@@ -12,3 +12,14 @@ class Businessman():
 		self.subsidiaries = 500000 * 1 / (self.capital + 1000)
 		self.companies = []
 		
+
+	def negotiate(self):
+
+
+	def suicide(self):
+
+
+	def declareBancrupcy(self):
+
+
+	def invest(self):
