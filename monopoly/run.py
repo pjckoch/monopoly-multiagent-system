@@ -20,10 +20,10 @@ if __name__ == "__main__":
     print(environment.avgCapital)
     print("Average Happiness:")
     print(environment.avgHappiness)
-    
+
     # simulate with dummy profits
     for time in np.linspace(0.0, days, num = environment.numActions * days + 1):
-        
+
         stillALiveBms = [bm for bm in environment.listOfPeople if bm.isAlive]
 
         for bm in stillALiveBms:
@@ -58,3 +58,9 @@ if __name__ == "__main__":
     # print the profit history for each businessman
     print("People Profit Dictionary after " + str(days) + " days:")
     print(environment.peopleProfitDict)
+    print("COMPANY ID: ",environment.listOfCompanies[0].id)
+    print("COMPANY frequency: ",environment.listOfCompanies[0].frequency)
+    print("COMPANY necessity: " ,environment.listOfCompanies[0].necessity)
+    print("COMPANY price: " ,environment.listOfCompanies[0].price)
+    print("COMPANY variableCost: " ,environment.listOfCompanies[0].variableCost)
+    print("COMPANY fixedCost: " ,environment.listOfCompanies[0].fixedCost)

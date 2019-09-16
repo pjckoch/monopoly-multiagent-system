@@ -45,7 +45,6 @@ class Environment():
             self.avgCapital += bm.capital
 
         self.avgCapital /= len(self.listOfPeople)
-<<<<<<< Updated upstream
 
 
     def addProfitsForBM(self, bmId, profit):
@@ -66,5 +65,3 @@ class Environment():
 
         return listOfCompaniesAux
         # return [company for company in bm.companies for bm in self.listOfPeople]
-=======
->>>>>>> Stashed changes
