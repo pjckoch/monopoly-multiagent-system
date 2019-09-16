@@ -24,5 +24,5 @@ class Company():
     def computeCompanyValue(self):
         print("")
 
-# TODO
-# Proper Initialization of Company Atributes
+    # TODO
+    # Proper Initialization of Company Atributes
