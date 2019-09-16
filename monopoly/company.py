@@ -1,5 +1,4 @@
 import numpy as np
-
 class Company():
     """Company Object."""
 
