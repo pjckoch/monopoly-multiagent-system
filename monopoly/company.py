@@ -3,8 +3,8 @@ import numpy as np
 class Company():
 	"""Company Object."""
 
-	def __init__(self):
-
+	def __init__(self, companyId):
+        self.id = companyId
 		self.turnOver = 1000 * np.random.randn() + 10000		# sig * randn + mu
 		self.fixedCost = 1000 * np.random.randn() + 10000		# sig * randn + mu
         self.variableCost = 1000 * np.random.randn() + 10000		# sig * randn + mu
@@ -15,4 +15,14 @@ class Company():
         self.companyValue = 1000 * np.random.randn() + 10000		# sig * randn + mu
 
 
-# TODO - Initialize company atributes
+    def computeProfit(self):
+        print("")
+
+    def updateTaxes(self):
+        print("")
+
+    def computeCompanyValue(self):
+        print("")
+
+# TODO
+# Proper Initialization of Company Atributes
