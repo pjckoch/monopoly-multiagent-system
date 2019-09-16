@@ -12,6 +12,10 @@ class Businessman():
         self.subsidiaries = 500000 * 1 / (self.capital + 1000)
         self.companies = []
 
+    def chooseAction(self, nChoices):
+        # choose randomly and based on frequency the nChoices
+        # for each one, choose to do it or not
+
     def negotiate(self):
         print("")
 
