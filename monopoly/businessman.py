@@ -1,4 +1,5 @@
 import numpy as np
+import random
 from company import Company
 
 class Businessman():
@@ -12,10 +13,27 @@ class Businessman():
         self.subsidiaries = 500000 * 1 / (self.capital + 1000)
         self.companies = []
 
-    def chooseAction(self, nChoices):
-        # choose randomly and based on frequency the nChoices
+    def chooseAction(self, nChoices, allCompanies):
+        # choose randomly
+        companiesForEvaluation = []
+        actions = []
+
+        for i in range(nChoices):
+            companiesForEvaluation.append(allCompanies[random.randint(0, len(allCompanies)-1)])
+
         # for each one, choose to do it or not
+        for company in companiesForEvaluation:
+            aux = self.considerAction(company)
+            if self.considerAction(company) > 0.5:
+                actions.append(company)
+                self.capital -= company.price
+
         print("")
+
+        return actions
+
+    def considerAction(self, company):
+        return company.price * 900 / self.capital
 
     def negotiate(self):
         print("")

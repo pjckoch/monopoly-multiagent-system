@@ -27,7 +27,9 @@ if __name__ == "__main__":
         stillALiveBms = [bm for bm in environment.listOfPeople if bm.isAlive]
 
         for bm in stillALiveBms:
-            """bm.chooseAction()"""
+            aux = bm.chooseAction(environment.numActions, environment.listOfCompanies)
+            # print("ACA")
+            # print(len(aux))
             break
 
         environment.time = round(time, 1)
