@@ -1,8 +1,7 @@
 import numpy as np
 
 class Businessman():
-	"""An intelligent agent that interacts with other agents with the objective
-	to maximize his capital."""
+	"""An intelligent agent that interacts with other agents with the objective to maximize his capital."""
 
 	def __init__(self):
 
@@ -11,4 +10,3 @@ class Businessman():
 		self.isAlive = True
 		self.subsidiaries = 0
 		self.companies = []
-
