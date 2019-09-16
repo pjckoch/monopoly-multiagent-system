@@ -1,12 +1,12 @@
 import numpy as np
 
 class Company():
-	"""Company Object."""
+    """Company Object."""
 
-	def __init__(self, companyId):
+    def __init__(self, companyId):
         self.id = companyId
-		self.turnOver = 1000 * np.random.randn() + 10000		# sig * randn + mu
-		self.fixedCost = 1000 * np.random.randn() + 10000		# sig * randn + mu
+        self.turnOver = 1000 * np.random.randn() + 10000		# sig * randn + mu
+        self.fixedCost = 1000 * np.random.randn() + 10000		# sig * randn + mu
         self.variableCost = 1000 * np.random.randn() + 10000		# sig * randn + mu
         self.taxes = 1000 * np.random.randn() + 10000		# sig * randn + mu
         self.profitHistory = []
