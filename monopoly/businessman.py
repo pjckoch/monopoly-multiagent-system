@@ -27,6 +27,7 @@ class Businessman():
             if self.considerAction(company) > 0.5:
                 actions.append(company)
                 self.capital -= company.price
+                company.turnOver += company.price #temporary way, change to transaction function
 
         print("")
 
