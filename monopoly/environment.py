@@ -1,3 +1,4 @@
+import random
 from company import Company
 from businessman import Businessman
 
@@ -6,10 +7,10 @@ class Environment():
     """Defines the environment of the multiagent system."""
 
     def __init__(self):
-        self.numPeople = 20
+        self.numPeople = 10
         self.numCompanies = 1 * self.numPeople
         self.listOfPeople = [Businessman(i) for i in range(self.numPeople)]
-        self.listOfCompanies = [Company(i) for i in range(self.numCompanies)]
+        self.listOfCompanies = self.distributeCompanies()
         self.numActions = 5     # per day
         self.suicideCount = 0
         self.avgHappiness = 0
@@ -46,6 +47,14 @@ class Environment():
         self.avgCapital /= len(self.listOfPeople)
 
 
-    def addProfitForBM(self, bmId, profit):
+    def addProfitsForBM(self, bmId, profit):
         """Function to append a profit for a certain businessman to the peopleProfitDict"""
-        self.peopleProfitMatrix[bmId].append(profit)
+        self.peopleProfitDict[bmId].append(profit)
+
+
+    def distributeCompanies(self):
+        """Makes every businessman found his first company for himself."""
+        for bm in self.listOfPeople:
+            bm.foundCompany(bm.id)  # id of first company is sames as BM Id
+
+        return [company for company in bm.companies for bm in self.listOfPeople]

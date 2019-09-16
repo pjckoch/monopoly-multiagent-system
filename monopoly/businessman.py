@@ -23,3 +23,9 @@ class Businessman():
 
     def invest(self):
         print("")
+
+    def foundCompany(self, companyId):
+        """Creates a new company belonging to the businessman who founds it."""
+        company = Company(companyId)
+        self.companies.append(company)
+        return company
