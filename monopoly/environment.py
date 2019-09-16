@@ -14,12 +14,12 @@ class Environment():
         self.suicideCount = 0
         self.avgHappiness = 0
         self.avgCapital = 0
-        self.peopleProfitMatrix = {}
+        self.peopleProfitDict = {}
         self.time = 0
 
         # initialize peopleProfitMatrix --> each bm has empty list of profits
         for bm in self.listOfPeople:
-            self.peopleProfitMatrix[bm.id] = []
+            self.peopleProfitDict[bm.id] = []
 
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
@@ -44,3 +44,8 @@ class Environment():
             self.avgCapital += bm.capital
 
         self.avgCapital /= len(self.listOfPeople)
+
+
+    def addProfitForBM(self, bmId, profit):
+        """Function to append a profit for a certain businessman to the peopleProfitDict"""
+        self.peopleProfitMatrix[bmId].append(profit)
