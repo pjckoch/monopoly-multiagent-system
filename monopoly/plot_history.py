@@ -30,7 +30,7 @@ def plotProfitHistory(peopleProfitDict, bmIds, numDays):
             profits[i].append(totalDailyProfits[i, day])
             plt.plot(days, profits[i], color=clr, label=i)
 
-        plt.pause(0.1)
+        plt.pause(0.05)
 
     plt.show()
 

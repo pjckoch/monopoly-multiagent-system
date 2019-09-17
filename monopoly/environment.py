@@ -7,11 +7,11 @@ class Environment():
     """Defines the environment of the multiagent system."""
 
     def __init__(self):
-        self.numPeople = 10
+        self.numPeople = 30
         self.numCompanies = 1 * self.numPeople
         self.listOfPeople = [Businessman(i) for i in range(self.numPeople)]
         self.listOfCompanies = self.distributeCompanies()
-        self.numActions = 5     # per day
+        self.numActions = 20     # per day
         self.suicideCount = 0
         self.avgHappiness = 0
         self.avgCapital = 0

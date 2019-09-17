@@ -2,7 +2,7 @@ import numpy as np
 from environment import Environment
 from plot_history import *
 
-days = 50.0
+days = 100.0
 
 if __name__ == "__main__":
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
             break
 
         environment.time = round(time, 1)
-        print("Days passed: " + str(environment.time))
+        #print("Days passed: " + str(environment.time))
 
         if environment.time != 0 and environment.time % 1.0 == 0.0 :
 
@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
                 for company in bm.companies:
 
-                    """dailyProfits.append(company.computeProfit())"""
+                    #dailyProfits.append(company.computeProfit())
                     dailyProfits.append(np.random.randint(low = -1000, high = 1000))
 
                 # append the new values into the peopleProfitDict
@@ -58,9 +58,9 @@ if __name__ == "__main__":
                 printmsg += str(bm.capital)
                 print(printmsg)
 
-                if bm.id == 0 or bm.id == 1:
+                """if bm.id == 0 or bm.id == 1:
                     plotCapitalHistory(bm.capital, bm.id, int(environment.time))
-
+                """
 
     # print the profit history for each businessman
     print("People Profit Dictionary after " + str(days) + " days:")

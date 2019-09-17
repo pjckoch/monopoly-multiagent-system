@@ -23,9 +23,10 @@ class Company():
         self.profitHistory = []
         self.companyValue = 0
 
-    def computeProfit(self, clientCount):
-        profit = clientCount * self.price - self.taxes - self.variableCost - self.fixedCost
+    def computeProfit(self):
+        profit = self.turnOver - self.taxes - self.variableCost - self.fixedCost
         self.profitHistory.append(profit)
+        self.turnOver = 0
         return profit
 
     def updateTaxes(self):
