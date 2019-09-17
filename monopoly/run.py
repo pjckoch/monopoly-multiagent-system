@@ -1,7 +1,8 @@
 import numpy as np
 from environment import Environment
+from plot_history import plotProfitHistory
 
-days = 2.0
+days = 50.0
 
 if __name__ == "__main__":
 
@@ -66,3 +67,6 @@ if __name__ == "__main__":
     print("COMPANY price: " ,environment.listOfCompanies[0].price)
     print("COMPANY variableCost: " ,environment.listOfCompanies[0].variableCost)
     print("COMPANY fixedCost: " ,environment.listOfCompanies[0].fixedCost)
+
+    # plot the profitHistory
+    plotProfitHistory(environment.peopleProfitDict, bmIds = [0, 1], numDays = days)
