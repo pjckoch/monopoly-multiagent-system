@@ -1,6 +1,6 @@
 import numpy as np
 from environment import Environment
-from plot_history import plotProfitHistory
+from plot_history import *
 
 days = 50.0
 
@@ -57,6 +57,10 @@ if __name__ == "__main__":
                 printmsg += " capital after " + str(time) + " days: "
                 printmsg += str(bm.capital)
                 print(printmsg)
+
+                if bm.id == 0 or bm.id == 1:
+                    plotCapitalHistory(bm.capital, bm.id, int(environment.time))
+
 
     # print the profit history for each businessman
     print("People Profit Dictionary after " + str(days) + " days:")

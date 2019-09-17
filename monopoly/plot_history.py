@@ -17,7 +17,7 @@ def plotProfitHistory(peopleProfitDict, bmIds, numDays):
     profitArr = np.array(profitList)
     totalDailyProfits = np.sum(profitArr, 2)
     
-    profits = [[], [], []]
+    profits = [[], []]
     days = []
 
     colors = cm.rainbow(np.linspace(0, 1, len(bmIds)))
@@ -28,8 +28,24 @@ def plotProfitHistory(peopleProfitDict, bmIds, numDays):
 
         for i, clr in zip(range(len(bmIds)), colors):
             profits[i].append(totalDailyProfits[i, day])
-            plt.plot(days, profits[i], color=clr)
+            plt.plot(days, profits[i], color=clr, label=i)
 
         plt.pause(0.1)
 
     plt.show()
+
+
+plt.figure('Capital History')
+plt.axis([0, 50, 0, 20000])
+plt.title('Capital History')
+plt.xlabel('Time (days)')
+plt.ylabel('Capital (USD)')
+capitalHistory = [[], []]
+clrs = cm.rainbow(np.linspace(0, 1, 2))
+
+
+def plotCapitalHistory(capital, bmId, day):
+    clr = clrs[bmId]
+    capitalHistory[bmId].append(capital)
+    days = range(day)
+    plt.plot(days, capitalHistory[bmId], color=clr, label=str(bmId))
