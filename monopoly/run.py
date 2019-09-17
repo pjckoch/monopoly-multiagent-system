@@ -45,8 +45,8 @@ if __name__ == "__main__":
 
                 for company in bm.companies:
 
-                    #dailyProfits.append(company.computeProfit())
-                    dailyProfits.append(np.random.randint(low = -1000, high = 1000))
+                    dailyProfits.append(company.computeProfit())
+                    #dailyProfits.append(np.random.randint(low = -1000, high = 1000))
 
                 # append the new values into the peopleProfitDict
                 environment.addProfitsForBM(bm.id, dailyProfits)
