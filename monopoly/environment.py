@@ -57,11 +57,4 @@ class Environment():
         for bm in self.listOfPeople:
             bm.foundCompany(bm.id)  # id of first company is sames as BM Id
 
-        listOfCompaniesAux = []
-
-        for bm1 in self.listOfPeople:
-            for company1 in bm1.companies:
-                listOfCompaniesAux.append(company1)
-
-        return listOfCompaniesAux
-        # return [company for company in bm.companies for bm in self.listOfPeople]
+        return [company for bman in self.listOfPeople for company in bman.companies]
