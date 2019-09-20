@@ -1,8 +1,9 @@
 import numpy as np
+import random
 from environment import Environment
 from plot_history import *
 
-days = 100.0
+days = 2
 
 if __name__ == "__main__":
 
@@ -22,45 +23,57 @@ if __name__ == "__main__":
     print("Average Happiness:")
     print(environment.avgHappiness)
 
-    # simulate with dummy profits
+    # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = environment.numActions * days + 1):
-
-        stillALiveBms = [bm for bm in environment.listOfPeople if bm.isAlive]
-
-        for bm in stillALiveBms:
-            aux = bm.chooseAction(environment.numActions, environment.listOfCompanies)
-            # print("ACA")
-            # print(len(aux))
-            break
-
-        environment.time = round(time, 1)
-        #print("Days passed: " + str(environment.time))
-
-        if environment.time != 0 and environment.time % 1.0 == 0.0 :
-
-            # compute the profits for each businessman
+        if round(time, 1)!= 0:
+            stillALiveBms = [bm for bm in environment.listOfPeople if bm.isAlive]
             for bm in stillALiveBms:
+                #
+                # choose randomly
+                companiesForEvaluation = []
 
-                dailyProfits = []
+                for i in range(environment.numActions):
+                    companiesForEvaluation.append(environment.listOfCompanies[random.randint(0, len(environment.listOfCompanies)-1)])
 
-                for company in bm.companies:
+                bmDailyActions = []
+                for company in companiesForEvaluation:
+                    aux = bm.chooseAction(company)
+                    bmDailyActions.append(aux)
 
-                    dailyProfits.append(company.computeProfit())
-                    #dailyProfits.append(np.random.randint(low = -1000, high = 1000))
+                print("Businessman " + str(bm.id) + " List of Actions:")
+                for action in bmDailyActions:
+                    if action is not None:
+                        print(action.id)
+                    else:
+                        print("No action")
+            environment.time = round(time, 1)
+            print("Days passed: " + str(environment.time))
 
-                # append the new values into the peopleProfitDict
-                environment.addProfitsForBM(bm.id, dailyProfits)
+            if environment.time % 1.0 == 0.0 :
 
-                # compute the updated capital for the businessman and print
-                bm.capital += sum(dailyProfits)
-                printmsg = "Businessman " + str(bm.id)
-                printmsg += " capital after " + str(time) + " days: "
-                printmsg += str(bm.capital)
-                print(printmsg)
+                # compute the profits for each businessman
+                for bm in stillALiveBms:
 
-                """if bm.id == 0 or bm.id == 1:
-                    plotCapitalHistory(bm.capital, bm.id, int(environment.time))
-                """
+                    dailyProfits = []
+
+                    for company in bm.companies:
+
+                        dailyProfits.append(company.computeProfit())
+                        #dailyProfits.append(np.random.randint(low = -1000, high = 1000))
+
+                    # append the new values into the peopleProfitDict
+                    environment.addProfitsForBM(bm.id, dailyProfits)
+
+                    # compute the updated capital for the businessman and print
+                    bm.capital += sum(dailyProfits)
+                    printmsg = "Businessman " + str(bm.id)
+                    printmsg += " capital after " + str(time) + " days: "
+                    printmsg += str(bm.capital)
+                    print(printmsg)
+
+                    # """if bm.id == 0 or bm.id == 1:
+                    #     plotCapitalHistory(bm.capital, bm.id, int(environment.time))
+                    # """
 
     # print the profit history for each businessman
     print("People Profit Dictionary after " + str(days) + " days:")
@@ -73,4 +86,4 @@ if __name__ == "__main__":
     print("COMPANY fixedCost: " ,environment.listOfCompanies[0].fixedCost)
 
     # plot the profitHistory
-    plotProfitHistory(environment.peopleProfitDict, bmIds = [0, 1], numDays = days)
+    # plotProfitHistory(environment.peopleProfitDict, bmIds = [0, 1], numDays = days)

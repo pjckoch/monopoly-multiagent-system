@@ -13,25 +13,14 @@ class Businessman():
         self.subsidiaries = 500000 * 1 / (self.capital + 1000)
         self.companies = []
 
-    def chooseAction(self, nChoices, allCompanies):
-        # choose randomly
-        companiesForEvaluation = []
-        actions = []
-
-        for i in range(nChoices):
-            companiesForEvaluation.append(allCompanies[random.randint(0, len(allCompanies)-1)])
-
-        # for each one, choose to do it or not
-        for company in companiesForEvaluation:
-            aux = self.considerAction(company)
-            if self.considerAction(company) > 0.5:
-                actions.append(company)
-                self.capital -= company.price
-                company.turnOver += company.price #temporary way, change to transaction function
-
-        print("")
-
-        return actions
+    def chooseAction(self, company):
+        aux = self.considerAction(company)
+        if self.considerAction(company) > 0.5:
+            self.capital -= company.price
+            company.turnOver += company.price #temporary way, change to transaction function
+            return company
+        else:
+            return None
 
     def considerAction(self, company):
         return company.price * 900 / self.capital
