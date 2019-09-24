@@ -16,11 +16,14 @@ class Environment():
         self.avgHappiness = 0
         self.avgCapital = 0
         self.peopleProfitDict = {}
+        self.peopleCapitalDict = {}
         self.time = 0
 
         # initialize peopleProfitMatrix --> each bm has empty list of profits
         for bm in self.listOfPeople:
             self.peopleProfitDict[bm.id] = []
+            self.peopleCapitalDict[bm.id] = []
+
 
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
@@ -50,6 +53,11 @@ class Environment():
     def addProfitsForBM(self, bmId, profit):
         """Function to append a profit for a certain businessman to the peopleProfitDict"""
         self.peopleProfitDict[bmId].append(profit)
+
+
+    def addCapitalForBM(self, bmId, capital):
+        """Function to append a profit for a certain businessman to the peopleProfitDict"""
+        self.peopleCapitalDict[bmId].append(capital)
 
 
     def distributeCompanies(self):

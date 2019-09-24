@@ -3,40 +3,40 @@ import random
 from environment import Environment
 from plot_history import *
 
-days = 100
+days = 50
 
 if __name__ == "__main__":
 
-    environment = Environment()
+    env = Environment()
 
     # print businessmen id's
     print("Businessman IDs:")
-    print([bm.id for bm in environment.listOfPeople])
+    print([bm.id for bm in env.listOfPeople])
 
     # print companies id's
     print("Company IDs:")
-    print([company.id for company in environment.listOfCompanies])
+    print([company.id for company in env.listOfCompanies])
 
     # print average capital and average happiness
     print("Average Capital:")
-    print(environment.avgCapital)
+    print(env.avgCapital)
     print("Average Happiness:")
-    print(environment.avgHappiness)
+    print(env.avgHappiness)
 
     # change this later, one action per loop only
-    for time in np.linspace(0.0, days, num = environment.numActions * days + 1):
+    for time in np.linspace(0.0, days, num = env.numActions * days + 1):
 
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
-            stillALiveBms = [bm for bm in environment.listOfPeople if bm.isAlive]
+            stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
             for bm in stillALiveBms:
                 
                 # choose randomly
                 companiesForEvaluation = []
 
-                for i in range(environment.numActions):
-                    companiesForEvaluation.append(environment.listOfCompanies[random.randint(0, len(environment.listOfCompanies)-1)])
+                for i in range(env.numActions):
+                    companiesForEvaluation.append(env.listOfCompanies[random.randint(0, len(env.listOfCompanies)-1)])
 
                 bmDailyActions = []
                 for company in companiesForEvaluation:
@@ -49,10 +49,10 @@ if __name__ == "__main__":
                         print(action.id)
                     else:
                         print("No action")
-            environment.time = round(time, 1)
-            print("Days passed: " + str(environment.time))
+            env.time = round(time, 1)
+            print("Days passed: " + str(env.time))
 
-            if environment.time % 1.0 == 0.0 :
+            if env.time % 1.0 == 0.0 :
 
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
@@ -62,31 +62,23 @@ if __name__ == "__main__":
                     for company in bm.companies:
 
                         dailyProfits.append(company.computeProfit())
-                        #dailyProfits.append(np.random.randint(low = -1000, high = 1000))
+                        
 
                     # append the new values into the peopleProfitDict
-                    environment.addProfitsForBM(bm.id, dailyProfits)
+                    env.addProfitsForBM(bm.id, dailyProfits)
 
                     # compute the updated capital for the businessman and print
                     bm.capital += sum(dailyProfits)
-                    printmsg = "Businessman " + str(bm.id)
-                    printmsg += " capital after " + str(time) + " days: "
-                    printmsg += str(bm.capital)
-                    print(printmsg)
+                    env.addCapitalForBM(bm.id, bm.capital)
 
-                    # """if bm.id == 0 or bm.id == 1:
-                    #     plotCapitalHistory(bm.capital, bm.id, int(environment.time))
-                    # """
 
-    # print the profit history for each businessman
-    print("People Profit Dictionary after " + str(days) + " days:")
-    print(environment.peopleProfitDict)
-    print("COMPANY ID: ",environment.listOfCompanies[0].id)
-    print("COMPANY frequency: ",environment.listOfCompanies[0].frequency)
-    print("COMPANY necessity: " ,environment.listOfCompanies[0].necessity)
-    print("COMPANY price: " ,environment.listOfCompanies[0].price)
-    print("COMPANY variableCost: " ,environment.listOfCompanies[0].variableCost)
-    print("COMPANY fixedCost: " ,environment.listOfCompanies[0].fixedCost)
+    # print some values
+    print("COMPANY ID: ",env.listOfCompanies[0].id)
+    print("COMPANY frequency: ",env.listOfCompanies[0].frequency)
+    print("COMPANY necessity: " ,env.listOfCompanies[0].necessity)
+    print("COMPANY price: " ,env.listOfCompanies[0].price)
+    print("COMPANY variableCost: " ,env.listOfCompanies[0].variableCost)
+    print("COMPANY fixedCost: " ,env.listOfCompanies[0].fixedCost)
 
-    # plot the profitHistory
-    plotProfitHistory(environment.peopleProfitDict, bmIds = [0, 1, 2], numDays = days)
+    # plot profit history and capital
+    plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)

@@ -1,47 +1,62 @@
 import matplotlib.pyplot as plt
 from matplotlib import cm
+from matplotlib.animation import FuncAnimation
 import numpy as np
 
-def plotProfitHistory(peopleProfitDict, bmIds, numDays):
 
-    plt.figure('Profit History')
-    plt.axis([0, numDays, -2000, 5000])
-    # plt.axes().spines['bottom'].set_position(('data', 0))
-    plt.title('Profit History for Businessmen ' + str(bmIds))
-    plt.xlabel('Time (days)')
-    plt.ylabel('Profit (USD)')
+pause_interval = 0.1
+
+
+fig = plt.figure('Monopoly')
+ax1 = fig.add_subplot(2,1,1, adjustable='box', aspect=.5)
+ax1.set_title('Capital Distribution')
+
+ax2 = fig.add_subplot(2,1,2)
+ax2.set_title('Profit History')
+ax2.set_xlabel('Time (days)')
+ax2.set_ylabel('Profit (USD)')
+
+def plot_all(peopleCapitalDict, peopleProfitDict, numDays):
+
+    bmIds = list(peopleProfitDict.keys())
+    line_labels = ['BM ' + str(id) for id in bmIds]
+
+    ax2.set_xlim([0, numDays])
+    ax2.set_ylim([-1000, 3000])
+
+    capitalList = list(peopleCapitalDict.values())
+    capitalArr = np.array(capitalList)
 
 
     profitList = list(peopleProfitDict.values())
-    #profitList = [profitList[bmId] for bmId in bmIds]
     profitArr = np.array(profitList)[bmIds]
-    print(profitArr)
     totalDailyProfits = np.sum(profitArr, 2)
+    colors = cm.gnuplot(np.linspace(0.1, 0.8, len(bmIds)))
 
-    days = np.arange(1, numDays + 1)    # arange does not include the last value --> therefore + 1
-    colors = cm.rainbow(np.linspace(0, 1, len(bmIds)))
+    days = np.arange(1, numDays + 1)
 
-    for day in days:
+    def update(day):
 
-        for i, clr in zip(range(len(bmIds)), colors):
-            plt.plot(days[0:day], totalDailyProfits[i, 0:day], color=clr, label=i)
 
-        plt.pause(0.05)
+        ax1.clear()
+        # labels = [('BM' + str(bm.id)) for bm in businessmen]
+        l1 = ax1.pie(capitalArr[:,day], autopct='%1.1f%%', shadow=True, startangle=90, colors=colors)
+        ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+        ax1.set_title('Day ' + str(day+1))
 
+        for j, clr in zip(range(len(bmIds)), colors):
+            l2 = ax2.plot(days[0:day], totalDailyProfits[j, 0:day], color=clr, label=j)
+
+        fig.legend([l1, l2],     # The line objects
+           labels=line_labels,   # The labels for each line
+           loc="upper right",    # Position of legend
+           borderaxespad=0.1,    # Small spacing around legend box
+           title="Businessmen"  # Title for the legend
+        )
+
+        plt.pause(pause_interval)
+
+
+
+    anim = FuncAnimation(fig, update, frames=range(numDays), repeat=False)   
     plt.show()
-
-
-plt.figure('Capital History')
-plt.axis([0, 50, 0, 20000])
-plt.title('Capital History')
-plt.xlabel('Time (days)')
-plt.ylabel('Capital (USD)')
-capitalHistory = [[], []]
-clrs = cm.rainbow(np.linspace(0, 1, 2))
-
-
-def plotCapitalHistory(capital, bmId, day):
-    clr = clrs[bmId]
-    capitalHistory[bmId].append(capital)
-    days = range(day)
-    plt.plot(days, capitalHistory[bmId], color=clr, label=str(bmId))
