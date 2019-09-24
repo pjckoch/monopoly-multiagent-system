@@ -3,7 +3,7 @@ import random
 from environment import Environment
 from plot_history import *
 
-days = 2
+days = 100
 
 if __name__ == "__main__":
 
@@ -25,10 +25,13 @@ if __name__ == "__main__":
 
     # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = environment.numActions * days + 1):
-        if round(time, 1)!= 0:
+
+        # we don't need to round here, we only want to exclude the very first value
+        if time != 0.0:
+
             stillALiveBms = [bm for bm in environment.listOfPeople if bm.isAlive]
             for bm in stillALiveBms:
-                #
+                
                 # choose randomly
                 companiesForEvaluation = []
 
@@ -86,4 +89,4 @@ if __name__ == "__main__":
     print("COMPANY fixedCost: " ,environment.listOfCompanies[0].fixedCost)
 
     # plot the profitHistory
-    # plotProfitHistory(environment.peopleProfitDict, bmIds = [0, 1], numDays = days)
+    plotProfitHistory(environment.peopleProfitDict, bmIds = [0, 1, 2], numDays = days)

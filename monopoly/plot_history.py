@@ -5,7 +5,7 @@ import numpy as np
 def plotProfitHistory(peopleProfitDict, bmIds, numDays):
 
     plt.figure('Profit History')
-    plt.axis([0, numDays, -2000, 2000])
+    plt.axis([0, numDays, -2000, 5000])
     # plt.axes().spines['bottom'].set_position(('data', 0))
     plt.title('Profit History for Businessmen ' + str(bmIds))
     plt.xlabel('Time (days)')
@@ -13,22 +13,18 @@ def plotProfitHistory(peopleProfitDict, bmIds, numDays):
 
 
     profitList = list(peopleProfitDict.values())
-    profitList = [profitList[bmId] for bmId in bmIds]
-    profitArr = np.array(profitList)
+    #profitList = [profitList[bmId] for bmId in bmIds]
+    profitArr = np.array(profitList)[bmIds]
+    print(profitArr)
     totalDailyProfits = np.sum(profitArr, 2)
-    
-    profits = [[], []]
-    days = []
 
+    days = np.arange(1, numDays + 1)    # arange does not include the last value --> therefore + 1
     colors = cm.rainbow(np.linspace(0, 1, len(bmIds)))
 
-    for day in range(int(numDays)):
-        #print(totalDailyProfits[:, day])
-        days.append(day + 1)
+    for day in days:
 
         for i, clr in zip(range(len(bmIds)), colors):
-            profits[i].append(totalDailyProfits[i, day])
-            plt.plot(days, profits[i], color=clr, label=i)
+            plt.plot(days[0:day], totalDailyProfits[i, 0:day], color=clr, label=i)
 
         plt.pause(0.05)
 
