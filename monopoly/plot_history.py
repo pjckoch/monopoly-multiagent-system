@@ -21,7 +21,7 @@ def plot_all(peopleCapitalDict, peopleProfitDict, numDays):
     bmIds = list(peopleProfitDict.keys())
     line_labels = ['BM ' + str(id) for id in bmIds]
 
-    ax2.set_xlim([0, numDays])
+    ax2.set_xlim([1, numDays])
     ax2.set_ylim([-1000, 3000])
 
     capitalList = list(peopleCapitalDict.values())
@@ -40,9 +40,9 @@ def plot_all(peopleCapitalDict, peopleProfitDict, numDays):
 
         ax1.clear()
         # labels = [('BM' + str(bm.id)) for bm in businessmen]
-        l1 = ax1.pie(capitalArr[:,day], autopct='%1.1f%%', shadow=True, startangle=90, colors=colors)
+        l1 = ax1.pie(capitalArr[:,day], autopct= lambda p: int(p/100.*capitalArr[:,day].sum()), shadow=True, startangle=90, colors=colors)
         ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-        ax1.set_title('Day ' + str(day+1))
+        ax1.set_title('Capital Day ' + str(day+1))
 
         for j, clr in zip(range(len(bmIds)), colors):
             l2 = ax2.plot(days[0:day], totalDailyProfits[j, 0:day], color=clr, label=j)
