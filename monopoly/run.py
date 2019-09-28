@@ -2,7 +2,6 @@ import numpy as np
 import random
 from environment import Environment
 from plot_history import *
-import params
 import json
 
 days = 2
