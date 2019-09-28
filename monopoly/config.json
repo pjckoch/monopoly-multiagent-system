@@ -1,0 +1,122 @@
+{
+    "numPeople": 3,
+    "numCompanies": 3,
+    "listOfPeople": [
+        {
+            "id": 0,
+            "capital": 10279.219528627404,
+            "happiness": 55.386218365891985,
+            "isAlive": true,
+            "subsidiaries": 44.32930831171137,
+            "companies": [
+                {
+                    "id": 0,
+                    "frequency": 8,
+                    "necessity": 2,
+                    "price": 50,
+                    "turnOver": 0,
+                    "fixedCost": 10,
+                    "variableCost": 40,
+                    "taxes": 0,
+                    "profitHistory": [],
+                    "companyValue": 0
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "capital": 10161.061855981457,
+            "happiness": 61.90194484671377,
+            "isAlive": true,
+            "subsidiaries": 44.79860486858955,
+            "companies": [
+                {
+                    "id": 1,
+                    "frequency": 2,
+                    "necessity": 7,
+                    "price": 45,
+                    "turnOver": 0,
+                    "fixedCost": 35,
+                    "variableCost": 10,
+                    "taxes": 0,
+                    "profitHistory": [],
+                    "companyValue": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "capital": 11331.11667843167,
+            "happiness": 59.87608615290033,
+            "isAlive": true,
+            "subsidiaries": 40.547828152056084,
+            "companies": [
+                {
+                    "id": 2,
+                    "frequency": 2,
+                    "necessity": 1,
+                    "price": 15,
+                    "turnOver": 0,
+                    "fixedCost": 5,
+                    "variableCost": 10,
+                    "taxes": 0,
+                    "profitHistory": [],
+                    "companyValue": 0
+                }
+            ]
+        }
+    ],
+    "listOfCompanies": [
+        {
+            "id": 0,
+            "frequency": 8,
+            "necessity": 2,
+            "price": 50,
+            "turnOver": 0,
+            "fixedCost": 10,
+            "variableCost": 40,
+            "taxes": 0,
+            "profitHistory": [],
+            "companyValue": 0
+        },
+        {
+            "id": 1,
+            "frequency": 2,
+            "necessity": 7,
+            "price": 45,
+            "turnOver": 0,
+            "fixedCost": 35,
+            "variableCost": 10,
+            "taxes": 0,
+            "profitHistory": [],
+            "companyValue": 0
+        },
+        {
+            "id": 2,
+            "frequency": 2,
+            "necessity": 1,
+            "price": 15,
+            "turnOver": 0,
+            "fixedCost": 5,
+            "variableCost": 10,
+            "taxes": 0,
+            "profitHistory": [],
+            "companyValue": 0
+        }
+    ],
+    "numActions": 5,
+    "suicideCount": 0,
+    "avgHappiness": 59.05474978850202,
+    "avgCapital": 10590.46602101351,
+    "peopleProfitDict": {
+        "0": [],
+        "1": [],
+        "2": []
+    },
+    "peopleCapitalDict": {
+        "0": [],
+        "1": [],
+        "2": []
+    },
+    "time": 0
+}

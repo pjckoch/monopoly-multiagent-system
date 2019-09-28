@@ -2,12 +2,21 @@ import numpy as np
 import random
 from environment import Environment
 from plot_history import *
+import params
+import json
 
 days = 2
+
+class MyEncoder(json.JSONEncoder):
+        def default(self, o):
+            return o.__dict__  
 
 if __name__ == "__main__":
 
     env = Environment()
+
+    with open("config.json", 'w') as f:
+        json.dump(env, f, cls = MyEncoder, indent=4)
 
     # print businessmen id's
     print("Businessman IDs:")
