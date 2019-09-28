@@ -45,7 +45,8 @@ def plot_all(peopleCapitalDict, peopleProfitDict, numDays):
         ax1.set_title('Capital Day ' + str(day+1))
 
         for j, clr in zip(range(len(bmIds)), colors):
-            l2 = ax2.plot(days[0:day], totalDailyProfits[j, 0:day], color=clr, label=j)
+            l2 = ax2.plot(days[:day+1], totalDailyProfits[j, :day+1], color=clr, label=j)
+
 
         fig.legend([l1, l2],     # The line objects
            labels=line_labels,   # The labels for each line

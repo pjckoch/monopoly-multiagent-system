@@ -3,7 +3,7 @@ import random
 from environment import Environment
 from plot_history import *
 
-days = 50
+days = 2
 
 if __name__ == "__main__":
 
