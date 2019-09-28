@@ -40,28 +40,28 @@ if __name__ == "__main__":
 
             stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
             for bm in stillALiveBms:
-                
+
                 # choose randomly
-                companiesForEvaluation = []
+                companyForEvaluation = env.listOfCompanies[random.randint(0, len(env.listOfCompanies)-1)]
+                action = bm.chooseAction(companyForEvaluation)
+                bm.dailyActions.append(action)
 
-                for i in range(env.numActions):
-                    companiesForEvaluation.append(env.listOfCompanies[random.randint(0, len(env.listOfCompanies)-1)])
+                print("Businessman " + str(bm.id) + " Action:")
 
-                bmDailyActions = []
-                for company in companiesForEvaluation:
-                    aux = bm.chooseAction(company)
-                    bmDailyActions.append(aux)
-
-                print("Businessman " + str(bm.id) + " List of Actions:")
-                for action in bmDailyActions:
-                    if action is not None:
-                        print(action.id)
-                    else:
-                        print("No action")
+                # Either display the momentary actions
+                if action is not None:
+                    print(action.id)
+                else:
+                    print("No action")
             env.time = round(time, 1)
             print("Days passed: " + str(env.time))
 
             if env.time % 1.0 == 0.0 :
+
+                # Or display the daily auctions
+                for bm in stillALiveBms:
+                    bm.displayDailyActions()
+                    bm.dailyActions = []
 
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
@@ -71,7 +71,7 @@ if __name__ == "__main__":
                     for company in bm.companies:
 
                         dailyProfits.append(company.computeProfit())
-                        
+
 
                     # append the new values into the peopleProfitDict
                     env.addProfitsForBM(bm.id, dailyProfits)
@@ -79,15 +79,6 @@ if __name__ == "__main__":
                     # compute the updated capital for the businessman and print
                     bm.capital += sum(dailyProfits)
                     env.addCapitalForBM(bm.id, bm.capital)
-
-
-    # print some values
-    print("COMPANY ID: ",env.listOfCompanies[0].id)
-    print("COMPANY frequency: ",env.listOfCompanies[0].frequency)
-    print("COMPANY necessity: " ,env.listOfCompanies[0].necessity)
-    print("COMPANY price: " ,env.listOfCompanies[0].price)
-    print("COMPANY variableCost: " ,env.listOfCompanies[0].variableCost)
-    print("COMPANY fixedCost: " ,env.listOfCompanies[0].fixedCost)
 
     # plot profit history and capital
     plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
