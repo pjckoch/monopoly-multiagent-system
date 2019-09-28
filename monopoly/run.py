@@ -4,9 +4,9 @@ from environment import Environment
 from plot_history import *
 import json
 
-days = 50
+days = 2
 
-class MyEncoder(json.JSONEncoder):
+class JsonEncoder(json.JSONEncoder):
         def default(self, o):
             return o.__dict__  
 
@@ -15,7 +15,8 @@ if __name__ == "__main__":
     env = Environment()
 
     with open("config.json", 'w') as f:
-        json.dump(env, f, cls = MyEncoder, indent=4)
+        json.dump(env, f, cls = JsonEncoder, indent=4)
+        f.close()
 
     # print businessmen id's
     print("Businessman IDs:")

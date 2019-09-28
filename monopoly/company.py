@@ -1,5 +1,12 @@
 import numpy as np
 import random
+import pandas as pd
+
+company_list = "lists/companies.csv"
+
+df = pd.read_csv(company_list)
+company_names = df['fake-company-name']
+numLines = len(company_names)
 
 class Company():
     """Company Object."""
@@ -14,6 +21,8 @@ class Company():
 
     def __init__(self, companyId):
         self.id = companyId
+        self.name = company_names[random.randint(0, numLines)]
+        print(self.name)
         self.frequency = random.randint(1,10)   #random number between 1 and 10
         self.necessity = random.randint(1,10)   #random number between 1 and 10
         self.price = 8 * self.frequency + 8 * self.necessity
