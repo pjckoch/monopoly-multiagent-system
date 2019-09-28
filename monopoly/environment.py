@@ -1,5 +1,6 @@
 import random
 from company import Company
+from government import Government
 from businessman import Businessman
 
 
@@ -9,9 +10,10 @@ class Environment():
     def __init__(self):
         self.numPeople = 3
         self.numCompanies = 1 * self.numPeople
+        self.government = Government()
         self.listOfPeople = [Businessman(i) for i in range(self.numPeople)]
         self.listOfCompanies = self.distributeCompanies()
-        self.numActions = 5     # per day
+        self.numActions = 2     # per day
         self.suicideCount = 0
         self.avgHappiness = 0
         self.avgCapital = 0

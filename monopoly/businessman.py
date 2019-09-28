@@ -12,6 +12,7 @@ class Businessman():
         self.isAlive = True
         self.subsidiaries = 500000 * 1 / (self.capital + 1000)
         self.companies = []
+        self.dailyActions = []
 
     def chooseAction(self, company):
         aux = self.considerAction(company)
@@ -42,3 +43,8 @@ class Businessman():
         company = Company(companyId)
         self.companies.append(company)
         return company
+
+    def displayDailyActions(self):
+        print("Businessman " + str(self.id) + " Daily Actions:")
+        for action in self.dailyActions:
+            print(action.id)
