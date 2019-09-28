@@ -10,13 +10,13 @@ class Businessman():
         self.capital = 1000 * np.random.randn() + 10000		# sig * randn + mu
         self.happiness = 10 * np.random.randn() + 50		# sig * randn + mu
         self.isAlive = True
-        self.subsidiaries = 500000 * 1 / (self.capital + 1000)
+        self.subsidiaries = 0
         self.companies = []
         self.dailyActions = []
 
     def chooseAction(self, company):
         aux = self.considerAction(company)
-        if self.considerAction(company) > 0.5:
+        if self.considerAction(company) > 0.3:
             self.capital -= company.price
             company.turnOver += company.price #temporary way, change to transaction function
             return company

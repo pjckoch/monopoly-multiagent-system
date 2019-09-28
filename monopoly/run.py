@@ -3,7 +3,7 @@ import random
 from environment import Environment
 from plot_history import *
 
-days = 2
+days = 50
 
 if __name__ == "__main__":
 
@@ -68,8 +68,12 @@ if __name__ == "__main__":
                     env.addProfitsForBM(bm.id, dailyProfits)
 
                     # compute the updated capital for the businessman and print
-                    bm.capital += sum(dailyProfits)
+                    bm.capital += sum(dailyProfits) + bm.subsidiaries
                     env.addCapitalForBM(bm.id, bm.capital)
+
+                env.computeAvgCapital()
+                env.computeAvgHappiness()
+                env.government.regulate(env.avgCapital, stillALiveBms)
 
     # plot profit history and capital
     plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)

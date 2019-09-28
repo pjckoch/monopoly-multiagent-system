@@ -15,10 +15,10 @@ class Company():
         self.id = companyId
         self.frequency = random.randint(1,10)   #random number between 1 and 10
         self.necessity = random.randint(1,10)   #random number between 1 and 10
-        self.price = 5 * self.frequency + 5 * self.necessity
+        self.price = 8 * self.frequency + 8 * self.necessity
         self.turnOver = 0
-        self.fixedCost = 5 * self.necessity
-        self.variableCost = 5 * self.frequency
+        self.fixedCost = 3 * self.necessity
+        self.variableCost = 3 * self.frequency
         self.taxes = 0
         self.profitHistory = []
         self.companyValue = 0
