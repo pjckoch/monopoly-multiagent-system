@@ -1,5 +1,7 @@
 import numpy as np
 import random
+import json
+
 class Company():
     """Company Object."""
 
@@ -13,8 +15,8 @@ class Company():
 
     def __init__(self, companyId):
         self.id = companyId
-        self.frequency = random.randint(1,10)   #random number between 1 and 10
-        self.necessity = random.randint(1,10)   #random number between 1 and 10
+        self.frequency = random.randint(1,10)   
+        self.necessity = 
         self.price = 5 * self.frequency + 5 * self.necessity
         self.turnOver = 0
         self.fixedCost = 5 * self.necessity
@@ -22,6 +24,11 @@ class Company():
         self.taxes = 0
         self.profitHistory = []
         self.companyValue = 0
+        json.dumps({"id": companyId,
+                    "frequency": random.randint(1,10),                      #random number between 1 and 10
+                    "necessity": random.randint(1,10),                      #random number between 1 and 10
+                    "price": 5 * self.frequency + 5 * self.necessity,
+
 
     def computeProfit(self):
         profit = self.turnOver - self.taxes - self.variableCost - self.fixedCost
