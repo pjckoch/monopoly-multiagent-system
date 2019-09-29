@@ -4,6 +4,10 @@ from government import Government
 from businessman import Businessman
 # from government import Government
 
+# To be parametrized'
+# Wealth Distribution - Value from 0.1 to 1 (0.1 concentrated wealth; 1 distributed wealth)
+wealthDist = 0.5
+
 
 class Environment():
     """Defines the environment of the multiagent system."""
@@ -52,6 +56,13 @@ class Environment():
             self.avgCapital += bm.capital
 
         self.avgCapital /= len(self.listOfPeople)
+
+    def computeAverageCompanyValue(self):
+        """Function to compute the average company value"""
+        temp = 0
+        for company in self.listOfCompanies:
+            temp += company.companyValue
+        return temp/len(self.listOfCompanies)
 
 
     def addProfitsForBM(self, bmId, profit):

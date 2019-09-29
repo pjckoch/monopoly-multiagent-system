@@ -11,6 +11,8 @@ class Government():
             "competitive": -0.5,
         }
         self.avgCapital = 0
+        self.avgCompanyValue = 0
+        self.taxesStatus = []
 
     def startAuction(self, companyId):
         return None
@@ -21,11 +23,29 @@ class Government():
         if (businessman.capital > (self.avgCapital * 1.5)):
             businessman.subsidiaries = 0
 
-    def regulateTax(self,company):
-        return None
+    def isCompanyTaxed(self, company):
+        for tax in self.taxesStatus:
+            if tax[0] == company.id:
+                return True
+        return False
 
-    def regulate(self, averageCapital, businessmenList):
-        self.avgCapital = 0
+    #TODO: improve tomorrow
+    def regulateTax(self,company):
+        if not self.isCompanyTaxed(company):
+            if company.companyValue > self.avgCompanyValue:
+                company.taxes += 20
+                temp = [company.id, 0]
+                self.taxesStatus.append(temp)
+                print("Taxing Company:" + str(company.id))
+        else:
+            for tax in self.taxesStatus:
+                if tax[0] == company.id:
+                    self.taxesStatus.remove(tax)
+                    print("Removed Tax from Company:" + str(company.id))
+
+    def regulate(self, averageCapital, averageCompany, businessmenList):
+        self.avgCapital = averageCapital
+        self.avgCompanyValue = averageCompany
         for bm in businessmenList:
             self.regulateSubsidiary(bm)
             for company in bm.companies:

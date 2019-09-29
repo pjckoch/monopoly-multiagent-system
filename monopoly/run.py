@@ -4,11 +4,11 @@ from environment import Environment
 from plot_history import *
 import json
 
-days = 2
+days = 10
 
 class JsonEncoder(json.JSONEncoder):
         def default(self, o):
-            return o.__dict__  
+            return o.__dict__
 
 if __name__ == "__main__":
 
@@ -71,6 +71,7 @@ if __name__ == "__main__":
                     for company in bm.companies:
 
                         dailyProfits.append(company.computeProfit())
+                        company.computeCompanyValue()
 
 
                     # append the new values into the peopleProfitDict
@@ -82,7 +83,8 @@ if __name__ == "__main__":
 
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
-                env.government.regulate(env.avgCapital, stillALiveBms)
+                averageCompany = env.computeAverageCompanyValue()
+                env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
 
     # plot profit history and capital
-    plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
+    # plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
