@@ -20,6 +20,7 @@ ax2.set_ylabel('Profit (USD)')
 
 initial_text = ""
 active = []
+currentDay = 0
 
 def plot_all(peopleCapitalDict, peopleProfitDict, numDays):
 
@@ -44,6 +45,9 @@ def plot_all(peopleCapitalDict, peopleProfitDict, numDays):
 
     def update(day):
 
+        global currentDay
+
+        currentDay = day
 
         ax1.clear()
         ax2.clear()
@@ -73,14 +77,26 @@ def plot_all(peopleCapitalDict, peopleProfitDict, numDays):
 
     def submit(text):
         global active
-        if text not in active:
-            active.append(text)
+        if text == "all":
+            active = []
+            for bm in bmIds:
+                active.append(str(bm))
+        elif text == "none":
+                active = []
+        elif text not in active:
+                active.append(text)
         else: 
             active.remove(text)
+            
+        global currentDay
+
+        if currentDay == numDays - 1:
+            update(numDays-1)
+            
         
 
     anim = FuncAnimation(fig, update, frames=range(numDays), repeat=False)
-    axbox = plt.axes([0.1, -0.01, 0.8, 0.075])
+    axbox = plt.axes([0.125, 0.5, 0.1, 0.075])
     text_box = TextBox(axbox, 'BM no:', initial=initial_text)
     text_box.on_submit(submit)
 

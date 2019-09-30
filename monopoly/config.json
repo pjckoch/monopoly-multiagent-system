@@ -16,15 +16,15 @@
     "listOfPeople": [
         {
             "id": 0,
-            "name": "Carmencita Skitterel",
-            "capital": 10581.573462010729,
-            "happiness": 50.691656111872106,
+            "name": "Birgit Clemmey",
+            "capital": 11193.166894841348,
+            "happiness": 38.51908075171924,
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 0,
-                    "name": "Lemke-Collier",
+                    "name": "Roob, Pfannerstill and Kris",
                     "frequency": 2,
                     "necessity": 6,
                     "price": 6.4,
@@ -40,15 +40,15 @@
         },
         {
             "id": 1,
-            "name": "Jemie Benedit",
-            "capital": 10140.289749947948,
-            "happiness": 50.523192535719396,
+            "name": "Ashil Prosek",
+            "capital": 10478.262540709276,
+            "happiness": 38.238612626542654,
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 1,
-                    "name": "Spencer Group",
+                    "name": "Daniel-Walter",
                     "frequency": 9,
                     "necessity": 6,
                     "price": 12.0,
@@ -64,21 +64,21 @@
         },
         {
             "id": 2,
-            "name": "Hamish Radbone",
-            "capital": 8833.82263015587,
-            "happiness": 41.64701437014372,
+            "name": "Ysabel Prahl",
+            "capital": 10483.820680349063,
+            "happiness": 37.5441235247126,
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 2,
-                    "name": "Kihn LLC",
-                    "frequency": 7,
-                    "necessity": 2,
-                    "price": 7.200000000000001,
+                    "name": "Bradtke-Braun",
+                    "frequency": 10,
+                    "necessity": 3,
+                    "price": 10.4,
                     "turnOver": 0,
-                    "fixedCost": 1.0,
-                    "variableCost": 3.5,
+                    "fixedCost": 1.5,
+                    "variableCost": 5.0,
                     "taxes": 0,
                     "profitHistory": [],
                     "companyValue": 0
@@ -90,7 +90,7 @@
     "listOfCompanies": [
         {
             "id": 0,
-            "name": "Lemke-Collier",
+            "name": "Roob, Pfannerstill and Kris",
             "frequency": 2,
             "necessity": 6,
             "price": 6.4,
@@ -103,7 +103,7 @@
         },
         {
             "id": 1,
-            "name": "Spencer Group",
+            "name": "Daniel-Walter",
             "frequency": 9,
             "necessity": 6,
             "price": 12.0,
@@ -116,13 +116,13 @@
         },
         {
             "id": 2,
-            "name": "Kihn LLC",
-            "frequency": 7,
-            "necessity": 2,
-            "price": 7.200000000000001,
+            "name": "Bradtke-Braun",
+            "frequency": 10,
+            "necessity": 3,
+            "price": 10.4,
             "turnOver": 0,
-            "fixedCost": 1.0,
-            "variableCost": 3.5,
+            "fixedCost": 1.5,
+            "variableCost": 5.0,
             "taxes": 0,
             "profitHistory": [],
             "companyValue": 0
@@ -130,8 +130,8 @@
     ],
     "numActions": 2,
     "suicideCount": 0,
-    "avgHappiness": 47.620621005911744,
-    "avgCapital": 9851.895280704848,
+    "avgHappiness": 38.10060563432483,
+    "avgCapital": 10718.416705299896,
     "peopleProfitDict": {
         "0": [],
         "1": [],
