@@ -87,4 +87,4 @@ if __name__ == "__main__":
                 env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
 
     # plot profit history and capital
-    # plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
+    plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
