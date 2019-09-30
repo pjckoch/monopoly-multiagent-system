@@ -13,15 +13,32 @@ class Government():
         self.avgCapital = 0
         self.avgCompanyValue = 0
         self.taxesStatus = []
+        self.subsidiariesStatus = []
 
     def startAuction(self, companyId):
         return None
 
+    def isPersonHelped(self, bm):
+        for subs in self.subsidiariesStatus:
+            if subs[0] == bm.id:
+                return True
+        return False
+
+    #TODO: improve
     def regulateSubsidiary(self,businessman):
-        if (businessman.capital < (self.avgCapital * 0.5)):
-            businessman.subsidiaries += 500 * self.politicsSwitcher.get("supportive", 0)
-        if (businessman.capital > (self.avgCapital * 1.5)):
-            businessman.subsidiaries = 0
+        if not self.isPersonHelped(businessman):
+            if (businessman.capital < 10000):
+            # if (businessman.capital < (self.avgCapital * 0.5)):
+                businessman.subsidiaries += 50000 * self.politicsSwitcher.get("supportive", 0)
+                temp = [businessman.id, 0] # We put a pair instead of ID only because later on we will increment the counter to 3 days per subsidiary
+                self.subsidiariesStatus.append(temp)
+                print("Helping Businessman:" + str(businessman.id))
+        else:
+            for subs in self.subsidiariesStatus:
+                if subs[0] == businessman.id:
+                    self.subsidiariesStatus.remove(subs)
+                    businessman.subsidiaries = 0
+                    print("Removed Subsidiary from Businessman:" + str(businessman.id))
 
     def isCompanyTaxed(self, company):
         for tax in self.taxesStatus:
@@ -29,7 +46,7 @@ class Government():
                 return True
         return False
 
-    #TODO: improve tomorrow
+    #TODO: improve
     def regulateTax(self,company):
         if not self.isCompanyTaxed(company):
             if company.companyValue > self.avgCompanyValue:
@@ -41,6 +58,7 @@ class Government():
             for tax in self.taxesStatus:
                 if tax[0] == company.id:
                     self.taxesStatus.remove(tax)
+                    company.taxes = 0
                     print("Removed Tax from Company:" + str(company.id))
 
     def regulate(self, averageCapital, averageCompany, businessmenList):
@@ -48,5 +66,5 @@ class Government():
         self.avgCompanyValue = averageCompany
         for bm in businessmenList:
             self.regulateSubsidiary(bm)
-            for company in bm.companies:
-                self.regulateTax(company)
+            # for company in bm.companies:
+                # self.regulateTax(company)

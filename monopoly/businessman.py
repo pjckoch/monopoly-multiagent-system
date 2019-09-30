@@ -55,4 +55,7 @@ class Businessman():
     def displayDailyActions(self):
         print("Businessman " + str(self.id) + " Daily Actions:")
         for action in self.dailyActions:
-            print(action.id)
+            if action is not None:
+                print(action.id)
+            else:
+                print("No Action")

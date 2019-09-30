@@ -4,7 +4,7 @@ from environment import Environment
 from plot_history import *
 import json
 
-days = 10
+days = 100
 
 class JsonEncoder(json.JSONEncoder):
         def default(self, o):
@@ -49,10 +49,10 @@ if __name__ == "__main__":
                 print("Businessman " + str(bm.id) + " Action:")
 
                 # Either display the momentary actions
-                if action is not None:
-                    print(action.id)
-                else:
-                    print("No action")
+                # if action is not None:
+                    # print(action.id)
+                # else:
+                    # print("No action")
             env.time = round(time, 1)
             print("Days passed: " + str(env.time))
 
@@ -87,4 +87,4 @@ if __name__ == "__main__":
                 env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
 
     # plot profit history and capital
-    # plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
+    plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
