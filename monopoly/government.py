@@ -15,6 +15,10 @@ class Government():
         self.taxesStatus = []
         self.subsidiariesStatus = []
 
+        self.taxValue = 20
+        self.subsidyValue = 100
+        self.governmentMoney = 0
+
     def startAuction(self, companyId):
         return None
 
@@ -27,9 +31,10 @@ class Government():
     #TODO: improve
     def regulateSubsidiary(self,businessman):
         if not self.isPersonHelped(businessman):
-            if (businessman.capital < 10000):
             # if (businessman.capital < (self.avgCapital * 0.5)):
-                businessman.subsidiaries += 50000 * self.politicsSwitcher.get("supportive", 0)
+            if businessman.capital < 10000 & self.governmentMoney - self.subsidyValue < 0:
+                businessman.subsidiaries += self.subsidyValue
+                self.governmentMoney -= self.subsidyValue
                 temp = [businessman.id, 0] # We put a pair instead of ID only because later on we will increment the counter to 3 days per subsidiary
                 self.subsidiariesStatus.append(temp)
                 print("Helping Businessman:" + str(businessman.id))
@@ -50,7 +55,8 @@ class Government():
     def regulateTax(self,company):
         if not self.isCompanyTaxed(company):
             if company.companyValue > self.avgCompanyValue:
-                company.taxes += 20
+                company.taxes += self.taxValue
+                self.governmentMoney += self.taxValue
                 temp = [company.id, 0]
                 self.taxesStatus.append(temp)
                 print("Taxing Company:" + str(company.id))
@@ -66,5 +72,5 @@ class Government():
         self.avgCompanyValue = averageCompany
         for bm in businessmenList:
             self.regulateSubsidiary(bm)
-            # for company in bm.companies:
-                # self.regulateTax(company)
+            for company in bm.companies:
+                self.regulateTax(company)
