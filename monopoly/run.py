@@ -22,9 +22,9 @@ if __name__ == "__main__":
     print("Businessman IDs:")
     print([bm.id for bm in env.listOfPeople])
 
-    # print companies id's
-    print("Company IDs:")
-    print([company.id for company in env.listOfCompanies])
+    # print companies categories
+    print("Company Categories:")
+    print([company.category for company in env.listOfCompanies])
 
     # print average capital and average happiness
     print("Average Capital:")
