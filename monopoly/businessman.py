@@ -32,7 +32,7 @@ class Businessman():
             return None
 
     def considerAction(self, company):
-        return company.price * 900 / self.capital
+        return self.capital / company.price * 900
 
     def negotiate(self):
         print("")

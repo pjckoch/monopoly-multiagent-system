@@ -4,7 +4,7 @@ from environment import Environment
 from plot_history import *
 import json
 
-days = 20
+days = 50
 
 class JsonEncoder(json.JSONEncoder):
         def default(self, o):
@@ -69,7 +69,7 @@ if __name__ == "__main__":
                     dailyProfits = []
 
                     for company in bm.companies:
-
+                        print("price:" + str(company.price))
                         dailyProfits.append(company.computeProfit())
                         company.computeCompanyValue()
 

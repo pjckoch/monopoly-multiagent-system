@@ -2,6 +2,7 @@ import numpy as np
 import random
 import pandas as pd
 from enum import Enum
+from django.utils.functional import cached_property
 
 company_list = "lists/companies.csv"
 
@@ -25,8 +26,9 @@ class Company():
         self.name = company_names[np.random.randint(0, numLines)]
         self.category = random.choice(list(BusinessCategory))
         self.turnOver = 0
-        self.fixedCost = 0.5 * self.necessity
-        self.variableCost = 0.5 * self.frequency
+        #self._price = price
+        self.fixedCost = 0.5 * self.price
+        self.variableCost = 0.01 * self.frequency * self.price
         self.taxes = 0
         self.profitHistory = []
         self.companyValue = 0
@@ -55,50 +57,53 @@ class Company():
         print(self.companyValue)
         return self.companyValue
 
-    @property
+    @cached_property
     def frequency(self):
         if self.category == BusinessCategory.MEDICAL:
-            return np.random.randint(1,3)                  #np.random number between 1 and 3
+            self._frequency = np.random.uniform(1,3)                  #np.random number between 1 and 3
         elif self.category == BusinessCategory.SUPERMARKET:
-            return np.random.randint(8,10)
+            self._frequency = np.random.uniform(9,10)
         elif self.category == BusinessCategory.RESTAURANT:
-            return np.random.randint(4,8)
+            self._frequency = np.random.uniform(4,8)
         elif self.category == BusinessCategory.ENTERTAINMENT:
-            return np.random.randint(2,6)
+            self._frequency = np.random.uniform(2,6)
         elif self.category == BusinessCategory.LUXURY:
-            return np.random.randint(1,3)
+            self._frequency = np.random.uniform(1,1.5)
         else:
             raise ValueError("Category invalid.")
+        return self._frequency
     
-    @property
+    @cached_property
     def necessity(self):
         if self.category == BusinessCategory.MEDICAL:
-            return np.random.randint(8,10)
+            self._necessity = np.random.uniform(9,10)
         elif self.category == BusinessCategory.SUPERMARKET:
-            return np.random.randint(7,9)
+            self._necessity = np.random.uniform(7,9)
         elif self.category == BusinessCategory.RESTAURANT:
-            return np.random.randint(3,5)
+            self._necessity = np.random.uniform(3,5)
         elif self.category == BusinessCategory.ENTERTAINMENT:
-            return np.random.randint(1,3)
+            self._necessity = np.random.uniform(1,3)
         elif self.category == BusinessCategory.LUXURY:
-            return np.random.randint(1,2)
+            self._necessity = 1.0
         else:
             raise ValueError("Category invalid.")
+        return self._necessity
 
-    @property
+    @cached_property
     def price(self):
         if self.category == BusinessCategory.MEDICAL:
-            return 10 * np.random.randn() + 200 		        # sig * randn + mu
+            self._price = 10 * np.random.randn() + 150 		        # sig * randn + mu
         elif self.category == BusinessCategory.SUPERMARKET:
-            return 2 * np.random.randn() + 10
+            self._price = 2 * np.random.randn() + 10
         elif self.category == BusinessCategory.RESTAURANT:
-            return 5 * np.random.randn() + 25
+            self._price = 5 * np.random.randn() + 30
         elif self.category == BusinessCategory.ENTERTAINMENT:
-            return 5 * np.random.randn() + 25
+            self._price = 5 * np.random.randn() + 40
         elif self.category == BusinessCategory.LUXURY:
-            return 100 * np.random.randn() + 300
+            self._price = 40 * np.random.randn() + 200
         else:
             raise ValueError("Category invalid.")
+        return self._price
 
 
 class BusinessCategory(str, Enum):
