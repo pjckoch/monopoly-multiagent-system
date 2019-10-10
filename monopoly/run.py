@@ -46,13 +46,11 @@ if __name__ == "__main__":
                 action = bm.chooseAction(companyForEvaluation)
                 bm.dailyActions.append(action)
 
-                print("Businessman " + str(bm.id) + " Action:")
+                # display the momentary actions
+                act_description = action.name if action else "None"
 
-                # Either display the momentary actions
-                # if action is not None:
-                    # print(action.id)
-                # else:
-                    # print("No action")
+                print("Businessman " + str(bm.id) + " Action: "+ act_description)
+
             env.time = round(time, 1)
             print("Days passed: " + str(env.time))
 

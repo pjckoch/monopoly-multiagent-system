@@ -26,7 +26,6 @@ class Company():
         self.name = company_names[np.random.randint(0, numLines)]
         self.category = random.choice(list(BusinessCategory))
         self.turnOver = 0
-        #self._price = price
         self.fixedCost = 0.5 * self.price
         self.variableCost = 0.01 * self.frequency * self.price
         self.taxes = 0
@@ -35,14 +34,6 @@ class Company():
 
     def computeProfit(self):
         profit = self.turnOver - self.taxes - self.variableCost - self.fixedCost
-        # print("PROFIT " + str(self.id))
-        # print("price: " + str(self.price))
-        # print("turnOver: " + str(self.turnOver))
-        # print("taxes: " + str(self.taxes))
-        # print("variableCost: " + str(self.variableCost))
-        # print("fixedCost: " + str(self.fixedCost))
-        # print("RESULT: " + str(profit))
-        # print("-----------------------")
         self.profitHistory.append(profit)
         self.turnOver = 0
         return profit
@@ -60,15 +51,15 @@ class Company():
     @cached_property
     def frequency(self):
         if self.category == BusinessCategory.MEDICAL:
-            self._frequency = np.random.uniform(1,3)                  #np.random number between 1 and 3
+            self._frequency = 0.1
         elif self.category == BusinessCategory.SUPERMARKET:
-            self._frequency = np.random.uniform(9,10)
+            self._frequency = 0.45
         elif self.category == BusinessCategory.RESTAURANT:
-            self._frequency = np.random.uniform(4,8)
+            self._frequency = 0.2
         elif self.category == BusinessCategory.ENTERTAINMENT:
-            self._frequency = np.random.uniform(2,6)
+            self._frequency = 0.2
         elif self.category == BusinessCategory.LUXURY:
-            self._frequency = np.random.uniform(1,1.5)
+            self._frequency = 0.05
         else:
             raise ValueError("Category invalid.")
         return self._frequency
@@ -76,15 +67,15 @@ class Company():
     @cached_property
     def necessity(self):
         if self.category == BusinessCategory.MEDICAL:
-            self._necessity = np.random.uniform(9,10)
+            self._necessity = 0.9
         elif self.category == BusinessCategory.SUPERMARKET:
-            self._necessity = np.random.uniform(7,9)
+            self._necessity = 0.8
         elif self.category == BusinessCategory.RESTAURANT:
-            self._necessity = np.random.uniform(3,5)
+            self._necessity = 0.4
         elif self.category == BusinessCategory.ENTERTAINMENT:
-            self._necessity = np.random.uniform(1,3)
+            self._necessity = 0.3
         elif self.category == BusinessCategory.LUXURY:
-            self._necessity = 1.0
+            self._necessity = 0.1
         else:
             raise ValueError("Category invalid.")
         return self._necessity
@@ -103,8 +94,13 @@ class Company():
             self._price = 40 * np.random.randn() + 200
         else:
             raise ValueError("Category invalid.")
-        return self._price
+        return self._price * (1 + self.quality)
 
+    @cached_property
+    def quality(self):
+        self._quality = np.random.uniform(0.0, 1.0)                 # 0.0: low, 1.0: high quality
+        return self._quality
+        
 
 class BusinessCategory(str, Enum):
 
