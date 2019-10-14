@@ -43,7 +43,35 @@ class Businessman():
     def declareBancrupcy(self):
         print("")
 
-    def invest(self):
+    def offerForCompany(self, company, price):
+        print(self.happiness)
+        if price >= company.companyValue:
+            if self.happiness < 60:
+                return price
+        return 0 
+    
+    def considerInvestment(self, avgCapital, possibleInvestments):
+        if avgCapital - self.capital > 0:
+            for cmp in possibleInvestments:
+                if self.capital/1.5 > cmp.computeCompanyValue():
+                    if random.randint(1,101) > 80 and (avgCapital - self.capital) / avgCapital > 0.1:
+                        return cmp
+            print("")
+
+    def invest(self, env):
+        categories = []
+        for cmp in self.companies:
+            categories.append(cmp.category)
+        
+        possibleInvestments = env.findCompaniesByCategory(categories)
+
+        company = self.considerInvestment(env.avgCapital, possibleInvestments)
+
+        if company != None:
+            owner = env.findCompanyOwner(company)
+            price = owner.offerForCompany(company, company.companyValue)
+            if price > 0:
+                env.sellCompany(company, self, owner, price)
         print("")
 
     def foundCompany(self, companyId):

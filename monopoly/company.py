@@ -28,7 +28,7 @@ class Company():
         self.turnOver = 0
         #self._price = price
         self.fixedCost = 0.5 * self.price
-        self.variableCost = 0.01 * self.frequency * self.price
+        self.variableCost = 0.02 * self.frequency * self.price #0.01 makes it balanced
         self.taxes = 0
         self.profitHistory = []
         self.companyValue = 0
@@ -53,7 +53,7 @@ class Company():
     def computeCompanyValue(self):
         if (len(self.profitHistory) > 4):
             self.companyValue = self.profitHistory[-5] + self.profitHistory[-4] + self.profitHistory[-3] + self.profitHistory[-2] + self.profitHistory[-1]
-        print("COMPANY VALUE: " + str(self.id))
+        print("COMPANY " + str(self.id) + " VALUE :" )
         print(self.companyValue)
         return self.companyValue
 

@@ -46,6 +46,10 @@ if __name__ == "__main__":
                 action = bm.chooseAction(companyForEvaluation)
                 bm.dailyActions.append(action)
 
+                # assuming buying a new company counts as an investment
+                bm.invest(env)
+
+
                 print("Businessman " + str(bm.id) + " Action:")
 
                 # Either display the momentary actions

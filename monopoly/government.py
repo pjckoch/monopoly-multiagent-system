@@ -15,8 +15,8 @@ class Government():
         self.taxesStatus = []
         self.subsidiariesStatus = []
 
-        self.taxValue = 20
-        self.subsidyValue = 100
+        self.taxValue = 60 #20
+        self.subsidyValue = 50 #100
         self.governmentMoney = 0
 
     def startAuction(self, companyId):
@@ -32,7 +32,7 @@ class Government():
     def regulateSubsidiary(self,businessman):
         if not self.isPersonHelped(businessman):
             # if (businessman.capital < (self.avgCapital * 0.5)):
-            if businessman.capital < 10000 & self.governmentMoney - self.subsidyValue < 0:
+            if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:
                 businessman.subsidiaries += self.subsidyValue
                 self.governmentMoney -= self.subsidyValue
                 temp = [businessman.id, 0] # We put a pair instead of ID only because later on we will increment the counter to 3 days per subsidiary

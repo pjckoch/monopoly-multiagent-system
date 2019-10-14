@@ -15,7 +15,7 @@ class Environment():
     def __init__(self):
         self.numPeople = 3
         # self.gov = Government()
-        self.numCompanies = 1 * self.numPeople
+        self.numCompanies = 2 * self.numPeople
         self.government = Government()
         self.listOfPeople = [Businessman(i) for i in range(self.numPeople)]
         self.listOfCompanies = self.distributeCompanies()
@@ -81,3 +81,26 @@ class Environment():
             bm.foundCompany(bm.id)  # id of first company is sames as BM Id
 
         return [company for bman in self.listOfPeople for company in bman.companies]
+
+    def findCompaniesByCategory(self, categories):
+        companies = []
+        for cmp in self.listOfCompanies:
+            if cmp.category in categories:
+                companies.append(cmp)
+
+        return companies
+
+    def findCompanyOwner(self, company):
+        for bm in self.listOfPeople:
+            for cmp in bm.companies:
+                if cmp == company:
+                    return bm
+        return None
+
+    def sellCompany(self, company, buyer, seller, price):
+        seller.companies.remove(company)
+        buyer.companies.append(company)
+        seller.capital += price
+        buyer.capital -= price
+
+        print("Transaction: " + seller.name + "'s company " + company.name + " sold to " + buyer.name + " for " + str(price))
