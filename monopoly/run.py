@@ -52,11 +52,6 @@ if __name__ == "__main__":
 
                 print("Businessman " + str(bm.id) + " Action:")
 
-                # Either display the momentary actions
-                # if action is not None:
-                    # print(action.id)
-                # else:
-                    # print("No action")
             env.time = round(time, 1)
             print("Days passed: " + str(env.time))
 
