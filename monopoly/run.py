@@ -69,7 +69,8 @@ if __name__ == "__main__":
 
                     for company in bm.companies:
                         print("price:" + str(company.price))
-                        dailyProfits.append(company.computeProfit())
+                        cmpProfit = company.computeProfit()
+                        dailyProfits.append(cmpProfit)
                         company.computeCompanyValue()
 
 
@@ -80,6 +81,12 @@ if __name__ == "__main__":
                     bm.capital += sum(dailyProfits) + bm.subsidiaries
                     env.addCapitalForBM(bm.id, bm.capital)
 
+                print(env.listOfCompanies)
+
+                for cmp in env.listOfCompanies:
+                    cmpProfit = cmp.computeProfit()
+                    env.addProfitsForCompany(cmp.id, cmpProfit)
+
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
                 averageCompany = env.computeAverageCompanyValue()
@@ -87,4 +94,4 @@ if __name__ == "__main__":
                 print("Government Money: " + str(env.government.governmentMoney))
 
     # plot profit history and capital
-    plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
+    plot_all(env.peopleCapitalDict, env.peopleProfitDict, env.companiesProfitDict, numDays = days)
