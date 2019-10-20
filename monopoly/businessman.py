@@ -48,8 +48,8 @@ class Businessman():
         if price >= company.companyValue:
             if self.happiness < 60:
                 return price
-        return 0 
-    
+        return 0
+
     def considerInvestment(self, avgCapital, possibleInvestments):
         if avgCapital - self.capital > 0:
             for cmp in possibleInvestments:
@@ -58,11 +58,13 @@ class Businessman():
                         return cmp
             print("")
 
+
+    # TODO: Add investments in own companies, Create a new company, Buy a new company
     def invest(self, env):
         categories = []
         for cmp in self.companies:
             categories.append(cmp.category)
-        
+
         possibleInvestments = env.findCompaniesByCategory(categories)
 
         company = self.considerInvestment(env.avgCapital, possibleInvestments)
@@ -74,7 +76,7 @@ class Businessman():
                 env.sellCompany(company, self, owner, price)
         print("")
 
-    def foundCompany(self, companyId):
+    def createCompany(self, companyId):
         """Creates a new company belonging to the businessman who founds it."""
         company = Company(companyId)
         self.companies.append(company)

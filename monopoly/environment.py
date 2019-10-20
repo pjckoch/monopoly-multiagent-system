@@ -76,9 +76,9 @@ class Environment():
 
 
     def distributeCompanies(self):
-        """Makes every businessman found his first company for himself."""
+        """Makes every businessman to create his first company for himself."""
         for bm in self.listOfPeople:
-            bm.foundCompany(bm.id)  # id of first company is sames as BM Id
+            bm.createCompany(bm.id)  # id of first company is sames as BM Id
 
         return [company for bman in self.listOfPeople for company in bman.companies]
 
