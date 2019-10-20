@@ -19,14 +19,21 @@
     "listOfPeople": [
         {
             "id": 0,
+<<<<<<< HEAD
             "name": "Natal Girod",
             "capital": 10289.041080002744,
             "happiness": 42.145017563373315,
+=======
+            "name": "Henry Avramov",
+            "capital": 7498.476003983704,
+            "happiness": 41.789138004331605,
+>>>>>>> develop
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 0,
+<<<<<<< HEAD
                     "name": "Klocko-Sipes",
                     "category": "MEDICAL",
                     "turnOver": 0,
@@ -38,6 +45,19 @@
                     "_frequency": 0.1,
                     "frequency": 0.1,
                     "variableCost": 0.4889814555363271,
+=======
+                    "name": "Goodwin Ltd",
+                    "category": "ENTERTAINMENT",
+                    "turnOver": 0,
+                    "_price": 35.322311364701505,
+                    "_quality": 0.48043333523885623,
+                    "quality": 0.48043333523885623,
+                    "price": 52.29232722199041,
+                    "fixedCost": 26.146163610995206,
+                    "_frequency": 0.2,
+                    "frequency": 0.2,
+                    "variableCost": 0.20916930888796165,
+>>>>>>> develop
                     "taxes": 0,
                     "profitHistory": [],
                     "companyValue": 0
@@ -47,14 +67,21 @@
         },
         {
             "id": 1,
+<<<<<<< HEAD
             "name": "Ardeen Wybrow",
             "capital": 8425.54366998977,
             "happiness": 50.58291372557561,
+=======
+            "name": "Frazer Hefner",
+            "capital": 10151.437513766,
+            "happiness": 48.22311844754085,
+>>>>>>> develop
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 1,
+<<<<<<< HEAD
                     "name": "Sanford, Denesik and Eichmann",
                     "category": "SUPERMARKET",
                     "turnOver": 0,
@@ -66,6 +93,19 @@
                     "_frequency": 0.45,
                     "frequency": 0.45,
                     "variableCost": 0.1372284110088203,
+=======
+                    "name": "Legros-Crist",
+                    "category": "LUXURY",
+                    "turnOver": 0,
+                    "_price": 257.83867905111146,
+                    "_quality": 0.7634762318004048,
+                    "quality": 0.7634762318004048,
+                    "price": 454.69238214544805,
+                    "fixedCost": 227.34619107272403,
+                    "_frequency": 0.05,
+                    "frequency": 0.05,
+                    "variableCost": 0.45469238214544805,
+>>>>>>> develop
                     "taxes": 0,
                     "profitHistory": [],
                     "companyValue": 0
@@ -75,14 +115,21 @@
         },
         {
             "id": 2,
+<<<<<<< HEAD
             "name": "Zahara Pennington",
             "capital": 11579.746514491933,
             "happiness": 44.44402497858063,
+=======
+            "name": "Malanie Maccaddie",
+            "capital": 10390.634192502448,
+            "happiness": 70.71969587104402,
+>>>>>>> develop
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 2,
+<<<<<<< HEAD
                     "name": "Shanahan, Predovic and West",
                     "category": "MEDICAL",
                     "turnOver": 0,
@@ -94,6 +141,19 @@
                     "_frequency": 0.1,
                     "frequency": 0.1,
                     "variableCost": 0.3516788421172124,
+=======
+                    "name": "Lueilwitz, Wolf and Glover",
+                    "category": "RESTAURANT",
+                    "turnOver": 0,
+                    "_price": 22.07350099901835,
+                    "_quality": 0.187471629938459,
+                    "quality": 0.187471629938459,
+                    "price": 26.211656209752526,
+                    "fixedCost": 13.105828104876263,
+                    "_frequency": 0.2,
+                    "frequency": 0.2,
+                    "variableCost": 0.10484662483901011,
+>>>>>>> develop
                     "taxes": 0,
                     "profitHistory": [],
                     "companyValue": 0
@@ -105,6 +165,7 @@
     "listOfCompanies": [
         {
             "id": 0,
+<<<<<<< HEAD
             "name": "Klocko-Sipes",
             "category": "MEDICAL",
             "turnOver": 0,
@@ -116,12 +177,26 @@
             "_frequency": 0.1,
             "frequency": 0.1,
             "variableCost": 0.4889814555363271,
+=======
+            "name": "Goodwin Ltd",
+            "category": "ENTERTAINMENT",
+            "turnOver": 0,
+            "_price": 35.322311364701505,
+            "_quality": 0.48043333523885623,
+            "quality": 0.48043333523885623,
+            "price": 52.29232722199041,
+            "fixedCost": 26.146163610995206,
+            "_frequency": 0.2,
+            "frequency": 0.2,
+            "variableCost": 0.20916930888796165,
+>>>>>>> develop
             "taxes": 0,
             "profitHistory": [],
             "companyValue": 0
         },
         {
             "id": 1,
+<<<<<<< HEAD
             "name": "Sanford, Denesik and Eichmann",
             "category": "SUPERMARKET",
             "turnOver": 0,
@@ -133,12 +208,26 @@
             "_frequency": 0.45,
             "frequency": 0.45,
             "variableCost": 0.1372284110088203,
+=======
+            "name": "Legros-Crist",
+            "category": "LUXURY",
+            "turnOver": 0,
+            "_price": 257.83867905111146,
+            "_quality": 0.7634762318004048,
+            "quality": 0.7634762318004048,
+            "price": 454.69238214544805,
+            "fixedCost": 227.34619107272403,
+            "_frequency": 0.05,
+            "frequency": 0.05,
+            "variableCost": 0.45469238214544805,
+>>>>>>> develop
             "taxes": 0,
             "profitHistory": [],
             "companyValue": 0
         },
         {
             "id": 2,
+<<<<<<< HEAD
             "name": "Shanahan, Predovic and West",
             "category": "MEDICAL",
             "turnOver": 0,
@@ -150,6 +239,19 @@
             "_frequency": 0.1,
             "frequency": 0.1,
             "variableCost": 0.3516788421172124,
+=======
+            "name": "Lueilwitz, Wolf and Glover",
+            "category": "RESTAURANT",
+            "turnOver": 0,
+            "_price": 22.07350099901835,
+            "_quality": 0.187471629938459,
+            "quality": 0.187471629938459,
+            "price": 26.211656209752526,
+            "fixedCost": 13.105828104876263,
+            "_frequency": 0.2,
+            "frequency": 0.2,
+            "variableCost": 0.10484662483901011,
+>>>>>>> develop
             "taxes": 0,
             "profitHistory": [],
             "companyValue": 0
@@ -157,14 +259,24 @@
     ],
     "numActions": 2,
     "suicideCount": 0,
+<<<<<<< HEAD
     "avgHappiness": 45.72398542250985,
     "avgCapital": 10098.110421494815,
+=======
+    "avgHappiness": 53.57731744097216,
+    "avgCapital": 9346.849236750719,
+>>>>>>> develop
     "peopleProfitDict": {
         "0": [],
         "1": [],
         "2": []
     },
     "peopleCapitalDict": {
+        "0": [],
+        "1": [],
+        "2": []
+    },
+    "companiesProfitDict": {
         "0": [],
         "1": [],
         "2": []
