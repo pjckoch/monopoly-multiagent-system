@@ -50,17 +50,18 @@ if __name__ == "__main__":
                 bm.invest(env)
 
 
-                print("Businessman " + str(bm.id) + " Action:")
+                # print("Businessman " + str(bm.id) + " Action:")
 
             env.time = round(time, 1)
+            print("-----------||-----------")
             print("Days passed: " + str(env.time))
 
             if env.time % 1.0 == 0.0 :
 
                 # Or display the daily auctions
-                for bm in stillALiveBms:
-                    bm.displayDailyActions()
-                    bm.dailyActions = []
+                # for bm in stillALiveBms:
+                #     bm.displayDailyActions()
+                #     bm.dailyActions = []
 
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
@@ -68,7 +69,7 @@ if __name__ == "__main__":
                     dailyProfits = []
 
                     for company in bm.companies:
-                        print("price:" + str(company.price))
+                        # print("price:" + str(company.price))
                         cmpProfit = company.computeProfit()
                         dailyProfits.append(cmpProfit)
                         company.computeCompanyValue()
@@ -81,7 +82,7 @@ if __name__ == "__main__":
                     bm.capital += sum(dailyProfits) + bm.subsidiaries
                     env.addCapitalForBM(bm.id, bm.capital)
 
-                print(env.listOfCompanies)
+                # print(env.listOfCompanies)
 
                 for cmp in env.listOfCompanies:
                     cmpProfit = cmp.computeProfit()

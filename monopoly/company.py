@@ -38,14 +38,14 @@ class Company():
         self.turnOver = 0
         return profit
 
-    def updateTaxes(self):
-        print("")
+    # def updateTaxes(self):
+    #     print("")
 
     def computeCompanyValue(self):
         if (len(self.profitHistory) > 4):
             self.companyValue = self.profitHistory[-5] + self.profitHistory[-4] + self.profitHistory[-3] + self.profitHistory[-2] + self.profitHistory[-1]
-        print("COMPANY " + str(self.id) + " VALUE :" )
-        print(self.companyValue)
+        # print("COMPANY " + str(self.id) + " VALUE :" )
+        # print(self.companyValue)
         return self.companyValue
 
     @cached_property
@@ -63,7 +63,7 @@ class Company():
         else:
             raise ValueError("Category invalid.")
         return self._frequency
-    
+
     @cached_property
     def necessity(self):
         if self.category == BusinessCategory.MEDICAL:
@@ -100,7 +100,7 @@ class Company():
     def quality(self):
         self._quality = np.random.uniform(0.0, 1.0)                 # 0.0: low, 1.0: high quality
         return self._quality
-        
+
 
 class BusinessCategory(str, Enum):
 

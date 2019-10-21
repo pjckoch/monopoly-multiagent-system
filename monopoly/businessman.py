@@ -44,7 +44,6 @@ class Businessman():
         print("")
 
     def offerForCompany(self, company, price):
-        print(self.happiness)
         if price >= company.companyValue:
             if self.happiness < 60:
                 return price
@@ -58,9 +57,29 @@ class Businessman():
                         return cmp
             print("")
 
+    def investOwnCompany(self, price):
+        cmpList = self.companies
 
-    # TODO: Add investments in own companies, Create a new company, Buy a new company
-    def invest(self, env):
+        worstCmpValue = 9999
+        worstCmp = None
+        for cmp in cmpList:
+            if cmp.companyValue < worstCmpValue:
+                worstCmpValue = cmp.companyValue
+                worstCmp = cmp
+        if worstCmp != None:
+            worstCmp.frequency = worstCmp.frequency  - 1
+            worstCmp.necessity = worstCmp.necessity - 1
+            # self.capital -= price
+            print("BM " + str(self.id) + " made an investment in company " + str(worstCmp.id))
+
+
+    # Calculates the best investment (Buy a Company from another BM, Create a New One or Invest in one of his own companies)
+    def evaluateInvestments(self, env):
+        option = "none"
+        buyCompPrice = 1000000
+        owner = None
+
+        # Calculate Buy Company Price
         categories = []
         for cmp in self.companies:
             categories.append(cmp.category)
@@ -71,10 +90,53 @@ class Businessman():
 
         if company != None:
             owner = env.findCompanyOwner(company)
-            price = owner.offerForCompany(company, company.companyValue)
-            if price > 0:
-                env.sellCompany(company, self, owner, price)
-        print("")
+            buyCompPrice = owner.offerForCompany(company, company.companyValue)
+            if buyCompPrice < 0:
+                buyCompPrice = 1000000
+
+        # Calculate Investment Price (Regulated By The Government)
+        investPrice = env.government.investOwnCompPrice
+
+        # Calculate Create Company Price (Regulated By The Government)
+        createCompPrice = env.government.startCompPrice
+
+        # Return best option
+        if (buyCompPrice < investPrice and  buyCompPrice < createCompPrice):
+            option = "Buy Company"
+            price = buyCompPrice
+        elif (investPrice < buyCompPrice and  investPrice < createCompPrice):
+            option = "Invest"
+            price = investPrice
+        else:
+            option = "Create Company"
+            price = createCompPrice
+
+        ret = []
+        ret.append(option)
+        ret.append(price)
+        ret.append(owner)
+        ret.append(company)
+        return ret
+
+
+    # TODO: Add investments in own companies, Create a new company, Buy a new company
+    def invest(self, env):
+        evaluation = self.evaluateInvestments(env)
+        print("EVALUATION OPTION: " + str(evaluation[0]))
+        print("EVALUATION Price: " + str(evaluation[1]))
+        if (self.capital > evaluation[1]):
+            # Buy an existing company
+            if (evaluation[0]  == "Buy Company"):
+                if evaluation[1] > 0:
+                    env.sellCompany(evaluation[3], self, evaluation[2], evaluation[1])
+            # Investing in own company
+            elif (evaluation[0]  == "Invest"):
+                self.investOwnCompany(evaluation[1])
+            # Create a new company
+            elif (evaluation[0]  == "Create Company"):
+                print()
+        # else:
+        #     print("No Investment")
 
     def createCompany(self, companyId):
         """Creates a new company belonging to the businessman who founds it."""
