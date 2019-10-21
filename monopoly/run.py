@@ -97,4 +97,4 @@ if __name__ == "__main__":
                     print(bm.capital)
 
     # plot profit history and capital
-    plot_all(env.peopleCapitalDict, env.peopleProfitDict, env.companiesProfitDict, numDays = days)
+    plot_all(env.peopleCapitalDict, env.peopleProfitDict, env.companiesProfitDict, env.companiesTypeIds, numDays = days)

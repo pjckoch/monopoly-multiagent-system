@@ -21,14 +21,21 @@
     "listOfPeople": [
         {
             "id": 0,
+<<<<<<< HEAD
             "name": "Lynnea Nazer",
             "capital": 8668.06944430759,
             "happiness": 60.38323220038892,
+=======
+            "name": "Louisa Avramovic",
+            "capital": 12166.627604008414,
+            "happiness": 48.6065294797598,
+>>>>>>> develop
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 0,
+<<<<<<< HEAD
                     "name": "Haag Group",
                     "category": "LUXURY",
                     "turnOver": 0,
@@ -40,6 +47,19 @@
                     "_frequency": 0.05,
                     "frequency": 0.05,
                     "variableCost": 0.33728722792610194,
+=======
+                    "name": "Mosciski-Weber",
+                    "category": "LUXURY",
+                    "turnOver": 0,
+                    "_price": 248.57382994535124,
+                    "_quality": 0.4614569232621548,
+                    "quality": 0.4614569232621548,
+                    "price": 363.2799447154231,
+                    "fixedCost": 181.63997235771154,
+                    "_frequency": 0.05,
+                    "frequency": 0.05,
+                    "variableCost": 0.3632799447154231,
+>>>>>>> develop
                     "taxes": 0,
                     "profitHistory": [],
                     "companyValue": 0,
@@ -50,14 +70,21 @@
         },
         {
             "id": 1,
+<<<<<<< HEAD
             "name": "Wainwright Lemary",
             "capital": 8062.322341439581,
             "happiness": 47.2829819886345,
+=======
+            "name": "Courtney Brute",
+            "capital": 9291.731707713887,
+            "happiness": 57.229192780613694,
+>>>>>>> develop
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 1,
+<<<<<<< HEAD
                     "name": "Walsh Ltd",
                     "category": "MEDICAL",
                     "turnOver": 0,
@@ -69,6 +96,19 @@
                     "_frequency": 0.1,
                     "frequency": 0.1,
                     "variableCost": 0.5353831132056747,
+=======
+                    "name": "Barrows, Gutmann and Heathcote",
+                    "category": "MEDICAL",
+                    "turnOver": 0,
+                    "_price": 149.8200511719864,
+                    "_quality": 0.9579988842463264,
+                    "quality": 0.9579988842463264,
+                    "price": 293.34749303247685,
+                    "fixedCost": 146.67374651623842,
+                    "_frequency": 0.1,
+                    "frequency": 0.1,
+                    "variableCost": 0.5866949860649537,
+>>>>>>> develop
                     "taxes": 0,
                     "profitHistory": [],
                     "companyValue": 0,
@@ -79,14 +119,21 @@
         },
         {
             "id": 2,
+<<<<<<< HEAD
             "name": "Abigail Redborn",
             "capital": 9448.94405927851,
             "happiness": 54.54867314736749,
+=======
+            "name": "Tedra O' Donohue",
+            "capital": 11984.709800087334,
+            "happiness": 63.26554131569011,
+>>>>>>> develop
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 2,
+<<<<<<< HEAD
                     "name": "Hudson LLC",
                     "category": "RESTAURANT",
                     "turnOver": 0,
@@ -98,6 +145,19 @@
                     "_frequency": 0.2,
                     "frequency": 0.2,
                     "variableCost": 0.21543035895057316,
+=======
+                    "name": "Lesch PLC",
+                    "category": "ENTERTAINMENT",
+                    "turnOver": 0,
+                    "_price": 37.05424709538845,
+                    "_quality": 0.8357416524293519,
+                    "quality": 0.8357416524293519,
+                    "price": 68.0220247924139,
+                    "fixedCost": 34.01101239620695,
+                    "_frequency": 0.2,
+                    "frequency": 0.2,
+                    "variableCost": 0.2720880991696556,
+>>>>>>> develop
                     "taxes": 0,
                     "profitHistory": [],
                     "companyValue": 0,
@@ -110,6 +170,7 @@
     "listOfCompanies": [
         {
             "id": 0,
+<<<<<<< HEAD
             "name": "Haag Group",
             "category": "LUXURY",
             "turnOver": 0,
@@ -121,6 +182,19 @@
             "_frequency": 0.05,
             "frequency": 0.05,
             "variableCost": 0.33728722792610194,
+=======
+            "name": "Mosciski-Weber",
+            "category": "LUXURY",
+            "turnOver": 0,
+            "_price": 248.57382994535124,
+            "_quality": 0.4614569232621548,
+            "quality": 0.4614569232621548,
+            "price": 363.2799447154231,
+            "fixedCost": 181.63997235771154,
+            "_frequency": 0.05,
+            "frequency": 0.05,
+            "variableCost": 0.3632799447154231,
+>>>>>>> develop
             "taxes": 0,
             "profitHistory": [],
             "companyValue": 0,
@@ -128,6 +202,7 @@
         },
         {
             "id": 1,
+<<<<<<< HEAD
             "name": "Walsh Ltd",
             "category": "MEDICAL",
             "turnOver": 0,
@@ -139,6 +214,19 @@
             "_frequency": 0.1,
             "frequency": 0.1,
             "variableCost": 0.5353831132056747,
+=======
+            "name": "Barrows, Gutmann and Heathcote",
+            "category": "MEDICAL",
+            "turnOver": 0,
+            "_price": 149.8200511719864,
+            "_quality": 0.9579988842463264,
+            "quality": 0.9579988842463264,
+            "price": 293.34749303247685,
+            "fixedCost": 146.67374651623842,
+            "_frequency": 0.1,
+            "frequency": 0.1,
+            "variableCost": 0.5866949860649537,
+>>>>>>> develop
             "taxes": 0,
             "profitHistory": [],
             "companyValue": 0,
@@ -146,6 +234,7 @@
         },
         {
             "id": 2,
+<<<<<<< HEAD
             "name": "Hudson LLC",
             "category": "RESTAURANT",
             "turnOver": 0,
@@ -157,6 +246,19 @@
             "_frequency": 0.2,
             "frequency": 0.2,
             "variableCost": 0.21543035895057316,
+=======
+            "name": "Lesch PLC",
+            "category": "ENTERTAINMENT",
+            "turnOver": 0,
+            "_price": 37.05424709538845,
+            "_quality": 0.8357416524293519,
+            "quality": 0.8357416524293519,
+            "price": 68.0220247924139,
+            "fixedCost": 34.01101239620695,
+            "_frequency": 0.2,
+            "frequency": 0.2,
+            "variableCost": 0.2720880991696556,
+>>>>>>> develop
             "taxes": 0,
             "profitHistory": [],
             "companyValue": 0,
@@ -165,8 +267,13 @@
     ],
     "numActions": 2,
     "suicideCount": 0,
+<<<<<<< HEAD
     "avgHappiness": 54.0716291121303,
     "avgCapital": 8726.445281675227,
+=======
+    "avgHappiness": 56.367087858687874,
+    "avgCapital": 11147.689703936543,
+>>>>>>> develop
     "peopleProfitDict": {
         "0": [],
         "1": [],
@@ -181,6 +288,19 @@
         "0": [],
         "1": [],
         "2": []
+    },
+    "companiesTypeIds": {
+        "MEDICAL": [
+            1
+        ],
+        "SUPERMARKET": [],
+        "RESTAURANT": [],
+        "ENTERTAINMENT": [
+            2
+        ],
+        "LUXURY": [
+            0
+        ]
     },
     "time": 0
 }
