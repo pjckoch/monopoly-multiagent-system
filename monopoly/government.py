@@ -1,3 +1,5 @@
+import random
+
 class Government():
     """An intelligent agent that interacts with other agents in order to regulate the happiness."""
 
@@ -6,9 +8,9 @@ class Government():
     def __init__(self):
         self.politics = "supportive"
         self.politicsSwitcher = {
-            "supportive": 0.5,
+            "supportive": 1,
             "neutral": 0,
-            "competitive": -0.5,
+            "competitive": -1,
         }
         self.avgCapital = 0
         self.avgCompanyValue = 0
@@ -19,7 +21,7 @@ class Government():
         self.subsidyValue = 50 #100
         self.governmentMoney = 0
         self.startCompPrice = 9000
-        self.investOwnCompPrice = 8000
+        self.investOwnCompPrice = 3000
 
     def startAuction(self, companyId):
         return None
@@ -53,6 +55,14 @@ class Government():
                 return True
         return False
 
+    def ejectCapital(self,bm):
+        if bm.capital < 7000 and self.politics == "supportive":
+            bm.companies[0].investmentLevel = bm.companies[0].investmentLevel + 1
+        if bm.capital < 5000 and self.politics == "neutral":
+            bm.capital = 5000 + random.randint(0, 400)
+        if bm.capital < 1500 and self.politics == "competitive":
+            bm.capital = 0 + random.randint(0, 1500)
+
     #TODO: improve
     def regulateTax(self,company):
         if not self.isCompanyTaxed(company):
@@ -74,5 +84,6 @@ class Government():
         self.avgCompanyValue = averageCompany
         for bm in businessmenList:
             self.regulateSubsidiary(bm)
+            self.ejectCapital(bm)
             for company in bm.companies:
                 self.regulateTax(company)

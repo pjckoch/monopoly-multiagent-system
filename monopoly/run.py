@@ -93,6 +93,8 @@ if __name__ == "__main__":
                 averageCompany = env.computeAverageCompanyValue()
                 env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 print("Government Money: " + str(env.government.governmentMoney))
+                for bm in env.listOfPeople:
+                    print(bm.capital)
 
     # plot profit history and capital
     plot_all(env.peopleCapitalDict, env.peopleProfitDict, env.companiesProfitDict, numDays = days)

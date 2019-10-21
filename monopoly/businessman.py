@@ -69,7 +69,8 @@ class Businessman():
         if worstCmp != None:
             worstCmp.frequency = worstCmp.frequency  - 1
             worstCmp.necessity = worstCmp.necessity - 1
-            # self.capital -= price
+            worstCmp.investmentLevel = worstCmp.investmentLevel + 1
+            self.capital -= price
             print("BM " + str(self.id) + " made an investment in company " + str(worstCmp.id))
 
 
@@ -101,10 +102,10 @@ class Businessman():
         createCompPrice = env.government.startCompPrice
 
         # Return best option
-        if (buyCompPrice < investPrice and  buyCompPrice < createCompPrice):
+        if (buyCompPrice < investPrice and  buyCompPrice < createCompPrice and env.government.politics == "competitive"):
             option = "Buy Company"
             price = buyCompPrice
-        elif (investPrice < buyCompPrice and  investPrice < createCompPrice):
+        elif (investPrice < buyCompPrice and  investPrice < createCompPrice and env.government.politics == "neutral?"):
             option = "Invest"
             price = investPrice
         else:
@@ -122,15 +123,18 @@ class Businessman():
     # TODO: Add investments in own companies, Create a new company, Buy a new company
     def invest(self, env):
         evaluation = self.evaluateInvestments(env)
-        print("EVALUATION OPTION: " + str(evaluation[0]))
-        print("EVALUATION Price: " + str(evaluation[1]))
         if (self.capital > evaluation[1]):
             # Buy an existing company
             if (evaluation[0]  == "Buy Company"):
                 if evaluation[1] > 0:
+                    print("EVALUATION OPTION: " + str(evaluation[0]))
+                    print("EVALUATION Price: " + str(evaluation[1]))
                     env.sellCompany(evaluation[3], self, evaluation[2], evaluation[1])
             # Investing in own company
-            elif (evaluation[0]  == "Invest"):
+            # TODO: Remove Only investing in first company
+            elif (evaluation[0]  == "Invest" and self.companies[0].investmentLevel == 0):
+                print("EVALUATION OPTION: " + str(evaluation[0]))
+                print("EVALUATION Price: " + str(evaluation[1]))
                 self.investOwnCompany(evaluation[1])
             # Create a new company
             elif (evaluation[0]  == "Create Company"):
