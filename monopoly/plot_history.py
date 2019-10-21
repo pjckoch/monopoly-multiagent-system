@@ -29,7 +29,7 @@ active1 = []
 active2 = []
 currentDay = 0
 
-def plot_all(peopleCapitalDict, peopleProfitDict, companiesProfitDict, numDays):
+def plot_all(peopleCapitalDict, peopleProfitDict, companiesProfitDict, companiesTypeIds, numDays):
 
     bmIds = list(peopleProfitDict.keys())
     line_labels = ['BM ' + str(id) for id in bmIds]
@@ -81,11 +81,13 @@ def plot_all(peopleCapitalDict, peopleProfitDict, companiesProfitDict, numDays):
                 l.set_visible(True)
 
         for i, clr in zip(range(len(cmpIds)), colors2):
-            l, = ax3.plot(days[0:day], dailyCmpProfits[i, 0:day], color=clr, label=i)
+            g, = ax3.plot(days[0:day], dailyCmpProfits[i, 0:day], color=clr, label=i)
             l3.append(l)
 
-            if l.get_label() not in active2:
-                l.set_visible(False)
+            if int(g.get_label()) not in active2:
+                g.set_visible(False)
+            else:
+                g.set_visible(True)
 
         fig.legend([l1, l2],     # The line objects
            labels=line_labels,   # The labels for each line
@@ -117,8 +119,13 @@ def plot_all(peopleCapitalDict, peopleProfitDict, companiesProfitDict, numDays):
             
     def submit2(text):
         global active2
-        if hasattr(BusinessCategory, text.upper()):
-            active2 = text.upper()
+        print(companiesTypeIds)
+        key = text.upper()
+        if key in companiesTypeIds:
+            active2 = companiesTypeIds[text.upper()]
+            print(active2)
+        else:
+            active2 = []
 
     anim = FuncAnimation(fig, update, frames=range(numDays), repeat=False)
     axbox1 = plt.axes([0.1, 0.58, 0.1, 0.075])

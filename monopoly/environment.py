@@ -1,5 +1,6 @@
 import random
 from company import Company
+from company import BusinessCategory
 from government import Government
 from businessman import Businessman
 # from government import Government
@@ -26,6 +27,7 @@ class Environment():
         self.peopleProfitDict = {}
         self.peopleCapitalDict = {}
         self.companiesProfitDict = {}
+        self.companiesTypeIds = {}
         self.time = 0
 
         # initialize peopleProfitMatrix --> each bm has empty list of profits
@@ -36,6 +38,11 @@ class Environment():
         for cmp in self.listOfCompanies:
             self.companiesProfitDict[cmp.id] = []
 
+        for item in list(BusinessCategory):
+            self.companiesTypeIds[item] = []
+
+        for cmp in self.listOfCompanies:
+            self.companiesTypeIds[cmp.category].append(cmp.id)
 
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
