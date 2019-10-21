@@ -83,15 +83,15 @@ class Company():
     @cached_property
     def price(self):
         if self.category == BusinessCategory.MEDICAL:
-            self._price = 10 * np.random.randn() + 150 		        # sig * randn + mu
+            self._price = 10 * np.random.randn() + 100 		        # sig * randn + mu
         elif self.category == BusinessCategory.SUPERMARKET:
             self._price = 2 * np.random.randn() + 10
         elif self.category == BusinessCategory.RESTAURANT:
-            self._price = 5 * np.random.randn() + 30
+            self._price = 5 * np.random.randn() + 35
         elif self.category == BusinessCategory.ENTERTAINMENT:
             self._price = 5 * np.random.randn() + 40
         elif self.category == BusinessCategory.LUXURY:
-            self._price = 40 * np.random.randn() + 200
+            self._price = 40 * np.random.randn() + 300
         else:
             raise ValueError("Category invalid.")
         return self._price * (1 + self.quality)

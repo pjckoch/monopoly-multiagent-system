@@ -40,10 +40,9 @@ if __name__ == "__main__":
 
             stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
             for bm in stillALiveBms:
-
                 # choose randomly
-                companyForEvaluation = env.listOfCompanies[random.randint(0, len(env.listOfCompanies)-1)]
-                action = bm.chooseAction(companyForEvaluation)
+                companiesForEvaluation = env.listOfCompanies
+                action = bm.chooseAction(companiesForEvaluation)
                 bm.dailyActions.append(action)
 
                 # display the momentary actions

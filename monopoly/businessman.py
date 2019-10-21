@@ -1,7 +1,7 @@
 import numpy as np
-import random
 import pandas as pd
-from company import Company
+from company import Company, BusinessCategory
+import random
 
 name_list = "lists/names.csv"
 
@@ -14,7 +14,7 @@ class Businessman():
 
     def __init__(self, businessmanId):
         self.id = businessmanId
-        self.name = full_names[random.randint(1, numLines)]
+        self.name = full_names[np.random.randint(1, numLines)]
         self.capital = 1000 * np.random.randn() + 10000		# sig * randn + mu
         self.happiness = 10 * np.random.randn() + 50		# sig * randn + mu
         self.isAlive = True
@@ -22,16 +22,21 @@ class Businessman():
         self.companies = []
         self.dailyActions = []
 
-    def chooseAction(self, company):
-        aux = self.considerAction(company)
-        if self.considerAction(company) > 0.3:
+    def chooseAction(self, companies):
+        category = random.choice(list(BusinessCategory))
+        aux = self.considerAction(category, companies)
+        if self.considerAction(companies) > 0.3:
             self.capital -= company.price
             company.turnOver += company.price #temporary way, change to transaction function
             return company
         else:
             return None
 
-    def considerAction(self, company):
+    def considerAction(self, category, companies):
+        companiesFromCategory = [c for c in companies if c.category == category]
+        print(category)
+        print(companiesFromCategory)
+        company = random.choice(companiesFromCategory)
         return self.capital / company.price * 900
 
     def negotiate(self):
