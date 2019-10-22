@@ -3,12 +3,15 @@ import random
 from environment import Environment
 from plot_history import *
 import json
+from enum import Enum
 
-days = 50
+days = 10
 
 class JsonEncoder(json.JSONEncoder):
-        def default(self, o):
-            return o.__dict__
+        def default(self, obj):
+            if isinstance(obj, Enum):
+                return obj.name  # Could also be obj.value
+            return obj.__dict__
 
 if __name__ == "__main__":
 
@@ -45,20 +48,22 @@ if __name__ == "__main__":
                 action = bm.chooseAction(companiesForEvaluation)
                 bm.dailyActions.append(action)
 
-                # display the momentary actions
-                act_description = action.name if action else "None"
+                # assuming buying a new company counts as an investment
+                bm.invest(env)
 
-                print("Businessman " + str(bm.id) + " Action: "+ act_description)
+
+                # print("Businessman " + str(bm.id) + " Action:")
 
             env.time = round(time, 1)
+            print("-----------||-----------")
             print("Days passed: " + str(env.time))
 
             if env.time % 1.0 == 0.0 :
 
                 # Or display the daily auctions
-                for bm in stillALiveBms:
-                    bm.displayDailyActions()
-                    bm.dailyActions = []
+                # for bm in stillALiveBms:
+                #     bm.displayDailyActions()
+                #     bm.dailyActions = []
 
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
@@ -66,8 +71,9 @@ if __name__ == "__main__":
                     dailyProfits = []
 
                     for company in bm.companies:
-                        print("price:" + str(company.price))
-                        dailyProfits.append(company.computeProfit())
+                        # print("price:" + str(company.price))
+                        cmpProfit = company.computeProfit()
+                        dailyProfits.append(cmpProfit)
                         company.computeCompanyValue()
 
 
@@ -78,11 +84,19 @@ if __name__ == "__main__":
                     bm.capital += sum(dailyProfits) + bm.subsidiaries
                     env.addCapitalForBM(bm.id, bm.capital)
 
+                # print(env.listOfCompanies)
+
+                for cmp in env.listOfCompanies:
+                    cmpProfit = cmp.computeProfit()
+                    env.addProfitsForCompany(cmp.id, cmpProfit)
+
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
                 averageCompany = env.computeAverageCompanyValue()
                 env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 print("Government Money: " + str(env.government.governmentMoney))
+                for bm in env.listOfPeople:
+                    print(bm.capital)
 
     # plot profit history and capital
-    plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
+    plot_all(env.peopleCapitalDict, env.peopleProfitDict, env.companiesProfitDict, env.companiesTypeIds, numDays = days)

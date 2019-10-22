@@ -4,6 +4,7 @@ import pandas as pd
 from enum import Enum
 from django.utils.functional import cached_property
 
+
 company_list = "lists/companies.csv"
 
 df = pd.read_csv(company_list)
@@ -25,59 +26,41 @@ class Company():
         self.id = companyId
         self.name = company_names[np.random.randint(0, numLines)]
         self.category = random.choice(list(BusinessCategory))
+        # call frequency and necessity to add the to the JSON config
+        self.frequency
+        self.necessity
         self.turnOver = 0
         self.fixedCost = 0.5 * self.price
-        self.variableCost = 0.01 * self.frequency * self.price
+        self.variableCost = 0.02 * self.frequency * self.price #0.01 makes it balanced
         self.taxes = 0
         self.profitHistory = []
         self.companyValue = 0
+        self.investmentLevel = 0
 
     def computeProfit(self):
-        profit = self.turnOver - self.taxes - self.variableCost - self.fixedCost
+        profit = self.turnOver - self.taxes - self.variableCost - self.fixedCost + 100 * self.investmentLevel
         self.profitHistory.append(profit)
         self.turnOver = 0
         return profit
 
-    def updateTaxes(self):
-        print("")
+    # def updateTaxes(self):
+    #     print("")
 
     def computeCompanyValue(self):
         if (len(self.profitHistory) > 4):
             self.companyValue = self.profitHistory[-5] + self.profitHistory[-4] + self.profitHistory[-3] + self.profitHistory[-2] + self.profitHistory[-1]
-        print("COMPANY VALUE: " + str(self.id))
-        print(self.companyValue)
+        # print("COMPANY " + str(self.id) + " VALUE :" )
+        # print(self.companyValue)
         return self.companyValue
 
-    @cached_property
+    @property
     def frequency(self):
-        if self.category == BusinessCategory.MEDICAL:
-            self._frequency = 0.1
-        elif self.category == BusinessCategory.SUPERMARKET:
-            self._frequency = 0.45
-        elif self.category == BusinessCategory.RESTAURANT:
-            self._frequency = 0.2
-        elif self.category == BusinessCategory.ENTERTAINMENT:
-            self._frequency = 0.2
-        elif self.category == BusinessCategory.LUXURY:
-            self._frequency = 0.05
-        else:
-            raise ValueError("Category invalid.")
+        self._frequency = self.category.value[0]
         return self._frequency
-    
-    @cached_property
+
+    @property
     def necessity(self):
-        if self.category == BusinessCategory.MEDICAL:
-            self._necessity = 0.9
-        elif self.category == BusinessCategory.SUPERMARKET:
-            self._necessity = 0.8
-        elif self.category == BusinessCategory.RESTAURANT:
-            self._necessity = 0.4
-        elif self.category == BusinessCategory.ENTERTAINMENT:
-            self._necessity = 0.3
-        elif self.category == BusinessCategory.LUXURY:
-            self._necessity = 0.1
-        else:
-            raise ValueError("Category invalid.")
+        self._necessity = self.category.value[1]
         return self._necessity
 
     @cached_property
@@ -100,12 +83,13 @@ class Company():
     def quality(self):
         self._quality = np.random.uniform(0.0, 1.0)                 # 0.0: low, 1.0: high quality
         return self._quality
-        
 
-class BusinessCategory(str, Enum):
 
-    MEDICAL = 'MEDICAL'
-    SUPERMARKET = 'SUPERMARKET'
-    RESTAURANT = 'RESTAURANT'
-    ENTERTAINMENT = 'ENTERTAINMENT'
-    LUXURY = 'LUXURY'
+class BusinessCategory(Enum):
+
+    # Name = (Frequency, Necessity)
+    MEDICAL = (0.1, 0.9)
+    SUPERMARKET = (0.45, 0.8)
+    RESTAURANT = (0.2, 0.4)
+    ENTERTAINMENT = (0.2, 0.3)
+    LUXURY = (0.05, 0.1)

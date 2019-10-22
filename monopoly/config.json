@@ -1,102 +1,107 @@
 {
     "numPeople": 3,
-    "numCompanies": 3,
+    "numCompanies": 6,
     "government": {
         "politics": "supportive",
         "politicsSwitcher": {
-            "supportive": 0.5,
+            "supportive": 1,
             "neutral": 0,
-            "competitive": -0.5
+            "competitive": -1
         },
         "avgCapital": 0,
         "avgCompanyValue": 0,
         "taxesStatus": [],
         "subsidiariesStatus": [],
-        "taxValue": 20,
-        "subsidyValue": 100,
-        "governmentMoney": 0
+        "taxValue": 60,
+        "subsidyValue": 50,
+        "governmentMoney": 0,
+        "startCompPrice": 9000,
+        "investOwnCompPrice": 3000
     },
     "listOfPeople": [
         {
             "id": 0,
-            "name": "Jeremy Zamora",
-            "capital": 9843.808283071605,
-            "happiness": 63.0285281066123,
+            "name": "Denver Parsonage",
+            "capital": 8987.94210924137,
+            "happiness": 57.48401168292474,
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 0,
-                    "name": "Leffler, Boyle and Pollich",
-                    "category": "SUPERMARKET",
+                    "name": "Barton LLC",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
                     "turnOver": 0,
-                    "_price": 12.921561278185635,
-                    "_quality": 0.7680019343860495,
-                    "quality": 0.7680019343860495,
-                    "price": 22.845345335120076,
-                    "fixedCost": 11.422672667560038,
-                    "_frequency": 0.45,
-                    "frequency": 0.45,
-                    "variableCost": 0.10280405400804035,
+                    "_price": 41.89800468781915,
+                    "_quality": 0.6821263712129857,
+                    "quality": 0.6821263712129857,
+                    "price": 70.4777385865859,
+                    "fixedCost": 35.23886929329295,
+                    "variableCost": 0.2819109543463436,
                     "taxes": 0,
                     "profitHistory": [],
-                    "companyValue": 0
+                    "companyValue": 0,
+                    "investmentLevel": 0
                 }
             ],
             "dailyActions": []
         },
         {
             "id": 1,
-            "name": "Verina Somner",
-            "capital": 9987.638286030246,
-            "happiness": 38.75340932444328,
+            "name": "Keely Schroeder",
+            "capital": 9820.260153903137,
+            "happiness": 58.596987384814966,
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 1,
-                    "name": "Jaskolski and Sons",
-                    "category": "RESTAURANT",
+                    "name": "Purdy, Dooley and Heidenreich",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
                     "turnOver": 0,
-                    "_price": 30.05753334670167,
-                    "_quality": 0.17830356159614724,
-                    "quality": 0.17830356159614724,
-                    "price": 35.416898595213546,
-                    "fixedCost": 17.708449297606773,
-                    "_frequency": 0.2,
-                    "frequency": 0.2,
-                    "variableCost": 0.0708337971904271,
+                    "_price": 302.7706988446249,
+                    "_quality": 0.17175301180169777,
+                    "quality": 0.17175301180169777,
+                    "price": 354.772478256494,
+                    "fixedCost": 177.386239128247,
+                    "variableCost": 0.35477247825649405,
                     "taxes": 0,
                     "profitHistory": [],
-                    "companyValue": 0
+                    "companyValue": 0,
+                    "investmentLevel": 0
                 }
             ],
             "dailyActions": []
         },
         {
             "id": 2,
-            "name": "Dredi Makeswell",
-            "capital": 12007.632112863303,
-            "happiness": 47.18376610354512,
+            "name": "Morse Jankovic",
+            "capital": 9274.572731722734,
+            "happiness": 45.18635810908886,
             "isAlive": true,
             "subsidiaries": 0,
             "companies": [
                 {
                     "id": 2,
-                    "name": "Pollich Inc",
+                    "name": "Purdy and Sons",
                     "category": "SUPERMARKET",
-                    "turnOver": 0,
-                    "_price": 10.088361138493283,
-                    "_quality": 0.5660499146476758,
-                    "quality": 0.5660499146476758,
-                    "price": 15.798877099872337,
-                    "fixedCost": 7.899438549936169,
                     "_frequency": 0.45,
-                    "frequency": 0.45,
-                    "variableCost": 0.07109494694942553,
+                    "_necessity": 0.8,
+                    "turnOver": 0,
+                    "_price": 7.14966338725611,
+                    "_quality": 0.763720230389075,
+                    "quality": 0.763720230389075,
+                    "price": 12.610005956575682,
+                    "fixedCost": 6.305002978287841,
+                    "variableCost": 0.11349005360918116,
                     "taxes": 0,
                     "profitHistory": [],
-                    "companyValue": 0
+                    "companyValue": 0,
+                    "investmentLevel": 0
                 }
             ],
             "dailyActions": []
@@ -105,60 +110,63 @@
     "listOfCompanies": [
         {
             "id": 0,
-            "name": "Leffler, Boyle and Pollich",
-            "category": "SUPERMARKET",
+            "name": "Barton LLC",
+            "category": "RESTAURANT",
+            "_frequency": 0.2,
+            "_necessity": 0.4,
             "turnOver": 0,
-            "_price": 12.921561278185635,
-            "_quality": 0.7680019343860495,
-            "quality": 0.7680019343860495,
-            "price": 22.845345335120076,
-            "fixedCost": 11.422672667560038,
-            "_frequency": 0.45,
-            "frequency": 0.45,
-            "variableCost": 0.10280405400804035,
+            "_price": 41.89800468781915,
+            "_quality": 0.6821263712129857,
+            "quality": 0.6821263712129857,
+            "price": 70.4777385865859,
+            "fixedCost": 35.23886929329295,
+            "variableCost": 0.2819109543463436,
             "taxes": 0,
             "profitHistory": [],
-            "companyValue": 0
+            "companyValue": 0,
+            "investmentLevel": 0
         },
         {
             "id": 1,
-            "name": "Jaskolski and Sons",
-            "category": "RESTAURANT",
+            "name": "Purdy, Dooley and Heidenreich",
+            "category": "LUXURY",
+            "_frequency": 0.05,
+            "_necessity": 0.1,
             "turnOver": 0,
-            "_price": 30.05753334670167,
-            "_quality": 0.17830356159614724,
-            "quality": 0.17830356159614724,
-            "price": 35.416898595213546,
-            "fixedCost": 17.708449297606773,
-            "_frequency": 0.2,
-            "frequency": 0.2,
-            "variableCost": 0.0708337971904271,
+            "_price": 302.7706988446249,
+            "_quality": 0.17175301180169777,
+            "quality": 0.17175301180169777,
+            "price": 354.772478256494,
+            "fixedCost": 177.386239128247,
+            "variableCost": 0.35477247825649405,
             "taxes": 0,
             "profitHistory": [],
-            "companyValue": 0
+            "companyValue": 0,
+            "investmentLevel": 0
         },
         {
             "id": 2,
-            "name": "Pollich Inc",
+            "name": "Purdy and Sons",
             "category": "SUPERMARKET",
-            "turnOver": 0,
-            "_price": 10.088361138493283,
-            "_quality": 0.5660499146476758,
-            "quality": 0.5660499146476758,
-            "price": 15.798877099872337,
-            "fixedCost": 7.899438549936169,
             "_frequency": 0.45,
-            "frequency": 0.45,
-            "variableCost": 0.07109494694942553,
+            "_necessity": 0.8,
+            "turnOver": 0,
+            "_price": 7.14966338725611,
+            "_quality": 0.763720230389075,
+            "quality": 0.763720230389075,
+            "price": 12.610005956575682,
+            "fixedCost": 6.305002978287841,
+            "variableCost": 0.11349005360918116,
             "taxes": 0,
             "profitHistory": [],
-            "companyValue": 0
+            "companyValue": 0,
+            "investmentLevel": 0
         }
     ],
     "numActions": 2,
     "suicideCount": 0,
-    "avgHappiness": 49.655234511533564,
-    "avgCapital": 10613.026227321718,
+    "avgHappiness": 53.75578572560952,
+    "avgCapital": 9360.924998289081,
     "peopleProfitDict": {
         "0": [],
         "1": [],
@@ -168,6 +176,24 @@
         "0": [],
         "1": [],
         "2": []
+    },
+    "companiesProfitDict": {
+        "0": [],
+        "1": [],
+        "2": []
+    },
+    "companiesTypeIds": {
+        "MEDICAL": [],
+        "SUPERMARKET": [
+            2
+        ],
+        "RESTAURANT": [
+            0
+        ],
+        "ENTERTAINMENT": [],
+        "LUXURY": [
+            1
+        ]
     },
     "time": 0
 }
