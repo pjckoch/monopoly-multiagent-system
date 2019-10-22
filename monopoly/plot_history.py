@@ -67,7 +67,10 @@ def plot_all(peopleCapitalDict, peopleProfitDict, companiesProfitDict, companies
         ax2.clear()
         ax3.clear()
         # labels = [('BM' + str(bm.id)) for bm in businessmen]
-        l1 = ax1.pie(capitalArr[:,day], autopct= lambda p: int(p/100.*capitalArr[:,day].sum()), shadow=True, startangle=90, colors=colors1)
+        if len(bmIds) < 5:
+            l1 = ax1.pie(capitalArr[:,day], autopct= lambda p: int(p/100.*capitalArr[:,day].sum()), shadow=True, startangle=90, colors=colors1)
+        else:
+            l1 = ax1.pie(capitalArr[:,day], autopct='', shadow=True, startangle=90, colors=colors1)
         ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
         ax1.set_title('Capital Day ' + str(day+1))
 

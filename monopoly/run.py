@@ -5,7 +5,7 @@ from plot_history import *
 import json
 from enum import Enum
 
-days = 10
+days = 50
 
 class JsonEncoder(json.JSONEncoder):
         def default(self, obj):
@@ -47,7 +47,7 @@ if __name__ == "__main__":
                 companiesForEvaluation = env.listOfCompanies
                 action = bm.chooseAction(companiesForEvaluation)
                 if action in bm.companies:
-                    print("Action of BM " + str(bm.id) + ": " + str(action.category.name) + ", own company <<" + str(action.name) + ">>")
+                    print("Action of BM " + str(bm.id) + ": " + str(action.category.name) + ", OWN Company <<" + str(action.name) + ">>")
                 elif action:
                     print("Action of BM " + str(bm.id) + ": " + str(action.category.name) + ", <<" + str(action.name) + ">>")
                 else:
@@ -102,7 +102,7 @@ if __name__ == "__main__":
                 env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 print("Government Money: " + str(env.government.governmentMoney))
                 for bm in env.listOfPeople:
-                    print(bm.capital)
+                    print(round(bm.capital,0))
 
     # plot profit history and capital
     plot_all(env.peopleCapitalDict, env.peopleProfitDict, env.companiesProfitDict, env.companiesTypeIds, numDays = days)
