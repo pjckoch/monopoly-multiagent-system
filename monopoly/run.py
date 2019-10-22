@@ -5,7 +5,7 @@ from plot_history import *
 import json
 from enum import Enum
 
-days = 100
+days = 10
 
 class JsonEncoder(json.JSONEncoder):
         def default(self, obj):
@@ -46,7 +46,12 @@ if __name__ == "__main__":
                 # choose randomly
                 companiesForEvaluation = env.listOfCompanies
                 action = bm.chooseAction(companiesForEvaluation)
-                print("action: " + str(action))
+                if action in bm.companies:
+                    print("Action of BM " + str(bm.id) + ": " + str(action.category.name) + ", own company <<" + str(action.name) + ">>")
+                elif action:
+                    print("Action of BM " + str(bm.id) + ": " + str(action.category.name) + ", <<" + str(action.name) + ">>")
+                else:
+                    print("Action of BM " + str(bm.id) + ": NONE")
                 bm.dailyActions.append(action)
 
                 # assuming buying a new company counts as an investment

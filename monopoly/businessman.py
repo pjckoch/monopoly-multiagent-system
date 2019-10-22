@@ -23,13 +23,10 @@ class Businessman():
         self.dailyActions = []
 
     def chooseAction(self, companies):
-        allCategories = list(BusinessCategory)
         # choose a category randomly based on the frequency (probability)
-        category = random.choices(population = allCategories, weights = [cat.value[0] for cat in allCategories])[0]
+        category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
-        if company:
-            print("ConsiderAction: " + str(self.considerAction(company)))
         if company and self.considerAction(company) > 0.3:
             self.capital -= company.price
             company.turnOver += company.price #temporary way, change to transaction function
@@ -40,15 +37,31 @@ class Businessman():
     def considerAction(self, company):
         return self.capital * company.necessity**2 / company.price
 
+    def chooseCategory(self):
+            allCategories = list(BusinessCategory)
+            # pick from the categories list according to the frequency as weights (probability)
+            return random.choices(population = allCategories, weights = [cat.value[0] for cat in allCategories])[0]
+
     def chooseCompany(self, category, companies):
         companiesFromCategory = [c for c in companies if c.category == category]
         # catch the case that there is no company in that category
         if not companiesFromCategory:
             return None
-        company = random.choice(companiesFromCategory)  # to be more intelligent in the future
+        # check if the businessman owns a company of that type himself, increasing the probability that he goes there
+        bmsCompaniesOfThisCategory = [i for i in range(len(self.companies)) if self.companies[i].category == category]
+        # if he has a company of that type, he chooses it with 90 % probability
+        if bmsCompaniesOfThisCategory and decision(0.9):
+            # pick randomly from all his companies that belong to this particular category
+            companyIdx = random.choice(bmsCompaniesOfThisCategory)
+            company = self.companies[companyIdx]
+        # otherwise evaluate the quality of the other companies
+        else:
+            company = self.pickAccordingToQuality(companiesFromCategory)
         return company
 
-
+    def pickAccordingToQuality(self, companiesFromCategory):
+        # pick randomly from the companies list according to the quality as weights (probability)
+        return random.choices(population = companiesFromCategory, weights = [comp.quality for comp in companiesFromCategory])[0]
 
     def negotiate(self):
         print("")
@@ -171,3 +184,7 @@ class Businessman():
                 print(action.id)
             else:
                 print("No Action")
+
+
+def decision(probability):
+    return np.random.random() < probability
