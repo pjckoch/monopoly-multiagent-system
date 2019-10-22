@@ -34,9 +34,6 @@ class Businessman():
         else:
             return None
 
-    def considerAction(self, company):
-        return self.capital * company.necessity**2 / company.price
-
     def chooseCategory(self):
             allCategories = list(BusinessCategory)
             # pick from the categories list according to the frequency as weights (probability)
@@ -62,6 +59,9 @@ class Businessman():
     def pickAccordingToQuality(self, companiesFromCategory):
         # pick randomly from the companies list according to the quality as weights (probability)
         return random.choices(population = companiesFromCategory, weights = [comp.quality for comp in companiesFromCategory])[0]
+    
+    def considerAction(self, company):
+        return self.capital * company.necessity**2 / company.price
 
     def negotiate(self):
         print("")
