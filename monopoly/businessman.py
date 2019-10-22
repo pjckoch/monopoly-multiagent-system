@@ -84,7 +84,6 @@ class Businessman():
                 if self.capital/1.5 > cmp.computeCompanyValue():
                     if random.randint(1,101) > 80 and (avgCapital - self.capital) / avgCapital > 0.1:
                         return cmp
-            print("")
 
     def investOwnCompany(self, price):
         cmpList = self.companies
@@ -166,8 +165,8 @@ class Businessman():
                 print("EVALUATION Price: " + str(evaluation[1]))
                 self.investOwnCompany(evaluation[1])
             # Create a new company
-            elif (evaluation[0]  == "Create Company"):
-                print()
+            # elif (evaluation[0]  == "Create Company"):
+                # print()
         # else:
         #     print("No Investment")
 
