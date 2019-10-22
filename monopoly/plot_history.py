@@ -7,7 +7,7 @@ from company import BusinessCategory
 import numpy as np
 
 
-pause_interval = 0.1
+pause_interval = 0.05
 
 
 fig = plt.figure('Monopoly')

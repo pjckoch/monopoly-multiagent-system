@@ -23,8 +23,13 @@ class Businessman():
         self.dailyActions = []
 
     def chooseAction(self, companies):
-        category = random.choice(list(BusinessCategory))
+        allCategories = list(BusinessCategory)
+        # choose a category randomly based on the frequency (probability)
+        category = random.choices(population = allCategories, weights = [cat.value[0] for cat in allCategories])[0]
+        # choose a company from that category
         company = self.chooseCompany(category, companies)
+        if company:
+            print("ConsiderAction: " + str(self.considerAction(company)))
         if company and self.considerAction(company) > 0.3:
             self.capital -= company.price
             company.turnOver += company.price #temporary way, change to transaction function
@@ -33,11 +38,10 @@ class Businessman():
             return None
 
     def considerAction(self, company):
-        return self.capital / company.price * 900
+        return self.capital * company.necessity**2 / company.price
 
     def chooseCompany(self, category, companies):
         companiesFromCategory = [c for c in companies if c.category == category]
-        print(category, companiesFromCategory)
         # catch the case that there is no company in that category
         if not companiesFromCategory:
             return None
