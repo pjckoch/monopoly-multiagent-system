@@ -3,7 +3,7 @@ from company import Company
 from company import BusinessCategory
 from government import Government
 from businessman import Businessman
-# from government import Government
+import pandas as pd
 
 # To be parametrized'
 # Wealth Distribution - Value from 0.1 to 1 (0.1 concentrated wealth; 1 distributed wealth)
@@ -28,6 +28,7 @@ class Environment():
         self.peopleCapitalDict = {}
         self.companiesProfitDict = {}
         self.companiesTypeIds = {}
+        self.dataframe = pd.DataFrame()
         self.time = 0
 
         # initialize peopleProfitMatrix --> each bm has empty list of profits
@@ -84,6 +85,7 @@ class Environment():
     def addCapitalForBM(self, bmId, capital):
         """Function to append a profit for a certain businessman to the peopleProfitDict"""
         self.peopleCapitalDict[bmId].append(capital)
+        
 
     def addProfitsForCompany(self, cmpId, profit):
         """Function to append a profit for a certain businessman to the peopleProfitDict"""

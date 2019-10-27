@@ -49,8 +49,6 @@ class Company():
     def computeCompanyValue(self):
         if (len(self.profitHistory) > 4):
             self.companyValue = self.profitHistory[-5] + self.profitHistory[-4] + self.profitHistory[-3] + self.profitHistory[-2] + self.profitHistory[-1]
-        # print("COMPANY " + str(self.id) + " VALUE :" )
-        # print(self.companyValue)
         return self.companyValue
 
     @property

@@ -4,8 +4,10 @@ from environment import Environment
 from plot_history import *
 import json
 from enum import Enum
+import data_manager
 
-days = 50
+days = 1800
+evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
 class JsonEncoder(json.JSONEncoder):
         def default(self, obj):
@@ -21,20 +23,6 @@ if __name__ == "__main__":
         json.dump(env, f, cls = JsonEncoder, indent=4)
         f.close()
 
-    # print businessmen id's
-    print("Businessman IDs:")
-    print([bm.id for bm in env.listOfPeople])
-
-    # print companies categories
-    print("Company Categories:")
-    print([company.category for company in env.listOfCompanies])
-
-    # print average capital and average happiness
-    print("Average Capital:")
-    print(env.avgCapital)
-    print("Average Happiness:")
-    print(env.avgHappiness)
-
     # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
 
@@ -46,12 +34,7 @@ if __name__ == "__main__":
                 # choose randomly
                 companiesForEvaluation = env.listOfCompanies
                 action = bm.chooseAction(companiesForEvaluation)
-                if action in bm.companies:
-                    print("Action of BM " + str(bm.id) + ": " + str(action.category.name) + ", OWN Company <<" + str(action.name) + ">>")
-                elif action:
-                    print("Action of BM " + str(bm.id) + ": " + str(action.category.name) + ", <<" + str(action.name) + ">>")
-                else:
-                    print("Action of BM " + str(bm.id) + ": NONE")
+
                 bm.dailyActions.append(action)
 
                 # assuming buying a new company counts as an investment
@@ -81,20 +64,13 @@ if __name__ == "__main__":
                         cmpProfit = company.computeProfit()
                         dailyProfits.append(cmpProfit)
                         company.computeCompanyValue()
-
-
-                    # append the new values into the peopleProfitDict
-                    env.addProfitsForBM(bm.id, dailyProfits)
+                        env.addProfitsForCompany(company.id, cmpProfit)
 
                     # compute the updated capital for the businessman and print
                     bm.capital += sum(dailyProfits) + bm.subsidiaries
-                    env.addCapitalForBM(bm.id, bm.capital)
 
-                # print(env.listOfCompanies)
-
-                for cmp in env.listOfCompanies:
-                    cmpProfit = cmp.computeProfit()
-                    env.addProfitsForCompany(cmp.id, cmpProfit)
+                if env.time % evaluationInterval.value == 0:
+                    data_manager.evaluateStats(time, evaluationInterval, env.listOfPeople)
 
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
@@ -105,4 +81,4 @@ if __name__ == "__main__":
                     print(round(bm.capital,0))
 
     # plot profit history and capital
-    plot_all(env.peopleCapitalDict, env.peopleProfitDict, env.companiesProfitDict, env.companiesTypeIds, numDays = days)
+    data_manager.exportToCSV()
