@@ -6,7 +6,7 @@ import json
 from enum import Enum
 import data_manager
 
-days = 1800
+days = 3600
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
 class JsonEncoder(json.JSONEncoder):
@@ -44,8 +44,8 @@ if __name__ == "__main__":
                 # print("Businessman " + str(bm.id) + " Action:")
 
             env.time = round(time, 1)
-            print("-----------||-----------")
-            print("Days passed: " + str(env.time))
+            # print("-----------||-----------")
+            # print("Days passed: " + str(env.time))
 
             if env.time % 1.0 == 0.0 :
 
@@ -76,9 +76,9 @@ if __name__ == "__main__":
                 env.computeAvgHappiness()
                 averageCompany = env.computeAverageCompanyValue()
                 env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
-                print("Government Money: " + str(env.government.governmentMoney))
-                for bm in env.listOfPeople:
-                    print(round(bm.capital,0))
+                # print("Government Money: " + str(env.government.governmentMoney))
+                # for bm in env.listOfPeople:
+                #     print(round(bm.capital,0))
 
     # plot profit history and capital
     data_manager.exportToCSV()

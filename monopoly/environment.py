@@ -15,11 +15,10 @@ class Environment():
 
     def __init__(self):
         self.numPeople = 10
-        # self.gov = Government()
-        self.numCompanies = 2 * self.numPeople
+        self.numCompanies = 4 * self.numPeople
         self.government = Government()
         self.listOfPeople = [Businessman(i) for i in range(self.numPeople)]
-        self.listOfCompanies = self.distributeCompanies()
+        self.listOfCompanies = []
         self.numActions = 2     # per day
         self.suicideCount = 0
         self.avgHappiness = 0
@@ -30,6 +29,8 @@ class Environment():
         self.companiesTypeIds = {}
         self.dataframe = pd.DataFrame()
         self.time = 0
+
+        self.distributeCompanies()
 
         # initialize peopleProfitMatrix --> each bm has empty list of profits
         for bm in self.listOfPeople:
@@ -93,12 +94,16 @@ class Environment():
 
 
     def distributeCompanies(self):
-        """Makes every businessman to create his first company for himself."""
-        for bm in self.listOfPeople:
-            bm.createCompany(bm.id)  # id of first company is sames as BM Id
-
-        return [company for bman in self.listOfPeople for company in bman.companies]
-
+        """Makes every businessman create his first company for himself."""
+        numCompaniesPerBm = self.numCompanies // len(self.listOfPeople)
+        remainingCompanies = self.numCompanies % len(self.listOfPeople)
+        for _ in range(numCompaniesPerBm):
+            for bm in self.listOfPeople:
+                self.listOfCompanies.append(bm.createCompany(len(self.listOfCompanies))) # id increments with every new company
+        for _ in range(remainingCompanies):
+            bm = random.choice(self.listOfPeople)
+            self.listOfCompanies.append(bm.createCompany(len(self.listOfCompanies)))
+            
     def findCompaniesByCategory(self, categories):
         companies = []
         for cmp in self.listOfCompanies:
