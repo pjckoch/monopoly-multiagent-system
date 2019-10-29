@@ -12,15 +12,22 @@ numLines = len(full_names)
 class Businessman():
     """An intelligent agent that interacts with other agents with the objective to maximize his capital."""
 
-    def __init__(self, businessmanId):
+    def __init__(self,
+                businessmanId,
+                name=full_names[np.random.randint(1, numLines)],
+                capital=1000 * np.random.randn() + 10000,
+                happiness=10 * np.random.randn() + 50,
+                isAlive=True,
+                subsidiaries=0,
+                companies=[]):
         self.id = businessmanId
-        self.name = full_names[np.random.randint(1, numLines)]
-        self.capital = 1000 * np.random.randn() + 10000		# sig * randn + mu
-        self.happiness = 10 * np.random.randn() + 50		# sig * randn + mu
-        self.isAlive = True
-        self.subsidiaries = 0
-        self.companies = []
+        self.isAlive = isAlive
+        self.subsidiaries = subsidiaries
+        self.companies = companies
         self.dailyActions = []
+        self.name = name
+        self.capital = capital
+        self.happiness = happiness
 
     def chooseAction(self, companies):
         # choose a category randomly based on the frequency (probability)

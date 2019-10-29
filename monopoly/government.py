@@ -9,11 +9,8 @@ class Government():
 
     def __init__(self):
         self.politics = PoliticsSwitcher.COMPETITIVE
-        # self.avgCapital = 0
-        # self.avgCompanyValue = 0
         self.taxesStatus = []
         self.subsidiariesStatus = []
-
         self.taxRate = 0.3
         self.subsidyValue = 50
         self.governmentMoney = 0

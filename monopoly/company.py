@@ -22,22 +22,54 @@ class Company():
     # The variable costs are higher based on how high the frequency is
     # Initial Taxes for every Company, then the government adjusts
 
-    def __init__(self, companyId):
+    def __init__(self,
+                 companyId,
+                 name=company_names[np.random.randint(0, numLines)],
+                 category=None,
+                 frequency=None,
+                 necessity=None,
+                 price=None,
+                 quality=None,
+                 turnOver=0,
+                 fixedCost=None,
+                 variableCost=None,
+                 taxes=0,
+                 companyValue=0,
+                 investmentLevel=0,
+                 bruttoProfitHistory=[],
+                 nettoProfitHistory=[],
+                 turnOverHistory=[]):
         self.id = companyId
-        self.name = company_names[np.random.randint(0, numLines)]
-        self.category = random.choice(list(BusinessCategory))
-        # call frequency and necessity to add the to the JSON config
-        self.frequency
-        self.necessity
-        self.turnOver = 0
-        self.fixedCost = 0.5 * self.price
-        self.variableCost = 0.02 * self.frequency * self.price #0.01 makes it balanced
-        self.taxes = 0
-        self.bruttoProfitHistory = []
-        self.nettoProfitHistory = []
-        self.turnOverHistory = []
-        self.companyValue = 0
-        self.investmentLevel = 0
+        self.name = name
+        self.category = random.choice(list(BusinessCategory)) if category is None else category
+        if frequency is None:
+            self.frequency = self.category.value[0]
+        else:
+            self.frequency = frequency
+        if necessity is None:
+            self.necessity = self.category.value[1]
+        else:
+            self.necessity = necessity
+        if price is None:
+            self.price
+        else:
+            self.price = price
+        if quality is None:
+            self.quality
+        else:
+            self.quality = quality
+        self.fixedCost = (0.5 * self.price) if fixedCost is None else fixedCost
+        self.variableCost = (0.02 * self.frequency * self.price) if variableCost is None else variableCost
+        self.turnOver = turnOver
+        self.fixedCost = fixedCost
+        self.variableCost =  variableCost
+        self.taxes = taxes
+        self.companyValue = companyValue
+        self.investmentLevel = investmentLevel
+        self.bruttoProfitHistory = bruttoProfitHistory
+        self.nettoProfitHistory = nettoProfitHistory
+        self.turnOverHistory = turnOverHistory
+
 
     def computeBruttoProfit(self):
         """Compute profit without considering taxes"""
@@ -61,13 +93,17 @@ class Company():
 
     @property
     def frequency(self):
-        self._frequency = self.category.value[0]
         return self._frequency
+    @frequency.setter
+    def frequency(self, value):
+        self._frequency = value
 
     @property
     def necessity(self):
-        self._necessity = self.category.value[1]
         return self._necessity
+    @necessity.setter
+    def necessity(self, value):
+        self._necessity = value
 
     @cached_property
     def price(self):

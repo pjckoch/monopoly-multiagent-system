@@ -59,14 +59,6 @@ class JsonEncoder(json.JSONEncoder):
                 }
             return obj.__dict__
 
-class JSONObject:
-  def __init__(self, obj):
-      vars(self).update(obj)
-
-def deserialize_objects(obj):
-    if '__class__' in obj:
-        obj = obj['__value__']
-
 def writeToJson(filepath, data):
     with open(filepath, 'w') as f:
         json.dump(data, f, cls = JsonEncoder, indent=4)
@@ -134,3 +126,50 @@ def appendToDataFrame(time, bm, turnOver, nettoProfit):
                        index = [dfIndex])
     df_total = df_total.append(df_part)
     dfIndex += 1
+
+
+def deserialize_objects(obj):
+    if '__class__' in obj:
+        objval = obj['__value__']
+        if obj['__class__'] == 'Company':
+            company = deserialize_company(objval) 
+            return company
+        elif obj['__class__'] == 'Businessman':
+            bm = deserialize_businessman(objval) 
+            print(bm.companies)    
+            return bm
+    return obj
+
+def deserialize_businessman(obj):
+    return businessman.Businessman(businessmanId = obj['id'],
+                                   name = obj['name'],
+                                   capital = obj['capital'],
+                                   happiness = obj['happiness'],
+                                   isAlive = obj['isAlive'],
+                                   subsidiaries = obj['subsidiaries'],
+                                   companies = obj['companies'])
+
+def deserialize_company(obj):
+    return company.Company(companyId = obj['id'],
+                           name = obj['name'],
+                           category = obj['category'],
+                           frequency = obj['_frequency'],
+                           necessity = obj['_necessity'],
+                           price = obj['price'],
+                           quality = obj['quality'],
+                           turnOver = obj['turnOver'],
+                           fixedCost = obj['fixedCost'],
+                           variableCost = obj['variableCost'],
+                           taxes = obj['taxes'],
+                           companyValue= obj['companyValue'],
+                           investmentLevel = obj['investmentLevel'],
+                           bruttoProfitHistory = obj['bruttoProfitHistory'],
+                           nettoProfitHistory = obj['nettoProfitHistory'],
+                           turnOverHistory = obj['turnOverHistory'])
+
+def deserialize_government(obj):
+    return government.Government()
+
+def deserialize_environment(obj):
+    print('')
+
