@@ -1,10 +1,13 @@
 import pandas as pd
 from enum import Enum
-from company import BusinessCategory
 import pandas as pd
 import datetime
 import json
 
+import company
+import environment
+import businessman
+import government
 
 filepath = ("statistics.csv")
 df_total = pd.DataFrame()
@@ -34,7 +37,35 @@ class JsonEncoder(json.JSONEncoder):
         def default(self, obj):
             if isinstance(obj, Enum):
                 return obj.name  # Could also be obj.value
+            elif isinstance(obj, environment.Environment):
+                return {
+                    '__class__': 'Environment',
+                    '__value__': obj.__dict__
+                }
+            elif isinstance(obj, businessman.Businessman):
+                return {
+                    '__class__': 'Businessman',
+                    '__value__': obj.__dict__
+                }
+            elif isinstance(obj, company.Company):
+                return {
+                    '__class__': 'Company',
+                    '__value__': obj.__dict__
+                }
+            elif isinstance(obj, government.Government):
+                return {
+                    '__class__': 'Government',
+                    '__value__': obj.__dict__
+                }
             return obj.__dict__
+
+class JSONObject:
+  def __init__(self, obj):
+      vars(self).update(obj)
+
+def deserialize_objects(obj):
+    if '__class__' in obj:
+        obj = obj['__value__']
 
 def writeToJson(filepath, data):
     with open(filepath, 'w') as f:
@@ -43,7 +74,7 @@ def writeToJson(filepath, data):
 
 def readFromJson(filepath):
     with open(filepath, 'r') as f:
-        data = json.loads(f, object_hook= JSONObject)
+        data = json.loads(f.read(), object_hook=deserialize_objects)
         f.close()
     return data
 
