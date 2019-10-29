@@ -129,7 +129,7 @@ class Company():
 
 class BusinessCategory(Enum):
 
-    # Name = (Frequency, Necessity)
+    """ Name = (Frequency, Necessity)"""
     MEDICAL = (0.1, 0.9)
     SUPERMARKET = (0.45, 0.8)
     RESTAURANT = (0.2, 0.4)

@@ -2,20 +2,29 @@ import random
 from enum import Enum
 import data_manager
 
+
 class Government():
     """An intelligent agent that interacts with other agents in order to regulate the happiness."""
 
     # Government Politics can be supportive, neutral or competitive
 
-    def __init__(self):
-        self.politics = PoliticsSwitcher.COMPETITIVE
-        self.taxesStatus = []
-        self.subsidiariesStatus = []
-        self.taxRate = 0.3
-        self.subsidyValue = 50
-        self.governmentMoney = 0
-        self.startCompPrice = 9000
-        self.investOwnCompPrice = 3000
+    def __init__(self,
+                 politics=None,
+                 taxesStatus=[],
+                 subsidiariesStatus=[],
+                 taxRate=0.3,
+                 subsidyValue=50,
+                 governmentMoney=0,
+                 startCompPrice=9000,
+                 investOwnCompPrice=3000):
+        self.politics = PoliticsSwitcher.SUPPORTIVE if politics is None else politics
+        self.taxesStatus = taxesStatus
+        self.subsidiariesStatus = subsidiariesStatus
+        self.taxRate = taxRate
+        self.subsidyValue = subsidyValue
+        self.governmentMoney = governmentMoney
+        self.startCompPrice = startCompPrice
+        self.investOwnCompPrice = investOwnCompPrice
 
     def startAuction(self, companyId):
         return None
@@ -83,7 +92,10 @@ class Government():
             for company in bm.companies:
                 self.regulateTax(company)
 
+
+
 class PoliticsSwitcher(Enum):
+
     """Defines the economical strategy of the government"""
     SUPPORTIVE = 1
     NEUTRAL = 0

@@ -19,7 +19,7 @@ class Environment():
         self.government = Government()
         self.listOfPeople = [Businessman(i) for i in range(self.numPeople)]
         self.listOfCompanies = []
-        self.numActions = 2     # per day
+        self.numActions = 2
         self.suicideCount = 0
         self.avgHappiness = 0
         self.avgCapital = 0

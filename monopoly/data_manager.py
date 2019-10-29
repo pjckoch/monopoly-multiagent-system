@@ -138,6 +138,9 @@ def deserialize_objects(obj):
             bm = deserialize_businessman(objval) 
             print(bm.companies)    
             return bm
+        elif obj['__class__'] == 'Government':
+            government = deserialize_government(objval) 
+            return government
     return obj
 
 def deserialize_businessman(obj):
@@ -150,9 +153,10 @@ def deserialize_businessman(obj):
                                    companies = obj['companies'])
 
 def deserialize_company(obj):
+    category = company.BusinessCategory[obj['category']]
     return company.Company(companyId = obj['id'],
                            name = obj['name'],
-                           category = obj['category'],
+                           category = category,
                            frequency = obj['_frequency'],
                            necessity = obj['_necessity'],
                            price = obj['price'],
@@ -168,7 +172,15 @@ def deserialize_company(obj):
                            turnOverHistory = obj['turnOverHistory'])
 
 def deserialize_government(obj):
-    return government.Government()
+    politics = government.PoliticsSwitcher[obj['politics']]
+    return government.Government(politics=politics,
+                                 taxesStatus=obj['taxesStatus'],
+                                 subsidiariesStatus=obj['subsidiariesStatus'],
+                                 taxRate=obj['taxRate'],
+                                 subsidyValue=obj['subsidyValue'],
+                                 governmentMoney=obj['governmentMoney'],
+                                 startCompPrice=obj['startCompPrice'],
+                                 investOwnCompPrice=obj['investOwnCompPrice'])
 
 def deserialize_environment(obj):
     print('')
