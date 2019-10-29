@@ -18,12 +18,11 @@ class Businessman():
                 capital=1000 * np.random.randn() + 10000,
                 happiness=10 * np.random.randn() + 50,
                 isAlive=True,
-                subsidiaries=0,
-                companies=[]):
+                subsidiaries=0):
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
-        self.companies = companies
+        self.companies = []
         self.dailyActions = []
         self.name = name
         self.capital = capital

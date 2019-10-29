@@ -8,9 +8,19 @@ import data_manager
 days = 3600
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
-def runFromJson(jsonFile):
+# def runFromJson(jsonFile):
 
-    env = data_manager.readFromJson(jsonFile)
+#     env = data_manager.readFromJson(jsonFile)
+
+    
+
+
+if __name__ == "__main__":
+
+    configFile = "config.json"
+    env = Environment()
+    data_manager.writeToJson(configFile, env)
+    # runFromJson(configFile)
 
     # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
@@ -71,14 +81,5 @@ def runFromJson(jsonFile):
     # plot profit history and capital
     data_manager.exportToCSV()
     # data_manager.writeToJson("results.json", env)
-
-
-if __name__ == "__main__":
-
-    configFile = "config.json"
-    env = Environment()
-
-    data_manager.writeToJson(configFile, env)
-    runFromJson(configFile)
 
     

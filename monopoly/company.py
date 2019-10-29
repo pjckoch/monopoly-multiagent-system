@@ -61,14 +61,12 @@ class Company():
         self.fixedCost = (0.5 * self.price) if fixedCost is None else fixedCost
         self.variableCost = (0.02 * self.frequency * self.price) if variableCost is None else variableCost
         self.turnOver = turnOver
-        self.fixedCost = fixedCost
-        self.variableCost =  variableCost
         self.taxes = taxes
         self.companyValue = companyValue
         self.investmentLevel = investmentLevel
-        self.bruttoProfitHistory = bruttoProfitHistory
-        self.nettoProfitHistory = nettoProfitHistory
-        self.turnOverHistory = turnOverHistory
+        self.bruttoProfitHistory = []
+        self.nettoProfitHistory = []
+        self.turnOverHistory = []
 
 
     def computeBruttoProfit(self):

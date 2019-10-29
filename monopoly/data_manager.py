@@ -104,11 +104,11 @@ def appendToDataFrame(time, bm, turnOver, nettoProfit):
     """Function to append a stats for a certain businessman to a given dataframe"""
     global dfIndex, df_total
 
-    numOfMedicals = sum(1 for comp in bm.companies if comp.category == BusinessCategory.MEDICAL)
-    numOfSupermarkets = sum(1 for comp in bm.companies if comp.category == BusinessCategory.SUPERMARKET)
-    numOfRestaurants = sum(1 for comp in bm.companies if comp.category == BusinessCategory.RESTAURANT)
-    numOfEntertainments = sum(1 for comp in bm.companies if comp.category == BusinessCategory.ENTERTAINMENT)
-    numOfLuxuries = sum(1 for comp in bm.companies if comp.category == BusinessCategory.LUXURY)
+    numOfMedicals = sum(1 for comp in bm.companies if comp.category == company.BusinessCategory.MEDICAL)
+    numOfSupermarkets = sum(1 for comp in bm.companies if comp.category == company.BusinessCategory.SUPERMARKET)
+    numOfRestaurants = sum(1 for comp in bm.companies if comp.category == company.BusinessCategory.RESTAURANT)
+    numOfEntertainments = sum(1 for comp in bm.companies if comp.category == company.BusinessCategory.ENTERTAINMENT)
+    numOfLuxuries = sum(1 for comp in bm.companies if comp.category == company.BusinessCategory.LUXURY)
 
     df_part = pd.DataFrame({"time": time,
                        "id": bm.id,
@@ -132,19 +132,17 @@ def deserialize_objects(obj):
     if '__class__' in obj:
         objval = obj['__value__']
         if obj['__class__'] == 'Company':
-            comp = deserialize_company(objval) 
-            return comp
+            des_obj = deserialize_company(objval) 
         elif obj['__class__'] == 'Businessman':
-            bm = deserialize_businessman(objval) 
-            return bm
+            des_obj = deserialize_businessman(objval)
         elif obj['__class__'] == 'Government':
-            gov = deserialize_government(objval)
-            return gov
+            des_obj = deserialize_government(objval)
         elif obj['__class__'] == 'Environment':
-            env = deserialize_environment(objval)
-            print(env.listOfPeople)
-            return env
-    return obj
+            des_obj = deserialize_environment(objval)
+        else:
+            des_obj = obj
+        obj.pop(des_obj)
+        return des_obj
 
 def deserialize_businessman(obj):
     return businessman.Businessman(businessmanId = obj['id'],
