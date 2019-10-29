@@ -132,15 +132,18 @@ def deserialize_objects(obj):
     if '__class__' in obj:
         objval = obj['__value__']
         if obj['__class__'] == 'Company':
-            company = deserialize_company(objval) 
-            return company
+            comp = deserialize_company(objval) 
+            return comp
         elif obj['__class__'] == 'Businessman':
             bm = deserialize_businessman(objval) 
-            print(bm.companies)    
             return bm
         elif obj['__class__'] == 'Government':
-            government = deserialize_government(objval) 
-            return government
+            gov = deserialize_government(objval)
+            return gov
+        elif obj['__class__'] == 'Environment':
+            env = deserialize_environment(objval)
+            print(env.listOfPeople)
+            return env
     return obj
 
 def deserialize_businessman(obj):
@@ -183,5 +186,11 @@ def deserialize_government(obj):
                                  investOwnCompPrice=obj['investOwnCompPrice'])
 
 def deserialize_environment(obj):
-    print('')
-
+    return environment.Environment(numPeople=obj['numPeople'],
+                                   numCompanies=obj['numCompanies'],
+                                   government=obj['government'],
+                                   listOfPeople=obj['listOfPeople'],
+                                   listOfCompanies=obj['listOfCompanies'],
+                                   numActions=obj['numActions'],
+                                   suicideCount=obj['suicideCount'],
+                                   time=obj['time'])

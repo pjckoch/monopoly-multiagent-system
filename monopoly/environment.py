@@ -13,35 +13,27 @@ wealthDist = 0.5
 class Environment():
     """Defines the environment of the multiagent system."""
 
-    def __init__(self):
-        self.numPeople = 10
-        self.numCompanies = 4 * self.numPeople
-        self.government = Government()
-        self.listOfPeople = [Businessman(i) for i in range(self.numPeople)]
-        self.listOfCompanies = []
+    def __init__(self,
+                 numPeople=10,
+                 numCompanies=None,
+                 government=None,
+                 listOfPeople=None,
+                 listOfCompanies=None,
+                 numActions=2,
+                 suicideCount=0,
+                 time=0):
+        self.numPeople = numPeople
+        self.numCompanies = (4 * self.numPeople) if numCompanies is None else numCompanies
+        self.government = Government() if government is None else government
+        self.listOfPeople = [Businessman(i) for i in range(self.numPeople)] if listOfPeople is None else listOfPeople
+        self.listOfCompanies = listOfCompanies
         self.numActions = 2
         self.suicideCount = 0
-        self.avgHappiness = 0
-        self.avgCapital = 0
-        self.dataframe = pd.DataFrame()
         self.time = 0
-
-        self.distributeCompanies()
-
-        # initialize peopleProfitMatrix --> each bm has empty list of profits
-        # for bm in self.listOfPeople:
-        #     self.peopleProfitDict[bm.id] = []
-        #     self.peopleCapitalDict[bm.id] = []
-
-        # for cmp in self.listOfCompanies:
-        #     self.companiesProfitDict[cmp.id] = []
-
-        # for item in list(BusinessCategory):
-        #     self.companiesTypeIds[item.name] = []
-
-        # for cmp in self.listOfCompanies:
-        #     self.companiesTypeIds[cmp.category.name].append(cmp.id)
-
+        
+        if listOfCompanies is None:
+            self.distributeCompanies()
+        
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
         self.computeAvgCapital()
@@ -91,6 +83,7 @@ class Environment():
 
     def distributeCompanies(self):
         """Makes every businessman create his first company for himself."""
+        self.listOfCompanies = []
         numCompaniesPerBm = self.numCompanies // len(self.listOfPeople)
         remainingCompanies = self.numCompanies % len(self.listOfPeople)
         for _ in range(numCompaniesPerBm):
@@ -111,7 +104,7 @@ class Environment():
     def findCompanyOwner(self, company):
         for bm in self.listOfPeople:
             for cmp in bm.companies:
-                if cmp == company:
+                if cmp.id == company.id:
                     return bm
         return None
 
