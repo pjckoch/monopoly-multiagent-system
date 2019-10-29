@@ -2,26 +2,17 @@ import numpy as np
 import random
 from environment import Environment
 from plot_history import *
-import json
 from enum import Enum
 import data_manager
 
 days = 3600
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
-class JsonEncoder(json.JSONEncoder):
-        def default(self, obj):
-            if isinstance(obj, Enum):
-                return obj.name  # Could also be obj.value
-            return obj.__dict__
-
 if __name__ == "__main__":
 
     env = Environment()
 
-    with open("config.json", 'w') as f:
-        json.dump(env, f, cls = JsonEncoder, indent=4)
-        f.close()
+    data_manager.writeToJson("config.json", env)
 
     # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
@@ -47,7 +38,7 @@ if __name__ == "__main__":
             # print("-----------||-----------")
             # print("Days passed: " + str(env.time))
 
-            if env.time % 1.0 == 0.0 :
+            if env.time % evaluationInterval.value == 0.0 :
 
                 # Or display the daily auctions
                 # for bm in stillALiveBms:
@@ -57,28 +48,31 @@ if __name__ == "__main__":
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
 
-                    dailyProfits = []
+                    bProfits = []
 
                     for company in bm.companies:
                         # print("price:" + str(company.price))
-                        cmpProfit = company.computeProfit()
-                        dailyProfits.append(cmpProfit)
+                        company.computeBruttoProfit()
                         company.computeCompanyValue()
-                        env.addProfitsForCompany(company.id, cmpProfit)
+                        nProfit = company.computeNettoProfit()
+                        # env.addProfitsForCompany(company.id, cmpProfit)
 
                     # compute the updated capital for the businessman and print
-                    bm.capital += sum(dailyProfits) + bm.subsidiaries
+                    bm.capital += nProfit + bm.subsidiaries
 
-                if env.time % evaluationInterval.value == 0:
-                    data_manager.evaluateStats(time, evaluationInterval, env.listOfPeople)
-
-                env.computeAvgCapital()
-                env.computeAvgHappiness()
                 averageCompany = env.computeAverageCompanyValue()
                 env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
+                env.computeAvgCapital()
+                env.computeAvgHappiness()
+                data_manager.evaluateStats(time, evaluationInterval, env.listOfPeople)
+
                 # print("Government Money: " + str(env.government.governmentMoney))
                 # for bm in env.listOfPeople:
                 #     print(round(bm.capital,0))
 
     # plot profit history and capital
     data_manager.exportToCSV()
+    data_manager.writeToJson("results.json", env)
+
+    # data = data_manager.readFromJson("results.json")
+    # print(data)

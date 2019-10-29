@@ -23,28 +23,24 @@ class Environment():
         self.suicideCount = 0
         self.avgHappiness = 0
         self.avgCapital = 0
-        self.peopleProfitDict = {}
-        self.peopleCapitalDict = {}
-        self.companiesProfitDict = {}
-        self.companiesTypeIds = {}
         self.dataframe = pd.DataFrame()
         self.time = 0
 
         self.distributeCompanies()
 
         # initialize peopleProfitMatrix --> each bm has empty list of profits
-        for bm in self.listOfPeople:
-            self.peopleProfitDict[bm.id] = []
-            self.peopleCapitalDict[bm.id] = []
+        # for bm in self.listOfPeople:
+        #     self.peopleProfitDict[bm.id] = []
+        #     self.peopleCapitalDict[bm.id] = []
 
-        for cmp in self.listOfCompanies:
-            self.companiesProfitDict[cmp.id] = []
+        # for cmp in self.listOfCompanies:
+        #     self.companiesProfitDict[cmp.id] = []
 
-        for item in list(BusinessCategory):
-            self.companiesTypeIds[item.name] = []
+        # for item in list(BusinessCategory):
+        #     self.companiesTypeIds[item.name] = []
 
-        for cmp in self.listOfCompanies:
-            self.companiesTypeIds[cmp.category.name].append(cmp.id)
+        # for cmp in self.listOfCompanies:
+        #     self.companiesTypeIds[cmp.category.name].append(cmp.id)
 
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
@@ -78,19 +74,19 @@ class Environment():
         return temp/len(self.listOfCompanies)
 
 
-    def addProfitsForBM(self, bmId, profit):
-        """Function to append a profit for a certain businessman to the peopleProfitDict"""
-        self.peopleProfitDict[bmId].append(profit)
+    # def addProfitsForBM(self, bmId, profit):
+    #     """Function to append a profit for a certain businessman to the peopleProfitDict"""
+    #     self.peopleProfitDict[bmId].append(profit)
 
 
-    def addCapitalForBM(self, bmId, capital):
-        """Function to append a profit for a certain businessman to the peopleProfitDict"""
-        self.peopleCapitalDict[bmId].append(capital)
+    # def addCapitalForBM(self, bmId, capital):
+    #     """Function to append a profit for a certain businessman to the peopleProfitDict"""
+    #     self.peopleCapitalDict[bmId].append(capital)
         
 
-    def addProfitsForCompany(self, cmpId, profit):
-        """Function to append a profit for a certain businessman to the peopleProfitDict"""
-        self.companiesProfitDict[cmpId].append(profit)
+    # def addProfitsForCompany(self, cmpId, profit):
+    #     """Function to append a profit for a certain businessman to the peopleProfitDict"""
+    #     self.companiesProfitDict[cmpId].append(profit)
 
 
     def distributeCompanies(self):

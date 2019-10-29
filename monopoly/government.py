@@ -1,5 +1,6 @@
 import random
 from enum import Enum
+import data_manager
 
 class Government():
     """An intelligent agent that interacts with other agents in order to regulate the happiness."""
@@ -7,14 +8,14 @@ class Government():
     # Government Politics can be supportive, neutral or competitive
 
     def __init__(self):
-        self.politics = PoliticsSwitcher.SUPPORTIVE
-        self.avgCapital = 0
-        self.avgCompanyValue = 0
+        self.politics = PoliticsSwitcher.COMPETITIVE
+        # self.avgCapital = 0
+        # self.avgCompanyValue = 0
         self.taxesStatus = []
         self.subsidiariesStatus = []
 
-        self.taxValue = 60 #20
-        self.subsidyValue = 50 #100
+        self.taxRate = 0.3
+        self.subsidyValue = 50
         self.governmentMoney = 0
         self.startCompPrice = 9000
         self.investOwnCompPrice = 3000
@@ -60,24 +61,28 @@ class Government():
 
     #TODO: improve
     def regulateTax(self,company):
-        if not self.isCompanyTaxed(company):
-            if company.companyValue > self.avgCompanyValue:
-                company.taxes += self.taxValue
-                self.governmentMoney += self.taxValue
-                temp = [company.id, 0]
-                self.taxesStatus.append(temp)
-        else:
-            for tax in self.taxesStatus:
-                if tax[0] == company.id:
-                    self.taxesStatus.remove(tax)
-                    company.taxes = 0
+        if company.computeBruttoProfit() > 0:
+            company.taxes = company.computeBruttoProfit() * self.taxRate
+            self.governmentMoney += company.taxes
+
+        # if not self.isCompanyTaxed(company):
+        #     if company.companyValue > self.avgCompanyValue:
+        #         company.taxes += self.taxRate
+        #         self.governmentMoney += self.taxRate
+        #         temp = [company.id, 0]
+        #         self.taxesStatus.append(temp)
+        # else:
+        #     for tax in self.taxesStatus:
+        #         if tax[0] == company.id:
+        #             self.taxesStatus.remove(tax)
+        #             company.taxes = 0
 
     def regulate(self, averageCapital, averageCompany, businessmenList):
-        self.avgCapital = averageCapital
-        self.avgCompanyValue = averageCompany
+        # self.avgCapital = averageCapital
+        # self.avgCompanyValue = averageCompany
         for bm in businessmenList:
             self.regulateSubsidiary(bm)
-            self.ejectCapital(bm)
+            # self.ejectCapital(bm)
             for company in bm.companies:
                 self.regulateTax(company)
 

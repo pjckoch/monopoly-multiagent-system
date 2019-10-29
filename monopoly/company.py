@@ -33,22 +33,30 @@ class Company():
         self.fixedCost = 0.5 * self.price
         self.variableCost = 0.02 * self.frequency * self.price #0.01 makes it balanced
         self.taxes = 0
-        self.profitHistory = []
+        self.bruttoProfitHistory = []
+        self.nettoProfitHistory = []
+        self.turnOverHistory = []
         self.companyValue = 0
         self.investmentLevel = 0
 
-    def computeProfit(self):
-        profit = self.turnOver - self.taxes - self.variableCost - self.fixedCost + 100 * self.investmentLevel
-        self.profitHistory.append(profit)
+    def computeBruttoProfit(self):
+        """Compute profit without considering taxes"""
+        self.turnOverHistory.append(self.turnOver)
+        bProfit = self.turnOver - self.variableCost - self.fixedCost + 100 * self.investmentLevel
         self.turnOver = 0
-        return profit
+        self.bruttoProfitHistory.append(bProfit)
+        return bProfit
 
-    # def updateTaxes(self):
-    #     print("")
+    def computeNettoProfit(self):
+        """Profit minus taxes"""
+        bProfit = self.computeBruttoProfit()
+        nProfit = bProfit - self.taxes
+        self.nettoProfitHistory.append(nProfit)
+        return nProfit
 
     def computeCompanyValue(self):
-        if (len(self.profitHistory) > 4):
-            self.companyValue = self.profitHistory[-5] + self.profitHistory[-4] + self.profitHistory[-3] + self.profitHistory[-2] + self.profitHistory[-1]
+        if (len(self.nettoProfitHistory) > 4):
+            self.companyValue = sum(self.nettoProfitHistory[-5:])
         return self.companyValue
 
     @property
