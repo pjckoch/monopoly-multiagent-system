@@ -58,8 +58,8 @@ class Company():
             self.quality
         else:
             self.quality = quality
-        self.fixedCost = (0.5 * self.price) if fixedCost is None else fixedCost
-        self.variableCost = (0.02 * self.frequency * self.price) if variableCost is None else variableCost
+        self.fixedCost = (0.3 * self.price) if fixedCost is None else fixedCost
+        self.variableCost = (0.01 * self.frequency * self.price) if variableCost is None else variableCost
         self.turnOver = turnOver
         self.taxes = taxes
         self.companyValue = companyValue
