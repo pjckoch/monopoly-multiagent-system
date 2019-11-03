@@ -38,7 +38,8 @@ class Company():
                  investmentLevel=0,
                  bruttoProfitHistory=[],
                  nettoProfitHistory=[],
-                 turnOverHistory=[]):
+                 turnOverHistory=[],
+                 taxHistory=[0]):
         self.id = companyId
         self.name = name
         self.category = random.choice(list(BusinessCategory)) if category is None else category
@@ -61,12 +62,12 @@ class Company():
         self.fixedCost = (0.2 * self.price) if fixedCost is None else fixedCost
         self.variableCost = (0.01 * self.frequency * self.price) if variableCost is None else variableCost
         self.turnOver = turnOver
-        self.taxes = taxes
         self.companyValue = companyValue
         self.investmentLevel = investmentLevel
         self.bruttoProfitHistory = []
         self.nettoProfitHistory = []
         self.turnOverHistory = []
+        self.taxHistory = [0]
 
 
     def computeBruttoProfit(self):
@@ -80,7 +81,7 @@ class Company():
         """Profit minus taxes"""
         bProfit = self.computeBruttoProfit()
         self.bruttoProfitHistory.append(bProfit)
-        nProfit = bProfit - self.taxes
+        nProfit = bProfit - self.taxHistory[-1]
         self.nettoProfitHistory.append(nProfit)
         return nProfit
 

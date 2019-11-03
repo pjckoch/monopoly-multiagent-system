@@ -28,99 +28,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 0,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 291.8217719519063,
-                                "_quality": 0.30414276860974165,
-                                "quality": 0.30414276860974165,
-                                "price": 380.5772536139598,
-                                "fixedCost": 76.11545072279196,
-                                "variableCost": 0.1902886268069799,
+                                "name": "Zemlak Group",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 106.42554695898389,
+                                "_quality": 0.6137284446203027,
+                                "quality": 0.6137284446203027,
+                                "price": 171.74193236198607,
+                                "fixedCost": 34.348386472397216,
+                                "variableCost": 0.17174193236198607,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 10,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 360.48923853854905,
-                                "_quality": 0.5740447608928864,
-                                "quality": 0.5740447608928864,
-                                "price": 567.426197279869,
-                                "fixedCost": 113.48523945597381,
-                                "variableCost": 0.28371309863993455,
+                                "name": "Zemlak Group",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 43.47601831941453,
+                                "_quality": 0.09956770087065281,
+                                "quality": 0.09956770087065281,
+                                "price": 47.80482550648902,
+                                "fixedCost": 9.560965101297803,
+                                "variableCost": 0.09560965101297804,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 20,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 86.9185907882539,
-                                "_quality": 0.1053559844365527,
-                                "quality": 0.1053559844365527,
-                                "price": 96.07598448658825,
-                                "fixedCost": 19.215196897317654,
-                                "variableCost": 0.09607598448658826,
+                                "name": "Zemlak Group",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 37.890783834442,
+                                "_quality": 0.6778711429329223,
+                                "quality": 0.6778711429329223,
+                                "price": 63.57585277891949,
+                                "fixedCost": 12.7151705557839,
+                                "variableCost": 0.12715170555783897,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 30,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 91.65743650366558,
-                                "_quality": 0.35544358208455784,
-                                "quality": 0.35544358208455784,
-                                "price": 124.23648405921638,
-                                "fixedCost": 24.84729681184328,
-                                "variableCost": 0.12423648405921638,
+                                "name": "Zemlak Group",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 238.39790215613215,
+                                "_quality": 0.19369843946773435,
+                                "quality": 0.19369843946773435,
+                                "price": 284.57520377615657,
+                                "fixedCost": 56.91504075523132,
+                                "variableCost": 0.1422876018880783,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -134,99 +142,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 1,
-                                "name": "Waters Inc",
-                                "category": "RESTAURANT",
+                                "name": "Zemlak Group",
+                                "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
-                                "_necessity": 0.4,
-                                "_price": 27.399966307649944,
-                                "_quality": 0.47578159800434805,
-                                "quality": 0.47578159800434805,
-                                "price": 40.43636606276893,
-                                "fixedCost": 8.087273212553788,
-                                "variableCost": 0.08087273212553786,
+                                "_necessity": 0.3,
+                                "_price": 31.760207481564194,
+                                "_quality": 0.8792564918994248,
+                                "quality": 0.8792564918994248,
+                                "price": 59.68557609380219,
+                                "fixedCost": 11.93711521876044,
+                                "variableCost": 0.11937115218760438,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 11,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 214.27268136246906,
-                                "_quality": 0.13692435458398056,
-                                "quality": 0.13692435458398056,
-                                "price": 243.61182996300403,
-                                "fixedCost": 48.72236599260081,
-                                "variableCost": 0.12180591498150202,
+                                "name": "Zemlak Group",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 35.172716301075916,
+                                "_quality": 0.3457255646617122,
+                                "quality": 0.3457255646617122,
+                                "price": 47.3328235049516,
+                                "fixedCost": 9.46656470099032,
+                                "variableCost": 0.0946656470099032,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 21,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 273.5485968421628,
-                                "_quality": 0.42961405318200885,
-                                "quality": 0.42961405318200885,
-                                "price": 391.06891827377564,
-                                "fixedCost": 78.21378365475513,
-                                "variableCost": 0.19553445913688783,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 6.869704758525758,
+                                "_quality": 0.1961743264355762,
+                                "quality": 0.1961743264355762,
+                                "price": 8.217364462340822,
+                                "fixedCost": 1.6434728924681643,
+                                "variableCost": 0.036978140080533704,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 31,
-                                "name": "Waters Inc",
-                                "category": "RESTAURANT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.4,
-                                "_price": 34.33597682543538,
-                                "_quality": 0.7618614087023999,
-                                "quality": 0.7618614087023999,
-                                "price": 60.49523249883454,
-                                "fixedCost": 12.099046499766908,
-                                "variableCost": 0.12099046499766908,
+                                "name": "Zemlak Group",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 99.78847183269656,
+                                "_quality": 0.5368294690580703,
+                                "quality": 0.5368294690580703,
+                                "price": 153.35786418475925,
+                                "fixedCost": 30.671572836951853,
+                                "variableCost": 0.15335786418475925,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -240,99 +256,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 2,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 92.98015215399622,
-                                "_quality": 0.7478277429247076,
-                                "quality": 0.7478277429247076,
-                                "price": 162.5132894761151,
-                                "fixedCost": 32.50265789522302,
-                                "variableCost": 0.1625132894761151,
+                                "name": "Zemlak Group",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 37.55637960286807,
+                                "_quality": 0.5391656109584954,
+                                "quality": 0.5391656109584954,
+                                "price": 57.80548795683761,
+                                "fixedCost": 11.561097591367522,
+                                "variableCost": 0.11561097591367522,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 12,
-                                "name": "Waters Inc",
-                                "category": "ENTERTAINMENT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.3,
-                                "_price": 31.210162496679494,
-                                "_quality": 0.1819671217768254,
-                                "quality": 0.1819671217768254,
-                                "price": 36.88938593638728,
-                                "fixedCost": 7.377877187277456,
-                                "variableCost": 0.07377877187277455,
+                                "name": "Zemlak Group",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 101.19179270260523,
+                                "_quality": 0.8398205707764217,
+                                "quality": 0.8398205707764217,
+                                "price": 186.1747418079965,
+                                "fixedCost": 37.2349483615993,
+                                "variableCost": 0.1861747418079965,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 22,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 108.26261219703424,
-                                "_quality": 0.1476123185692243,
-                                "quality": 0.1476123185692243,
-                                "price": 124.24350739779926,
-                                "fixedCost": 24.848701479559853,
-                                "variableCost": 0.12424350739779927,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 13.93752297444024,
+                                "_quality": 0.04282720335472889,
+                                "quality": 0.04282720335472889,
+                                "price": 14.5344281051278,
+                                "fixedCost": 2.9068856210255603,
+                                "variableCost": 0.06540492647307511,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 32,
-                                "name": "Waters Inc",
-                                "category": "ENTERTAINMENT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.3,
-                                "_price": 33.76371534071276,
-                                "_quality": 0.486293195708009,
-                                "quality": 0.486293195708009,
-                                "price": 50.18278037272349,
-                                "fixedCost": 10.036556074544698,
-                                "variableCost": 0.10036556074544699,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 9.931882610937617,
+                                "_quality": 0.20197248894087805,
+                                "quality": 0.20197248894087805,
+                                "price": 11.937849661737314,
+                                "fixedCost": 2.387569932347463,
+                                "variableCost": 0.05372032347781792,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -346,99 +370,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 3,
-                                "name": "Waters Inc",
-                                "category": "ENTERTAINMENT",
+                                "name": "Zemlak Group",
+                                "category": "RESTAURANT",
                                 "_frequency": 0.2,
-                                "_necessity": 0.3,
-                                "_price": 38.4448090475539,
-                                "_quality": 0.36951511350014565,
-                                "quality": 0.36951511350014565,
-                                "price": 52.650747026252205,
-                                "fixedCost": 10.530149405250441,
-                                "variableCost": 0.10530149405250441,
+                                "_necessity": 0.4,
+                                "_price": 32.93706373143675,
+                                "_quality": 0.4435949374720134,
+                                "quality": 0.4435949374720134,
+                                "price": 47.547778457895156,
+                                "fixedCost": 9.509555691579031,
+                                "variableCost": 0.09509555691579032,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 13,
-                                "name": "Waters Inc",
+                                "name": "Zemlak Group",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 40.67657696060743,
-                                "_quality": 0.19797939277987286,
-                                "quality": 0.19797939277987286,
-                                "price": 48.72970096763225,
-                                "fixedCost": 9.745940193526451,
-                                "variableCost": 0.09745940193526449,
+                                "_price": 37.07065919851394,
+                                "_quality": 0.10501128621686551,
+                                "quality": 0.10501128621686551,
+                                "price": 40.96349680185696,
+                                "fixedCost": 8.192699360371392,
+                                "variableCost": 0.08192699360371393,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 23,
-                                "name": "Waters Inc",
-                                "category": "RESTAURANT",
+                                "name": "Zemlak Group",
+                                "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
-                                "_necessity": 0.4,
-                                "_price": 36.008804900099896,
-                                "_quality": 0.3423523048156498,
-                                "quality": 0.3423523048156498,
-                                "price": 48.336502251306165,
-                                "fixedCost": 9.667300450261234,
-                                "variableCost": 0.09667300450261233,
+                                "_necessity": 0.3,
+                                "_price": 40.378773027146224,
+                                "_quality": 0.35373326193783006,
+                                "quality": 0.35373326193783006,
+                                "price": 54.66208812308593,
+                                "fixedCost": 10.932417624617187,
+                                "variableCost": 0.10932417624617186,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 33,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 366.39801708566193,
-                                "_quality": 0.4981896077930641,
-                                "quality": 0.4981896077930641,
-                                "price": 548.9337015137243,
-                                "fixedCost": 109.78674030274486,
-                                "variableCost": 0.2744668507568621,
+                                "name": "Zemlak Group",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 106.7299135460309,
+                                "_quality": 0.8107843773311391,
+                                "quality": 0.8107843773311391,
+                                "price": 193.26486004305588,
+                                "fixedCost": 38.65297200861118,
+                                "variableCost": 0.19326486004305587,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -452,99 +484,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 4,
-                                "name": "Waters Inc",
+                                "name": "Zemlak Group",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 103.35657693456321,
-                                "_quality": 0.5608983612885841,
-                                "quality": 0.5608983612885841,
-                                "price": 161.32911156555718,
-                                "fixedCost": 32.265822313111435,
-                                "variableCost": 0.16132911156555718,
+                                "_price": 85.36222052519906,
+                                "_quality": 0.9094865921128944,
+                                "quality": 0.9094865921128944,
+                                "price": 162.99801556585174,
+                                "fixedCost": 32.59960311317035,
+                                "variableCost": 0.16299801556585175,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 14,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 100.26391612155724,
-                                "_quality": 0.9709346070239552,
-                                "quality": 0.9709346070239552,
-                                "price": 197.61362211972425,
-                                "fixedCost": 39.52272442394485,
-                                "variableCost": 0.19761362211972425,
+                                "name": "Zemlak Group",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 274.6780521881085,
+                                "_quality": 0.5619183340474253,
+                                "quality": 0.5619183340474253,
+                                "price": 429.02468567304214,
+                                "fixedCost": 85.80493713460844,
+                                "variableCost": 0.21451234283652107,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 24,
-                                "name": "Waters Inc",
+                                "name": "Zemlak Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 8.961063926798802,
-                                "_quality": 0.8625460894417661,
-                                "quality": 0.8625460894417661,
-                                "price": 16.690394574096786,
-                                "fixedCost": 3.3380789148193575,
-                                "variableCost": 0.07510677558343555,
+                                "_price": 9.924317694733082,
+                                "_quality": 0.9331204946870346,
+                                "quality": 0.9331204946870346,
+                                "price": 19.184901931473707,
+                                "fixedCost": 3.8369803862947416,
+                                "variableCost": 0.08633205869163169,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 34,
-                                "name": "Waters Inc",
+                                "name": "Zemlak Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 34.129633083888585,
-                                "_quality": 0.18194924404869894,
-                                "quality": 0.18194924404869894,
-                                "price": 40.33949402316158,
-                                "fixedCost": 8.067898804632316,
-                                "variableCost": 0.08067898804632316,
+                                "_price": 36.98318638983898,
+                                "_quality": 0.2233732321758698,
+                                "quality": 0.2233732321758698,
+                                "price": 45.24424026989994,
+                                "fixedCost": 9.048848053979988,
+                                "variableCost": 0.09048848053979988,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -558,99 +598,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 5,
-                                "name": "Waters Inc",
+                                "name": "Zemlak Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 39.11158019505534,
-                                "_quality": 0.0967558480008065,
-                                "quality": 0.0967558480008065,
-                                "price": 42.89585430347946,
-                                "fixedCost": 8.579170860695893,
-                                "variableCost": 0.08579170860695892,
+                                "_price": 40.418309797436876,
+                                "_quality": 0.6276488883610585,
+                                "quality": 0.6276488883610585,
+                                "price": 65.78681701123101,
+                                "fixedCost": 13.157363402246203,
+                                "variableCost": 0.13157363402246203,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 15,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 303.18833803374747,
-                                "_quality": 0.5094877148167954,
-                                "quality": 0.5094877148167954,
-                                "price": 457.65907153766364,
-                                "fixedCost": 91.53181430753273,
-                                "variableCost": 0.22882953576883183,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 9.3639825168617,
+                                "_quality": 0.13933124465025126,
+                                "quality": 0.13933124465025126,
+                                "price": 10.668677855819233,
+                                "fixedCost": 2.1337355711638466,
+                                "variableCost": 0.04800905035118656,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 25,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 285.24703997132997,
-                                "_quality": 0.30728316576170245,
-                                "quality": 0.30728316576170245,
-                                "price": 372.89865343787517,
-                                "fixedCost": 74.57973068757504,
-                                "variableCost": 0.18644932671893757,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 10.539131440497513,
+                                "_quality": 0.8095626884368065,
+                                "quality": 0.8095626884368065,
+                                "price": 19.07121902325555,
+                                "fixedCost": 3.8142438046511105,
+                                "variableCost": 0.08582048560464998,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 35,
-                                "name": "Waters Inc",
-                                "category": "RESTAURANT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.4,
-                                "_price": 34.8476987888441,
-                                "_quality": 0.7236994495987015,
-                                "quality": 0.7236994495987015,
-                                "price": 60.06695922211191,
-                                "fixedCost": 12.013391844422383,
-                                "variableCost": 0.12013391844422383,
+                                "name": "Zemlak Group",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 106.78850783885082,
+                                "_quality": 0.9358262688908794,
+                                "quality": 0.9358262688908794,
+                                "price": 206.723998690107,
+                                "fixedCost": 41.34479973802141,
+                                "variableCost": 0.20672399869010702,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -664,99 +712,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 6,
-                                "name": "Waters Inc",
-                                "category": "ENTERTAINMENT",
+                                "name": "Zemlak Group",
+                                "category": "RESTAURANT",
                                 "_frequency": 0.2,
-                                "_necessity": 0.3,
-                                "_price": 34.65652045583655,
-                                "_quality": 0.8493316517425642,
-                                "quality": 0.8493316517425642,
-                                "price": 64.09140021824217,
-                                "fixedCost": 12.818280043648436,
-                                "variableCost": 0.12818280043648433,
+                                "_necessity": 0.4,
+                                "_price": 40.91274273953917,
+                                "_quality": 0.3464277735929129,
+                                "quality": 0.3464277735929129,
+                                "price": 55.086053118377336,
+                                "fixedCost": 11.017210623675467,
+                                "variableCost": 0.11017210623675468,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 16,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 98.44327840537889,
-                                "_quality": 0.19909889752949816,
-                                "quality": 0.19909889752949816,
-                                "price": 118.04322660507927,
-                                "fixedCost": 23.608645321015857,
-                                "variableCost": 0.11804322660507927,
+                                "name": "Zemlak Group",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 40.24696831688745,
+                                "_quality": 0.08480295435023777,
+                                "quality": 0.08480295435023777,
+                                "price": 43.66003013379992,
+                                "fixedCost": 8.732006026759985,
+                                "variableCost": 0.08732006026759985,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 26,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 104.56475508071937,
-                                "_quality": 0.7091435818684804,
-                                "quality": 0.7091435818684804,
-                                "price": 178.71618003586107,
-                                "fixedCost": 35.743236007172214,
-                                "variableCost": 0.17871618003586107,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 7.833860585431772,
+                                "_quality": 0.7590848323746835,
+                                "quality": 0.7590848323746835,
+                                "price": 13.78042533477089,
+                                "fixedCost": 2.756085066954178,
+                                "variableCost": 0.06201191400646901,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 36,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 101.13132596003086,
-                                "_quality": 0.8111707872364644,
-                                "quality": 0.8111707872364644,
-                                "price": 183.1661032532966,
-                                "fixedCost": 36.63322065065932,
-                                "variableCost": 0.1831661032532966,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 12.187780565068651,
+                                "_quality": 0.5349773092079226,
+                                "quality": 0.5349773092079226,
+                                "price": 18.707966616985694,
+                                "fixedCost": 3.741593323397139,
+                                "variableCost": 0.08418584977643563,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -770,99 +826,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 7,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 94.70324447717596,
-                                "_quality": 0.5310586469847844,
-                                "quality": 0.5310586469847844,
-                                "price": 144.99622135429428,
-                                "fixedCost": 28.999244270858856,
-                                "variableCost": 0.14499622135429427,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 7.481252612992415,
+                                "_quality": 0.041093037113463904,
+                                "quality": 0.041093037113463904,
+                                "price": 7.788680004273311,
+                                "fixedCost": 1.5577360008546624,
+                                "variableCost": 0.0350490600192299,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 17,
-                                "name": "Waters Inc",
-                                "category": "ENTERTAINMENT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.3,
-                                "_price": 45.7415522427757,
-                                "_quality": 0.49763580026919396,
-                                "quality": 0.49763580026919396,
-                                "price": 68.50418619866451,
-                                "fixedCost": 13.700837239732904,
-                                "variableCost": 0.13700837239732902,
+                                "name": "Zemlak Group",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 244.96157903927204,
+                                "_quality": 0.0779469536452051,
+                                "quality": 0.0779469536452051,
+                                "price": 264.0555878855024,
+                                "fixedCost": 52.81111757710048,
+                                "variableCost": 0.13202779394275121,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 27,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 96.65385021030268,
-                                "_quality": 0.6312487912360711,
-                                "quality": 0.6312487912360711,
-                                "price": 157.66647632386852,
-                                "fixedCost": 31.533295264773706,
-                                "variableCost": 0.15766647632386852,
+                                "name": "Zemlak Group",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 41.22728776959056,
+                                "_quality": 0.6154307966387813,
+                                "quality": 0.6154307966387813,
+                                "price": 66.59983032488597,
+                                "fixedCost": 13.319966064977194,
+                                "variableCost": 0.13319966064977196,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 37,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 101.30822595312956,
-                                "_quality": 0.1473407975863349,
-                                "quality": 0.1473407975863349,
-                                "price": 116.23506076712032,
-                                "fixedCost": 23.247012153424066,
-                                "variableCost": 0.11623506076712031,
+                                "name": "Zemlak Group",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 343.7998802619996,
+                                "_quality": 0.47172574259701616,
+                                "quality": 0.47172574259701616,
+                                "price": 505.97913408335654,
+                                "fixedCost": 101.19582681667131,
+                                "variableCost": 0.2529895670416783,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -876,99 +940,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 8,
-                                "name": "Waters Inc",
-                                "category": "SUPERMARKET",
-                                "_frequency": 0.45,
-                                "_necessity": 0.8,
-                                "_price": 7.734850943392127,
-                                "_quality": 0.54220676129501,
-                                "quality": 0.54220676129501,
-                                "price": 11.928739422508423,
-                                "fixedCost": 2.3857478845016846,
-                                "variableCost": 0.05367932740128791,
+                                "name": "Zemlak Group",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 41.98095271248023,
+                                "_quality": 0.9560459135979256,
+                                "quality": 0.9560459135979256,
+                                "price": 82.1166710021947,
+                                "fixedCost": 16.42333420043894,
+                                "variableCost": 0.1642333420043894,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 18,
-                                "name": "Waters Inc",
-                                "category": "ENTERTAINMENT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.3,
-                                "_price": 37.24386347979926,
-                                "_quality": 0.24689995307561008,
-                                "quality": 0.24689995307561008,
-                                "price": 46.43937162531612,
-                                "fixedCost": 9.287874325063225,
-                                "variableCost": 0.09287874325063224,
+                                "name": "Zemlak Group",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 268.83055907516274,
+                                "_quality": 0.07962268892119118,
+                                "quality": 0.07962268892119118,
+                                "price": 290.23557105291434,
+                                "fixedCost": 58.04711421058287,
+                                "variableCost": 0.14511778552645718,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 28,
-                                "name": "Waters Inc",
-                                "category": "ENTERTAINMENT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.3,
-                                "_price": 38.83972210478136,
-                                "_quality": 0.6140741013088391,
-                                "quality": 0.6140741013088391,
-                                "price": 62.69018955136002,
-                                "fixedCost": 12.538037910272005,
-                                "variableCost": 0.12538037910272004,
+                                "name": "Zemlak Group",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 189.96684598815537,
+                                "_quality": 0.7823932666907253,
+                                "quality": 0.7823932666907253,
+                                "price": 338.5956271837622,
+                                "fixedCost": 67.71912543675244,
+                                "variableCost": 0.1692978135918811,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 38,
-                                "name": "Waters Inc",
-                                "category": "ENTERTAINMENT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.3,
-                                "_price": 33.59588569048089,
-                                "_quality": 0.4995568265349375,
-                                "quality": 0.4995568265349375,
-                                "price": 50.37893973064804,
-                                "fixedCost": 10.075787946129608,
-                                "variableCost": 0.1007578794612961,
+                                "name": "Zemlak Group",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 306.1608879553529,
+                                "_quality": 0.2890795316684067,
+                                "quality": 0.2890795316684067,
+                                "price": 394.6657340606699,
+                                "fixedCost": 78.93314681213398,
+                                "variableCost": 0.19733286703033495,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             },
             {
@@ -982,99 +1054,107 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 9,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 244.328961026316,
-                                "_quality": 0.7473805095200396,
-                                "quality": 0.7473805095200396,
-                                "price": 426.93566440866596,
-                                "fixedCost": 85.3871328817332,
-                                "variableCost": 0.213467832204333,
+                                "name": "Zemlak Group",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 110.65375256824156,
+                                "_quality": 0.5438210480258423,
+                                "quality": 0.5438210480258423,
+                                "price": 170.82959225789492,
+                                "fixedCost": 34.16591845157898,
+                                "variableCost": 0.17082959225789493,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 19,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 252.57094715373188,
-                                "_quality": 0.2800073568565836,
-                                "quality": 0.2800073568565836,
-                                "price": 323.29267048501225,
-                                "fixedCost": 64.65853409700246,
-                                "variableCost": 0.16164633524250613,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 12.572678864285956,
+                                "_quality": 0.32176000767841173,
+                                "quality": 0.32176000767841173,
+                                "price": 16.618064112196812,
+                                "fixedCost": 3.3236128224393626,
+                                "variableCost": 0.07478128850488566,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 29,
-                                "name": "Waters Inc",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 106.17157741228026,
-                                "_quality": 0.6796673966135541,
-                                "quality": 0.6796673966135541,
-                                "price": 178.33293702643923,
-                                "fixedCost": 35.66658740528785,
-                                "variableCost": 0.17833293702643924,
+                                "name": "Zemlak Group",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 31.72283519618634,
+                                "_quality": 0.6700544987853919,
+                                "quality": 0.6700544987853919,
+                                "price": 52.97886363361857,
+                                "fixedCost": 10.595772726723716,
+                                "variableCost": 0.10595772726723715,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         },
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 39,
-                                "name": "Waters Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 287.3491446478196,
-                                "_quality": 0.4944122121409359,
-                                "quality": 0.4944122121409359,
-                                "price": 429.41807090995394,
-                                "fixedCost": 85.8836141819908,
-                                "variableCost": 0.21470903545497697,
+                                "name": "Zemlak Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 9.310058969391623,
+                                "_quality": 0.24293281006509382,
+                                "quality": 0.24293281006509382,
+                                "price": 11.57177775669766,
+                                "fixedCost": 2.314355551339532,
+                                "variableCost": 0.05207299990513948,
                                 "turnOver": 0,
-                                "taxes": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
                                 "bruttoProfitHistory": [],
                                 "nettoProfitHistory": [],
-                                "turnOverHistory": []
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
                             }
                         }
                     ],
                     "dailyActions": [],
-                    "name": "Dmitri Kolakovic",
-                    "capital": 10435.818696473432,
-                    "happiness": 37.4439532652973
+                    "name": "Hinda Crooke",
+                    "capital": 11138.77470721189,
+                    "happiness": 54.827175050793436
                 }
             }
         ],
@@ -1083,927 +1163,1007 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 0,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 291.8217719519063,
-                    "_quality": 0.30414276860974165,
-                    "quality": 0.30414276860974165,
-                    "price": 380.5772536139598,
-                    "fixedCost": 76.11545072279196,
-                    "variableCost": 0.1902886268069799,
+                    "name": "Zemlak Group",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 106.42554695898389,
+                    "_quality": 0.6137284446203027,
+                    "quality": 0.6137284446203027,
+                    "price": 171.74193236198607,
+                    "fixedCost": 34.348386472397216,
+                    "variableCost": 0.17174193236198607,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 1,
-                    "name": "Waters Inc",
-                    "category": "RESTAURANT",
+                    "name": "Zemlak Group",
+                    "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 27.399966307649944,
-                    "_quality": 0.47578159800434805,
-                    "quality": 0.47578159800434805,
-                    "price": 40.43636606276893,
-                    "fixedCost": 8.087273212553788,
-                    "variableCost": 0.08087273212553786,
+                    "_necessity": 0.3,
+                    "_price": 31.760207481564194,
+                    "_quality": 0.8792564918994248,
+                    "quality": 0.8792564918994248,
+                    "price": 59.68557609380219,
+                    "fixedCost": 11.93711521876044,
+                    "variableCost": 0.11937115218760438,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 2,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 92.98015215399622,
-                    "_quality": 0.7478277429247076,
-                    "quality": 0.7478277429247076,
-                    "price": 162.5132894761151,
-                    "fixedCost": 32.50265789522302,
-                    "variableCost": 0.1625132894761151,
+                    "name": "Zemlak Group",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 37.55637960286807,
+                    "_quality": 0.5391656109584954,
+                    "quality": 0.5391656109584954,
+                    "price": 57.80548795683761,
+                    "fixedCost": 11.561097591367522,
+                    "variableCost": 0.11561097591367522,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 3,
-                    "name": "Waters Inc",
-                    "category": "ENTERTAINMENT",
+                    "name": "Zemlak Group",
+                    "category": "RESTAURANT",
                     "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 38.4448090475539,
-                    "_quality": 0.36951511350014565,
-                    "quality": 0.36951511350014565,
-                    "price": 52.650747026252205,
-                    "fixedCost": 10.530149405250441,
-                    "variableCost": 0.10530149405250441,
+                    "_necessity": 0.4,
+                    "_price": 32.93706373143675,
+                    "_quality": 0.4435949374720134,
+                    "quality": 0.4435949374720134,
+                    "price": 47.547778457895156,
+                    "fixedCost": 9.509555691579031,
+                    "variableCost": 0.09509555691579032,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 4,
-                    "name": "Waters Inc",
+                    "name": "Zemlak Group",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 103.35657693456321,
-                    "_quality": 0.5608983612885841,
-                    "quality": 0.5608983612885841,
-                    "price": 161.32911156555718,
-                    "fixedCost": 32.265822313111435,
-                    "variableCost": 0.16132911156555718,
+                    "_price": 85.36222052519906,
+                    "_quality": 0.9094865921128944,
+                    "quality": 0.9094865921128944,
+                    "price": 162.99801556585174,
+                    "fixedCost": 32.59960311317035,
+                    "variableCost": 0.16299801556585175,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 5,
-                    "name": "Waters Inc",
+                    "name": "Zemlak Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
                     "_necessity": 0.3,
-                    "_price": 39.11158019505534,
-                    "_quality": 0.0967558480008065,
-                    "quality": 0.0967558480008065,
-                    "price": 42.89585430347946,
-                    "fixedCost": 8.579170860695893,
-                    "variableCost": 0.08579170860695892,
+                    "_price": 40.418309797436876,
+                    "_quality": 0.6276488883610585,
+                    "quality": 0.6276488883610585,
+                    "price": 65.78681701123101,
+                    "fixedCost": 13.157363402246203,
+                    "variableCost": 0.13157363402246203,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 6,
-                    "name": "Waters Inc",
-                    "category": "ENTERTAINMENT",
+                    "name": "Zemlak Group",
+                    "category": "RESTAURANT",
                     "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 34.65652045583655,
-                    "_quality": 0.8493316517425642,
-                    "quality": 0.8493316517425642,
-                    "price": 64.09140021824217,
-                    "fixedCost": 12.818280043648436,
-                    "variableCost": 0.12818280043648433,
+                    "_necessity": 0.4,
+                    "_price": 40.91274273953917,
+                    "_quality": 0.3464277735929129,
+                    "quality": 0.3464277735929129,
+                    "price": 55.086053118377336,
+                    "fixedCost": 11.017210623675467,
+                    "variableCost": 0.11017210623675468,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 7,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 94.70324447717596,
-                    "_quality": 0.5310586469847844,
-                    "quality": 0.5310586469847844,
-                    "price": 144.99622135429428,
-                    "fixedCost": 28.999244270858856,
-                    "variableCost": 0.14499622135429427,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 7.481252612992415,
+                    "_quality": 0.041093037113463904,
+                    "quality": 0.041093037113463904,
+                    "price": 7.788680004273311,
+                    "fixedCost": 1.5577360008546624,
+                    "variableCost": 0.0350490600192299,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 8,
-                    "name": "Waters Inc",
-                    "category": "SUPERMARKET",
-                    "_frequency": 0.45,
-                    "_necessity": 0.8,
-                    "_price": 7.734850943392127,
-                    "_quality": 0.54220676129501,
-                    "quality": 0.54220676129501,
-                    "price": 11.928739422508423,
-                    "fixedCost": 2.3857478845016846,
-                    "variableCost": 0.05367932740128791,
+                    "name": "Zemlak Group",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 41.98095271248023,
+                    "_quality": 0.9560459135979256,
+                    "quality": 0.9560459135979256,
+                    "price": 82.1166710021947,
+                    "fixedCost": 16.42333420043894,
+                    "variableCost": 0.1642333420043894,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 9,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 244.328961026316,
-                    "_quality": 0.7473805095200396,
-                    "quality": 0.7473805095200396,
-                    "price": 426.93566440866596,
-                    "fixedCost": 85.3871328817332,
-                    "variableCost": 0.213467832204333,
+                    "name": "Zemlak Group",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 110.65375256824156,
+                    "_quality": 0.5438210480258423,
+                    "quality": 0.5438210480258423,
+                    "price": 170.82959225789492,
+                    "fixedCost": 34.16591845157898,
+                    "variableCost": 0.17082959225789493,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 10,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 360.48923853854905,
-                    "_quality": 0.5740447608928864,
-                    "quality": 0.5740447608928864,
-                    "price": 567.426197279869,
-                    "fixedCost": 113.48523945597381,
-                    "variableCost": 0.28371309863993455,
+                    "name": "Zemlak Group",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 43.47601831941453,
+                    "_quality": 0.09956770087065281,
+                    "quality": 0.09956770087065281,
+                    "price": 47.80482550648902,
+                    "fixedCost": 9.560965101297803,
+                    "variableCost": 0.09560965101297804,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 11,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 214.27268136246906,
-                    "_quality": 0.13692435458398056,
-                    "quality": 0.13692435458398056,
-                    "price": 243.61182996300403,
-                    "fixedCost": 48.72236599260081,
-                    "variableCost": 0.12180591498150202,
+                    "name": "Zemlak Group",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 35.172716301075916,
+                    "_quality": 0.3457255646617122,
+                    "quality": 0.3457255646617122,
+                    "price": 47.3328235049516,
+                    "fixedCost": 9.46656470099032,
+                    "variableCost": 0.0946656470099032,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 12,
-                    "name": "Waters Inc",
-                    "category": "ENTERTAINMENT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 31.210162496679494,
-                    "_quality": 0.1819671217768254,
-                    "quality": 0.1819671217768254,
-                    "price": 36.88938593638728,
-                    "fixedCost": 7.377877187277456,
-                    "variableCost": 0.07377877187277455,
+                    "name": "Zemlak Group",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 101.19179270260523,
+                    "_quality": 0.8398205707764217,
+                    "quality": 0.8398205707764217,
+                    "price": 186.1747418079965,
+                    "fixedCost": 37.2349483615993,
+                    "variableCost": 0.1861747418079965,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 13,
-                    "name": "Waters Inc",
+                    "name": "Zemlak Group",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 40.67657696060743,
-                    "_quality": 0.19797939277987286,
-                    "quality": 0.19797939277987286,
-                    "price": 48.72970096763225,
-                    "fixedCost": 9.745940193526451,
-                    "variableCost": 0.09745940193526449,
+                    "_price": 37.07065919851394,
+                    "_quality": 0.10501128621686551,
+                    "quality": 0.10501128621686551,
+                    "price": 40.96349680185696,
+                    "fixedCost": 8.192699360371392,
+                    "variableCost": 0.08192699360371393,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 14,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 100.26391612155724,
-                    "_quality": 0.9709346070239552,
-                    "quality": 0.9709346070239552,
-                    "price": 197.61362211972425,
-                    "fixedCost": 39.52272442394485,
-                    "variableCost": 0.19761362211972425,
+                    "name": "Zemlak Group",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 274.6780521881085,
+                    "_quality": 0.5619183340474253,
+                    "quality": 0.5619183340474253,
+                    "price": 429.02468567304214,
+                    "fixedCost": 85.80493713460844,
+                    "variableCost": 0.21451234283652107,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 15,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 303.18833803374747,
-                    "_quality": 0.5094877148167954,
-                    "quality": 0.5094877148167954,
-                    "price": 457.65907153766364,
-                    "fixedCost": 91.53181430753273,
-                    "variableCost": 0.22882953576883183,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 9.3639825168617,
+                    "_quality": 0.13933124465025126,
+                    "quality": 0.13933124465025126,
+                    "price": 10.668677855819233,
+                    "fixedCost": 2.1337355711638466,
+                    "variableCost": 0.04800905035118656,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 16,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 98.44327840537889,
-                    "_quality": 0.19909889752949816,
-                    "quality": 0.19909889752949816,
-                    "price": 118.04322660507927,
-                    "fixedCost": 23.608645321015857,
-                    "variableCost": 0.11804322660507927,
+                    "name": "Zemlak Group",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 40.24696831688745,
+                    "_quality": 0.08480295435023777,
+                    "quality": 0.08480295435023777,
+                    "price": 43.66003013379992,
+                    "fixedCost": 8.732006026759985,
+                    "variableCost": 0.08732006026759985,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 17,
-                    "name": "Waters Inc",
-                    "category": "ENTERTAINMENT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 45.7415522427757,
-                    "_quality": 0.49763580026919396,
-                    "quality": 0.49763580026919396,
-                    "price": 68.50418619866451,
-                    "fixedCost": 13.700837239732904,
-                    "variableCost": 0.13700837239732902,
+                    "name": "Zemlak Group",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 244.96157903927204,
+                    "_quality": 0.0779469536452051,
+                    "quality": 0.0779469536452051,
+                    "price": 264.0555878855024,
+                    "fixedCost": 52.81111757710048,
+                    "variableCost": 0.13202779394275121,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 18,
-                    "name": "Waters Inc",
-                    "category": "ENTERTAINMENT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 37.24386347979926,
-                    "_quality": 0.24689995307561008,
-                    "quality": 0.24689995307561008,
-                    "price": 46.43937162531612,
-                    "fixedCost": 9.287874325063225,
-                    "variableCost": 0.09287874325063224,
+                    "name": "Zemlak Group",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 268.83055907516274,
+                    "_quality": 0.07962268892119118,
+                    "quality": 0.07962268892119118,
+                    "price": 290.23557105291434,
+                    "fixedCost": 58.04711421058287,
+                    "variableCost": 0.14511778552645718,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 19,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 252.57094715373188,
-                    "_quality": 0.2800073568565836,
-                    "quality": 0.2800073568565836,
-                    "price": 323.29267048501225,
-                    "fixedCost": 64.65853409700246,
-                    "variableCost": 0.16164633524250613,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 12.572678864285956,
+                    "_quality": 0.32176000767841173,
+                    "quality": 0.32176000767841173,
+                    "price": 16.618064112196812,
+                    "fixedCost": 3.3236128224393626,
+                    "variableCost": 0.07478128850488566,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 20,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 86.9185907882539,
-                    "_quality": 0.1053559844365527,
-                    "quality": 0.1053559844365527,
-                    "price": 96.07598448658825,
-                    "fixedCost": 19.215196897317654,
-                    "variableCost": 0.09607598448658826,
+                    "name": "Zemlak Group",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 37.890783834442,
+                    "_quality": 0.6778711429329223,
+                    "quality": 0.6778711429329223,
+                    "price": 63.57585277891949,
+                    "fixedCost": 12.7151705557839,
+                    "variableCost": 0.12715170555783897,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 21,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 273.5485968421628,
-                    "_quality": 0.42961405318200885,
-                    "quality": 0.42961405318200885,
-                    "price": 391.06891827377564,
-                    "fixedCost": 78.21378365475513,
-                    "variableCost": 0.19553445913688783,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 6.869704758525758,
+                    "_quality": 0.1961743264355762,
+                    "quality": 0.1961743264355762,
+                    "price": 8.217364462340822,
+                    "fixedCost": 1.6434728924681643,
+                    "variableCost": 0.036978140080533704,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 22,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 108.26261219703424,
-                    "_quality": 0.1476123185692243,
-                    "quality": 0.1476123185692243,
-                    "price": 124.24350739779926,
-                    "fixedCost": 24.848701479559853,
-                    "variableCost": 0.12424350739779927,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 13.93752297444024,
+                    "_quality": 0.04282720335472889,
+                    "quality": 0.04282720335472889,
+                    "price": 14.5344281051278,
+                    "fixedCost": 2.9068856210255603,
+                    "variableCost": 0.06540492647307511,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 23,
-                    "name": "Waters Inc",
-                    "category": "RESTAURANT",
+                    "name": "Zemlak Group",
+                    "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 36.008804900099896,
-                    "_quality": 0.3423523048156498,
-                    "quality": 0.3423523048156498,
-                    "price": 48.336502251306165,
-                    "fixedCost": 9.667300450261234,
-                    "variableCost": 0.09667300450261233,
+                    "_necessity": 0.3,
+                    "_price": 40.378773027146224,
+                    "_quality": 0.35373326193783006,
+                    "quality": 0.35373326193783006,
+                    "price": 54.66208812308593,
+                    "fixedCost": 10.932417624617187,
+                    "variableCost": 0.10932417624617186,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 24,
-                    "name": "Waters Inc",
+                    "name": "Zemlak Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 8.961063926798802,
-                    "_quality": 0.8625460894417661,
-                    "quality": 0.8625460894417661,
-                    "price": 16.690394574096786,
-                    "fixedCost": 3.3380789148193575,
-                    "variableCost": 0.07510677558343555,
+                    "_price": 9.924317694733082,
+                    "_quality": 0.9331204946870346,
+                    "quality": 0.9331204946870346,
+                    "price": 19.184901931473707,
+                    "fixedCost": 3.8369803862947416,
+                    "variableCost": 0.08633205869163169,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 25,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 285.24703997132997,
-                    "_quality": 0.30728316576170245,
-                    "quality": 0.30728316576170245,
-                    "price": 372.89865343787517,
-                    "fixedCost": 74.57973068757504,
-                    "variableCost": 0.18644932671893757,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 10.539131440497513,
+                    "_quality": 0.8095626884368065,
+                    "quality": 0.8095626884368065,
+                    "price": 19.07121902325555,
+                    "fixedCost": 3.8142438046511105,
+                    "variableCost": 0.08582048560464998,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 26,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 104.56475508071937,
-                    "_quality": 0.7091435818684804,
-                    "quality": 0.7091435818684804,
-                    "price": 178.71618003586107,
-                    "fixedCost": 35.743236007172214,
-                    "variableCost": 0.17871618003586107,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 7.833860585431772,
+                    "_quality": 0.7590848323746835,
+                    "quality": 0.7590848323746835,
+                    "price": 13.78042533477089,
+                    "fixedCost": 2.756085066954178,
+                    "variableCost": 0.06201191400646901,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 27,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 96.65385021030268,
-                    "_quality": 0.6312487912360711,
-                    "quality": 0.6312487912360711,
-                    "price": 157.66647632386852,
-                    "fixedCost": 31.533295264773706,
-                    "variableCost": 0.15766647632386852,
+                    "name": "Zemlak Group",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 41.22728776959056,
+                    "_quality": 0.6154307966387813,
+                    "quality": 0.6154307966387813,
+                    "price": 66.59983032488597,
+                    "fixedCost": 13.319966064977194,
+                    "variableCost": 0.13319966064977196,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 28,
-                    "name": "Waters Inc",
-                    "category": "ENTERTAINMENT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 38.83972210478136,
-                    "_quality": 0.6140741013088391,
-                    "quality": 0.6140741013088391,
-                    "price": 62.69018955136002,
-                    "fixedCost": 12.538037910272005,
-                    "variableCost": 0.12538037910272004,
+                    "name": "Zemlak Group",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 189.96684598815537,
+                    "_quality": 0.7823932666907253,
+                    "quality": 0.7823932666907253,
+                    "price": 338.5956271837622,
+                    "fixedCost": 67.71912543675244,
+                    "variableCost": 0.1692978135918811,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 29,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 106.17157741228026,
-                    "_quality": 0.6796673966135541,
-                    "quality": 0.6796673966135541,
-                    "price": 178.33293702643923,
-                    "fixedCost": 35.66658740528785,
-                    "variableCost": 0.17833293702643924,
+                    "name": "Zemlak Group",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 31.72283519618634,
+                    "_quality": 0.6700544987853919,
+                    "quality": 0.6700544987853919,
+                    "price": 52.97886363361857,
+                    "fixedCost": 10.595772726723716,
+                    "variableCost": 0.10595772726723715,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 30,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 91.65743650366558,
-                    "_quality": 0.35544358208455784,
-                    "quality": 0.35544358208455784,
-                    "price": 124.23648405921638,
-                    "fixedCost": 24.84729681184328,
-                    "variableCost": 0.12423648405921638,
+                    "name": "Zemlak Group",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 238.39790215613215,
+                    "_quality": 0.19369843946773435,
+                    "quality": 0.19369843946773435,
+                    "price": 284.57520377615657,
+                    "fixedCost": 56.91504075523132,
+                    "variableCost": 0.1422876018880783,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 31,
-                    "name": "Waters Inc",
-                    "category": "RESTAURANT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 34.33597682543538,
-                    "_quality": 0.7618614087023999,
-                    "quality": 0.7618614087023999,
-                    "price": 60.49523249883454,
-                    "fixedCost": 12.099046499766908,
-                    "variableCost": 0.12099046499766908,
+                    "name": "Zemlak Group",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 99.78847183269656,
+                    "_quality": 0.5368294690580703,
+                    "quality": 0.5368294690580703,
+                    "price": 153.35786418475925,
+                    "fixedCost": 30.671572836951853,
+                    "variableCost": 0.15335786418475925,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 32,
-                    "name": "Waters Inc",
-                    "category": "ENTERTAINMENT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 33.76371534071276,
-                    "_quality": 0.486293195708009,
-                    "quality": 0.486293195708009,
-                    "price": 50.18278037272349,
-                    "fixedCost": 10.036556074544698,
-                    "variableCost": 0.10036556074544699,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 9.931882610937617,
+                    "_quality": 0.20197248894087805,
+                    "quality": 0.20197248894087805,
+                    "price": 11.937849661737314,
+                    "fixedCost": 2.387569932347463,
+                    "variableCost": 0.05372032347781792,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 33,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 366.39801708566193,
-                    "_quality": 0.4981896077930641,
-                    "quality": 0.4981896077930641,
-                    "price": 548.9337015137243,
-                    "fixedCost": 109.78674030274486,
-                    "variableCost": 0.2744668507568621,
+                    "name": "Zemlak Group",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 106.7299135460309,
+                    "_quality": 0.8107843773311391,
+                    "quality": 0.8107843773311391,
+                    "price": 193.26486004305588,
+                    "fixedCost": 38.65297200861118,
+                    "variableCost": 0.19326486004305587,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 34,
-                    "name": "Waters Inc",
+                    "name": "Zemlak Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
                     "_necessity": 0.3,
-                    "_price": 34.129633083888585,
-                    "_quality": 0.18194924404869894,
-                    "quality": 0.18194924404869894,
-                    "price": 40.33949402316158,
-                    "fixedCost": 8.067898804632316,
-                    "variableCost": 0.08067898804632316,
+                    "_price": 36.98318638983898,
+                    "_quality": 0.2233732321758698,
+                    "quality": 0.2233732321758698,
+                    "price": 45.24424026989994,
+                    "fixedCost": 9.048848053979988,
+                    "variableCost": 0.09048848053979988,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 35,
-                    "name": "Waters Inc",
-                    "category": "RESTAURANT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 34.8476987888441,
-                    "_quality": 0.7236994495987015,
-                    "quality": 0.7236994495987015,
-                    "price": 60.06695922211191,
-                    "fixedCost": 12.013391844422383,
-                    "variableCost": 0.12013391844422383,
+                    "name": "Zemlak Group",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 106.78850783885082,
+                    "_quality": 0.9358262688908794,
+                    "quality": 0.9358262688908794,
+                    "price": 206.723998690107,
+                    "fixedCost": 41.34479973802141,
+                    "variableCost": 0.20672399869010702,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 36,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 101.13132596003086,
-                    "_quality": 0.8111707872364644,
-                    "quality": 0.8111707872364644,
-                    "price": 183.1661032532966,
-                    "fixedCost": 36.63322065065932,
-                    "variableCost": 0.1831661032532966,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 12.187780565068651,
+                    "_quality": 0.5349773092079226,
+                    "quality": 0.5349773092079226,
+                    "price": 18.707966616985694,
+                    "fixedCost": 3.741593323397139,
+                    "variableCost": 0.08418584977643563,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 37,
-                    "name": "Waters Inc",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 101.30822595312956,
-                    "_quality": 0.1473407975863349,
-                    "quality": 0.1473407975863349,
-                    "price": 116.23506076712032,
-                    "fixedCost": 23.247012153424066,
-                    "variableCost": 0.11623506076712031,
+                    "name": "Zemlak Group",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 343.7998802619996,
+                    "_quality": 0.47172574259701616,
+                    "quality": 0.47172574259701616,
+                    "price": 505.97913408335654,
+                    "fixedCost": 101.19582681667131,
+                    "variableCost": 0.2529895670416783,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 38,
-                    "name": "Waters Inc",
-                    "category": "ENTERTAINMENT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 33.59588569048089,
-                    "_quality": 0.4995568265349375,
-                    "quality": 0.4995568265349375,
-                    "price": 50.37893973064804,
-                    "fixedCost": 10.075787946129608,
-                    "variableCost": 0.1007578794612961,
+                    "name": "Zemlak Group",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 306.1608879553529,
+                    "_quality": 0.2890795316684067,
+                    "quality": 0.2890795316684067,
+                    "price": 394.6657340606699,
+                    "fixedCost": 78.93314681213398,
+                    "variableCost": 0.19733286703033495,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
                     "id": 39,
-                    "name": "Waters Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 287.3491446478196,
-                    "_quality": 0.4944122121409359,
-                    "quality": 0.4944122121409359,
-                    "price": 429.41807090995394,
-                    "fixedCost": 85.8836141819908,
-                    "variableCost": 0.21470903545497697,
+                    "name": "Zemlak Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 9.310058969391623,
+                    "_quality": 0.24293281006509382,
+                    "quality": 0.24293281006509382,
+                    "price": 11.57177775669766,
+                    "fixedCost": 2.314355551339532,
+                    "variableCost": 0.05207299990513948,
                     "turnOver": 0,
-                    "taxes": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
                     "nettoProfitHistory": [],
-                    "turnOverHistory": []
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
                 }
             }
         ],
         "numActions": 2,
         "suicideCount": 0,
         "time": 0,
-        "avgHappiness": 37.4439532652973,
-        "avgCapital": 10435.818696473432
+        "avgHappiness": 54.82717505079343,
+        "avgCapital": 11138.774707211891
     }
 }

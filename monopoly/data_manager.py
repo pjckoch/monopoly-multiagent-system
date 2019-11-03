@@ -84,23 +84,23 @@ def evaluateStats(time, evaluationInterval, listOfPeople):
     elif evaluationInterval == EvaluationInterval.YEARLY:
         time = datetime.datetime(year+startYear, 12, 31)
     for bm in listOfPeople:
-        turnOver, nettoProfit = computeStatsForEvaluationInterval(evaluationInterval, bm)
-        appendToDataFrame(time, bm, turnOver, nettoProfit)
+        turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(evaluationInterval, bm)
+        appendToDataFrame(time, bm, turnOver, taxes, nettoProfit)
 
 def computeStatsForEvaluationInterval(evaluationInterval, bm):
     """Compute the stats for one Businessman over a given evaluation interval"""
-    nettoProfit = 0
     turnOver = 0
+    taxes = 0
+    nettoProfit = 0
 
     for comp in bm.companies:
-        turnOver = comp.turnOverHistory[-1]
-        nettoProfit = comp.nettoProfitHistory[-1]
-    #     # some profit and turnover to get total within the specified evaluationInterval
-    #     nettoProfit += sum(comp.nettoProfitHistory[-evaluationInterval.value:])
-    #     turnOver += sum(comp.turnOverHistory[-evaluationInterval.value:])
-    return turnOver, nettoProfit
+        turnOver += comp.turnOverHistory[-1]
+        taxes += comp.taxHistory[-1]
+        nettoProfit += comp.nettoProfitHistory[-1]
+        
+    return turnOver, taxes, nettoProfit
 
-def appendToDataFrame(time, bm, turnOver, nettoProfit):
+def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
     """Function to append a stats for a certain businessman to a given dataframe"""
     global dfIndex, df_total
 
@@ -119,6 +119,7 @@ def appendToDataFrame(time, bm, turnOver, nettoProfit):
                        "numOfEntertainments": numOfEntertainments,
                        "numOfLuxuries": numOfLuxuries,
                        "turnOver": turnOver,
+                       "taxes": taxes,
                        "nettoProfit": nettoProfit,
                        "subsidiaries": bm.subsidiaries,
                        "capital": bm.capital,
