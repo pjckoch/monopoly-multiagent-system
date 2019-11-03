@@ -71,7 +71,6 @@ def readFromJson(filepath):
     return data
 
 def exportToCSV():
-    
     df_total.to_csv(filepath)
 
 def evaluateStats(time, evaluationInterval, listOfPeople):

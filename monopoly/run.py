@@ -12,8 +12,6 @@ evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
 #     env = data_manager.readFromJson(jsonFile)
 
-    
-
 
 if __name__ == "__main__":
 
