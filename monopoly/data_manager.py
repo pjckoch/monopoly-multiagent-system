@@ -82,6 +82,9 @@ def evaluateStats(time, evaluationInterval, listOfPeople):
         time = datetime.datetime(year+startYear, month, 1)
     elif evaluationInterval == EvaluationInterval.ANNUAL:
         time = datetime.datetime(year+startYear, 12, 31)
+    elif evaluationInterval == EvaluationInterval.DAILY:
+        starttime = datetime.datetime(startYear, 1, 1)
+        time = starttime + datetime.timedelta(days=time)
     for bm in listOfPeople:
         turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(evaluationInterval, bm)
         appendToDataFrame(time, bm, turnOver, taxes, nettoProfit)

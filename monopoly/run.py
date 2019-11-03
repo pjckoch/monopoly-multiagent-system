@@ -5,8 +5,8 @@ from plot_history import *
 from enum import Enum
 import data_manager
 
-days = 3600
-evaluationInterval = data_manager.EvaluationInterval.MONTHLY
+days = 360
+evaluationInterval = data_manager.EvaluationInterval.DAILY
 
 # def runFromJson(jsonFile):
 
