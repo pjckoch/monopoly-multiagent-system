@@ -80,7 +80,7 @@ def evaluateStats(time, evaluationInterval, listOfPeople):
         year = int((time-1) // 12)
         month = Month(time - 12 * year).value
         time = datetime.datetime(year+startYear, month, 1)
-    elif evaluationInterval == EvaluationInterval.YEARLY:
+    elif evaluationInterval == EvaluationInterval.ANNUAL:
         time = datetime.datetime(year+startYear, 12, 31)
     for bm in listOfPeople:
         turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(evaluationInterval, bm)
