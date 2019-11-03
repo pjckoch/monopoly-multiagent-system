@@ -58,7 +58,7 @@ class Company():
             self.quality
         else:
             self.quality = quality
-        self.fixedCost = (0.3 * self.price) if fixedCost is None else fixedCost
+        self.fixedCost = (0.2 * self.price) if fixedCost is None else fixedCost
         self.variableCost = (0.01 * self.frequency * self.price) if variableCost is None else variableCost
         self.turnOver = turnOver
         self.taxes = taxes
@@ -74,12 +74,12 @@ class Company():
         self.turnOverHistory.append(self.turnOver)
         bProfit = self.turnOver - self.variableCost - self.fixedCost + 100 * self.investmentLevel
         self.turnOver = 0
-        self.bruttoProfitHistory.append(bProfit)
         return bProfit
 
     def computeNettoProfit(self):
         """Profit minus taxes"""
         bProfit = self.computeBruttoProfit()
+        self.bruttoProfitHistory.append(bProfit)
         nProfit = bProfit - self.taxes
         self.nettoProfitHistory.append(nProfit)
         return nProfit

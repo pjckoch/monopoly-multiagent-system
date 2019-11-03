@@ -12,7 +12,7 @@ class Government():
                  politics=None,
                  taxesStatus=[],
                  subsidiariesStatus=[],
-                 taxRate=0.3,
+                 taxRate=0.1,
                  subsidyValue=50,
                  governmentMoney=0,
                  startCompPrice=9000,
@@ -67,8 +67,8 @@ class Government():
 
     #TODO: improve
     def regulateTax(self,company):
-        if company.computeBruttoProfit() > 0:
-            company.taxes = company.computeBruttoProfit() * self.taxRate
+        if company.bruttoProfitHistory[-1] > 0:
+            company.taxes = company.bruttoProfitHistory[-1] * self.taxRate
             self.governmentMoney += company.taxes
 
         # if not self.isCompanyTaxed(company):

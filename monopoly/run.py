@@ -29,41 +29,25 @@ if __name__ == "__main__":
         if time != 0.0:
 
             stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
+            companiesForEvaluation = env.listOfCompanies
+
             for bm in stillALiveBms:
-                # choose randomly
-                companiesForEvaluation = env.listOfCompanies
+
                 action = bm.chooseAction(companiesForEvaluation)
-
                 bm.dailyActions.append(action)
-
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
 
-
-                # print("Businessman " + str(bm.id) + " Action:")
-
             env.time = round(time, 1)
-            # print("-----------||-----------")
-            # print("Days passed: " + str(env.time))
 
             if env.time % evaluationInterval.value == 0.0 :
-
-                # Or display the daily auctions
-                # for bm in stillALiveBms:
-                #     bm.displayDailyActions()
-                #     bm.dailyActions = []
 
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
 
-                    bProfits = []
-
                     for company in bm.companies:
-                        # print("price:" + str(company.price))
-                        company.computeBruttoProfit()
+                        nProfit = company.computeNettoProfit()                        
                         company.computeCompanyValue()
-                        nProfit = company.computeNettoProfit()
-                        # env.addProfitsForCompany(company.id, cmpProfit)
 
                     # compute the updated capital for the businessman and print
                     bm.capital += nProfit + bm.subsidiaries
@@ -81,5 +65,3 @@ if __name__ == "__main__":
     # plot profit history and capital
     data_manager.exportToCSV()
     # data_manager.writeToJson("results.json", env)
-
-    
