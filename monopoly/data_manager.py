@@ -9,9 +9,7 @@ import environment
 import businessman
 import government
 
-df_total = pd.DataFrame()
-dfIndex = 0
-startYear = 2019
+df_total, dfIndex, startDate = init_statistics()
 
 class EvaluationInterval(Enum):
     ANNUAL = 365
@@ -63,6 +61,13 @@ class JsonEncoder(json.JSONEncoder):
                 }
             return obj.__dict__
 
+def init_statistics(df=None,
+                    dfIndex=0,
+                    startDate=datetime.datetime(2019,1,1)):
+                    dataframe = pd.DataFrame() if df is None else df
+                    return dataframe, dfIndex, startDate
+    
+
 def writeToJson(filepath, data):
     with open(filepath.value, 'w') as f:
         json.dump(data, f, cls = JsonEncoder, indent=4)
@@ -77,23 +82,18 @@ def readFromJson(filepath):
 def exportToCSV():
     df_total.to_csv(FileType.STATS.value)
 
-def evaluateStats(time, evaluationInterval, listOfPeople):
+def getTime(days):
+    global startDate
+    time = startDate + datetime.timedelta(days=days)
+
+def evaluateStats(time, listOfPeople):
     """Evaluate the stats for a list of businessmen over a given evaluation interval"""
-    time = int(time//evaluationInterval.value)
-    if evaluationInterval == EvaluationInterval.MONTHLY:
-        year = int((time-1) // 12)
-        month = Month(time - 12 * year).value
-        time = datetime.datetime(year+startYear, month, 1)
-    elif evaluationInterval == EvaluationInterval.ANNUAL:
-        time = datetime.datetime(year+startYear, 12, 31)
-    elif evaluationInterval == EvaluationInterval.DAILY:
-        starttime = datetime.datetime(startYear, 1, 1)
-        time = starttime + datetime.timedelta(days=time)
+    time = getTime(days=time)
     for bm in listOfPeople:
-        turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(evaluationInterval, bm)
+        turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(bm)
         appendToDataFrame(time, bm, turnOver, taxes, nettoProfit)
 
-def computeStatsForEvaluationInterval(evaluationInterval, bm):
+def computeStatsForEvaluationInterval(bm):
     """Compute the stats for one Businessman over a given evaluation interval"""
     turnOver = 0
     taxes = 0
@@ -138,9 +138,6 @@ def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
 def deserialize_objects(obj):
     if '__class__' in obj:
         objval = obj['__value__']
-        # print(obj)
-        # TODO Belongs to the IS THIS NEEDED
-        # copyOfDict = dict(objval)
         if obj['__class__'] == 'Company':
             des_obj = deserialize_company(objval) 
         elif obj['__class__'] == 'Businessman':
@@ -149,10 +146,6 @@ def deserialize_objects(obj):
             des_obj = deserialize_government(objval)
         elif obj['__class__'] == 'Environment':
             des_obj = deserialize_environment(objval)
-        # TODO: IS THIS NEEDED?????????????
-        # for (key, value) in copyOfDict.items():
-        #     del objval[key]
-        # del obj['__value__']
     else:
         des_obj = obj
     return des_obj

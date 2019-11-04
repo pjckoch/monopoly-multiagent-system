@@ -5,7 +5,7 @@ from plot_history import *
 from enum import Enum
 import data_manager
 
-days = 360
+days = 90
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
 def runFromJson(jsonFile):
@@ -29,7 +29,7 @@ def runFromJson(jsonFile):
 
             env.time = round(time, 1)
 
-            if env.time % evaluationInterval.value == 0.0 :
+            if env.time % evaluationInterval.value == 0.0:
 
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
