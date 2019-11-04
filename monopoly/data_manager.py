@@ -74,7 +74,6 @@ def readFromJson(filepath):
     return data
 
 def exportToCSV():
-    
     df_total.to_csv(filepath)
     df_categories.to_csv(categories_filepath)
 
@@ -85,8 +84,11 @@ def evaluateStats(time, evaluationInterval, listOfPeople):
         year = int((time-1) // 12)
         month = Month(time - 12 * year).value
         time = datetime.datetime(year+startYear, month, 1)
-    elif evaluationInterval == EvaluationInterval.YEARLY:
+    elif evaluationInterval == EvaluationInterval.ANNUAL:
         time = datetime.datetime(year+startYear, 12, 31)
+    elif evaluationInterval == EvaluationInterval.DAILY:
+        starttime = datetime.datetime(startYear, 1, 1)
+        time = starttime + datetime.timedelta(days=time)
     for bm in listOfPeople:
         turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(evaluationInterval, bm)
         appendToDataFrame(time, bm, turnOver, taxes, nettoProfit)
