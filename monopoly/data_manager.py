@@ -9,12 +9,17 @@ import environment
 import businessman
 import government
 
-df_total, dfIndex, startDate = init_statistics()
+
+df_total = None
+dfIndex = None
+startDate = None
+currentDate = None
+
 
 class EvaluationInterval(Enum):
-    ANNUAL = 365
-    MONTHLY = 30
-    DAILY = 1
+    ANNUAL
+    MONTHLY
+    DAILY
 
 class Month(Enum):
     JANUARY = 1
@@ -61,11 +66,14 @@ class JsonEncoder(json.JSONEncoder):
                 }
             return obj.__dict__
 
-def init_statistics(df=None,
-                    dfIndex=0,
-                    startDate=datetime.datetime(2019,1,1)):
-                    dataframe = pd.DataFrame() if df is None else df
-                    return dataframe, dfIndex, startDate
+def init_statistics(dataframe=None,
+                    dfIdx=0,
+                    startDt=datetime.datetime(2019,1,1)):
+                    global df, dfIndex, startDate, currentDate
+                    df = pd.DataFrame() if dataframe is None else dataframe
+                    dfIndex = dfIdx
+                    startDate = startDt
+                    currentDate = startDat
     
 
 def writeToJson(filepath, data):
@@ -85,6 +93,20 @@ def exportToCSV():
 def getTime(days):
     global startDate
     time = startDate + datetime.timedelta(days=days)
+
+def isEvaluationIntervalCompleted(days, evaluationInterval):
+    global currentDate, startDate
+    oldDate = currentDate
+    currentDate = startDate + datetime.timedelta(days=days)
+    if evaluationInterval == EvaluationInterval.DAILY and days % 1.0 == 0.0:
+        return True
+    elif evaluationInterval == EvaluationInterval.MONTHLY:
+        if oldDate.month != currentDate.month or oldDate.year != currentDate.year:
+            # the part after the OR is for the case that the evaluation interval is changed in a step-by-step run process
+            return True
+    elif evaluationInterval == EvaluationInterval.ANNUAL:
+        if oldDate.year != currentDate.year:
+            return True
 
 def evaluateStats(time, listOfPeople):
     """Evaluate the stats for a list of businessmen over a given evaluation interval"""

@@ -29,7 +29,7 @@ def runFromJson(jsonFile):
 
             env.time = round(time, 1)
 
-            if env.time % evaluationInterval.value == 0.0:
+            if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
 
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
@@ -45,7 +45,7 @@ def runFromJson(jsonFile):
                 env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
-                data_manager.evaluateStats(time, evaluationInterval, env.listOfPeople)
+                data_manager.evaluateStats(time, env.listOfPeople)
 
     # plot profit history and capital
     data_manager.exportToCSV()
@@ -53,12 +53,19 @@ def runFromJson(jsonFile):
 
 
 def create_new_environment():
+    data_manager.init_statistics()
     env = Environment()
     jsonfile = data_manager.FileType.CONFIG
     data_manager.writeToJson(jsonfile, env)
     return jsonfile
 
 def use_existing_environment():
+    dataframe = pd.read_csv(data_manager.FileType.STATS)
+    lastDfIndex = dataframe.index[-1]
+    lastDate = dataframe.time[-1]
+    data_manager.init_statistics(df=dataframe,
+                                 dfIndex=lastDfIndex,
+                                 startDate=lastDate)
     return data_manager.FileType.RESULTS
     
 
