@@ -6,19 +6,11 @@ from enum import Enum
 import data_manager
 
 days = 360
-evaluationInterval = data_manager.EvaluationInterval.DAILY
+evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
-# def runFromJson(jsonFile):
+def runFromJson(jsonFile):
 
-#     env = data_manager.readFromJson(jsonFile)
-
-
-if __name__ == "__main__":
-
-    configFile = "config.json"
-    env = Environment()
-    data_manager.writeToJson(configFile, env)
-    # runFromJson(configFile)
+    env = data_manager.readFromJson(jsonFile)
 
     # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
@@ -56,10 +48,13 @@ if __name__ == "__main__":
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, evaluationInterval, env.listOfPeople)
 
-                # print("Government Money: " + str(env.government.governmentMoney))
-                # for bm in env.listOfPeople:
-                #     print(round(bm.capital,0))
-
     # plot profit history and capital
     data_manager.exportToCSV()
     # data_manager.writeToJson("results.json", env)
+
+
+if __name__ == "__main__":
+
+    env = Environment()
+    data_manager.writeToJson(data_manager.FileType.CONFIG, env)
+    runFromJson(data_manager.FileType.CONFIG)

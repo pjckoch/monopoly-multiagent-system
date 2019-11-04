@@ -18,15 +18,16 @@ class Businessman():
                 capital=1000 * np.random.randn() + 10000,
                 happiness=10 * np.random.randn() + 50,
                 isAlive=True,
-                subsidiaries=0):
+                subsidiaries=0,
+                companiesList=None):
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
-        self.companies = []
         self.dailyActions = []
         self.name = name
         self.capital = capital
         self.happiness = happiness
+        self.companies = [] if companiesList is None else companiesList
 
     def chooseAction(self, companies):
         # choose a category randomly based on the frequency (probability)

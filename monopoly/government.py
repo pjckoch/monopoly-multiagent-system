@@ -10,16 +10,16 @@ class Government():
 
     def __init__(self,
                  politics=None,
-                 taxesStatus=[],
-                 subsidiariesStatus=[],
+                 taxesStatus=None,
+                 subsidiariesStatus=None,
                  taxRate=0.1,
                  subsidyValue=50,
                  governmentMoney=0,
                  startCompPrice=9000,
                  investOwnCompPrice=3000):
         self.politics = PoliticsSwitcher.SUPPORTIVE if politics is None else politics
-        self.taxesStatus = taxesStatus
-        self.subsidiariesStatus = subsidiariesStatus
+        self.taxesStatus = [] if taxesStatus is None else taxesStatus
+        self.subsidiariesStatus = [] if subsidiariesStatus is None else subsidiariesStatus
         self.taxRate = taxRate
         self.subsidyValue = subsidyValue
         self.governmentMoney = governmentMoney

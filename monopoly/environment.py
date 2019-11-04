@@ -17,21 +17,22 @@ class Environment():
                  numPeople=10,
                  numCompanies=None,
                  government=None,
-                 listOfPeople=None,
-                 listOfCompanies=None,
+                 listPeople=None,
+                 listCompanies=None,
                  numActions=2,
                  suicideCount=0,
                  time=0):
         self.numPeople = numPeople
         self.numCompanies = (4 * self.numPeople) if numCompanies is None else numCompanies
         self.government = Government() if government is None else government
-        self.listOfPeople = [Businessman(i) for i in range(self.numPeople)] if listOfPeople is None else listOfPeople
-        self.listOfCompanies = listOfCompanies
+        self.listOfPeople = [Businessman(i) for i in range(self.numPeople)] if listPeople is None else listPeople
+        self.listOfCompanies = listCompanies
         self.numActions = 2
         self.suicideCount = 0
         self.time = 0
         
-        if listOfCompanies is None:
+        if self.listOfCompanies is None:
+            print("distributing companies")
             self.distributeCompanies()
         
         # compute initial values for happiness and capital

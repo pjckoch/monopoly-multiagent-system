@@ -33,13 +33,12 @@ class Company():
                  turnOver=0,
                  fixedCost=None,
                  variableCost=None,
-                 taxes=0,
                  companyValue=0,
                  investmentLevel=0,
                  bruttoProfitHistory=[],
                  nettoProfitHistory=[],
                  turnOverHistory=[],
-                 taxHistory=[0]):
+                 taxHist=[0]):
         self.id = companyId
         self.name = name
         self.category = random.choice(list(BusinessCategory)) if category is None else category
@@ -67,7 +66,7 @@ class Company():
         self.bruttoProfitHistory = []
         self.nettoProfitHistory = []
         self.turnOverHistory = []
-        self.taxHistory = [0]
+        self.taxHistory = taxHist
 
 
     def computeBruttoProfit(self):

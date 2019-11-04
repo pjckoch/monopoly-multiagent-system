@@ -9,7 +9,6 @@ import environment
 import businessman
 import government
 
-filepath = ("statistics.csv")
 df_total = pd.DataFrame()
 dfIndex = 0
 startYear = 2019
@@ -32,6 +31,11 @@ class Month(Enum):
     OCTOBER = 10
     NOVEMBER = 11
     DECEMBER = 12
+
+class FileType(Enum):
+    CONFIG = "config.json"
+    RESULTS = "results.json"
+    STATS = "statistics.csv"
 
 class JsonEncoder(json.JSONEncoder):
         def default(self, obj):
@@ -60,18 +64,18 @@ class JsonEncoder(json.JSONEncoder):
             return obj.__dict__
 
 def writeToJson(filepath, data):
-    with open(filepath, 'w') as f:
+    with open(filepath.value, 'w') as f:
         json.dump(data, f, cls = JsonEncoder, indent=4)
         f.close()
 
 def readFromJson(filepath):
-    with open(filepath, 'r') as f:
+    with open(filepath.value, 'r') as f:
         data = json.loads(f.read(), object_hook=deserialize_objects)
         f.close()
     return data
 
 def exportToCSV():
-    df_total.to_csv(filepath)
+    df_total.to_csv(FileType.STATS.value)
 
 def evaluateStats(time, evaluationInterval, listOfPeople):
     """Evaluate the stats for a list of businessmen over a given evaluation interval"""
@@ -134,6 +138,10 @@ def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
 def deserialize_objects(obj):
     if '__class__' in obj:
         objval = obj['__value__']
+        print("Before: " + str(len(obj)))
+        # print(obj)
+        # TODO Do we need the dict() tag?
+        copyOfDict = dict(objval)
         if obj['__class__'] == 'Company':
             des_obj = deserialize_company(objval) 
         elif obj['__class__'] == 'Businessman':
@@ -142,10 +150,14 @@ def deserialize_objects(obj):
             des_obj = deserialize_government(objval)
         elif obj['__class__'] == 'Environment':
             des_obj = deserialize_environment(objval)
-        else:
-            des_obj = obj
-        obj.pop(des_obj)
-        return des_obj
+        # TODO: IS THIS NEEDED?????????????
+        # for (key, value) in copyOfDict.items():
+        #     del objval[key]
+        del obj['__value__']
+        print("after: " + str(len(obj)))
+    else:
+        des_obj = obj
+    return des_obj
 
 def deserialize_businessman(obj):
     return businessman.Businessman(businessmanId = obj['id'],
@@ -154,7 +166,7 @@ def deserialize_businessman(obj):
                                    happiness = obj['happiness'],
                                    isAlive = obj['isAlive'],
                                    subsidiaries = obj['subsidiaries'],
-                                   companies = obj['companies'])
+                                   companiesList = obj['companies'])
 
 def deserialize_company(obj):
     category = company.BusinessCategory[obj['category']]
@@ -168,15 +180,15 @@ def deserialize_company(obj):
                            turnOver = obj['turnOver'],
                            fixedCost = obj['fixedCost'],
                            variableCost = obj['variableCost'],
-                           taxes = obj['taxes'],
                            companyValue= obj['companyValue'],
                            investmentLevel = obj['investmentLevel'],
                            bruttoProfitHistory = obj['bruttoProfitHistory'],
                            nettoProfitHistory = obj['nettoProfitHistory'],
-                           turnOverHistory = obj['turnOverHistory'])
+                           turnOverHistory = obj['turnOverHistory'],
+                           taxHist = obj['taxHistory'])
 
 def deserialize_government(obj):
-    politics = government.PoliticsSwitcher[obj['politics']]
+    politics = None #government.PoliticsSwitcher[obj['politics']]
     return government.Government(politics=politics,
                                  taxesStatus=obj['taxesStatus'],
                                  subsidiariesStatus=obj['subsidiariesStatus'],
@@ -190,8 +202,8 @@ def deserialize_environment(obj):
     return environment.Environment(numPeople=obj['numPeople'],
                                    numCompanies=obj['numCompanies'],
                                    government=obj['government'],
-                                   listOfPeople=obj['listOfPeople'],
-                                   listOfCompanies=obj['listOfCompanies'],
+                                   listPeople=obj['listOfPeople'],
+                                   listCompanies=obj['listOfCompanies'],
                                    numActions=obj['numActions'],
                                    suicideCount=obj['suicideCount'],
                                    time=obj['time'])
