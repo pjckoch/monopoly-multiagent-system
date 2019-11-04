@@ -183,14 +183,5 @@ class Businessman():
         self.companies.append(company)
         return company
 
-    def displayDailyActions(self):
-        print("Businessman " + str(self.id) + " Daily Actions:")
-        for action in self.dailyActions:
-            if action is not None:
-                print(action.id)
-            else:
-                print("No Action")
-
-
 def decision(probability):
     return np.random.random() < probability

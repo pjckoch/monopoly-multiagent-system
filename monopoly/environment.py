@@ -32,7 +32,6 @@ class Environment():
         self.time = 0
         
         if self.listOfCompanies is None:
-            print("distributing companies")
             self.distributeCompanies()
         
         # compute initial values for happiness and capital

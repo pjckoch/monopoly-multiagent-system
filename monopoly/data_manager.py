@@ -138,10 +138,9 @@ def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
 def deserialize_objects(obj):
     if '__class__' in obj:
         objval = obj['__value__']
-        print("Before: " + str(len(obj)))
         # print(obj)
-        # TODO Do we need the dict() tag?
-        copyOfDict = dict(objval)
+        # TODO Belongs to the IS THIS NEEDED
+        # copyOfDict = dict(objval)
         if obj['__class__'] == 'Company':
             des_obj = deserialize_company(objval) 
         elif obj['__class__'] == 'Businessman':
@@ -153,8 +152,7 @@ def deserialize_objects(obj):
         # TODO: IS THIS NEEDED?????????????
         # for (key, value) in copyOfDict.items():
         #     del objval[key]
-        del obj['__value__']
-        print("after: " + str(len(obj)))
+        # del obj['__value__']
     else:
         des_obj = obj
     return des_obj

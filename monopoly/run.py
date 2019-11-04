@@ -50,11 +50,21 @@ def runFromJson(jsonFile):
 
     # plot profit history and capital
     data_manager.exportToCSV()
-    # data_manager.writeToJson("results.json", env)
+    data_manager.writeToJson(data_manager.FileType.RESULTS, env)
 
+
+def create_new_environment():
+    env = Environment()
+    jsonfile = data_manager.FileType.CONFIG
+    data_manager.writeToJson(jsonfile, env)
+    return jsonfile
+
+def use_existing_environment():
+    return data_manager.FileType.RESULTS
+    
 
 if __name__ == "__main__":
 
-    env = Environment()
-    data_manager.writeToJson(data_manager.FileType.CONFIG, env)
-    runFromJson(data_manager.FileType.CONFIG)
+    jsonfile = create_new_environment()
+    # jsonfile = use_existing_environment()
+    runFromJson(jsonfile)
