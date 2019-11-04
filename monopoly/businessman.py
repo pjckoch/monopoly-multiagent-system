@@ -23,7 +23,6 @@ class Businessman():
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
-        self.dailyActions = []
         self.name = name
         self.capital = capital
         self.happiness = happiness

@@ -24,7 +24,6 @@ def runFromJson(jsonFile):
             for bm in stillALiveBms:
 
                 action = bm.chooseAction(companiesForEvaluation)
-                bm.dailyActions.append(action)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
 
