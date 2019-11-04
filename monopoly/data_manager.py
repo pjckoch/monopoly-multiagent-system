@@ -10,8 +10,11 @@ import businessman
 import government
 
 filepath = ("statistics.csv")
+categories_filepath = ("companiesStats.csv")
 df_total = pd.DataFrame()
+df_categories = pd.DataFrame()
 dfIndex = 0
+dfIndexCompanies = 0
 startYear = 2019
 
 class EvaluationInterval(Enum):
@@ -73,6 +76,7 @@ def readFromJson(filepath):
 def exportToCSV():
     
     df_total.to_csv(filepath)
+    df_categories.to_csv(categories_filepath)
 
 def evaluateStats(time, evaluationInterval, listOfPeople):
     """Evaluate the stats for a list of businessmen over a given evaluation interval"""
@@ -86,6 +90,10 @@ def evaluateStats(time, evaluationInterval, listOfPeople):
     for bm in listOfPeople:
         turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(evaluationInterval, bm)
         appendToDataFrame(time, bm, turnOver, taxes, nettoProfit)
+        for cmp in bm.companies:
+            #compute values??
+            appendToDataFrameCategories(time, cmp, bm)
+
 
 def computeStatsForEvaluationInterval(evaluationInterval, bm):
     """Compute the stats for one Businessman over a given evaluation interval"""
@@ -99,6 +107,7 @@ def computeStatsForEvaluationInterval(evaluationInterval, bm):
         nettoProfit += comp.nettoProfitHistory[-1]
         
     return turnOver, taxes, nettoProfit
+
 
 def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
     """Function to append a stats for a certain businessman to a given dataframe"""
@@ -127,6 +136,27 @@ def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
                        index = [dfIndex])
     df_total = df_total.append(df_part)
     dfIndex += 1
+
+def appendToDataFrameCategories(time, company, owner):
+    """Function to append a stats for businessess to a given dataframe"""
+    global dfIndexCompanies, df_categories
+
+
+    df_part = pd.DataFrame({"time": time,
+                       "id": company.id,
+                       "name": company.name,
+                       "owner": owner.name,
+                       "category": company.category,
+                       "turnOver": company.turnOver,
+                       #"taxes": company.taxes,
+                       "companyValue": company.companyValue,
+                       "fixedCost": company.fixedCost,
+                       "variableCost": company.variableCost},
+                       index = [dfIndexCompanies])
+
+    df_categories = df_categories.append(df_part)
+    dfIndexCompanies += 1
+
 
 
 def deserialize_objects(obj):

@@ -11,6 +11,7 @@ df = pd.read_csv(company_list)
 company_names = df['fake-company-name']
 numLines = len(company_names)
 
+
 class Company():
     """Company Object."""
 
@@ -24,7 +25,7 @@ class Company():
 
     def __init__(self,
                  companyId,
-                 name=company_names[np.random.randint(0, numLines)],
+                 name=None,
                  category=None,
                  frequency=None,
                  necessity=None,
@@ -41,7 +42,8 @@ class Company():
                  turnOverHistory=[],
                  taxHistory=[0]):
         self.id = companyId
-        self.name = name
+
+        self.name = company_names[np.random.randint(1, numLines)]
         self.category = random.choice(list(BusinessCategory)) if category is None else category
         if frequency is None:
             self.frequency = self.category.value[0]
@@ -73,7 +75,7 @@ class Company():
     def computeBruttoProfit(self):
         """Compute profit without considering taxes"""
         self.turnOverHistory.append(self.turnOver)
-        bProfit = self.turnOver - self.variableCost - self.fixedCost + 100 * self.investmentLevel
+        bProfit = self.turnOver - self.variableCost - self.fixedCost
         self.turnOver = 0
         return bProfit
 
@@ -89,6 +91,10 @@ class Company():
         if (len(self.nettoProfitHistory) > 4):
             self.companyValue = sum(self.nettoProfitHistory[-5:])
         return self.companyValue
+
+    def payCosts(self, government):
+        """Paying the costs (going to the government ATM)"""
+        government.governmentMoney += self.variableCost + self.fixedCost
 
     @property
     def frequency(self):
