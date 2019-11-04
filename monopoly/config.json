@@ -28,6 +28,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 0,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
@@ -38,6 +39,18 @@
                                 "price": 55.73333940284872,
                                 "fixedCost": 11.146667880569744,
                                 "variableCost": 0.05573333940284872,
+=======
+                                "name": "Daugherty-Senger",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 109.5310020034795,
+                                "_quality": 0.19328992972566061,
+                                "quality": 0.19328992972566061,
+                                "price": 130.70224168351322,
+                                "fixedCost": 26.140448336702647,
+                                "variableCost": 0.13070224168351322,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -53,6 +66,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 10,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -63,6 +77,18 @@
                                 "price": 26.476760922742635,
                                 "fixedCost": 5.295352184548527,
                                 "variableCost": 0.05295352184548527,
+=======
+                                "name": "Sporer, Kreiger and Johnston",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 39.98019304652146,
+                                "_quality": 0.2629783401789766,
+                                "quality": 0.2629783401789766,
+                                "price": 50.494117853930724,
+                                "fixedCost": 10.098823570786145,
+                                "variableCost": 0.10098823570786145,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -78,6 +104,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 20,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -88,6 +115,18 @@
                                 "price": 8.863727893734657,
                                 "fixedCost": 1.7727455787469315,
                                 "variableCost": 0.03988677552180596,
+=======
+                                "name": "Rath and Sons",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 100.50498957671644,
+                                "_quality": 0.7565858359199876,
+                                "quality": 0.7565858359199876,
+                                "price": 176.54564112974612,
+                                "fixedCost": 35.30912822594922,
+                                "variableCost": 0.1765456411297461,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -103,6 +142,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 30,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
@@ -113,6 +153,18 @@
                                 "price": 73.93944505428422,
                                 "fixedCost": 14.787889010856844,
                                 "variableCost": 0.07393944505428422,
+=======
+                                "name": "Thompson PLC",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 11.914285454929189,
+                                "_quality": 0.2092154107235238,
+                                "quality": 0.2092154107235238,
+                                "price": 14.406937579859505,
+                                "fixedCost": 2.8813875159719013,
+                                "variableCost": 0.06483121910936779,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -126,9 +178,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Isak Itzhaki",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -142,6 +200,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 1,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
@@ -152,6 +211,18 @@
                                 "price": 97.46173147228797,
                                 "fixedCost": 19.492346294457594,
                                 "variableCost": 0.09746173147228797,
+=======
+                                "name": "Dickens, Gibson and Bailey",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 318.3504138136918,
+                                "_quality": 0.5738280233665674,
+                                "quality": 0.5738280233665674,
+                                "price": 501.0288025103313,
+                                "fixedCost": 100.20576050206625,
+                                "variableCost": 0.25051440125516566,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -167,6 +238,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 11,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
@@ -177,6 +249,18 @@
                                 "price": 29.84063350254506,
                                 "fixedCost": 5.968126700509012,
                                 "variableCost": 0.05968126700509012,
+=======
+                                "name": "Johns, Jast and Sawayn",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 88.0988029579718,
+                                "_quality": 0.3664654716121183,
+                                "quality": 0.3664654716121183,
+                                "price": 120.38397233242802,
+                                "fixedCost": 24.076794466485605,
+                                "variableCost": 0.12038397233242802,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -192,6 +276,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 21,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -202,6 +287,18 @@
                                 "price": 9.076859748156235,
                                 "fixedCost": 1.815371949631247,
                                 "variableCost": 0.04084586886670306,
+=======
+                                "name": "Hill Inc",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 10.168008797324031,
+                                "_quality": 0.7740496242930829,
+                                "quality": 0.7740496242930829,
+                                "price": 18.03855218670146,
+                                "fixedCost": 3.607710437340292,
+                                "variableCost": 0.08117348484015657,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -217,6 +314,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 31,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -227,6 +325,18 @@
                                 "price": 39.79247211407706,
                                 "fixedCost": 7.958494422815412,
                                 "variableCost": 0.07958494422815411,
+=======
+                                "name": "Bins Group",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 31.71344350518556,
+                                "_quality": 0.89469332593048,
+                                "quality": 0.89469332593048,
+                                "price": 60.08724975154841,
+                                "fixedCost": 12.017449950309683,
+                                "variableCost": 0.12017449950309683,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -240,9 +350,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Kath Meysham",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -256,6 +372,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 2,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -266,6 +383,18 @@
                                 "price": 5.32188372681475,
                                 "fixedCost": 1.06437674536295,
                                 "variableCost": 0.023948476770666378,
+=======
+                                "name": "Corwin-Dooley",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 5.707965648595343,
+                                "_quality": 0.2893041554676701,
+                                "quality": 0.2893041554676701,
+                                "price": 7.359303830000691,
+                                "fixedCost": 1.4718607660001384,
+                                "variableCost": 0.033116867235003115,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -281,6 +410,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 12,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
@@ -291,6 +421,18 @@
                                 "price": 186.57580794891524,
                                 "fixedCost": 37.31516158978305,
                                 "variableCost": 0.09328790397445762,
+=======
+                                "name": "Klein Group",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 6.9883753940016735,
+                                "_quality": 0.28599288173311144,
+                                "quality": 0.28599288173311144,
+                                "price": 8.98700101156498,
+                                "fixedCost": 1.797400202312996,
+                                "variableCost": 0.040441504552042415,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -306,6 +448,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 22,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -316,6 +459,18 @@
                                 "price": 28.023754473292318,
                                 "fixedCost": 5.604750894658464,
                                 "variableCost": 0.05604750894658463,
+=======
+                                "name": "Kub-Stokes",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 35.67165685131466,
+                                "_quality": 0.2244411747307984,
+                                "quality": 0.2244411747307984,
+                                "price": 43.677845419617654,
+                                "fixedCost": 8.735569083923531,
+                                "variableCost": 0.0873556908392353,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -331,6 +486,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 32,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -341,6 +497,18 @@
                                 "price": 7.958520437562621,
                                 "fixedCost": 1.5917040875125243,
                                 "variableCost": 0.0358133419690318,
+=======
+                                "name": "Gislason-Carroll",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 32.59452653600799,
+                                "_quality": 0.6674216147644024,
+                                "quality": 0.6674216147644024,
+                                "price": 54.34881806915161,
+                                "fixedCost": 10.869763613830322,
+                                "variableCost": 0.10869763613830323,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -354,9 +522,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Marjie Durtnal",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -370,6 +544,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 3,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
@@ -380,6 +555,18 @@
                                 "price": 237.13430862152563,
                                 "fixedCost": 47.42686172430513,
                                 "variableCost": 0.11856715431076281,
+=======
+                                "name": "Kuphal, Kuphal and Kub",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 13.804185209987285,
+                                "_quality": 0.19519161339987523,
+                                "quality": 0.19519161339987523,
+                                "price": 16.498646392795397,
+                                "fixedCost": 3.2997292785590795,
+                                "variableCost": 0.07424390876757929,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -395,6 +582,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 13,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
@@ -405,6 +593,18 @@
                                 "price": 29.44520738986877,
                                 "fixedCost": 5.8890414779737545,
                                 "variableCost": 0.05889041477973754,
+=======
+                                "name": "Volkman LLC",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 37.527432823296834,
+                                "_quality": 0.3487601703623252,
+                                "quality": 0.3487601703623252,
+                                "price": 50.61550668801055,
+                                "fixedCost": 10.12310133760211,
+                                "variableCost": 0.1012310133760211,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -420,6 +620,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 23,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -430,6 +631,18 @@
                                 "price": 31.65039842670599,
                                 "fixedCost": 6.3300796853411985,
                                 "variableCost": 0.06330079685341199,
+=======
+                                "name": "Wiza, Miller and Fisher",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 10.744544596050007,
+                                "_quality": 0.612692006270569,
+                                "quality": 0.612692006270569,
+                                "price": 17.327641181067484,
+                                "fixedCost": 3.465528236213497,
+                                "variableCost": 0.07797438531480369,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -445,6 +658,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 33,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -455,6 +669,18 @@
                                 "price": 35.35256028900201,
                                 "fixedCost": 7.070512057800402,
                                 "variableCost": 0.07070512057800402,
+=======
+                                "name": "O'Reilly-Shields",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 75.65823915149164,
+                                "_quality": 0.0298750361497494,
+                                "quality": 0.0298750361497494,
+                                "price": 77.91853178116885,
+                                "fixedCost": 15.58370635623377,
+                                "variableCost": 0.07791853178116885,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -468,9 +694,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Terence Gilham",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -484,6 +716,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 4,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
@@ -494,6 +727,18 @@
                                 "price": 90.53647106235597,
                                 "fixedCost": 18.107294212471196,
                                 "variableCost": 0.09053647106235597,
+=======
+                                "name": "Mitchell PLC",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 263.06478792600956,
+                                "_quality": 0.7335457353493355,
+                                "quality": 0.7335457353493355,
+                                "price": 456.0348412297112,
+                                "fixedCost": 91.20696824594225,
+                                "variableCost": 0.2280174206148556,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -509,6 +754,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 14,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
@@ -519,6 +765,18 @@
                                 "price": 212.97222308816214,
                                 "fixedCost": 42.59444461763243,
                                 "variableCost": 0.10648611154408107,
+=======
+                                "name": "O'Reilly-Shields",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 38.122666355378946,
+                                "_quality": 0.7022915259198076,
+                                "quality": 0.7022915259198076,
+                                "price": 64.89589188222973,
+                                "fixedCost": 12.979178376445947,
+                                "variableCost": 0.12979178376445946,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -534,6 +792,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 24,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -544,6 +803,18 @@
                                 "price": 5.258960608357112,
                                 "fixedCost": 1.0517921216714226,
                                 "variableCost": 0.02366532273760701,
+=======
+                                "name": "Considine, Hilpert and Hegmann",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 351.42405408024865,
+                                "_quality": 0.7332053489054884,
+                                "quality": 0.7332053489054884,
+                                "price": 609.0900502659385,
+                                "fixedCost": 121.81801005318772,
+                                "variableCost": 0.30454502513296927,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -559,6 +830,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 34,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -569,6 +841,18 @@
                                 "price": 21.295223849710233,
                                 "fixedCost": 4.259044769942046,
                                 "variableCost": 0.04259044769942047,
+=======
+                                "name": "Langosh LLC",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 9.298820480824297,
+                                "_quality": 0.5373267282527853,
+                                "quality": 0.5373267282527853,
+                                "price": 14.29532526639561,
+                                "fixedCost": 2.859065053279122,
+                                "variableCost": 0.06432896369878024,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -582,9 +866,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Anabel Dencs",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -598,6 +888,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 5,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
@@ -608,6 +899,18 @@
                                 "price": 64.77608005665537,
                                 "fixedCost": 12.955216011331075,
                                 "variableCost": 0.06477608005665537,
+=======
+                                "name": "Harris, Farrell and Mraz",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 9.939406162194324,
+                                "_quality": 0.7011841744342051,
+                                "quality": 0.7011841744342051,
+                                "price": 16.908760466398803,
+                                "fixedCost": 3.381752093279761,
+                                "variableCost": 0.07608942209879463,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -623,6 +926,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 15,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
@@ -633,6 +937,18 @@
                                 "price": 73.0283688811654,
                                 "fixedCost": 14.605673776233083,
                                 "variableCost": 0.0730283688811654,
+=======
+                                "name": "Howell-Christiansen",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 276.59511414954255,
+                                "_quality": 0.46989483912757246,
+                                "quality": 0.46989483912757246,
+                                "price": 406.5657308163144,
+                                "fixedCost": 81.31314616326289,
+                                "variableCost": 0.2032828654081572,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -648,6 +964,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 25,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
@@ -658,6 +975,18 @@
                                 "price": 26.497964478454616,
                                 "fixedCost": 5.299592895690924,
                                 "variableCost": 0.05299592895690923,
+=======
+                                "name": "Hoeger PLC",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 84.00023812749747,
+                                "_quality": 0.2985026361750799,
+                                "quality": 0.2985026361750799,
+                                "price": 109.07453064788992,
+                                "fixedCost": 21.814906129577984,
+                                "variableCost": 0.10907453064788991,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -673,6 +1002,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 35,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -683,6 +1013,18 @@
                                 "price": 38.241061516086,
                                 "fixedCost": 7.6482123032172,
                                 "variableCost": 0.076482123032172,
+=======
+                                "name": "Thompson, Collins and Langworth",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 111.03882552403485,
+                                "_quality": 0.4469829180833249,
+                                "quality": 0.4469829180833249,
+                                "price": 160.67128377731314,
+                                "fixedCost": 32.13425675546263,
+                                "variableCost": 0.16067128377731313,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -696,9 +1038,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Esra Denisot",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -712,6 +1060,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 6,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
@@ -722,6 +1071,18 @@
                                 "price": 182.8539078278554,
                                 "fixedCost": 36.57078156557108,
                                 "variableCost": 0.0914269539139277,
+=======
+                                "name": "Romaguera, Lang and Carter",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 36.19867386026135,
+                                "_quality": 0.9990548222214445,
+                                "quality": 0.9990548222214445,
+                                "price": 72.3631335383768,
+                                "fixedCost": 14.47262670767536,
+                                "variableCost": 0.1447262670767536,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -737,6 +1098,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 16,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
@@ -747,6 +1109,18 @@
                                 "price": 177.3861671096146,
                                 "fixedCost": 35.477233421922925,
                                 "variableCost": 0.0886930835548073,
+=======
+                                "name": "Moen-Kilback",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 12.120255321433358,
+                                "_quality": 0.31242677204032254,
+                                "quality": 0.31242677204032254,
+                                "price": 15.906947567813326,
+                                "fixedCost": 3.1813895135626655,
+                                "variableCost": 0.07158126405515998,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -762,6 +1136,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 26,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -772,6 +1147,18 @@
                                 "price": 6.726683481593262,
                                 "fixedCost": 1.3453366963186524,
                                 "variableCost": 0.03027007566716968,
+=======
+                                "name": "Graham Inc",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 41.91362571220689,
+                                "_quality": 0.22573099594391666,
+                                "quality": 0.22573099594391666,
+                                "price": 51.3748301878439,
+                                "fixedCost": 10.274966037568781,
+                                "variableCost": 0.10274966037568779,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -787,6 +1174,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 36,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -797,6 +1185,18 @@
                                 "price": 35.643732874149855,
                                 "fixedCost": 7.128746574829972,
                                 "variableCost": 0.07128746574829971,
+=======
+                                "name": "Padberg-Parker",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 27.625753654887383,
+                                "_quality": 0.4434074409383164,
+                                "quality": 0.4434074409383164,
+                                "price": 39.87521838699334,
+                                "fixedCost": 7.975043677398668,
+                                "variableCost": 0.07975043677398667,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -810,9 +1210,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Bernice Jury",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -826,6 +1232,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 7,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -836,6 +1243,18 @@
                                 "price": 31.107526688427193,
                                 "fixedCost": 6.221505337685439,
                                 "variableCost": 0.06221505337685439,
+=======
+                                "name": "Wiegand PLC",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 331.79769557873357,
+                                "_quality": 0.5695127632200884,
+                                "quality": 0.5695127632200884,
+                                "price": 520.7607180178359,
+                                "fixedCost": 104.15214360356718,
+                                "variableCost": 0.2603803590089179,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -851,6 +1270,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 17,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
@@ -861,6 +1281,18 @@
                                 "price": 18.465338402449557,
                                 "fixedCost": 3.6930676804899116,
                                 "variableCost": 0.036930676804899115,
+=======
+                                "name": "Gutmann-Abbott",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 34.423814678965094,
+                                "_quality": 0.9872821287983906,
+                                "quality": 0.9872821287983906,
+                                "price": 68.40983171657504,
+                                "fixedCost": 13.68196634331501,
+                                "variableCost": 0.13681966343315008,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -876,6 +1308,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 27,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
@@ -886,6 +1319,18 @@
                                 "price": 21.831116156161404,
                                 "fixedCost": 4.366223231232281,
                                 "variableCost": 0.04366223231232281,
+=======
+                                "name": "Weimann, Jakubowski and Emmerich",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 224.72963955509914,
+                                "_quality": 0.17243129204205676,
+                                "quality": 0.17243129204205676,
+                                "price": 263.48006166373057,
+                                "fixedCost": 52.696012332746115,
+                                "variableCost": 0.13174003083186528,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -901,6 +1346,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 37,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
@@ -911,6 +1357,18 @@
                                 "price": 59.23484412305241,
                                 "fixedCost": 11.846968824610483,
                                 "variableCost": 0.05923484412305241,
+=======
+                                "name": "Rath, Goldner and Ryan",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 27.140566311382372,
+                                "_quality": 0.010621108072038865,
+                                "quality": 0.010621108072038865,
+                                "price": 27.428829199311902,
+                                "fixedCost": 5.485765839862381,
+                                "variableCost": 0.054857658398623804,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -924,9 +1382,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Anni Glyssanne",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -940,6 +1404,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 8,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
@@ -950,6 +1415,18 @@
                                 "price": 34.09665455747663,
                                 "fixedCost": 6.819330911495327,
                                 "variableCost": 0.06819330911495326,
+=======
+                                "name": "Brakus-Boehm",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 11.112192131580517,
+                                "_quality": 0.6586875586836906,
+                                "quality": 0.6586875586836906,
+                                "price": 18.431654838355403,
+                                "fixedCost": 3.686330967671081,
+                                "variableCost": 0.08294244677259932,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -965,6 +1442,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 18,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -975,6 +1453,18 @@
                                 "price": 37.42342972891874,
                                 "fixedCost": 7.484685945783749,
                                 "variableCost": 0.07484685945783748,
+=======
+                                "name": "Turner, Jaskolski and Wolf",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 10.754352831985198,
+                                "_quality": 0.8632487440942576,
+                                "quality": 0.8632487440942576,
+                                "price": 20.03803440774294,
+                                "fixedCost": 4.007606881548589,
+                                "variableCost": 0.09017115483484324,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -990,6 +1480,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 28,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
@@ -1000,6 +1491,18 @@
                                 "price": 160.22972982156992,
                                 "fixedCost": 32.04594596431399,
                                 "variableCost": 0.08011486491078496,
+=======
+                                "name": "Von, Christiansen and Johns",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 37.56328474177345,
+                                "_quality": 0.6725463594011012,
+                                "quality": 0.6725463594011012,
+                                "price": 62.82633514200012,
+                                "fixedCost": 12.565267028400024,
+                                "variableCost": 0.12565267028400023,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -1015,6 +1518,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 38,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -1025,6 +1529,18 @@
                                 "price": 8.292922755200083,
                                 "fixedCost": 1.6585845510400166,
                                 "variableCost": 0.037318152398400375,
+=======
+                                "name": "Adams Ltd",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 95.49553832065332,
+                                "_quality": 0.4046430865722527,
+                                "quality": 0.4046430865722527,
+                                "price": 134.1371477006013,
+                                "fixedCost": 26.827429540120264,
+                                "variableCost": 0.1341371477006013,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -1038,9 +1554,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Jemie Caddy",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             },
             {
@@ -1054,6 +1576,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 9,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -1064,6 +1587,18 @@
                                 "price": 40.37521534987418,
                                 "fixedCost": 8.075043069974837,
                                 "variableCost": 0.08075043069974837,
+=======
+                                "name": "Steuber-Lynch",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 7.887036404777339,
+                                "_quality": 0.6531056817242578,
+                                "quality": 0.6531056817242578,
+                                "price": 13.038104692703481,
+                                "fixedCost": 2.6076209385406965,
+                                "variableCost": 0.05867147111716567,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -1079,6 +1614,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 19,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
@@ -1089,6 +1625,18 @@
                                 "price": 27.883369694693318,
                                 "fixedCost": 5.576673938938664,
                                 "variableCost": 0.05576673938938664,
+=======
+                                "name": "Turcotte, Runte and Stracke",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 7.144797796724415,
+                                "_quality": 0.7384404808475713,
+                                "quality": 0.7384404808475713,
+                                "price": 12.42080571729626,
+                                "fixedCost": 2.484161143459252,
+                                "variableCost": 0.05589362572783317,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -1104,6 +1652,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 29,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -1114,6 +1663,18 @@
                                 "price": 9.45543230294246,
                                 "fixedCost": 1.8910864605884923,
                                 "variableCost": 0.042549445363241074,
+=======
+                                "name": "Nicolas Ltd",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 289.59157340197333,
+                                "_quality": 0.2134673651098392,
+                                "quality": 0.2134673651098392,
+                                "price": 351.4099235341052,
+                                "fixedCost": 70.28198470682104,
+                                "variableCost": 0.1757049617670526,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -1129,6 +1690,7 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 39,
+<<<<<<< HEAD
                                 "name": "Mayer Group",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
@@ -1139,6 +1701,18 @@
                                 "price": 27.822602078161236,
                                 "fixedCost": 5.564520415632248,
                                 "variableCost": 0.05564520415632247,
+=======
+                                "name": "Leffler Ltd",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 34.53107063363316,
+                                "_quality": 0.16898056329910194,
+                                "quality": 0.16898056329910194,
+                                "price": 40.36615040062557,
+                                "fixedCost": 8.073230080125114,
+                                "variableCost": 0.08073230080125114,
+>>>>>>> develop
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -1152,9 +1726,15 @@
                         }
                     ],
                     "dailyActions": [],
+<<<<<<< HEAD
                     "name": "Cherilynn Rosenfrucht",
                     "capital": 10006.993231605225,
                     "happiness": 50.978056435885556
+=======
+                    "name": "Stanfield Bagguley",
+                    "capital": 8448.869269308283,
+                    "happiness": 39.62415769890515
+>>>>>>> develop
                 }
             }
         ],
@@ -1163,6 +1743,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 0,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
@@ -1173,6 +1754,18 @@
                     "price": 55.73333940284872,
                     "fixedCost": 11.146667880569744,
                     "variableCost": 0.05573333940284872,
+=======
+                    "name": "Daugherty-Senger",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 109.5310020034795,
+                    "_quality": 0.19328992972566061,
+                    "quality": 0.19328992972566061,
+                    "price": 130.70224168351322,
+                    "fixedCost": 26.140448336702647,
+                    "variableCost": 0.13070224168351322,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1188,6 +1781,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 1,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
@@ -1198,6 +1792,18 @@
                     "price": 97.46173147228797,
                     "fixedCost": 19.492346294457594,
                     "variableCost": 0.09746173147228797,
+=======
+                    "name": "Dickens, Gibson and Bailey",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 318.3504138136918,
+                    "_quality": 0.5738280233665674,
+                    "quality": 0.5738280233665674,
+                    "price": 501.0288025103313,
+                    "fixedCost": 100.20576050206625,
+                    "variableCost": 0.25051440125516566,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1213,6 +1819,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 2,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
@@ -1223,6 +1830,18 @@
                     "price": 5.32188372681475,
                     "fixedCost": 1.06437674536295,
                     "variableCost": 0.023948476770666378,
+=======
+                    "name": "Corwin-Dooley",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 5.707965648595343,
+                    "_quality": 0.2893041554676701,
+                    "quality": 0.2893041554676701,
+                    "price": 7.359303830000691,
+                    "fixedCost": 1.4718607660001384,
+                    "variableCost": 0.033116867235003115,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1238,6 +1857,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 3,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "LUXURY",
                     "_frequency": 0.05,
@@ -1248,6 +1868,18 @@
                     "price": 237.13430862152563,
                     "fixedCost": 47.42686172430513,
                     "variableCost": 0.11856715431076281,
+=======
+                    "name": "Kuphal, Kuphal and Kub",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 13.804185209987285,
+                    "_quality": 0.19519161339987523,
+                    "quality": 0.19519161339987523,
+                    "price": 16.498646392795397,
+                    "fixedCost": 3.2997292785590795,
+                    "variableCost": 0.07424390876757929,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1263,6 +1895,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 4,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
@@ -1273,6 +1906,18 @@
                     "price": 90.53647106235597,
                     "fixedCost": 18.107294212471196,
                     "variableCost": 0.09053647106235597,
+=======
+                    "name": "Mitchell PLC",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 263.06478792600956,
+                    "_quality": 0.7335457353493355,
+                    "quality": 0.7335457353493355,
+                    "price": 456.0348412297112,
+                    "fixedCost": 91.20696824594225,
+                    "variableCost": 0.2280174206148556,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1288,6 +1933,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 5,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
@@ -1298,6 +1944,18 @@
                     "price": 64.77608005665537,
                     "fixedCost": 12.955216011331075,
                     "variableCost": 0.06477608005665537,
+=======
+                    "name": "Harris, Farrell and Mraz",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 9.939406162194324,
+                    "_quality": 0.7011841744342051,
+                    "quality": 0.7011841744342051,
+                    "price": 16.908760466398803,
+                    "fixedCost": 3.381752093279761,
+                    "variableCost": 0.07608942209879463,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1313,6 +1971,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 6,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "LUXURY",
                     "_frequency": 0.05,
@@ -1323,6 +1982,18 @@
                     "price": 182.8539078278554,
                     "fixedCost": 36.57078156557108,
                     "variableCost": 0.0914269539139277,
+=======
+                    "name": "Romaguera, Lang and Carter",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 36.19867386026135,
+                    "_quality": 0.9990548222214445,
+                    "quality": 0.9990548222214445,
+                    "price": 72.3631335383768,
+                    "fixedCost": 14.47262670767536,
+                    "variableCost": 0.1447262670767536,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1338,6 +2009,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 7,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -1348,6 +2020,18 @@
                     "price": 31.107526688427193,
                     "fixedCost": 6.221505337685439,
                     "variableCost": 0.06221505337685439,
+=======
+                    "name": "Wiegand PLC",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 331.79769557873357,
+                    "_quality": 0.5695127632200884,
+                    "quality": 0.5695127632200884,
+                    "price": 520.7607180178359,
+                    "fixedCost": 104.15214360356718,
+                    "variableCost": 0.2603803590089179,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1363,6 +2047,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 8,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
@@ -1373,6 +2058,18 @@
                     "price": 34.09665455747663,
                     "fixedCost": 6.819330911495327,
                     "variableCost": 0.06819330911495326,
+=======
+                    "name": "Brakus-Boehm",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 11.112192131580517,
+                    "_quality": 0.6586875586836906,
+                    "quality": 0.6586875586836906,
+                    "price": 18.431654838355403,
+                    "fixedCost": 3.686330967671081,
+                    "variableCost": 0.08294244677259932,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1388,6 +2085,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 9,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -1398,6 +2096,18 @@
                     "price": 40.37521534987418,
                     "fixedCost": 8.075043069974837,
                     "variableCost": 0.08075043069974837,
+=======
+                    "name": "Steuber-Lynch",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 7.887036404777339,
+                    "_quality": 0.6531056817242578,
+                    "quality": 0.6531056817242578,
+                    "price": 13.038104692703481,
+                    "fixedCost": 2.6076209385406965,
+                    "variableCost": 0.05867147111716567,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1413,6 +2123,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 10,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -1423,6 +2134,18 @@
                     "price": 26.476760922742635,
                     "fixedCost": 5.295352184548527,
                     "variableCost": 0.05295352184548527,
+=======
+                    "name": "Sporer, Kreiger and Johnston",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 39.98019304652146,
+                    "_quality": 0.2629783401789766,
+                    "quality": 0.2629783401789766,
+                    "price": 50.494117853930724,
+                    "fixedCost": 10.098823570786145,
+                    "variableCost": 0.10098823570786145,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1438,6 +2161,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 11,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
@@ -1448,6 +2172,18 @@
                     "price": 29.84063350254506,
                     "fixedCost": 5.968126700509012,
                     "variableCost": 0.05968126700509012,
+=======
+                    "name": "Johns, Jast and Sawayn",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 88.0988029579718,
+                    "_quality": 0.3664654716121183,
+                    "quality": 0.3664654716121183,
+                    "price": 120.38397233242802,
+                    "fixedCost": 24.076794466485605,
+                    "variableCost": 0.12038397233242802,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1463,6 +2199,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 12,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "LUXURY",
                     "_frequency": 0.05,
@@ -1473,6 +2210,18 @@
                     "price": 186.57580794891524,
                     "fixedCost": 37.31516158978305,
                     "variableCost": 0.09328790397445762,
+=======
+                    "name": "Klein Group",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 6.9883753940016735,
+                    "_quality": 0.28599288173311144,
+                    "quality": 0.28599288173311144,
+                    "price": 8.98700101156498,
+                    "fixedCost": 1.797400202312996,
+                    "variableCost": 0.040441504552042415,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1488,6 +2237,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 13,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
@@ -1498,6 +2248,18 @@
                     "price": 29.44520738986877,
                     "fixedCost": 5.8890414779737545,
                     "variableCost": 0.05889041477973754,
+=======
+                    "name": "Volkman LLC",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 37.527432823296834,
+                    "_quality": 0.3487601703623252,
+                    "quality": 0.3487601703623252,
+                    "price": 50.61550668801055,
+                    "fixedCost": 10.12310133760211,
+                    "variableCost": 0.1012310133760211,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1513,6 +2275,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 14,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "LUXURY",
                     "_frequency": 0.05,
@@ -1523,6 +2286,18 @@
                     "price": 212.97222308816214,
                     "fixedCost": 42.59444461763243,
                     "variableCost": 0.10648611154408107,
+=======
+                    "name": "O'Reilly-Shields",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 38.122666355378946,
+                    "_quality": 0.7022915259198076,
+                    "quality": 0.7022915259198076,
+                    "price": 64.89589188222973,
+                    "fixedCost": 12.979178376445947,
+                    "variableCost": 0.12979178376445946,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1538,6 +2313,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 15,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
@@ -1548,6 +2324,18 @@
                     "price": 73.0283688811654,
                     "fixedCost": 14.605673776233083,
                     "variableCost": 0.0730283688811654,
+=======
+                    "name": "Howell-Christiansen",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 276.59511414954255,
+                    "_quality": 0.46989483912757246,
+                    "quality": 0.46989483912757246,
+                    "price": 406.5657308163144,
+                    "fixedCost": 81.31314616326289,
+                    "variableCost": 0.2032828654081572,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1563,6 +2351,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 16,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "LUXURY",
                     "_frequency": 0.05,
@@ -1573,6 +2362,18 @@
                     "price": 177.3861671096146,
                     "fixedCost": 35.477233421922925,
                     "variableCost": 0.0886930835548073,
+=======
+                    "name": "Moen-Kilback",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 12.120255321433358,
+                    "_quality": 0.31242677204032254,
+                    "quality": 0.31242677204032254,
+                    "price": 15.906947567813326,
+                    "fixedCost": 3.1813895135626655,
+                    "variableCost": 0.07158126405515998,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1588,6 +2389,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 17,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
@@ -1598,6 +2400,18 @@
                     "price": 18.465338402449557,
                     "fixedCost": 3.6930676804899116,
                     "variableCost": 0.036930676804899115,
+=======
+                    "name": "Gutmann-Abbott",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 34.423814678965094,
+                    "_quality": 0.9872821287983906,
+                    "quality": 0.9872821287983906,
+                    "price": 68.40983171657504,
+                    "fixedCost": 13.68196634331501,
+                    "variableCost": 0.13681966343315008,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1613,6 +2427,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 18,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -1623,6 +2438,18 @@
                     "price": 37.42342972891874,
                     "fixedCost": 7.484685945783749,
                     "variableCost": 0.07484685945783748,
+=======
+                    "name": "Turner, Jaskolski and Wolf",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 10.754352831985198,
+                    "_quality": 0.8632487440942576,
+                    "quality": 0.8632487440942576,
+                    "price": 20.03803440774294,
+                    "fixedCost": 4.007606881548589,
+                    "variableCost": 0.09017115483484324,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1638,6 +2465,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 19,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
@@ -1648,6 +2476,18 @@
                     "price": 27.883369694693318,
                     "fixedCost": 5.576673938938664,
                     "variableCost": 0.05576673938938664,
+=======
+                    "name": "Turcotte, Runte and Stracke",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 7.144797796724415,
+                    "_quality": 0.7384404808475713,
+                    "quality": 0.7384404808475713,
+                    "price": 12.42080571729626,
+                    "fixedCost": 2.484161143459252,
+                    "variableCost": 0.05589362572783317,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1663,6 +2503,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 20,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
@@ -1673,6 +2514,18 @@
                     "price": 8.863727893734657,
                     "fixedCost": 1.7727455787469315,
                     "variableCost": 0.03988677552180596,
+=======
+                    "name": "Rath and Sons",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 100.50498957671644,
+                    "_quality": 0.7565858359199876,
+                    "quality": 0.7565858359199876,
+                    "price": 176.54564112974612,
+                    "fixedCost": 35.30912822594922,
+                    "variableCost": 0.1765456411297461,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1688,6 +2541,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 21,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
@@ -1698,6 +2552,18 @@
                     "price": 9.076859748156235,
                     "fixedCost": 1.815371949631247,
                     "variableCost": 0.04084586886670306,
+=======
+                    "name": "Hill Inc",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 10.168008797324031,
+                    "_quality": 0.7740496242930829,
+                    "quality": 0.7740496242930829,
+                    "price": 18.03855218670146,
+                    "fixedCost": 3.607710437340292,
+                    "variableCost": 0.08117348484015657,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1713,6 +2579,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 22,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -1723,6 +2590,18 @@
                     "price": 28.023754473292318,
                     "fixedCost": 5.604750894658464,
                     "variableCost": 0.05604750894658463,
+=======
+                    "name": "Kub-Stokes",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 35.67165685131466,
+                    "_quality": 0.2244411747307984,
+                    "quality": 0.2244411747307984,
+                    "price": 43.677845419617654,
+                    "fixedCost": 8.735569083923531,
+                    "variableCost": 0.0873556908392353,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1738,6 +2617,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 23,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -1748,6 +2628,18 @@
                     "price": 31.65039842670599,
                     "fixedCost": 6.3300796853411985,
                     "variableCost": 0.06330079685341199,
+=======
+                    "name": "Wiza, Miller and Fisher",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 10.744544596050007,
+                    "_quality": 0.612692006270569,
+                    "quality": 0.612692006270569,
+                    "price": 17.327641181067484,
+                    "fixedCost": 3.465528236213497,
+                    "variableCost": 0.07797438531480369,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1763,6 +2655,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 24,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
@@ -1773,6 +2666,18 @@
                     "price": 5.258960608357112,
                     "fixedCost": 1.0517921216714226,
                     "variableCost": 0.02366532273760701,
+=======
+                    "name": "Considine, Hilpert and Hegmann",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 351.42405408024865,
+                    "_quality": 0.7332053489054884,
+                    "quality": 0.7332053489054884,
+                    "price": 609.0900502659385,
+                    "fixedCost": 121.81801005318772,
+                    "variableCost": 0.30454502513296927,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1788,6 +2693,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 25,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
@@ -1798,6 +2704,18 @@
                     "price": 26.497964478454616,
                     "fixedCost": 5.299592895690924,
                     "variableCost": 0.05299592895690923,
+=======
+                    "name": "Hoeger PLC",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 84.00023812749747,
+                    "_quality": 0.2985026361750799,
+                    "quality": 0.2985026361750799,
+                    "price": 109.07453064788992,
+                    "fixedCost": 21.814906129577984,
+                    "variableCost": 0.10907453064788991,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1813,6 +2731,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 26,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
@@ -1823,6 +2742,18 @@
                     "price": 6.726683481593262,
                     "fixedCost": 1.3453366963186524,
                     "variableCost": 0.03027007566716968,
+=======
+                    "name": "Graham Inc",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 41.91362571220689,
+                    "_quality": 0.22573099594391666,
+                    "quality": 0.22573099594391666,
+                    "price": 51.3748301878439,
+                    "fixedCost": 10.274966037568781,
+                    "variableCost": 0.10274966037568779,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1838,6 +2769,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 27,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
@@ -1848,6 +2780,18 @@
                     "price": 21.831116156161404,
                     "fixedCost": 4.366223231232281,
                     "variableCost": 0.04366223231232281,
+=======
+                    "name": "Weimann, Jakubowski and Emmerich",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 224.72963955509914,
+                    "_quality": 0.17243129204205676,
+                    "quality": 0.17243129204205676,
+                    "price": 263.48006166373057,
+                    "fixedCost": 52.696012332746115,
+                    "variableCost": 0.13174003083186528,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1863,6 +2807,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 28,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "LUXURY",
                     "_frequency": 0.05,
@@ -1873,6 +2818,18 @@
                     "price": 160.22972982156992,
                     "fixedCost": 32.04594596431399,
                     "variableCost": 0.08011486491078496,
+=======
+                    "name": "Von, Christiansen and Johns",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 37.56328474177345,
+                    "_quality": 0.6725463594011012,
+                    "quality": 0.6725463594011012,
+                    "price": 62.82633514200012,
+                    "fixedCost": 12.565267028400024,
+                    "variableCost": 0.12565267028400023,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1888,6 +2845,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 29,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
@@ -1898,6 +2856,18 @@
                     "price": 9.45543230294246,
                     "fixedCost": 1.8910864605884923,
                     "variableCost": 0.042549445363241074,
+=======
+                    "name": "Nicolas Ltd",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 289.59157340197333,
+                    "_quality": 0.2134673651098392,
+                    "quality": 0.2134673651098392,
+                    "price": 351.4099235341052,
+                    "fixedCost": 70.28198470682104,
+                    "variableCost": 0.1757049617670526,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1913,6 +2883,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 30,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
@@ -1923,6 +2894,18 @@
                     "price": 73.93944505428422,
                     "fixedCost": 14.787889010856844,
                     "variableCost": 0.07393944505428422,
+=======
+                    "name": "Thompson PLC",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 11.914285454929189,
+                    "_quality": 0.2092154107235238,
+                    "quality": 0.2092154107235238,
+                    "price": 14.406937579859505,
+                    "fixedCost": 2.8813875159719013,
+                    "variableCost": 0.06483121910936779,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1938,6 +2921,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 31,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -1948,6 +2932,18 @@
                     "price": 39.79247211407706,
                     "fixedCost": 7.958494422815412,
                     "variableCost": 0.07958494422815411,
+=======
+                    "name": "Bins Group",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 31.71344350518556,
+                    "_quality": 0.89469332593048,
+                    "quality": 0.89469332593048,
+                    "price": 60.08724975154841,
+                    "fixedCost": 12.017449950309683,
+                    "variableCost": 0.12017449950309683,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1963,6 +2959,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 32,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
@@ -1973,6 +2970,18 @@
                     "price": 7.958520437562621,
                     "fixedCost": 1.5917040875125243,
                     "variableCost": 0.0358133419690318,
+=======
+                    "name": "Gislason-Carroll",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 32.59452653600799,
+                    "_quality": 0.6674216147644024,
+                    "quality": 0.6674216147644024,
+                    "price": 54.34881806915161,
+                    "fixedCost": 10.869763613830322,
+                    "variableCost": 0.10869763613830323,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1988,6 +2997,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 33,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -1998,6 +3008,18 @@
                     "price": 35.35256028900201,
                     "fixedCost": 7.070512057800402,
                     "variableCost": 0.07070512057800402,
+=======
+                    "name": "O'Reilly-Shields",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 75.65823915149164,
+                    "_quality": 0.0298750361497494,
+                    "quality": 0.0298750361497494,
+                    "price": 77.91853178116885,
+                    "fixedCost": 15.58370635623377,
+                    "variableCost": 0.07791853178116885,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2013,6 +3035,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 34,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -2023,6 +3046,18 @@
                     "price": 21.295223849710233,
                     "fixedCost": 4.259044769942046,
                     "variableCost": 0.04259044769942047,
+=======
+                    "name": "Langosh LLC",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 9.298820480824297,
+                    "_quality": 0.5373267282527853,
+                    "quality": 0.5373267282527853,
+                    "price": 14.29532526639561,
+                    "fixedCost": 2.859065053279122,
+                    "variableCost": 0.06432896369878024,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2038,6 +3073,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 35,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -2048,6 +3084,18 @@
                     "price": 38.241061516086,
                     "fixedCost": 7.6482123032172,
                     "variableCost": 0.076482123032172,
+=======
+                    "name": "Thompson, Collins and Langworth",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 111.03882552403485,
+                    "_quality": 0.4469829180833249,
+                    "quality": 0.4469829180833249,
+                    "price": 160.67128377731314,
+                    "fixedCost": 32.13425675546263,
+                    "variableCost": 0.16067128377731313,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2063,6 +3111,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 36,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -2073,6 +3122,18 @@
                     "price": 35.643732874149855,
                     "fixedCost": 7.128746574829972,
                     "variableCost": 0.07128746574829971,
+=======
+                    "name": "Padberg-Parker",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 27.625753654887383,
+                    "_quality": 0.4434074409383164,
+                    "quality": 0.4434074409383164,
+                    "price": 39.87521838699334,
+                    "fixedCost": 7.975043677398668,
+                    "variableCost": 0.07975043677398667,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2088,6 +3149,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 37,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
@@ -2098,6 +3160,18 @@
                     "price": 59.23484412305241,
                     "fixedCost": 11.846968824610483,
                     "variableCost": 0.05923484412305241,
+=======
+                    "name": "Rath, Goldner and Ryan",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 27.140566311382372,
+                    "_quality": 0.010621108072038865,
+                    "quality": 0.010621108072038865,
+                    "price": 27.428829199311902,
+                    "fixedCost": 5.485765839862381,
+                    "variableCost": 0.054857658398623804,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2113,6 +3187,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 38,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
@@ -2123,6 +3198,18 @@
                     "price": 8.292922755200083,
                     "fixedCost": 1.6585845510400166,
                     "variableCost": 0.037318152398400375,
+=======
+                    "name": "Adams Ltd",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 95.49553832065332,
+                    "_quality": 0.4046430865722527,
+                    "quality": 0.4046430865722527,
+                    "price": 134.1371477006013,
+                    "fixedCost": 26.827429540120264,
+                    "variableCost": 0.1341371477006013,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2138,6 +3225,7 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 39,
+<<<<<<< HEAD
                     "name": "Mayer Group",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
@@ -2148,6 +3236,18 @@
                     "price": 27.822602078161236,
                     "fixedCost": 5.564520415632248,
                     "variableCost": 0.05564520415632247,
+=======
+                    "name": "Leffler Ltd",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 34.53107063363316,
+                    "_quality": 0.16898056329910194,
+                    "quality": 0.16898056329910194,
+                    "price": 40.36615040062557,
+                    "fixedCost": 8.073230080125114,
+                    "variableCost": 0.08073230080125114,
+>>>>>>> develop
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2163,7 +3263,12 @@
         "numActions": 2,
         "suicideCount": 0,
         "time": 0,
+<<<<<<< HEAD
         "avgHappiness": 50.978056435885556,
         "avgCapital": 10006.993231605227
+=======
+        "avgHappiness": 39.62415769890515,
+        "avgCapital": 8448.869269308283
+>>>>>>> develop
     }
 }

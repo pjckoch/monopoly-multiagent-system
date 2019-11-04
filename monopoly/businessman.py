@@ -14,7 +14,7 @@ class Businessman():
 
     def __init__(self,
                 businessmanId,
-                name=full_names[np.random.randint(1, numLines)],
+                name=None,
                 capital=1000 * np.random.randn() + 10000,
                 happiness=10 * np.random.randn() + 50,
                 isAlive=True,
@@ -24,7 +24,7 @@ class Businessman():
         self.subsidiaries = subsidiaries
         self.companies = []
         self.dailyActions = []
-        self.name = name
+        self.name = full_names[np.random.randint(1, numLines)]
         self.capital = capital
         self.happiness = happiness
     
