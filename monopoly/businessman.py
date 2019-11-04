@@ -27,18 +27,27 @@ class Businessman():
         self.name = name
         self.capital = capital
         self.happiness = happiness
+    
+    def getCompanyOwner(self, company, env):
+        for bm in env.listOfPeople:
+            for cmp in bm.companies:
+                if cmp.id == company.id:
+                    return bm
+        return None
 
-    def chooseAction(self, companies):
+    def chooseAction(self, companies, env):
         # choose a category randomly based on the frequency (probability)
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
         if company and self.considerAction(company) > 0.3:
             self.capital -= company.price
+            self.getCompanyOwner(company, env).capital += company.price
             company.turnOver += company.price #temporary way, change to transaction function
             return company
         else:
             return None
+
 
     def chooseCategory(self):
             allCategories = list(BusinessCategory)
@@ -84,74 +93,74 @@ class Businessman():
                 return price
         return 0
 
-    def considerInvestment(self, avgCapital, possibleInvestments):
-        if avgCapital - self.capital > 0:
-            for cmp in possibleInvestments:
-                if self.capital/1.5 > cmp.computeCompanyValue():
-                    if random.randint(1,101) > 80 and (avgCapital - self.capital) / avgCapital > 0.1:
-                        return cmp
+    # def considerInvestment(self, avgCapital, possibleInvestments):
+    #     if avgCapital - self.capital > 0:
+    #         for cmp in possibleInvestments:
+    #             if self.capital/1.5 > cmp.computeCompanyValue():
+    #                 if random.randint(1,101) > 80 and (avgCapital - self.capital) / avgCapital > 0.1:
+    #                     return cmp
 
-    def investOwnCompany(self, price):
-        cmpList = self.companies
+    # def investOwnCompany(self, price):
+    #     cmpList = self.companies
 
-        worstCmpValue = 9999
-        worstCmp = None
-        for cmp in cmpList:
-            if cmp.companyValue < worstCmpValue:
-                worstCmpValue = cmp.companyValue
-                worstCmp = cmp
-        if worstCmp != None:
-            worstCmp.frequency = worstCmp.frequency  - 1
-            worstCmp.necessity = worstCmp.necessity - 1
-            worstCmp.investmentLevel = worstCmp.investmentLevel + 1
-            self.capital -= price
-            print("BM " + str(self.id) + " made an investment in company " + str(worstCmp.id))
+    #     worstCmpValue = 9999
+    #     worstCmp = None
+    #     for cmp in cmpList:
+    #         if cmp.companyValue < worstCmpValue:
+    #             worstCmpValue = cmp.companyValue
+    #             worstCmp = cmp
+    #     if worstCmp != None:
+    #         worstCmp.frequency = worstCmp.frequency  - 1
+    #         worstCmp.necessity = worstCmp.necessity - 1
+    #         worstCmp.investmentLevel = worstCmp.investmentLevel + 1
+    #         self.capital -= price
+    #         print("BM " + str(self.id) + " made an investment in company " + str(worstCmp.id))
 
 
     # Calculates the best investment (Buy a Company from another BM, Create a New One or Invest in one of his own companies)
-    def evaluateInvestments(self, env):
-        option = "none"
-        buyCompPrice = 1000000
-        owner = None
+    # def evaluateInvestments(self, env):
+    #     option = "none"
+    #     buyCompPrice = 1000000
+    #     owner = None
 
-        # Calculate Buy Company Price
-        categories = []
-        for cmp in self.companies:
-            categories.append(cmp.category)
+    #     # Calculate Buy Company Price
+    #     categories = []
+    #     for cmp in self.companies:
+    #         categories.append(cmp.category)
 
-        possibleInvestments = env.findCompaniesByCategory(categories)
+    #     possibleInvestments = env.findCompaniesByCategory(categories)
 
-        company = self.considerInvestment(env.avgCapital, possibleInvestments)
+    #     company = self.considerInvestment(env.avgCapital, possibleInvestments)
 
-        if company != None:
-            owner = env.findCompanyOwner(company)
-            buyCompPrice = owner.offerForCompany(company, company.companyValue)
-            if buyCompPrice < 0:
-                buyCompPrice = 1000000
+    #     if company != None:
+    #         owner = env.findCompanyOwner(company)
+    #         buyCompPrice = owner.offerForCompany(company, company.companyValue)
+    #         if buyCompPrice < 0:
+    #             buyCompPrice = 1000000
 
-        # Calculate Investment Price (Regulated By The Government)
-        investPrice = env.government.investOwnCompPrice
+    #     # Calculate Investment Price (Regulated By The Government)
+    #     investPrice = env.government.investOwnCompPrice
 
-        # Calculate Create Company Price (Regulated By The Government)
-        createCompPrice = env.government.startCompPrice
+    #     # Calculate Create Company Price (Regulated By The Government)
+    #     createCompPrice = env.government.startCompPrice
 
-        # Return best option
-        if (buyCompPrice < investPrice and  buyCompPrice < createCompPrice and env.government.politics == "competitive"):
-            option = "Buy Company"
-            price = buyCompPrice
-        elif (investPrice < buyCompPrice and  investPrice < createCompPrice and env.government.politics == "neutral?"):
-            option = "Invest"
-            price = investPrice
-        else:
-            option = "Create Company"
-            price = createCompPrice
+    #     # Return best option
+    #     if (buyCompPrice < investPrice and  buyCompPrice < createCompPrice and env.government.politics == "competitive"):
+    #         option = "Buy Company"
+    #         price = buyCompPrice
+    #     elif (investPrice < buyCompPrice and  investPrice < createCompPrice and env.government.politics == "neutral?"):
+    #         option = "Invest"
+    #         price = investPrice
+    #     else:
+    #         option = "Create Company"
+    #         price = createCompPrice
 
-        ret = []
-        ret.append(option)
-        ret.append(price)
-        ret.append(owner)
-        ret.append(company)
-        return ret
+    #     ret = []
+    #     ret.append(option)
+    #     ret.append(price)
+    #     ret.append(owner)
+    #     ret.append(company)
+    #     return ret
 
 
     # TODO: Add investments in own companies, Create a new company, Buy a new company

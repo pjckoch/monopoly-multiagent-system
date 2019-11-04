@@ -31,10 +31,10 @@ if __name__ == "__main__":
 
             for bm in stillALiveBms:
 
-                action = bm.chooseAction(companiesForEvaluation)
+                action = bm.chooseAction(companiesForEvaluation, env)
                 bm.dailyActions.append(action)
                 # assuming buying a new company counts as an investment
-                bm.invest(env)
+                # bm.invest(env)
 
             env.time = round(time, 1)
 
@@ -48,10 +48,11 @@ if __name__ == "__main__":
                         company.computeCompanyValue()
 
                     # compute the updated capital for the businessman and print
-                    bm.capital += nProfit + bm.subsidiaries
+                    # bm.capital += nProfit + bm.subsidiaries
+                    bm.capital += nProfit 
 
                 averageCompany = env.computeAverageCompanyValue()
-                env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
+                # env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, evaluationInterval, env.listOfPeople)

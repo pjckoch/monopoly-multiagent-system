@@ -19,7 +19,7 @@ class Environment():
                  government=None,
                  listOfPeople=None,
                  listOfCompanies=None,
-                 numActions=2,
+                 numActions=1,
                  suicideCount=0,
                  time=0):
         self.numPeople = numPeople
@@ -109,6 +109,7 @@ class Environment():
         return None
 
     def sellCompany(self, company, buyer, seller, price):
+        print("sell")
         seller.companies.remove(company)
         buyer.companies.append(company)
         seller.capital += price
