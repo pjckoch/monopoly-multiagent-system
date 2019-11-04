@@ -35,7 +35,7 @@ if __name__ == "__main__":
                 action = bm.chooseAction(companiesForEvaluation, env)
                 bm.dailyActions.append(action)
                 # assuming buying a new company counts as an investment
-                bm.invest(env)
+                # bm.invest(env)
                 totalMoney += bm.capital
 
             env.time = round(time, 1)
