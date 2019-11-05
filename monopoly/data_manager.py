@@ -15,7 +15,7 @@ startDate = None
 currentDate = None
 
 df_categories = None
-dfIndexCompanies = None
+dfIndexCompanies = 0
 
 
 class EvaluationInterval(Enum):
@@ -176,20 +176,20 @@ def appendToDataFrameCategories(time, company, owner):
     """Function to append a stats for businessess to a given dataframe"""
     global dfIndexCompanies, df_categories
 
-
+    turnOver = round(company.turnOverHistory[-1], 1)
     df_part = pd.DataFrame({"time": time,
-                       "id": company.id,
-                       "name": company.name,
-                       "owner": owner.name,
-                       "category": str(company.category).split(".")[1],
-                       "turnOver": company.turnOverHistory[-1],
-                       "taxes": company.taxes[-1],
-                       "companyValue": company.companyValue,
-                       "fixedCost": company.fixedCost,
-                       "variableCost": company.variableCost},
-                       index = [dfIndexCompanies])
+                            "id": company.id,
+                            "name": company.name,
+                            "owner": owner.name,
+                            "category": str(company.category).split(".")[1],
+                            "turnOver": turnOver,
+                            #"taxes": company.taxes[-1],
+                            "companyValue": company.companyValue,
+                            "fixedCost": company.fixedCost,
+                            "variableCost": company.variableCost},
+                            index = [dfIndexCompanies])
 
-    df_categories = df_categories.append(df_part)
+    df_categories = df_categories.append(df_part, sort=False)
     dfIndexCompanies += 1
 
 
@@ -235,7 +235,7 @@ def deserialize_company(obj):
                            bruttoProfitHistory = obj['bruttoProfitHistory'],
                            nettoProfitHistory = obj['nettoProfitHistory'],
                            turnOverHistory = obj['turnOverHistory'],
-                           taxHist = obj['taxHistory'])
+                           taxHistory = obj['taxHistory'])
 
 def deserialize_government(obj):
     politics = None #government.PoliticsSwitcher[obj['politics']]
