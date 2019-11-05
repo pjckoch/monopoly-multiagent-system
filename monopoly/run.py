@@ -82,10 +82,12 @@ def use_existing_environment():
                                  startDt=lastDate)
     return data_manager.FileType.RESULTS
     
+class chooseEnvironment(Enum):
+    NEW_ENV = create_new_environment()
+    EXISTING_ENV = use_existing_environment()
 
 if __name__ == "__main__":
-    # SELECT THIS OPTION TO CREATE A NEW ENVIRONMENT
-    jsonfile = create_new_environment()
-    # SELECT THIS OPTION TO LOAD AN EXISTING ENVIRONMENT
-    # jsonfile = use_existing_environment()
+    # choose between creating a new or using an existing environment configuration
+    env_type = chooseEnvironment.EXISTING_ENV
+    jsonfile = env_type.value
     runFromJson(jsonfile)
