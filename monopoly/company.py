@@ -36,10 +36,10 @@ class Company():
                  variableCost=None,
                  companyValue=0,
                  investmentLevel=0,
-                 bruttoProfitHistory=[],
-                 nettoProfitHistory=[],
-                 turnOverHistory=[],
-                 taxHist=[0]):
+                 bruttoProfitHistory=None,
+                 nettoProfitHistory=None,
+                 turnOverHistory=None,
+                 taxHistory=None):
         self.id = companyId
 
         self.name = company_names[np.random.randint(1, numLines)]
@@ -59,10 +59,10 @@ class Company():
         self.turnOver = turnOver
         self.companyValue = companyValue
         self.investmentLevel = investmentLevel
-        self.bruttoProfitHistory = []
-        self.nettoProfitHistory = []
-        self.turnOverHistory = []
-        self.taxHistory = taxHist
+        self.bruttoProfitHistory = [] if bruttoProfitHistory is None else bruttoProfitHistory
+        self.nettoProfitHistory = [] if nettoProfitHistory is None else nettoProfitHistory
+        self.turnOverHistory = [] if turnOverHistory is None else turnOverHistory
+        self.taxHistory = [0] if taxHistory is None else taxHistory
 
 
     def computeBruttoProfit(self):

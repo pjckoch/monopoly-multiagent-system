@@ -128,7 +128,6 @@ def evaluateStats(time, listOfPeople):
         turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(bm)
         appendToDataFrame(time, bm, turnOver, taxes, nettoProfit)
         for cmp in bm.companies:
-            #compute values??
             appendToDataFrameCategories(time, cmp, bm)
 
 def computeStatsForEvaluationInterval(bm):
@@ -183,8 +182,8 @@ def appendToDataFrameCategories(time, company, owner):
                        "name": company.name,
                        "owner": owner.name,
                        "category": str(company.category).split(".")[1],
-                       "turnOver": company.turnOver,
-                       #"taxes": company.taxes,
+                       "turnOver": company.turnOverHistory[-1],
+                       "taxes": company.taxes[-1],
                        "companyValue": company.companyValue,
                        "fixedCost": company.fixedCost,
                        "variableCost": company.variableCost},
