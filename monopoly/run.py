@@ -1,26 +1,19 @@
 import numpy as np
+import pandas as pd
 import random
 from environment import Environment
 from plot_history import *
 from enum import Enum
 import data_manager
 
-days = 360
-evaluationInterval = data_manager.EvaluationInterval.DAILY
+days = 90
+evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
-# def runFromJson(jsonFile):
+def runFromJson(jsonFile):
 
-#     env = data_manager.readFromJson(jsonFile)
+    env = data_manager.readFromJson(jsonFile)
 
-
-if __name__ == "__main__":
-
-    configFile = "config.json"
-    env = Environment()
-    data_manager.writeToJson(configFile, env)
     totalMoney = 0
-    # runFromJson(configFile)
-
     # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
         totalMoney = 0
@@ -33,14 +26,13 @@ if __name__ == "__main__":
             for bm in stillALiveBms:
 
                 action = bm.chooseAction(companiesForEvaluation, env)
-                bm.dailyActions.append(action)
                 # assuming buying a new company counts as an investment
                 # bm.invest(env)
                 totalMoney += bm.capital
 
             env.time = round(time, 1)
 
-            if env.time % evaluationInterval.value == 0.0 :
+            if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
 
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
@@ -58,13 +50,35 @@ if __name__ == "__main__":
                 # env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
-                data_manager.evaluateStats(time, evaluationInterval, env.listOfPeople)
+                data_manager.evaluateStats(time, env.listOfPeople)
 
-                # print("Government Money: " + str(env.government.governmentMoney))
-                # for bm in env.listOfPeople:
-                #     print(round(bm.capital,0))
         totalMoney += env.government.governmentMoney
 
-    # plot profit history and capital
     data_manager.exportToCSV()
-    # data_manager.writeToJson("results.json", env)
+    data_manager.writeToJson(data_manager.FileType.RESULTS, env)
+
+
+def create_new_environment():
+    data_manager.init_statistics()
+    env = Environment()
+    jsonfile = data_manager.FileType.CONFIG
+    data_manager.writeToJson(jsonfile, env)
+    return jsonfile
+
+def use_existing_environment():
+    dataframe = pd.read_csv(data_manager.FileType.STATS.value, index_col=0)
+    lastItem = dataframe.tail(1)
+    lastDfIndex = lastItem.index.item() + 1
+    lastDate = data_manager.convertStringToDate(lastItem.time.item())
+    data_manager.init_statistics(dataframe=dataframe,
+                                 dfIdx=lastDfIndex,
+                                 startDt=lastDate)
+    return data_manager.FileType.RESULTS
+    
+
+if __name__ == "__main__":
+    # SELECT THIS OPTION TO CREATE A NEW ENVIRONMENT
+    jsonfile = create_new_environment()
+    # SELECT THIS OPTION TO LOAD AN EXISTING ENVIRONMENT
+    # jsonfile = use_existing_environment()
+    runFromJson(jsonfile)

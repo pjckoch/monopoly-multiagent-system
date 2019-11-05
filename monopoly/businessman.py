@@ -18,15 +18,15 @@ class Businessman():
                 capital=1000 * np.random.randn() + 10000,
                 happiness=10 * np.random.randn() + 50,
                 isAlive=True,
-                subsidiaries=0):
+                subsidiaries=0,
+                companiesList=None):
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
-        self.companies = []
-        self.dailyActions = []
-        self.name = full_names[np.random.randint(1, numLines)]
+        self.name = name
         self.capital = capital
         self.happiness = happiness
+        self.companies = [] if companiesList is None else companiesList
     
     def getCompanyOwner(self, company, env):
         for bm in env.listOfPeople:
@@ -190,15 +190,6 @@ class Businessman():
         company = Company(companyId)
         self.companies.append(company)
         return company
-
-    def displayDailyActions(self):
-        print("Businessman " + str(self.id) + " Daily Actions:")
-        for action in self.dailyActions:
-            if action is not None:
-                print(action.id)
-            else:
-                print("No Action")
-
 
 def decision(probability):
     return np.random.random() < probability

@@ -34,25 +34,18 @@ class Company():
                  turnOver=0,
                  fixedCost=None,
                  variableCost=None,
-                 taxes=0,
                  companyValue=0,
                  investmentLevel=0,
                  bruttoProfitHistory=[],
                  nettoProfitHistory=[],
                  turnOverHistory=[],
-                 taxHistory=[0]):
+                 taxHist=[0]):
         self.id = companyId
 
         self.name = company_names[np.random.randint(1, numLines)]
         self.category = random.choice(list(BusinessCategory)) if category is None else category
-        if frequency is None:
-            self.frequency = self.category.value[0]
-        else:
-            self.frequency = frequency
-        if necessity is None:
-            self.necessity = self.category.value[1]
-        else:
-            self.necessity = necessity
+        self.frequency = self.category.value[0] if frequency is None else frequency
+        self.necessity = self.category.value[1] if necessity is None else necessity
         if price is None:
             self.price
         else:
@@ -69,7 +62,7 @@ class Company():
         self.bruttoProfitHistory = []
         self.nettoProfitHistory = []
         self.turnOverHistory = []
-        self.taxHistory = [0]
+        self.taxHistory = taxHist
 
 
     def computeBruttoProfit(self):

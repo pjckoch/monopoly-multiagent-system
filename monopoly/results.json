@@ -8,10 +8,47 @@
             "__value__": {
                 "politics": "SUPPORTIVE",
                 "taxesStatus": [],
-                "subsidiariesStatus": [],
+                "subsidiariesStatus": [
+                    [
+                        1,
+                        0
+                    ],
+                    [
+                        2,
+                        0
+                    ],
+                    [
+                        3,
+                        0
+                    ],
+                    [
+                        4,
+                        0
+                    ],
+                    [
+                        5,
+                        0
+                    ],
+                    [
+                        6,
+                        0
+                    ],
+                    [
+                        7,
+                        0
+                    ],
+                    [
+                        8,
+                        0
+                    ],
+                    [
+                        9,
+                        0
+                    ]
+                ],
                 "taxRate": 0.1,
                 "subsidyValue": 50,
-                "governmentMoney": 0,
+                "governmentMoney": 5912.203206017716,
                 "startCompPrice": 9000,
                 "investOwnCompPrice": 3000
             }
@@ -24,7 +61,7 @@
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 2770.4715640650566,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -35,20 +72,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 9.472548230718512,
-                                "_quality": 0.39409147391351684,
-                                "quality": 0.39409147391351684,
                                 "price": 13.205598724679247,
+                                "quality": 0.39409147391351684,
                                 "fixedCost": 2.6411197449358497,
                                 "variableCost": 0.059425194261056614,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    538.7290027726522,
+                                    499.1122065986145,
+                                    512.3178053232937
+                                ],
+                                "nettoProfitHistory": [
+                                    538.7290027726522,
+                                    445.23930632134926,
+                                    462.4065846634322
+                                ],
+                                "turnOverHistory": [
+                                    541.4295477118491,
+                                    501.8127515378114,
+                                    515.0183502624906
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    53.87290027726522,
+                                    49.91122065986145,
+                                    51.23178053232937
                                 ]
                             }
                         },
@@ -60,20 +110,33 @@
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 41.315585265847204,
-                                "_quality": 0.7617835374594094,
-                                "quality": 0.7617835374594094,
                                 "price": 72.78911796187013,
+                                "quality": 0.7617835374594094,
                                 "fixedCost": 14.557823592374028,
                                 "variableCost": 0.14557823592374028,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    640.3986598285335,
+                                    1004.3442496378842,
+                                    858.7660137141439
+                                ],
+                                "nettoProfitHistory": [
+                                    640.3986598285335,
+                                    940.3043836550308,
+                                    758.3315887503555
+                                ],
+                                "turnOverHistory": [
+                                    655.1020616568312,
+                                    1019.047651466182,
+                                    873.4694155424417
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    64.03986598285336,
+                                    100.43442496378843,
+                                    85.8766013714144
                                 ]
                             }
                         },
@@ -85,20 +148,33 @@
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 32.58827587040506,
-                                "_quality": 0.9725995287012991,
-                                "quality": 0.9725995287012991,
                                 "price": 64.28361762314894,
+                                "quality": 0.9725995287012991,
                                 "fixedCost": 12.856723524629789,
                                 "variableCost": 0.12856723524629787,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    372.71641497901754,
+                                    244.1491797327197,
+                                    822.7017383410603
+                                ],
+                                "nettoProfitHistory": [
+                                    372.71641497901754,
+                                    206.87753823481793,
+                                    798.2868203677883
+                                ],
+                                "turnOverHistory": [
+                                    385.7017057388936,
+                                    257.13447049259577,
+                                    835.6870291009365
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    37.271641497901754,
+                                    24.41491797327197,
+                                    82.27017383410603
                                 ]
                             }
                         },
@@ -110,20 +186,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 106.45134398687601,
-                                "_quality": 0.3333093585116059,
-                                "quality": 0.3333093585116059,
                                 "price": 141.93257316383998,
+                                "quality": 0.3333093585116059,
                                 "fixedCost": 28.386514632767998,
                                 "variableCost": 0.14193257316383998,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    964.999564940948,
+                                    539.2018454494281,
+                                    1248.864711268628
+                                ],
+                                "nettoProfitHistory": [
+                                    964.999564940948,
+                                    442.7018889553333,
+                                    1194.9445267236852
+                                ],
+                                "turnOverHistory": [
+                                    993.5280121468797,
+                                    567.7302926553599,
+                                    1277.3931584745599
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    96.4999564940948,
+                                    53.92018454494281,
+                                    124.88647112686282
                                 ]
                             }
                         }
@@ -135,9 +224,9 @@
                 "__value__": {
                     "id": 1,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 3253.064629629171,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -148,20 +237,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 9.695755148360476,
-                                "_quality": 0.5313341193046417,
-                                "quality": 0.5313341193046417,
                                 "price": 14.847440671108036,
+                                "quality": 0.5313341193046417,
                                 "fixedCost": 2.9694881342216073,
                                 "variableCost": 0.06681348301998617,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    576.0138845559717,
+                                    590.8613252270798,
+                                    442.38691851599935
+                                ],
+                                "nettoProfitHistory": [
+                                    576.0138845559717,
+                                    533.2599367714826,
+                                    383.30078599329136
+                                ],
+                                "turnOverHistory": [
+                                    579.0501861732133,
+                                    593.8976268443214,
+                                    445.42322013324093
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    57.601388455597174,
+                                    59.08613252270798,
+                                    44.23869185159994
                                 ]
                             }
                         },
@@ -173,18 +275,28 @@
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
                                 "_necessity": 0.1,
-                                "_price": 298.2049600386003,
-                                "_quality": 0.7915378000557907,
-                                "quality": 0.7915378000557907,
                                 "price": 534.2454580732789,
+                                "quality": 0.7915378000557907,
                                 "fixedCost": 106.84909161465578,
                                 "variableCost": 0.2671227290366395,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    -107.11621434369242,
+                                    -107.11621434369242,
+                                    -107.11621434369242
+                                ],
+                                "nettoProfitHistory": [
+                                    -107.11621434369242,
+                                    -107.11621434369242,
+                                    -107.11621434369242
+                                ],
+                                "turnOverHistory": [
+                                    0,
+                                    0,
+                                    0
+                                ],
                                 "taxHistory": [
                                     0
                                 ]
@@ -198,20 +310,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 41.56642914189818,
-                                "_quality": 0.16711094165823892,
-                                "quality": 0.16711094165823892,
                                 "price": 48.51263425717126,
+                                "quality": 0.16711094165823892,
                                 "fixedCost": 9.702526851434252,
                                 "variableCost": 0.09702526851434251,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    814.9152302519628,
+                                    426.8141561945928,
+                                    1300.041572823675
+                                ],
+                                "nettoProfitHistory": [
+                                    814.9152302519628,
+                                    345.3226331693965,
+                                    1257.3601572042157
+                                ],
+                                "turnOverHistory": [
+                                    824.7147823719115,
+                                    436.6137083145414,
+                                    1309.8411249436235
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    81.49152302519629,
+                                    42.68141561945928,
+                                    130.00415728236752
                                 ]
                             }
                         },
@@ -223,20 +348,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 89.24567186131486,
-                                "_quality": 0.5122839769979103,
-                                "quality": 0.5122839769979103,
                                 "price": 134.96479957227973,
+                                "quality": 0.5122839769979103,
                                 "fixedCost": 26.992959914455948,
                                 "variableCost": 0.13496479957227972,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    917.62567229193,
+                                    1592.449670153329,
+                                    1322.5200710087693
+                                ],
+                                "nettoProfitHistory": [
+                                    917.62567229193,
+                                    1500.687102924136,
+                                    1163.2751039934365
+                                ],
+                                "turnOverHistory": [
+                                    944.7535970059581,
+                                    1619.5775948673572,
+                                    1349.6479957227975
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    91.762567229193,
+                                    159.24496701533292,
+                                    132.25200710087694
                                 ]
                             }
                         }
@@ -248,9 +386,9 @@
                 "__value__": {
                     "id": 2,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 2739.4140046371067,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -261,18 +399,28 @@
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
                                 "_necessity": 0.1,
-                                "_price": 247.10044759893626,
-                                "_quality": 0.8014653214494132,
-                                "quality": 0.8014653214494132,
                                 "price": 445.1428872641116,
+                                "quality": 0.8014653214494132,
                                 "fixedCost": 89.02857745282233,
                                 "variableCost": 0.2225714436320558,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    -89.25114889645438,
+                                    -89.25114889645438,
+                                    -89.25114889645438
+                                ],
+                                "nettoProfitHistory": [
+                                    -89.25114889645438,
+                                    -89.25114889645438,
+                                    -89.25114889645438
+                                ],
+                                "turnOverHistory": [
+                                    0,
+                                    0,
+                                    0
+                                ],
                                 "taxHistory": [
                                     0
                                 ]
@@ -286,20 +434,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 10.223294976455188,
-                                "_quality": 0.845706572901984,
-                                "quality": 0.845706572901984,
                                 "price": 18.869202734759174,
+                                "quality": 0.845706572901984,
                                 "fixedCost": 3.773840546951835,
                                 "variableCost": 0.08491141230641629,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    750.9093574311087,
+                                    505.60972187923977,
+                                    449.0021136749622
+                                ],
+                                "nettoProfitHistory": [
+                                    750.9093574311087,
+                                    430.5187861361289,
+                                    398.4411414870382
+                                ],
+                                "turnOverHistory": [
+                                    754.7681093903669,
+                                    509.468473838498,
+                                    452.86086563422043
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    75.09093574311088,
+                                    50.56097218792398,
+                                    44.90021136749622
                                 ]
                             }
                         },
@@ -311,20 +472,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 100.07705364424457,
-                                "_quality": 0.11106056265450737,
-                                "quality": 0.11106056265450737,
                                 "price": 111.1916675307797,
+                                "quality": 0.11106056265450737,
                                 "fixedCost": 22.23833350615594,
                                 "variableCost": 0.11119166753077969,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    867.1838150725508,
+                                    755.9921475417711,
+                                    1089.5671501341103
+                                ],
+                                "nettoProfitHistory": [
+                                    867.1838150725508,
+                                    669.273766034516,
+                                    1013.9679353799332
+                                ],
+                                "turnOverHistory": [
+                                    889.5333402462376,
+                                    778.3416727154579,
+                                    1111.916675307797
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    86.71838150725509,
+                                    75.59921475417711,
+                                    108.95671501341104
                                 ]
                             }
                         },
@@ -336,20 +510,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 30.788845628564395,
-                                "_quality": 0.1304434762724408,
-                                "quality": 0.1304434762724408,
                                 "price": 34.80504968276988,
+                                "quality": 0.1304434762724408,
                                 "fixedCost": 6.9610099365539755,
                                 "variableCost": 0.06961009936553976,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    654.2653239367083,
+                                    723.8754233022481,
+                                    723.8754233022481
+                                ],
+                                "nettoProfitHistory": [
+                                    654.2653239367083,
+                                    658.4488909085773,
+                                    651.4878809720233
+                                ],
+                                "turnOverHistory": [
+                                    661.2959439726278,
+                                    730.9060433381676,
+                                    730.9060433381676
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    65.42653239367084,
+                                    72.38754233022482,
+                                    72.38754233022482
                                 ]
                             }
                         }
@@ -361,9 +548,9 @@
                 "__value__": {
                     "id": 3,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 2112.9459575019664,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -374,20 +561,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 98.81935061859755,
-                                "_quality": 0.3012749347565046,
-                                "quality": 0.3012749347565046,
                                 "price": 128.59114402889568,
+                                "quality": 0.3012749347565046,
                                 "fixedCost": 25.718228805779138,
                                 "variableCost": 0.12859114402889568,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    617.1089001946704,
+                                    1388.6557643680449,
+                                    1002.8823322813574
+                                ],
+                                "nettoProfitHistory": [
+                                    617.1089001946704,
+                                    1326.9448743485777,
+                                    864.0167558445529
+                                ],
+                                "turnOverHistory": [
+                                    642.9557201444784,
+                                    1414.5025843178528,
+                                    1028.7291522311655
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    61.71089001946704,
+                                    138.8655764368045,
+                                    100.28823322813575
                                 ]
                             }
                         },
@@ -399,20 +599,33 @@
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 35.37743249409769,
-                                "_quality": 0.8043765036331415,
-                                "quality": 0.8043765036331415,
                                 "price": 63.83420795121747,
+                                "quality": 0.8043765036331415,
                                 "fixedCost": 12.766841590243494,
                                 "variableCost": 0.12766841590243494,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    1582.96068877429,
+                                    816.950193359681,
+                                    816.950193359681
+                                ],
+                                "nettoProfitHistory": [
+                                    1582.96068877429,
+                                    658.654124482252,
+                                    735.2551740237128
+                                ],
+                                "turnOverHistory": [
+                                    1595.855198780436,
+                                    829.844703365827,
+                                    829.844703365827
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    158.296068877429,
+                                    81.6950193359681,
+                                    81.6950193359681
                                 ]
                             }
                         },
@@ -424,18 +637,28 @@
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
                                 "_necessity": 0.1,
-                                "_price": 270.58791617570546,
-                                "_quality": 0.24947919259869755,
-                                "quality": 0.24947919259869755,
                                 "price": 338.0939710301845,
+                                "quality": 0.24947919259869755,
                                 "fixedCost": 67.6187942060369,
                                 "variableCost": 0.16904698551509226,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    -67.78784119155199,
+                                    -67.78784119155199,
+                                    -67.78784119155199
+                                ],
+                                "nettoProfitHistory": [
+                                    -67.78784119155199,
+                                    -67.78784119155199,
+                                    -67.78784119155199
+                                ],
+                                "turnOverHistory": [
+                                    0,
+                                    0,
+                                    0
+                                ],
                                 "taxHistory": [
                                     0
                                 ]
@@ -449,20 +672,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 33.59315242945263,
-                                "_quality": 0.6770339194056173,
-                                "quality": 0.6770339194056173,
                                 "price": 56.336856083955276,
+                                "quality": 0.6770339194056173,
                                 "fixedCost": 11.267371216791055,
                                 "variableCost": 0.11267371216791056,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    1115.3570767501465,
+                                    608.3253719945492,
+                                    1002.6833645822359
+                                ],
+                                "nettoProfitHistory": [
+                                    1115.3570767501465,
+                                    496.78966431953455,
+                                    941.850827382781
+                                ],
+                                "turnOverHistory": [
+                                    1126.7371216791055,
+                                    619.7054169235081,
+                                    1014.0634095111948
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    111.53570767501465,
+                                    60.83253719945492,
+                                    100.26833645822359
                                 ]
                             }
                         }
@@ -474,9 +710,9 @@
                 "__value__": {
                     "id": 4,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 1821.004185934851,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -487,20 +723,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 13.408458440669687,
-                                "_quality": 0.24689391809998806,
-                                "quality": 0.24689391809998806,
                                 "price": 16.718925280767483,
+                                "quality": 0.24689391809998806,
                                 "fixedCost": 3.3437850561534965,
                                 "variableCost": 0.07523516376345368,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    648.6190657300154,
+                                    581.7433646069454,
+                                    748.9326174146205
+                                ],
+                                "nettoProfitHistory": [
+                                    648.6190657300154,
+                                    516.8814580339439,
+                                    690.7582809539259
+                                ],
+                                "turnOverHistory": [
+                                    652.0380859499323,
+                                    585.1623848268623,
+                                    752.3516376345374
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    64.86190657300155,
+                                    58.17433646069455,
+                                    74.89326174146206
                                 ]
                             }
                         },
@@ -512,20 +761,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 104.968524665072,
-                                "_quality": 0.7249116424221207,
-                                "quality": 0.7249116424221207,
                                 "price": 181.06143028265623,
+                                "quality": 0.7249116424221207,
                                 "fixedCost": 36.21228605653125,
                                 "variableCost": 0.18106143028265623,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    325.72951307849854,
+                                    325.72951307849854,
+                                    687.852373643811
+                                ],
+                                "nettoProfitHistory": [
+                                    325.72951307849854,
+                                    293.1565617706487,
+                                    655.2794223359612
+                                ],
+                                "turnOverHistory": [
+                                    362.12286056531246,
+                                    362.12286056531246,
+                                    724.2457211306249
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    32.572951307849856,
+                                    32.572951307849856,
+                                    68.7852373643811
                                 ]
                             }
                         },
@@ -537,20 +799,33 @@
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 37.21485298863159,
-                                "_quality": 0.3260409362523934,
-                                "quality": 0.3260409362523934,
                                 "price": 49.34841849954021,
+                                "quality": 0.3260409362523934,
                                 "fixedCost": 9.869683699908043,
                                 "variableCost": 0.09869683699908043,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    828.9547339552767,
+                                    730.2578969561962,
+                                    1026.3484079534373
+                                ],
+                                "nettoProfitHistory": [
+                                    828.9547339552767,
+                                    647.3624235606685,
+                                    953.3226182578177
+                                ],
+                                "turnOverHistory": [
+                                    838.9231144921838,
+                                    740.2262774931033,
+                                    1036.3167884903446
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    82.89547339552767,
+                                    73.02578969561962,
+                                    102.63484079534373
                                 ]
                             }
                         },
@@ -562,20 +837,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 103.42986888128715,
-                                "_quality": 0.5114089160804344,
-                                "quality": 0.5114089160804344,
                                 "price": 156.32482601620768,
+                                "quality": 0.5114089160804344,
                                 "fixedCost": 31.264965203241537,
                                 "variableCost": 0.15632482601620767,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    593.878014035573,
+                                    437.5531880193653,
+                                    281.2283620031576
+                                ],
+                                "nettoProfitHistory": [
+                                    593.878014035573,
+                                    378.16538661580796,
+                                    237.47304320122106
+                                ],
+                                "turnOverHistory": [
+                                    625.2993040648307,
+                                    468.97447804862304,
+                                    312.64965203241536
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    59.3878014035573,
+                                    43.75531880193653,
+                                    28.12283620031576
                                 ]
                             }
                         }
@@ -587,9 +875,9 @@
                 "__value__": {
                     "id": 5,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 280.0744821623265,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -600,20 +888,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 111.32798558978013,
-                                "_quality": 0.313627065441749,
-                                "quality": 0.313627065441749,
                                 "price": 146.2434550118442,
+                                "quality": 0.313627065441749,
                                 "fixedCost": 29.24869100236884,
                                 "variableCost": 0.1462434550118442,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    409.3354305781519,
+                                    1140.5527056373728,
+                                    116.8485205544635
+                                ],
+                                "nettoProfitHistory": [
+                                    409.3354305781519,
+                                    1099.6191625795577,
+                                    2.793249990726224
+                                ],
+                                "turnOverHistory": [
+                                    438.7303650355326,
+                                    1169.9476400947535,
+                                    146.2434550118442
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    40.93354305781519,
+                                    114.05527056373728,
+                                    11.68485205544635
                                 ]
                             }
                         },
@@ -625,20 +926,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 111.44263632090859,
-                                "_quality": 0.9232638939262947,
-                                "quality": 0.9232638939262947,
                                 "price": 214.3335986799626,
+                                "quality": 0.9232638939262947,
                                 "fixedCost": 42.86671973599252,
                                 "variableCost": 0.2143335986799626,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    385.5861440252527,
+                                    171.25254534529012,
+                                    1242.920538745103
+                                ],
+                                "nettoProfitHistory": [
+                                    385.5861440252527,
+                                    132.69393094276484,
+                                    1225.795284210574
+                                ],
+                                "turnOverHistory": [
+                                    428.6671973599252,
+                                    214.3335986799626,
+                                    1286.0015920797755
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    38.55861440252527,
+                                    17.125254534529013,
+                                    124.2920538745103
                                 ]
                             }
                         },
@@ -650,20 +964,32 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 88.35200463308249,
-                                "_quality": 0.8309831160215316,
-                                "quality": 0.8309831160215316,
                                 "price": 161.77102874983018,
+                                "quality": 0.8309831160215316,
                                 "fixedCost": 32.354205749966034,
                                 "variableCost": 0.16177102874983018,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    291.0260807209445,
+                                    -32.51597677871587,
+                                    291.0260807209445
+                                ],
+                                "nettoProfitHistory": [
+                                    291.0260807209445,
+                                    -61.61858485081032,
+                                    261.92347264885007
+                                ],
+                                "turnOverHistory": [
+                                    323.54205749966036,
+                                    0,
+                                    323.54205749966036
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    29.10260807209445,
+                                    29.10260807209445
                                 ]
                             }
                         },
@@ -675,20 +1001,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 8.70194096551492,
-                                "_quality": 0.5444255814843886,
-                                "quality": 0.5444255814843886,
                                 "price": 13.439500235708202,
+                                "quality": 0.5444255814843886,
                                 "fixedCost": 2.6879000471416408,
                                 "variableCost": 0.06047775106068692,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    481.07363068729273,
+                                    427.31562974446,
+                                    400.43662927304365
+                                ],
+                                "nettoProfitHistory": [
+                                    481.07363068729273,
+                                    379.2082666757307,
+                                    357.70506629859767
+                                ],
+                                "turnOverHistory": [
+                                    483.822008485495,
+                                    430.0640075426623,
+                                    403.18500707124593
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    48.10736306872928,
+                                    42.73156297444601,
+                                    40.04366292730437
                                 ]
                             }
                         }
@@ -700,9 +1039,9 @@
                 "__value__": {
                     "id": 6,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 881.3010631455941,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -713,18 +1052,28 @@
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
                                 "_necessity": 0.1,
-                                "_price": 325.4619526432331,
-                                "_quality": 0.7054897507439125,
-                                "quality": 0.7054897507439125,
                                 "price": 555.0720244901346,
+                                "quality": 0.7054897507439125,
                                 "fixedCost": 111.01440489802692,
                                 "variableCost": 0.2775360122450673,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    -111.29194091027199,
+                                    -111.29194091027199,
+                                    -111.29194091027199
+                                ],
+                                "nettoProfitHistory": [
+                                    -111.29194091027199,
+                                    -111.29194091027199,
+                                    -111.29194091027199
+                                ],
+                                "turnOverHistory": [
+                                    0,
+                                    0,
+                                    0
+                                ],
                                 "taxHistory": [
                                     0
                                 ]
@@ -738,20 +1087,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 102.70142313912721,
-                                "_quality": 0.3195955909951219,
-                                "quality": 0.3195955909951219,
                                 "price": 135.52434516331667,
+                                "quality": 0.3195955909951219,
                                 "fixedCost": 27.104869032663334,
                                 "variableCost": 0.13552434516331666,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    785.9056776020733,
+                                    1463.5274034186566,
+                                    1192.4787130920233
+                                ],
+                                "nettoProfitHistory": [
+                                    785.9056776020733,
+                                    1384.9368356584494,
+                                    1046.1259727501576
+                                ],
+                                "turnOverHistory": [
+                                    813.1460709799,
+                                    1490.7677967964833,
+                                    1219.71910646985
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    78.59056776020734,
+                                    146.35274034186565,
+                                    119.24787130920234
                                 ]
                             }
                         },
@@ -763,20 +1125,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 9.71196763754738,
-                                "_quality": 0.9322923711918537,
-                                "quality": 0.9322923711918537,
                                 "price": 18.766360975294972,
+                                "quality": 0.9322923711918537,
                                 "fixedCost": 3.7532721950589947,
                                 "variableCost": 0.08444862438882739,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    878.1812450194163,
+                                    652.9849133158762,
+                                    690.5176352664662
+                                ],
+                                "nettoProfitHistory": [
+                                    878.1812450194163,
+                                    565.1667888139345,
+                                    625.2191439348786
+                                ],
+                                "turnOverHistory": [
+                                    882.0189658388642,
+                                    656.822634135324,
+                                    694.3553560859141
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    87.81812450194164,
+                                    65.29849133158761,
+                                    69.05176352664662
                                 ]
                             }
                         },
@@ -788,20 +1163,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 31.244842840031723,
-                                "_quality": 0.30115108863323736,
-                                "quality": 0.30115108863323736,
                                 "price": 40.65426127548169,
+                                "quality": 0.30115108863323736,
                                 "fixedCost": 8.130852255096338,
                                 "variableCost": 0.08130852255096338,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    398.3304519771697,
+                                    520.2932358036147,
+                                    438.9847132526514
+                                ],
+                                "nettoProfitHistory": [
+                                    398.3304519771697,
+                                    480.46019060589776,
+                                    386.9553896722899
+                                ],
+                                "turnOverHistory": [
+                                    406.54261275481696,
+                                    528.5053965812621,
+                                    447.19687403029866
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    39.83304519771697,
+                                    52.02932358036148,
+                                    43.89847132526514
                                 ]
                             }
                         }
@@ -813,9 +1201,9 @@
                 "__value__": {
                     "id": 7,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 2998.986941212754,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -826,20 +1214,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 10.549052718949333,
-                                "_quality": 0.37870691342521035,
-                                "quality": 0.37870691342521035,
                                 "price": 14.544051913702459,
+                                "quality": 0.37870691342521035,
                                 "fixedCost": 2.908810382740492,
                                 "variableCost": 0.06544823361166108,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    607.8759217591507,
+                                    564.2437660180434,
+                                    549.699714104341
+                                ],
+                                "nettoProfitHistory": [
+                                    607.8759217591507,
+                                    503.45617384212835,
+                                    493.2753375025366
+                                ],
+                                "turnOverHistory": [
+                                    610.8501803755029,
+                                    567.2180246343955,
+                                    552.6739727206931
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    60.78759217591508,
+                                    56.42437660180434,
+                                    54.9699714104341
                                 ]
                             }
                         },
@@ -851,20 +1252,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 101.73566698376574,
-                                "_quality": 0.15720223037552084,
-                                "quality": 0.15720223037552084,
                                 "price": 117.72874074235494,
+                                "quality": 0.15720223037552084,
                                 "fixedCost": 23.54574814847099,
                                 "variableCost": 0.11772874074235494,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    211.79400459549652,
+                                    94.0652638531416,
+                                    447.25148608020646
+                                ],
+                                "nettoProfitHistory": [
+                                    211.79400459549652,
+                                    72.88586339359195,
+                                    437.8449596948923
+                                ],
+                                "turnOverHistory": [
+                                    235.4574814847099,
+                                    117.72874074235494,
+                                    470.9149629694198
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    21.179400459549655,
+                                    9.40652638531416,
+                                    44.725148608020646
                                 ]
                             }
                         },
@@ -876,20 +1290,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 90.95757572695197,
-                                "_quality": 0.5956244550428232,
-                                "quality": 0.5956244550428232,
                                 "price": 145.13413220133407,
+                                "quality": 0.5956244550428232,
                                 "fixedCost": 29.026826440266817,
                                 "variableCost": 0.14513413220133406,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    696.4987004342022,
+                                    551.3645682328681,
+                                    406.23043603153405
+                                ],
+                                "nettoProfitHistory": [
+                                    696.4987004342022,
+                                    481.7146981894479,
+                                    351.0939792082472
+                                ],
+                                "turnOverHistory": [
+                                    725.6706610066703,
+                                    580.5365288053363,
+                                    435.4023966040022
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    69.64987004342022,
+                                    55.136456823286814,
+                                    40.623043603153405
                                 ]
                             }
                         },
@@ -901,20 +1328,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 31.98723177071979,
-                                "_quality": 0.8387270908076404,
-                                "quality": 0.8387270908076404,
                                 "price": 58.815789616765336,
+                                "quality": 0.8387270908076404,
                                 "fixedCost": 11.763157923353068,
                                 "variableCost": 0.11763157923353068,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    929.1718443656586,
+                                    752.7244755153627,
+                                    987.9876339824239
+                                ],
+                                "nettoProfitHistory": [
+                                    929.1718443656586,
+                                    659.8072910787968,
+                                    912.7151864308876
+                                ],
+                                "turnOverHistory": [
+                                    941.0526338682452,
+                                    764.6052650179493,
+                                    999.8684234850105
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    92.91718443656586,
+                                    75.27244755153627,
+                                    98.79876339824239
                                 ]
                             }
                         }
@@ -926,9 +1366,9 @@
                 "__value__": {
                     "id": 8,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 1274.9835951581865,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -939,20 +1379,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 39.218950701130616,
-                                "_quality": 0.014441982762702033,
-                                "quality": 0.014441982762702033,
                                 "price": 39.785350111127606,
+                                "quality": 0.014441982762702033,
                                 "fixedCost": 7.957070022225522,
                                 "variableCost": 0.07957070022225521,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    628.5289610555941,
+                                    469.3875606110836,
+                                    548.9582608333388
+                                ],
+                                "nettoProfitHistory": [
+                                    628.5289610555941,
+                                    406.5346645055242,
+                                    502.01950477223045
+                                ],
+                                "turnOverHistory": [
+                                    636.5656017780418,
+                                    477.42420133353136,
+                                    556.9949015557866
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    62.85289610555941,
+                                    46.938756061108364,
+                                    54.89582608333389
                                 ]
                             }
                         },
@@ -964,20 +1417,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 10.553738152839728,
-                                "_quality": 0.23048731829989455,
-                                "quality": 0.23048731829989455,
                                 "price": 12.98624095772704,
+                                "quality": 0.23048731829989455,
                                 "fixedCost": 2.597248191545408,
                                 "variableCost": 0.05843808430977168,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    322.0003376673207,
+                                    296.02785575186664,
+                                    386.9315424559559
+                                ],
+                                "nettoProfitHistory": [
+                                    322.0003376673207,
+                                    263.82782198513456,
+                                    357.3287568807692
+                                ],
+                                "turnOverHistory": [
+                                    324.6560239431759,
+                                    298.68354202772184,
+                                    389.5872287318111
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    32.20003376673207,
+                                    29.602785575186665,
+                                    38.69315424559559
                                 ]
                             }
                         },
@@ -989,18 +1455,28 @@
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
                                 "_necessity": 0.1,
-                                "_price": 308.40455777422557,
-                                "_quality": 0.4637816726256413,
-                                "quality": 0.4637816726256413,
                                 "price": 451.43693942412716,
+                                "quality": 0.4637816726256413,
                                 "fixedCost": 90.28738788482543,
                                 "variableCost": 0.22571846971206358,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    -90.5131063545375,
+                                    -90.5131063545375,
+                                    -90.5131063545375
+                                ],
+                                "nettoProfitHistory": [
+                                    -90.5131063545375,
+                                    -90.5131063545375,
+                                    -90.5131063545375
+                                ],
+                                "turnOverHistory": [
+                                    0,
+                                    0,
+                                    0
+                                ],
                                 "taxHistory": [
                                     0
                                 ]
@@ -1014,20 +1490,33 @@
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 7.8727578564899305,
-                                "_quality": 0.0988687172477235,
-                                "quality": 0.0988687172477235,
                                 "price": 8.651127326963026,
+                                "quality": 0.0988687172477235,
                                 "fixedCost": 1.7302254653926052,
                                 "variableCost": 0.03893007297133362,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    136.64888169304444,
+                                    171.25339100089658,
+                                    136.64888169304444
+                                ],
+                                "nettoProfitHistory": [
+                                    136.64888169304444,
+                                    157.58850283159214,
+                                    119.52354259295478
+                                ],
+                                "turnOverHistory": [
+                                    138.4180372314084,
+                                    173.02254653926053,
+                                    138.4180372314084
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    13.664888169304445,
+                                    17.125339100089658,
+                                    13.664888169304445
                                 ]
                             }
                         }
@@ -1039,9 +1528,9 @@
                 "__value__": {
                     "id": 9,
                     "isAlive": true,
-                    "subsidiaries": 0,
+                    "subsidiaries": 50,
                     "name": "Florida Ortner",
-                    "capital": 11642.993433426353,
+                    "capital": 3523.106635111085,
                     "happiness": 49.530316043115256,
                     "companies": [
                         {
@@ -1052,20 +1541,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 51.0308483262567,
-                                "_quality": 0.28570053990648103,
-                                "quality": 0.28570053990648103,
                                 "price": 65.61038924495399,
+                                "quality": 0.28570053990648103,
                                 "fixedCost": 13.122077848990799,
                                 "variableCost": 0.13122077848990799,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    314.79864759728923,
+                                    314.79864759728923,
+                                    183.57786910738128
+                                ],
+                                "nettoProfitHistory": [
+                                    314.79864759728923,
+                                    283.3187828375603,
+                                    152.09800434765236
+                                ],
+                                "turnOverHistory": [
+                                    328.05194622476995,
+                                    328.05194622476995,
+                                    196.831167734862
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    31.479864759728926,
+                                    31.479864759728926,
+                                    18.357786910738128
                                 ]
                             }
                         },
@@ -1077,20 +1579,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 29.05679979283144,
-                                "_quality": 0.14866536215408888,
-                                "quality": 0.14866536215408888,
                                 "price": 33.37653945707158,
+                                "quality": 0.14866536215408888,
                                 "fixedCost": 6.675307891414317,
                                 "variableCost": 0.06675307891414316,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    160.14063631502944,
+                                    160.14063631502944,
+                                    126.76409685795787
+                                ],
+                                "nettoProfitHistory": [
+                                    160.14063631502944,
+                                    144.1265726835265,
+                                    110.75003322645492
+                                ],
+                                "turnOverHistory": [
+                                    166.8826972853579,
+                                    166.8826972853579,
+                                    133.50615782828632
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    16.014063631502946,
+                                    16.014063631502946,
+                                    12.676409685795788
                                 ]
                             }
                         },
@@ -1102,20 +1617,33 @@
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 33.15389650748016,
-                                "_quality": 0.4459065853942683,
-                                "quality": 0.4459065853942683,
                                 "price": 47.9374372916456,
+                                "quality": 0.4459065853942683,
                                 "fixedCost": 9.58748745832912,
                                 "variableCost": 0.0958748745832912,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    230.0038241253156,
+                                    277.9412614169612,
+                                    182.06638683366998
+                                ],
+                                "nettoProfitHistory": [
+                                    230.0038241253156,
+                                    254.94087900442963,
+                                    154.27226069197386
+                                ],
+                                "turnOverHistory": [
+                                    239.687186458228,
+                                    287.6246237498736,
+                                    191.7497491665824
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    23.00038241253156,
+                                    27.794126141696122,
+                                    18.206638683367
                                 ]
                             }
                         },
@@ -1127,20 +1655,33 @@
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 94.63781265067828,
-                                "_quality": 0.6831290438309753,
-                                "quality": 0.6831290438309753,
                                 "price": 159.28765111699113,
+                                "quality": 0.6831290438309753,
                                 "fixedCost": 31.85753022339823,
                                 "variableCost": 0.15928765111699114,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
+                                "bruttoProfitHistory": [
+                                    1720.1473444123872,
+                                    1242.2843910614138,
+                                    2516.585599997343
+                                ],
+                                "nettoProfitHistory": [
+                                    1720.1473444123872,
+                                    1070.269656620175,
+                                    2392.3571608912016
+                                ],
+                                "turnOverHistory": [
+                                    1752.1641622869024,
+                                    1274.301208935929,
+                                    2548.602417871858
+                                ],
                                 "taxHistory": [
-                                    0
+                                    0,
+                                    172.01473444123872,
+                                    124.22843910614138,
+                                    251.65855999973428
                                 ]
                             }
                         }
@@ -1157,13 +1698,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 9.472548230718512,
-                    "_quality": 0.39409147391351684,
-                    "quality": 0.39409147391351684,
                     "price": 13.205598724679247,
+                    "quality": 0.39409147391351684,
                     "fixedCost": 2.6411197449358497,
                     "variableCost": 0.059425194261056614,
-                    "turnOver": 0,
+                    "turnOver": 422.5791591897359,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1182,13 +1721,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 9.695755148360476,
-                    "_quality": 0.5313341193046417,
-                    "quality": 0.5313341193046417,
                     "price": 14.847440671108036,
+                    "quality": 0.5313341193046417,
                     "fixedCost": 2.9694881342216073,
                     "variableCost": 0.06681348301998617,
-                    "turnOver": 0,
+                    "turnOver": 460.27066080434895,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1207,10 +1744,8 @@
                     "category": "LUXURY",
                     "_frequency": 0.05,
                     "_necessity": 0.1,
-                    "_price": 247.10044759893626,
-                    "_quality": 0.8014653214494132,
-                    "quality": 0.8014653214494132,
                     "price": 445.1428872641116,
+                    "quality": 0.8014653214494132,
                     "fixedCost": 89.02857745282233,
                     "variableCost": 0.2225714436320558,
                     "turnOver": 0,
@@ -1232,13 +1767,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 98.81935061859755,
-                    "_quality": 0.3012749347565046,
-                    "quality": 0.3012749347565046,
                     "price": 128.59114402889568,
+                    "quality": 0.3012749347565046,
                     "fixedCost": 25.718228805779138,
                     "variableCost": 0.12859114402889568,
-                    "turnOver": 0,
+                    "turnOver": 128.59114402889568,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1257,13 +1790,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 13.408458440669687,
-                    "_quality": 0.24689391809998806,
-                    "quality": 0.24689391809998806,
                     "price": 16.718925280767483,
+                    "quality": 0.24689391809998806,
                     "fixedCost": 3.3437850561534965,
                     "variableCost": 0.07523516376345368,
-                    "turnOver": 0,
+                    "turnOver": 367.81635617688477,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1282,13 +1813,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 111.32798558978013,
-                    "_quality": 0.313627065441749,
-                    "quality": 0.313627065441749,
                     "price": 146.2434550118442,
+                    "quality": 0.313627065441749,
                     "fixedCost": 29.24869100236884,
                     "variableCost": 0.1462434550118442,
-                    "turnOver": 0,
+                    "turnOver": 292.4869100236884,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1307,10 +1836,8 @@
                     "category": "LUXURY",
                     "_frequency": 0.05,
                     "_necessity": 0.1,
-                    "_price": 325.4619526432331,
-                    "_quality": 0.7054897507439125,
-                    "quality": 0.7054897507439125,
                     "price": 555.0720244901346,
+                    "quality": 0.7054897507439125,
                     "fixedCost": 111.01440489802692,
                     "variableCost": 0.2775360122450673,
                     "turnOver": 0,
@@ -1332,13 +1859,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 10.549052718949333,
-                    "_quality": 0.37870691342521035,
-                    "quality": 0.37870691342521035,
                     "price": 14.544051913702459,
+                    "quality": 0.37870691342521035,
                     "fixedCost": 2.908810382740492,
                     "variableCost": 0.06544823361166108,
-                    "turnOver": 0,
+                    "turnOver": 494.4977650658833,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1357,13 +1882,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 39.218950701130616,
-                    "_quality": 0.014441982762702033,
-                    "quality": 0.014441982762702033,
                     "price": 39.785350111127606,
+                    "quality": 0.014441982762702033,
                     "fixedCost": 7.957070022225522,
                     "variableCost": 0.07957070022225521,
-                    "turnOver": 0,
+                    "turnOver": 39.785350111127606,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1382,13 +1905,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 51.0308483262567,
-                    "_quality": 0.28570053990648103,
-                    "quality": 0.28570053990648103,
                     "price": 65.61038924495399,
+                    "quality": 0.28570053990648103,
                     "fixedCost": 13.122077848990799,
                     "variableCost": 0.13122077848990799,
-                    "turnOver": 0,
+                    "turnOver": 984.1558386743102,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1407,13 +1928,11 @@
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
                     "_necessity": 0.3,
-                    "_price": 41.315585265847204,
-                    "_quality": 0.7617835374594094,
-                    "quality": 0.7617835374594094,
                     "price": 72.78911796187013,
+                    "quality": 0.7617835374594094,
                     "fixedCost": 14.557823592374028,
                     "variableCost": 0.14557823592374028,
-                    "turnOver": 0,
+                    "turnOver": 6987.755324339525,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1432,10 +1951,8 @@
                     "category": "LUXURY",
                     "_frequency": 0.05,
                     "_necessity": 0.1,
-                    "_price": 298.2049600386003,
-                    "_quality": 0.7915378000557907,
-                    "quality": 0.7915378000557907,
                     "price": 534.2454580732789,
+                    "quality": 0.7915378000557907,
                     "fixedCost": 106.84909161465578,
                     "variableCost": 0.2671227290366395,
                     "turnOver": 0,
@@ -1457,13 +1974,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 10.223294976455188,
-                    "_quality": 0.845706572901984,
-                    "quality": 0.845706572901984,
                     "price": 18.869202734759174,
+                    "quality": 0.845706572901984,
                     "fixedCost": 3.773840546951835,
                     "variableCost": 0.08491141230641629,
-                    "turnOver": 0,
+                    "turnOver": 1396.32100237218,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1482,13 +1997,11 @@
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
                     "_necessity": 0.3,
-                    "_price": 35.37743249409769,
-                    "_quality": 0.8043765036331415,
-                    "quality": 0.8043765036331415,
                     "price": 63.83420795121747,
+                    "quality": 0.8043765036331415,
                     "fixedCost": 12.766841590243494,
                     "variableCost": 0.12766841590243494,
-                    "turnOver": 0,
+                    "turnOver": 6191.918171268105,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1507,13 +2020,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 104.968524665072,
-                    "_quality": 0.7249116424221207,
-                    "quality": 0.7249116424221207,
                     "price": 181.06143028265623,
+                    "quality": 0.7249116424221207,
                     "fixedCost": 36.21228605653125,
                     "variableCost": 0.18106143028265623,
-                    "turnOver": 0,
+                    "turnOver": 905.3071514132812,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1532,13 +2043,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 111.44263632090859,
-                    "_quality": 0.9232638939262947,
-                    "quality": 0.9232638939262947,
                     "price": 214.3335986799626,
+                    "quality": 0.9232638939262947,
                     "fixedCost": 42.86671973599252,
                     "variableCost": 0.2143335986799626,
-                    "turnOver": 0,
+                    "turnOver": 1929.002388119663,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1557,13 +2066,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 102.70142313912721,
-                    "_quality": 0.3195955909951219,
-                    "quality": 0.3195955909951219,
                     "price": 135.52434516331667,
+                    "quality": 0.3195955909951219,
                     "fixedCost": 27.104869032663334,
                     "variableCost": 0.13552434516331666,
-                    "turnOver": 0,
+                    "turnOver": 135.52434516331667,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1582,13 +2089,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 101.73566698376574,
-                    "_quality": 0.15720223037552084,
-                    "quality": 0.15720223037552084,
                     "price": 117.72874074235494,
+                    "quality": 0.15720223037552084,
                     "fixedCost": 23.54574814847099,
                     "variableCost": 0.11772874074235494,
-                    "turnOver": 0,
+                    "turnOver": 117.72874074235494,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1607,13 +2112,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 10.553738152839728,
-                    "_quality": 0.23048731829989455,
-                    "quality": 0.23048731829989455,
                     "price": 12.98624095772704,
+                    "quality": 0.23048731829989455,
                     "fixedCost": 2.597248191545408,
                     "variableCost": 0.05843808430977168,
-                    "turnOver": 0,
+                    "turnOver": 259.72481915454074,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1632,13 +2135,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 29.05679979283144,
-                    "_quality": 0.14866536215408888,
-                    "quality": 0.14866536215408888,
                     "price": 33.37653945707158,
+                    "quality": 0.14866536215408888,
                     "fixedCost": 6.675307891414317,
                     "variableCost": 0.06675307891414316,
-                    "turnOver": 0,
+                    "turnOver": 267.01231565657264,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1657,13 +2158,11 @@
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
                     "_necessity": 0.3,
-                    "_price": 32.58827587040506,
-                    "_quality": 0.9725995287012991,
-                    "quality": 0.9725995287012991,
                     "price": 64.28361762314894,
+                    "quality": 0.9725995287012991,
                     "fixedCost": 12.856723524629789,
                     "variableCost": 0.12856723524629787,
-                    "turnOver": 0,
+                    "turnOver": 8871.139231994526,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1682,13 +2181,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 41.56642914189818,
-                    "_quality": 0.16711094165823892,
-                    "quality": 0.16711094165823892,
                     "price": 48.51263425717126,
+                    "quality": 0.16711094165823892,
                     "fixedCost": 9.702526851434252,
                     "variableCost": 0.09702526851434251,
-                    "turnOver": 0,
+                    "turnOver": 388.1010740573701,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1707,13 +2204,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 100.07705364424457,
-                    "_quality": 0.11106056265450737,
-                    "quality": 0.11106056265450737,
                     "price": 111.1916675307797,
+                    "quality": 0.11106056265450737,
                     "fixedCost": 22.23833350615594,
                     "variableCost": 0.11119166753077969,
-                    "turnOver": 0,
+                    "turnOver": 111.1916675307797,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1732,10 +2227,8 @@
                     "category": "LUXURY",
                     "_frequency": 0.05,
                     "_necessity": 0.1,
-                    "_price": 270.58791617570546,
-                    "_quality": 0.24947919259869755,
-                    "quality": 0.24947919259869755,
                     "price": 338.0939710301845,
+                    "quality": 0.24947919259869755,
                     "fixedCost": 67.6187942060369,
                     "variableCost": 0.16904698551509226,
                     "turnOver": 0,
@@ -1757,13 +2250,11 @@
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
                     "_necessity": 0.3,
-                    "_price": 37.21485298863159,
-                    "_quality": 0.3260409362523934,
-                    "quality": 0.3260409362523934,
                     "price": 49.34841849954021,
+                    "quality": 0.3260409362523934,
                     "fixedCost": 9.869683699908043,
                     "variableCost": 0.09869683699908043,
-                    "turnOver": 0,
+                    "turnOver": 2319.375669478389,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1782,13 +2273,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 88.35200463308249,
-                    "_quality": 0.8309831160215316,
-                    "quality": 0.8309831160215316,
                     "price": 161.77102874983018,
+                    "quality": 0.8309831160215316,
                     "fixedCost": 32.354205749966034,
                     "variableCost": 0.16177102874983018,
-                    "turnOver": 0,
+                    "turnOver": 1294.1682299986414,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1807,13 +2296,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 9.71196763754738,
-                    "_quality": 0.9322923711918537,
-                    "quality": 0.9322923711918537,
                     "price": 18.766360975294972,
+                    "quality": 0.9322923711918537,
                     "fixedCost": 3.7532721950589947,
                     "variableCost": 0.08444862438882739,
-                    "turnOver": 0,
+                    "turnOver": 1632.6734048506612,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1832,13 +2319,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 90.95757572695197,
-                    "_quality": 0.5956244550428232,
-                    "quality": 0.5956244550428232,
                     "price": 145.13413220133407,
+                    "quality": 0.5956244550428232,
                     "fixedCost": 29.026826440266817,
                     "variableCost": 0.14513413220133406,
-                    "turnOver": 0,
+                    "turnOver": 1161.0730576106725,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1857,10 +2342,8 @@
                     "category": "LUXURY",
                     "_frequency": 0.05,
                     "_necessity": 0.1,
-                    "_price": 308.40455777422557,
-                    "_quality": 0.4637816726256413,
-                    "quality": 0.4637816726256413,
                     "price": 451.43693942412716,
+                    "quality": 0.4637816726256413,
                     "fixedCost": 90.28738788482543,
                     "variableCost": 0.22571846971206358,
                     "turnOver": 0,
@@ -1882,13 +2365,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 33.15389650748016,
-                    "_quality": 0.4459065853942683,
-                    "quality": 0.4459065853942683,
                     "price": 47.9374372916456,
+                    "quality": 0.4459065853942683,
                     "fixedCost": 9.58748745832912,
                     "variableCost": 0.0958748745832912,
-                    "turnOver": 0,
+                    "turnOver": 1486.0605560410138,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1907,13 +2388,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 106.45134398687601,
-                    "_quality": 0.3333093585116059,
-                    "quality": 0.3333093585116059,
                     "price": 141.93257316383998,
+                    "quality": 0.3333093585116059,
                     "fixedCost": 28.386514632767998,
                     "variableCost": 0.14193257316383998,
-                    "turnOver": 0,
+                    "turnOver": 425.79771949151996,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1932,13 +2411,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 89.24567186131486,
-                    "_quality": 0.5122839769979103,
-                    "quality": 0.5122839769979103,
                     "price": 134.96479957227973,
+                    "quality": 0.5122839769979103,
                     "fixedCost": 26.992959914455948,
                     "variableCost": 0.13496479957227972,
-                    "turnOver": 0,
+                    "turnOver": 539.8591982891189,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1957,13 +2434,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 30.788845628564395,
-                    "_quality": 0.1304434762724408,
-                    "quality": 0.1304434762724408,
                     "price": 34.80504968276988,
+                    "quality": 0.1304434762724408,
                     "fixedCost": 6.9610099365539755,
                     "variableCost": 0.06961009936553976,
-                    "turnOver": 0,
+                    "turnOver": 313.24544714492896,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -1982,13 +2457,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 33.59315242945263,
-                    "_quality": 0.6770339194056173,
-                    "quality": 0.6770339194056173,
                     "price": 56.336856083955276,
+                    "quality": 0.6770339194056173,
                     "fixedCost": 11.267371216791055,
                     "variableCost": 0.11267371216791056,
-                    "turnOver": 0,
+                    "turnOver": 2197.137387274257,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -2007,13 +2480,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 103.42986888128715,
-                    "_quality": 0.5114089160804344,
-                    "quality": 0.5114089160804344,
                     "price": 156.32482601620768,
+                    "quality": 0.5114089160804344,
                     "fixedCost": 31.264965203241537,
                     "variableCost": 0.15632482601620767,
-                    "turnOver": 0,
+                    "turnOver": 625.2993040648307,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -2032,13 +2503,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 8.70194096551492,
-                    "_quality": 0.5444255814843886,
-                    "quality": 0.5444255814843886,
                     "price": 13.439500235708202,
+                    "quality": 0.5444255814843886,
                     "fixedCost": 2.6879000471416408,
                     "variableCost": 0.06047775106068692,
-                    "turnOver": 0,
+                    "turnOver": 430.0640075426623,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -2057,13 +2526,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 31.244842840031723,
-                    "_quality": 0.30115108863323736,
-                    "quality": 0.30115108863323736,
                     "price": 40.65426127548169,
+                    "quality": 0.30115108863323736,
                     "fixedCost": 8.130852255096338,
                     "variableCost": 0.08130852255096338,
-                    "turnOver": 0,
+                    "turnOver": 731.7767029586703,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -2082,13 +2549,11 @@
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 31.98723177071979,
-                    "_quality": 0.8387270908076404,
-                    "quality": 0.8387270908076404,
                     "price": 58.815789616765336,
+                    "quality": 0.8387270908076404,
                     "fixedCost": 11.763157923353068,
                     "variableCost": 0.11763157923353068,
-                    "turnOver": 0,
+                    "turnOver": 2529.078953520911,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -2107,13 +2572,11 @@
                     "category": "SUPERMARKET",
                     "_frequency": 0.45,
                     "_necessity": 0.8,
-                    "_price": 7.8727578564899305,
-                    "_quality": 0.0988687172477235,
-                    "quality": 0.0988687172477235,
                     "price": 8.651127326963026,
+                    "quality": 0.0988687172477235,
                     "fixedCost": 1.7302254653926052,
                     "variableCost": 0.03893007297133362,
-                    "turnOver": 0,
+                    "turnOver": 129.76690990444536,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -2132,13 +2595,11 @@
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 94.63781265067828,
-                    "_quality": 0.6831290438309753,
-                    "quality": 0.6831290438309753,
                     "price": 159.28765111699113,
+                    "quality": 0.6831290438309753,
                     "fixedCost": 31.85753022339823,
                     "variableCost": 0.15928765111699114,
-                    "turnOver": 0,
+                    "turnOver": 955.7259067019468,
                     "companyValue": 0,
                     "investmentLevel": 0,
                     "bruttoProfitHistory": [],
@@ -2152,8 +2613,8 @@
         ],
         "numActions": 3,
         "suicideCount": 0,
-        "time": 0,
+        "time": 90.0,
         "avgHappiness": 49.530316043115256,
-        "avgCapital": 11642.993433426353
+        "avgCapital": 2165.5353058558103
     }
 }
