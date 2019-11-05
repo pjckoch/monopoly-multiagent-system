@@ -121,12 +121,12 @@ def isEvaluationIntervalCompleted(days, evaluationInterval):
     else:
         return False
 
-def evaluateStats(time, listOfPeople):
+def evaluateStats(time, environment):
     """Evaluate the stats for a list of businessmen over a given evaluation interval"""
     time = getTime(days=time)
-    for bm in listOfPeople:
+    for bm in environment.listOfPeople:
         turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(bm)
-        appendToDataFrame(time, bm, turnOver, taxes, nettoProfit)
+        appendToDataFrame(time, environment, bm, turnOver, taxes, nettoProfit)
         for cmp in bm.companies:
             appendToDataFrameCategories(time, cmp, bm)
 
@@ -144,7 +144,7 @@ def computeStatsForEvaluationInterval(bm):
     return turnOver, taxes, nettoProfit
 
 
-def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
+def appendToDataFrame(time, env, bm, turnOver, taxes, nettoProfit):
     """Function to append a stats for a certain businessman to a given dataframe"""
     global dfIndex, df_total
 
@@ -167,7 +167,8 @@ def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
                        "nettoProfit": nettoProfit,
                        "subsidiaries": bm.subsidiaries,
                        "capital": bm.capital,
-                       "happiness": bm.happiness},
+                       "happiness": bm.happiness,
+                       "governmentCapital": env.government.governmentMoney},
                        index = [dfIndex])
     df_total = df_total.append(df_part, sort=False)
     dfIndex += 1

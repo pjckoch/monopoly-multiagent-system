@@ -14,7 +14,6 @@ def runFromJson(jsonFile):
     env = data_manager.readFromJson(jsonFile)
 
     totalMoney = 0
-    # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
         totalMoney = 0
         # we don't need to round here, we only want to exclude the very first value
@@ -47,10 +46,10 @@ def runFromJson(jsonFile):
                     bm.capital += nProfit 
 
                 averageCompany = env.computeAverageCompanyValue()
-                # env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
+                env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
-                data_manager.evaluateStats(time, env.listOfPeople)
+                data_manager.evaluateStats(time, env)
 
         totalMoney += env.government.governmentMoney
 
@@ -81,7 +80,7 @@ def use_existing_environment():
                                  dfIdxCompanies=lastDfIndex_companies,
                                  startDt=lastDate)
     return data_manager.FileType.RESULTS
-    
+
 
 chooseEnvironment = {
     'new': create_new_environment,
