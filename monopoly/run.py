@@ -6,7 +6,7 @@ from plot_history import *
 from enum import Enum
 import data_manager
 
-days = 90
+days = 365
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
 def runFromJson(jsonFile):
@@ -66,12 +66,19 @@ def create_new_environment():
     return jsonfile
 
 def use_existing_environment():
-    dataframe = pd.read_csv(data_manager.FileType.STATS.value, index_col=0)
-    lastItem = dataframe.tail(1)
-    lastDfIndex = lastItem.index.item() + 1
-    lastDate = data_manager.convertStringToDate(lastItem.time.item())
-    data_manager.init_statistics(dataframe_total=dataframe,
-                                 dfIdx=lastDfIndex,
+    dataframe_total = pd.read_csv(data_manager.FileType.STATS.value, index_col=0)
+    lastItem_total = dataframe_total.tail(1)
+    lastDfIndex_total = lastItem_total.index.item() + 1
+    lastDate = data_manager.convertStringToDate(lastItem_total.time.item())
+
+    dataframe_companies = pd.read_csv(data_manager.FileType.COMPANY_STATS.value, index_col=0)
+    lastItem_companies = dataframe_companies.tail(1)
+    lastDfIndex_companies = lastItem_companies.index.item() + 1
+
+    data_manager.init_statistics(dataframe_total=dataframe_total,
+                                 dataframe_categories=dataframe_companies,
+                                 dfIdx=lastDfIndex_total,
+                                 dfIdxCompanies=lastDfIndex_companies,
                                  startDt=lastDate)
     return data_manager.FileType.RESULTS
     
