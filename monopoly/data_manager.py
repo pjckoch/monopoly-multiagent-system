@@ -17,9 +17,9 @@ currentDate = None
 
 
 class EvaluationInterval(Enum):
-    ANNUAL
-    MONTHLY
-    DAILY
+    ANNUAL = "annual"
+    MONTHLY = "monthly"
+    DAILY = "daily"
 
 class Month(Enum):
     JANUARY = 1
@@ -68,12 +68,12 @@ class JsonEncoder(json.JSONEncoder):
 
 def init_statistics(dataframe=None,
                     dfIdx=0,
-                    startDt=datetime.datetime(2019,1,1)):
-                    global df, dfIndex, startDate, currentDate
-                    df = pd.DataFrame() if dataframe is None else dataframe
+                    startDt=datetime.date(2019,1,1)):
+                    global df_total, dfIndex, startDate, currentDate
+                    df_total = pd.DataFrame() if dataframe is None else dataframe
                     dfIndex = dfIdx
                     startDate = startDt
-                    currentDate = startDat
+                    currentDate = startDate
     
 
 def writeToJson(filepath, data):
@@ -92,7 +92,10 @@ def exportToCSV():
 
 def getTime(days):
     global startDate
-    time = startDate + datetime.timedelta(days=days)
+    return startDate + datetime.timedelta(days=days)
+
+def convertStringToDate(datestr):
+    return datetime.datetime.strptime(datestr, '%Y-%m-%d').date()
 
 def isEvaluationIntervalCompleted(days, evaluationInterval):
     global currentDate, startDate
@@ -107,6 +110,8 @@ def isEvaluationIntervalCompleted(days, evaluationInterval):
     elif evaluationInterval == EvaluationInterval.ANNUAL:
         if oldDate.year != currentDate.year:
             return True
+    else:
+        return False
 
 def evaluateStats(time, listOfPeople):
     """Evaluate the stats for a list of businessmen over a given evaluation interval"""
@@ -153,7 +158,7 @@ def appendToDataFrame(time, bm, turnOver, taxes, nettoProfit):
                        "capital": bm.capital,
                        "happiness": bm.happiness},
                        index = [dfIndex])
-    df_total = df_total.append(df_part)
+    df_total = df_total.append(df_part, sort=False)
     dfIndex += 1
 
 

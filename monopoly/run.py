@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 import random
 from environment import Environment
 from plot_history import *
@@ -60,17 +61,18 @@ def create_new_environment():
     return jsonfile
 
 def use_existing_environment():
-    dataframe = pd.read_csv(data_manager.FileType.STATS)
-    lastDfIndex = dataframe.index[-1]
-    lastDate = dataframe.time[-1]
-    data_manager.init_statistics(df=dataframe,
-                                 dfIndex=lastDfIndex,
-                                 startDate=lastDate)
+    dataframe = pd.read_csv(data_manager.FileType.STATS.value, index_col=0)
+    lastItem = dataframe.tail(1)
+    lastDfIndex = lastItem.index.item() + 1
+    lastDate = data_manager.convertStringToDate(lastItem.time.item())
+    data_manager.init_statistics(dataframe=dataframe,
+                                 dfIdx=lastDfIndex,
+                                 startDt=lastDate)
     return data_manager.FileType.RESULTS
     
 
 if __name__ == "__main__":
 
-    jsonfile = create_new_environment()
-    # jsonfile = use_existing_environment()
+    # jsonfile = create_new_environment()
+    jsonfile = use_existing_environment()
     runFromJson(jsonfile)
