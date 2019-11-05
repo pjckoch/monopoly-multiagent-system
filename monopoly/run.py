@@ -70,7 +70,7 @@ def use_existing_environment():
     lastItem = dataframe.tail(1)
     lastDfIndex = lastItem.index.item() + 1
     lastDate = data_manager.convertStringToDate(lastItem.time.item())
-    data_manager.init_statistics(dataframe=dataframe,
+    data_manager.init_statistics(dataframe_total=dataframe,
                                  dfIdx=lastDfIndex,
                                  startDt=lastDate)
     return data_manager.FileType.RESULTS

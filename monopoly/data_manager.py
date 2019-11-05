@@ -9,14 +9,13 @@ import environment
 import businessman
 import government
 
-df_categories = pd.DataFrame()
-dfIndexCompanies = 0
-categories_filepath = ("companiesStats.csv")
-
 df_total = None
 dfIndex = None
 startDate = None
 currentDate = None
+
+df_categories = None
+dfIndexCompanies = None
 
 
 class EvaluationInterval(Enum):
@@ -42,6 +41,7 @@ class FileType(Enum):
     CONFIG = "config.json"
     RESULTS = "results.json"
     STATS = "statistics.csv"
+    COMPANY_STATS = "companiesStats.csv"
 
 class JsonEncoder(json.JSONEncoder):
         def default(self, obj):
@@ -69,12 +69,16 @@ class JsonEncoder(json.JSONEncoder):
                 }
             return obj.__dict__
 
-def init_statistics(dataframe=None,
+def init_statistics(dataframe_total=None,
+                    dataframe_categories=None,
                     dfIdx=0,
+                    dfIdxCompanies=0,
                     startDt=datetime.date(2019,1,1)):
-                    global df_total, dfIndex, startDate, currentDate
-                    df_total = pd.DataFrame() if dataframe is None else dataframe
+                    global df_total, df_categories, dfIndex, dfIndexCompanies, startDate, currentDate
+                    df_total = pd.DataFrame() if dataframe_total is None else dataframe_total
+                    df_categories = pd.DataFrame() if dataframe_categories is None else dataframe_categories
                     dfIndex = dfIdx
+                    dfIndexCompanies = dfIdxCompanies
                     startDate = startDt
                     currentDate = startDate
     
@@ -92,7 +96,7 @@ def readFromJson(filepath):
 
 def exportToCSV():
     df_total.to_csv(FileType.STATS.value)
-    df_categories.to_csv(categories_filepath)
+    df_categories.to_csv(FileType.COMPANY_STATS.value)
 
 def getTime(days):
     global startDate
