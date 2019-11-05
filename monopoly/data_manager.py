@@ -178,14 +178,15 @@ def appendToDataFrameCategories(time, company, owner):
     global dfIndexCompanies, df_categories
 
     turnOver = round(company.turnOverHistory[-1], 1)
+    nettoProfit = round(company.nettoProfitHistory[-1], 1)
     df_part = pd.DataFrame({"time": time,
                             "id": company.id,
                             "name": company.name,
                             "owner": owner.name,
                             "category": str(company.category).split(".")[1],
                             "turnOver": turnOver,
+                            "nettoProfit": nettoProfit,
                             #"taxes": company.taxes[-1],
-                            "companyValue": company.companyValue,
                             "fixedCost": company.fixedCost,
                             "variableCost": company.variableCost},
                             index = [dfIndexCompanies])

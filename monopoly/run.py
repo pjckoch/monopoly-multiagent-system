@@ -5,9 +5,13 @@ from environment import Environment
 from plot_history import *
 from enum import Enum
 import data_manager
+import argparse
 
 days = 365
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
+
+parser = argparse.ArgumentParser(description='Run the multiagent monopoly system.')
+parser.add_argument('-e', '--existing', help='Use existing environment')
 
 def runFromJson(jsonFile):
 
@@ -88,8 +92,11 @@ chooseEnvironment = {
 }
 
 if __name__ == "__main__":
-    # choose between creating a new or using an existing environment configuration
-    env_type = 'new'
-    # env_type = 'existing'
+    arg = parser.parse_args()
+    print(arg)
+    if arg:
+        env_type = 'existing'
+    else:
+        env_type = 'new'
     jsonfile = chooseEnvironment[env_type]()
     runFromJson(jsonfile)
