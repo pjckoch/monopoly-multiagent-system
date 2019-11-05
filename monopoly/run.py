@@ -72,7 +72,8 @@ def use_existing_environment():
     
 
 if __name__ == "__main__":
-
-    # jsonfile = create_new_environment()
-    jsonfile = use_existing_environment()
+    # SELECT THIS OPTION TO CREATE A NEW ENVIRONMENT
+    jsonfile = create_new_environment()
+    # SELECT THIS OPTION TO LOAD AN EXISTING ENVIRONMENT
+    # jsonfile = use_existing_environment()
     runFromJson(jsonfile)
