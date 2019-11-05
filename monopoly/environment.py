@@ -19,7 +19,7 @@ class Environment():
                  government=None,
                  listPeople=None,
                  listCompanies=None,
-                 numActions=2,
+                 numActions=3,
                  suicideCount=0,
                  time=0):
         self.numPeople = numPeople
@@ -27,9 +27,9 @@ class Environment():
         self.government = Government() if government is None else government
         self.listOfPeople = [Businessman(i) for i in range(self.numPeople)] if listPeople is None else listPeople
         self.listOfCompanies = listCompanies
-        self.numActions = 2
-        self.suicideCount = 0
-        self.time = 0
+        self.numActions = numActions
+        self.suicideCount = suicideCount
+        self.time = time
         
         if self.listOfCompanies is None:
             self.distributeCompanies()

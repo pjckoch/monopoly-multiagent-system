@@ -42,14 +42,8 @@ class Company():
         self.id = companyId
         self.name = name
         self.category = random.choice(list(BusinessCategory)) if category is None else category
-        if frequency is None:
-            self.frequency = self.category.value[0]
-        else:
-            self.frequency = frequency
-        if necessity is None:
-            self.necessity = self.category.value[1]
-        else:
-            self.necessity = necessity
+        self.frequency = self.category.value[0] if frequency is None else frequency
+        self.necessity = self.category.value[1] if necessity is None else necessity
         if price is None:
             self.price
         else:
