@@ -89,7 +89,7 @@ chooseEnvironment = {
 
 if __name__ == "__main__":
     # choose between creating a new or using an existing environment configuration
-    env_type = 'new'
-    # env_type = 'existing'
+    # env_type = 'new'
+    env_type = 'existing'
     jsonfile = chooseEnvironment[env_type]()
     runFromJson(jsonfile)
