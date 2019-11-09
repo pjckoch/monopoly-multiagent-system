@@ -70,13 +70,13 @@ def create_new_environment():
 
 def use_existing_environment():
     dataframe_total = pd.read_csv(data_manager.FileType.STATS.value, index_col=0)
-    lastItem_total = dataframe_total.tail(1)
-    lastDfIndex_total = lastItem_total.index.item() + 1
-    lastDate = data_manager.convertStringToDate(lastItem_total.time.item())
+    lastItem_total = dataframe_total.iloc[-1]
+    lastDfIndex_total = len(dataframe_total.index) + 1
+    lastDate = data_manager.convertStringToDate(lastItem_total.time)
 
     dataframe_companies = pd.read_csv(data_manager.FileType.COMPANY_STATS.value, index_col=0)
     lastItem_companies = dataframe_companies.tail(1)
-    lastDfIndex_companies = lastItem_companies.index.item() + 1
+    lastDfIndex_companies = len(lastItem_companies.index) + 1
 
     data_manager.init_statistics(dataframe_total=dataframe_total,
                                  dataframe_categories=dataframe_companies,
