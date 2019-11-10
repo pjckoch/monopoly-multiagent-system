@@ -19,7 +19,8 @@ class Businessman():
                 happiness=10 * np.random.randn() + 50,
                 isAlive=True,
                 subsidiaries=0,
-                companiesList=None):
+                companiesList=None,
+                subsidiariesHistory=None):
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
@@ -27,6 +28,7 @@ class Businessman():
         self.capital = capital
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
+        self.subsidiariesHistory = [0] if subsidiariesHistory is None else subsidiariesHistory
     
     def getCompanyOwner(self, company, env):
         for bm in env.listOfPeople:

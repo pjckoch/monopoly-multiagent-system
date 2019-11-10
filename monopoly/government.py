@@ -12,7 +12,7 @@ class Government():
                  politics=None,
                  taxesStatus=None,
                  subsidiariesStatus=None,
-                 taxRate=0.1,
+                 taxRate=0.8,
                  subsidyValue=50,
                  governmentMoney=0,
                  startCompPrice=9000,
@@ -35,20 +35,28 @@ class Government():
                 return True
         return False
 
+    def calculateSubsidiary(self, bm, govMon, noBm):
+        return govMon/noBm
+
     #TODO: improve
-    def regulateSubsidiary(self,businessman):
-        if not self.isPersonHelped(businessman):
-            # if (businessman.capital < (self.avgCapital * 0.5)):
-            if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:
-                businessman.subsidiaries += self.subsidyValue
-                self.governmentMoney -= self.subsidyValue
-                temp = [businessman.id, 0] # We put a pair instead of ID only because later on we will increment the counter to 3 days per subsidiary
-                self.subsidiariesStatus.append(temp)
-        else:
-            for subs in self.subsidiariesStatus:
-                if subs[0] == businessman.id:
-                    self.subsidiariesStatus.remove(subs)
-                    businessman.subsidiaries = 0
+    def regulateSubsidiary(self,businessman,govMon,noBm):
+        subs = self.calculateSubsidiary(businessman,govMon,noBm)
+        businessman.subsidiariesHistory.append(subs)
+        businessman.capital += subs
+        self.governmentMoney -= subs
+        print("BM " + str(businessman.id) + " received " + str(subs))
+        # if not self.isPersonHelped(businessman):
+        #     # if (businessman.capital < (self.avgCapital * 0.5)):
+        #     if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:
+        #         businessman.subsidiaries += self.subsidyValue
+        #         self.governmentMoney -= self.subsidyValue
+        #         temp = [businessman.id, 0] # We put a pair instead of ID only because later on we will increment the counter to 3 days per subsidiary
+        #         self.subsidiariesStatus.append(temp)
+        # else:
+        #     for subs in self.subsidiariesStatus:
+        #         if subs[0] == businessman.id:
+        #             self.subsidiariesStatus.remove(subs)
+        #             businessman.subsidiaries = 0
 
     def isCompanyTaxed(self, company):
         for tax in self.taxesStatus:
@@ -70,7 +78,6 @@ class Government():
         if company.bruttoProfitHistory[-1] > 0:
             company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
             self.governmentMoney += company.taxHistory[-1]
-
         # if not self.isCompanyTaxed(company):
         #     if company.companyValue > self.avgCompanyValue:
         #         company.taxes += self.taxRate
@@ -84,10 +91,9 @@ class Government():
         #             company.taxes = 0
 
     def regulate(self, averageCapital, averageCompany, businessmenList):
-        # self.avgCapital = averageCapital
-        # self.avgCompanyValue = averageCompany
+        momentaryGovMoney = self.governmentMoney
         for bm in businessmenList:
-            self.regulateSubsidiary(bm)
+            self.regulateSubsidiary(bm, momentaryGovMoney, len(businessmenList))
             # self.ejectCapital(bm)
             for company in bm.companies:
                 self.regulateTax(company)

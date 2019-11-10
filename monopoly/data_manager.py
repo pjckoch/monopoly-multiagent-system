@@ -165,7 +165,7 @@ def appendToDataFrame(time, env, bm, turnOver, taxes, nettoProfit):
                        "turnOver": turnOver,
                        "taxes": taxes,
                        "nettoProfit": nettoProfit,
-                       "subsidiaries": bm.subsidiaries,
+                       "subsidiaries": bm.subsidiariesHistory[-1],
                        "capital": bm.capital,
                        "happiness": bm.happiness,
                        "governmentCapital": env.government.governmentMoney},
@@ -218,7 +218,8 @@ def deserialize_businessman(obj):
                                    happiness = obj['happiness'],
                                    isAlive = obj['isAlive'],
                                    subsidiaries = obj['subsidiaries'],
-                                   companiesList = obj['companies'])
+                                   companiesList = obj['companies'],
+                                   subsidiariesHistory = obj['subsidiariesHistory'])
 
 def deserialize_company(obj):
     category = company.BusinessCategory[obj['category']]
