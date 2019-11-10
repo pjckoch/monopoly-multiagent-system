@@ -92,9 +92,8 @@ chooseEnvironment = {
 }
 
 if __name__ == "__main__":
-    arg = parser.parse_args()
-    print(arg)
-    if arg:
+    args = parser.parse_args()
+    if args.existing:
         env_type = 'existing'
     else:
         env_type = 'new'
