@@ -70,12 +70,16 @@ class Businessman():
             company = self.companies[companyIdx]
         # otherwise evaluate the quality of the other companies
         else:
-            company = self.pickAccordingToQuality(companiesFromCategory)
+            company = self.pickBasedOnPricePerformance(companiesFromCategory)
         return company
 
-    def pickAccordingToQuality(self, companiesFromCategory):
-        # pick randomly from the companies list according to the quality as weights (probability)
-        return random.choices(population = companiesFromCategory, weights = [comp.quality for comp in companiesFromCategory])[0]
+    def pickBasedOnPricePerformance(self, companiesFromCategory):
+        # pick randomly from the companies list according to three parameters as weights: PRICE, QUALITY, CAPITAL
+        # this is a trade-off in which the businessman likely picks the best value option according to his financial situation
+        prices = np.array([comp.price for comp in companiesFromCategory])
+        qualities = np.array([comp.quality for comp in companiesFromCategory])
+        weights = qualities * np.log(self.capital/1000 +1) + 100/prices
+        return random.choices(population = companiesFromCategory, weights = weights)[0]
     
     def considerAction(self, company):
         return self.capital * company.necessity**2 / company.price

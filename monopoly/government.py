@@ -58,20 +58,20 @@ class Government():
         #             self.subsidiariesStatus.remove(subs)
         #             businessman.subsidiaries = 0
 
-    def isCompanyTaxed(self, company):
-        for tax in self.taxesStatus:
-            if tax[0] == company.id:
-                return True
-        return False
+    # def isCompanyTaxed(self, company):
+    #     for tax in self.taxesStatus:
+    #         if tax[0] == company.id:
+    #             return True
+    #     return False
 
-    def ejectCapital(self,bm):
-        if self.governmentMoney:
-            if bm.capital < 7000 and self.politics == PoliticsSwitcher.SUPPORTIVE:
-                bm.companies[0].investmentLevel = bm.companies[0].investmentLevel + 1
-            if bm.capital < 5000 and self.politics == PoliticsSwitcher.NEUTRAL:
-                bm.capital = 5000 + random.randint(0, 400)
-            if bm.capital < 1500 and self.politics == PoliticsSwitcher.COMPETITIVE:
-                bm.capital = 0 + random.randint(0, 1500)
+    # def ejectCapital(self,bm):
+    #     if self.governmentMoney:
+    #         if bm.capital < 7000 and self.politics == PoliticsSwitcher.SUPPORTIVE:
+    #             bm.companies[0].investmentLevel = bm.companies[0].investmentLevel + 1
+    #         if bm.capital < 5000 and self.politics == PoliticsSwitcher.NEUTRAL:
+    #             bm.capital = 5000 + random.randint(0, 400)
+    #         if bm.capital < 1500 and self.politics == PoliticsSwitcher.COMPETITIVE:
+    #             bm.capital = 0 + random.randint(0, 1500)
 
     #TODO: improve
     def regulateTax(self,company):
