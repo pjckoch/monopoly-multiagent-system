@@ -29,8 +29,10 @@ def runFromJson(jsonFile):
 
                 action = bm.chooseAction(env)
                 # assuming buying a new company counts as an investment
-                # bm.invest(env)
+                bm.invest(env)
                 totalMoney += bm.capital
+                for company in bm.companies:
+                    company.updateSale()
 
             env.time = round(time, 1)
 

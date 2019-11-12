@@ -184,6 +184,7 @@ def appendToDataFrameCategories(time, company, owner):
                             "name": company.name,
                             "owner": owner.name,
                             "category": str(company.category).split(".")[1],
+                            "companyValue": company.companyValue,
                             "turnOver": turnOver,
                             "nettoProfit": nettoProfit,
                             #"taxes": company.taxes[-1],
