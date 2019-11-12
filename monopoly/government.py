@@ -111,8 +111,6 @@ class Government():
         momentaryGovMoney = self.governmentMoney
         for bm in businessmenList:
             self.regulateSubsidiary(bm, momentaryGovMoney, len(businessmenList))
-            # for comp in bm.companies:
-                # self.regulateTax(comp)
 
 
 class PoliticsSwitcher(Enum):
