@@ -1,8 +1,8 @@
 {
     "__class__": "Environment",
     "__value__": {
-        "numPeople": 6,
-        "numCompanies": 24,
+        "numPeople": 15,
+        "numCompanies": 60,
         "government": {
             "__class__": "Government",
             "__value__": {
@@ -24,23 +24,23 @@
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": null,
-                    "capital": 9730.760581715842,
-                    "happiness": 54.00186868434685,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 0,
-                                "name": "Hegmann PLC",
+                                "name": "Effertz LLC",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 17.30157089645198,
-                                "_quality": 0.925965486792969,
-                                "quality": 0.925965486792969,
-                                "price": 33.3222284138682,
-                                "fixedCost": 6.664445682773641,
-                                "variableCost": 0.06664445682773641,
+                                "_price": 17.45691761458016,
+                                "_quality": 0.1036130539095943,
+                                "quality": 0.1036130539095943,
+                                "price": 19.265682160475,
+                                "fixedCost": 3.853136432095,
+                                "variableCost": 0.03853136432095,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -55,17 +55,42 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 6,
-                                "name": "Cole, Jacobson and Metz",
+                                "id": 15,
+                                "name": "Lockman Inc",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 49.87206450976602,
+                                "_quality": 0.6257958079577852,
+                                "quality": 0.6257958079577852,
+                                "price": 81.08179341417784,
+                                "fixedCost": 16.21635868283557,
+                                "variableCost": 0.08108179341417784,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 30,
+                                "name": "Hand PLC",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 19.81244013162646,
-                                "_quality": 0.276415542078696,
-                                "quality": 0.276415542078696,
-                                "price": 25.288906510511698,
-                                "fixedCost": 5.05778130210234,
-                                "variableCost": 0.0505778130210234,
+                                "_price": 20.198409845616393,
+                                "_quality": 0.4800793610565741,
+                                "quality": 0.4800793610565741,
+                                "price": 29.895249538658728,
+                                "fixedCost": 5.979049907731746,
+                                "variableCost": 0.059790499077317455,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -80,42 +105,17 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 12,
-                                "name": "Hoeger, Spinka and Volkman",
+                                "id": 45,
+                                "name": "Cruickshank-Hammes",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 17.197541888089923,
-                                "_quality": 0.30841389221405213,
-                                "quality": 0.30841389221405213,
-                                "price": 22.501502718309936,
-                                "fixedCost": 4.500300543661988,
-                                "variableCost": 0.04500300543661987,
-                                "turnOver": 0,
-                                "companyValue": 0,
-                                "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
-                                "taxHistory": [
-                                    0
-                                ]
-                            }
-                        },
-                        {
-                            "__class__": "Company",
-                            "__value__": {
-                                "id": 18,
-                                "name": "Buckridge LLC",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 148.9237684967485,
-                                "_quality": 0.9123550739215397,
-                                "quality": 0.9123550739215397,
-                                "price": 284.79512431227374,
-                                "fixedCost": 56.959024862454754,
-                                "variableCost": 0.1423975621561369,
+                                "_price": 17.104104230350064,
+                                "_quality": 0.7535844673434037,
+                                "quality": 0.7535844673434037,
+                                "price": 29.99349150616447,
+                                "fixedCost": 5.998698301232895,
+                                "variableCost": 0.059986983012328944,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -140,23 +140,23 @@
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": null,
-                    "capital": 9730.760581715842,
-                    "happiness": 54.00186868434685,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 1,
-                                "name": "Sawayn, Hettinger and Rippin",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 151.01270876220994,
-                                "_quality": 0.21528913789599935,
-                                "quality": 0.21528913789599935,
-                                "price": 183.52410464296574,
-                                "fixedCost": 36.70482092859315,
-                                "variableCost": 0.09176205232148286,
+                                "name": "Funk-Anderson",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 20.030254629055367,
+                                "_quality": 0.6612646651698283,
+                                "quality": 0.6612646651698283,
+                                "price": 33.27555424960406,
+                                "fixedCost": 6.655110849920813,
+                                "variableCost": 0.06655110849920813,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -171,42 +171,17 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 7,
-                                "name": "Sawayn, Hettinger and Rippin",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 50.30361481770602,
-                                "_quality": 0.4202641825038643,
-                                "quality": 0.4202641825038643,
-                                "price": 71.44442237605853,
-                                "fixedCost": 14.288884475211706,
-                                "variableCost": 0.07144442237605853,
-                                "turnOver": 0,
-                                "companyValue": 0,
-                                "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
-                                "taxHistory": [
-                                    0
-                                ]
-                            }
-                        },
-                        {
-                            "__class__": "Company",
-                            "__value__": {
-                                "id": 13,
-                                "name": "Beier, Renner and Reichel",
+                                "id": 16,
+                                "name": "Brakus, Ankunding and Keebler",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 17.456052386108396,
-                                "_quality": 0.3413474721798654,
-                                "quality": 0.3413474721798654,
-                                "price": 23.414631742345804,
-                                "fixedCost": 4.682926348469161,
-                                "variableCost": 0.04682926348469161,
+                                "_price": 17.47360205343933,
+                                "_quality": 0.5935403749906761,
+                                "quality": 0.5935403749906761,
+                                "price": 27.844890368675557,
+                                "fixedCost": 5.568978073735112,
+                                "variableCost": 0.05568978073735111,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -221,17 +196,42 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 19,
-                                "name": "Witting and Sons",
+                                "id": 31,
+                                "name": "Steuber Ltd",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
                                 "_necessity": 0.8,
-                                "_price": 5.0017866518232115,
-                                "_quality": 0.3041210916360443,
-                                "quality": 0.3041210916360443,
-                                "price": 6.522935468506282,
-                                "fixedCost": 1.3045870937012565,
-                                "variableCost": 0.029353209608278273,
+                                "_price": 4.852340806410711,
+                                "_quality": 0.47983021440533136,
+                                "quality": 0.47983021440533136,
+                                "price": 7.180640535918502,
+                                "fixedCost": 1.4361281071837004,
+                                "variableCost": 0.03231288241163326,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 46,
+                                "name": "Strosin-O'Connell",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 149.62643844561808,
+                                "_quality": 0.320055732911261,
+                                "quality": 0.320055732911261,
+                                "price": 197.51523786523205,
+                                "fixedCost": 39.503047573046416,
+                                "variableCost": 0.09875761893261603,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -256,73 +256,23 @@
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": null,
-                    "capital": 9730.760581715842,
-                    "happiness": 54.00186868434685,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 2,
-                                "name": "Treutel and Sons",
-                                "category": "SUPERMARKET",
-                                "_frequency": 0.45,
-                                "_necessity": 0.8,
-                                "_price": 5.07627897077572,
-                                "_quality": 0.8844935564741189,
-                                "quality": 0.8844935564741189,
-                                "price": 9.566215011291915,
-                                "fixedCost": 1.913243002258383,
-                                "variableCost": 0.04304796755081362,
-                                "turnOver": 0,
-                                "companyValue": 0,
-                                "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
-                                "taxHistory": [
-                                    0
-                                ]
-                            }
-                        },
-                        {
-                            "__class__": "Company",
-                            "__value__": {
-                                "id": 8,
-                                "name": "Torp Ltd",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 49.75120997725647,
-                                "_quality": 0.704573141453585,
-                                "quality": 0.704573141453585,
-                                "price": 84.804576282049,
-                                "fixedCost": 16.960915256409802,
-                                "variableCost": 0.084804576282049,
-                                "turnOver": 0,
-                                "companyValue": 0,
-                                "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
-                                "taxHistory": [
-                                    0
-                                ]
-                            }
-                        },
-                        {
-                            "__class__": "Company",
-                            "__value__": {
-                                "id": 14,
-                                "name": "Considine Group",
+                                "name": "Lemke-Collier",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
                                 "_necessity": 0.1,
-                                "_price": 150.4854768996236,
-                                "_quality": 0.3663363642215627,
-                                "quality": 0.3663363642215627,
-                                "price": 205.61377937517966,
-                                "fixedCost": 41.122755875035935,
-                                "variableCost": 0.10280688968758983,
+                                "_price": 150.69409905485776,
+                                "_quality": 0.15621119942337836,
+                                "quality": 0.15621119942337836,
+                                "price": 174.23420501424246,
+                                "fixedCost": 34.84684100284849,
+                                "variableCost": 0.08711710250712124,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -337,17 +287,67 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 20,
-                                "name": "O'Reilly Ltd",
-                                "category": "MEDICAL",
-                                "_frequency": 0.1,
-                                "_necessity": 0.9,
-                                "_price": 50.23869280416483,
-                                "_quality": 0.1500342562561241,
-                                "quality": 0.1500342562561241,
-                                "price": 57.77621771431759,
-                                "fixedCost": 11.555243542863519,
-                                "variableCost": 0.05777621771431759,
+                                "id": 17,
+                                "name": "Purdy and Sons",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 4.874000932241528,
+                                "_quality": 0.3915860744355236,
+                                "quality": 0.3915860744355236,
+                                "price": 6.782591824093071,
+                                "fixedCost": 1.3565183648186143,
+                                "variableCost": 0.030521663208418825,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 32,
+                                "name": "Runte-Yundt",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 20.21420000206172,
+                                "_quality": 0.38227873593617845,
+                                "quality": 0.38227873593617845,
+                                "price": 27.941658826810972,
+                                "fixedCost": 5.588331765362195,
+                                "variableCost": 0.05588331765362194,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 47,
+                                "name": "Watsica, Farrell and Christiansen",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.516053892643438,
+                                "_quality": 0.9483569916805311,
+                                "quality": 0.9483569916805311,
+                                "price": 34.127526068384824,
+                                "fixedCost": 6.825505213676966,
+                                "variableCost": 0.06825505213676965,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -372,73 +372,23 @@
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": null,
-                    "capital": 9730.760581715842,
-                    "happiness": 54.00186868434685,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 3,
-                                "name": "Gorczany and Sons",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 150.003303169824,
-                                "_quality": 0.7697097063480651,
-                                "quality": 0.7697097063480651,
-                                "price": 265.462301603909,
-                                "fixedCost": 53.092460320781804,
-                                "variableCost": 0.1327311508019545,
-                                "turnOver": 0,
-                                "companyValue": 0,
-                                "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
-                                "taxHistory": [
-                                    0
-                                ]
-                            }
-                        },
-                        {
-                            "__class__": "Company",
-                            "__value__": {
-                                "id": 9,
-                                "name": "Ratke PLC",
-                                "category": "SUPERMARKET",
-                                "_frequency": 0.45,
-                                "_necessity": 0.8,
-                                "_price": 4.906610087856052,
-                                "_quality": 0.41929754243203565,
-                                "quality": 0.41929754243203565,
-                                "price": 6.963939639366329,
-                                "fixedCost": 1.3927879278732658,
-                                "variableCost": 0.03133772837714848,
-                                "turnOver": 0,
-                                "companyValue": 0,
-                                "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
-                                "taxHistory": [
-                                    0
-                                ]
-                            }
-                        },
-                        {
-                            "__class__": "Company",
-                            "__value__": {
-                                "id": 15,
-                                "name": "Bradtke, Kilback and Wiegand",
+                                "name": "Gulgowski-Murazik",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
                                 "_necessity": 0.9,
-                                "_price": 50.70518251394988,
-                                "_quality": 0.1783085139255628,
-                                "quality": 0.1783085139255628,
-                                "price": 59.74634825633672,
-                                "fixedCost": 11.949269651267343,
-                                "variableCost": 0.05974634825633672,
+                                "_price": 49.06189523068192,
+                                "_quality": 0.3677871300381885,
+                                "quality": 0.3677871300381885,
+                                "price": 67.10622887180871,
+                                "fixedCost": 13.421245774361743,
+                                "variableCost": 0.06710622887180871,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -453,17 +403,67 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 21,
-                                "name": "McKenzie Ltd",
+                                "id": 18,
+                                "name": "Hyatt, Dickinson and Pollich",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.627590958315935,
+                                "_quality": 0.8940032131795544,
+                                "quality": 0.8940032131795544,
+                                "price": 33.38671391566525,
+                                "fixedCost": 6.677342783133049,
+                                "variableCost": 0.0667734278313305,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 33,
+                                "name": "Reichert, Homenick and Larson",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.882101796292268,
+                                "_quality": 0.7908785448284696,
+                                "quality": 0.7908785448284696,
+                                "price": 32.02467244341846,
+                                "fixedCost": 6.4049344886836925,
+                                "variableCost": 0.06404934488683692,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 48,
+                                "name": "Reichert, Wilderman and Grady",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 19.984841484131657,
-                                "_quality": 0.6641290861871078,
-                                "quality": 0.6641290861871078,
-                                "price": 33.25735599658221,
-                                "fixedCost": 6.651471199316443,
-                                "variableCost": 0.06651471199316443,
+                                "_price": 19.69629187622151,
+                                "_quality": 0.5469693448034956,
+                                "quality": 0.5469693448034956,
+                                "price": 30.4695597388168,
+                                "fixedCost": 6.09391194776336,
+                                "variableCost": 0.0609391194776336,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -488,48 +488,23 @@
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": null,
-                    "capital": 9730.760581715842,
-                    "happiness": 54.00186868434685,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 4,
-                                "name": "Mohr Ltd",
-                                "category": "RESTAURANT",
-                                "_frequency": 0.2,
-                                "_necessity": 0.4,
-                                "_price": 17.065212459563377,
-                                "_quality": 0.7839892224905264,
-                                "quality": 0.7839892224905264,
-                                "price": 30.444155107372115,
-                                "fixedCost": 6.088831021474423,
-                                "variableCost": 0.06088831021474423,
-                                "turnOver": 0,
-                                "companyValue": 0,
-                                "investmentLevel": 0,
-                                "bruttoProfitHistory": [],
-                                "nettoProfitHistory": [],
-                                "turnOverHistory": [],
-                                "taxHistory": [
-                                    0
-                                ]
-                            }
-                        },
-                        {
-                            "__class__": "Company",
-                            "__value__": {
-                                "id": 10,
-                                "name": "Spencer Ltd",
+                                "name": "Ledner, Fay and Schmidt",
                                 "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.3,
-                                "_price": 19.6758060973816,
-                                "_quality": 0.4698499726103009,
-                                "quality": 0.4698499726103009,
-                                "price": 28.920483053321934,
-                                "fixedCost": 5.784096610664387,
-                                "variableCost": 0.05784096610664387,
+                                "_price": 20.279775002588988,
+                                "_quality": 0.4168300857659737,
+                                "quality": 0.4168300857659737,
+                                "price": 28.732995356232806,
+                                "fixedCost": 5.746599071246561,
+                                "variableCost": 0.057465990712465616,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -544,17 +519,17 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 16,
-                                "name": "Cronin-Tillman",
+                                "id": 19,
+                                "name": "Fadel PLC",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 17.7252165963787,
-                                "_quality": 0.5101450376143253,
-                                "quality": 0.5101450376143253,
-                                "price": 26.767647883660377,
-                                "fixedCost": 5.353529576732075,
-                                "variableCost": 0.05353529576732075,
+                                "_price": 17.62274697089265,
+                                "_quality": 0.10257302864869855,
+                                "quality": 0.10257302864869855,
+                                "price": 19.430365500806786,
+                                "fixedCost": 3.8860731001613575,
+                                "variableCost": 0.03886073100161357,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -569,17 +544,42 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 22,
-                                "name": "Rippin-Lebsack",
-                                "category": "RESTAURANT",
+                                "id": 34,
+                                "name": "Legros LLC",
+                                "category": "ENTERTAINMENT",
                                 "_frequency": 0.2,
-                                "_necessity": 0.4,
-                                "_price": 17.33891835874702,
-                                "_quality": 0.4331671129666985,
-                                "quality": 0.4331671129666985,
-                                "price": 24.84956756617075,
-                                "fixedCost": 4.96991351323415,
-                                "variableCost": 0.049699135132341504,
+                                "_necessity": 0.3,
+                                "_price": 19.93663734869541,
+                                "_quality": 0.5539677678808554,
+                                "quality": 0.5539677678808554,
+                                "price": 30.9808918398023,
+                                "fixedCost": 6.19617836796046,
+                                "variableCost": 0.0619617836796046,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 49,
+                                "name": "Satterfield, Wehner and Boehm",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 49.47436355929147,
+                                "_quality": 0.48459045075111495,
+                                "quality": 0.48459045075111495,
+                                "price": 73.44916769711305,
+                                "fixedCost": 14.689833539422612,
+                                "variableCost": 0.07344916769711306,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -604,23 +604,23 @@
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": null,
-                    "capital": 9730.760581715842,
-                    "happiness": 54.00186868434685,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 5,
-                                "name": "Daniel PLC",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 147.47072267186036,
-                                "_quality": 0.5224096927994577,
-                                "quality": 0.5224096927994577,
-                                "price": 224.51085759978096,
-                                "fixedCost": 44.9021715199562,
-                                "variableCost": 0.11225542879989048,
+                                "name": "Hackett, D'Amore and Friesen",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 5.035881840903936,
+                                "_quality": 0.9076790422261378,
+                                "quality": 0.9076790422261378,
+                                "price": 9.60684624701962,
+                                "fixedCost": 1.921369249403924,
+                                "variableCost": 0.0432308081115883,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -635,17 +635,17 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 11,
-                                "name": "Flatley Inc",
-                                "category": "LUXURY",
-                                "_frequency": 0.05,
-                                "_necessity": 0.1,
-                                "_price": 148.50487666439417,
-                                "_quality": 0.3886318832669381,
-                                "quality": 0.3886318832669381,
-                                "price": 206.21860655680203,
-                                "fixedCost": 41.24372131136041,
-                                "variableCost": 0.10310930327840102,
+                                "id": 20,
+                                "name": "Rolfson-Reynolds",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 49.86904604663251,
+                                "_quality": 0.8663138996107943,
+                                "quality": 0.8663138996107943,
+                                "price": 93.07129379716098,
+                                "fixedCost": 18.614258759432197,
+                                "variableCost": 0.09307129379716098,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -660,17 +660,315 @@
                         {
                             "__class__": "Company",
                             "__value__": {
-                                "id": 17,
-                                "name": "Bahringer-Fisher",
+                                "id": 35,
+                                "name": "Goodwin, Hartmann and Ziemann",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 20.089716839042673,
+                                "_quality": 0.7225943262179876,
+                                "quality": 0.7225943262179876,
+                                "price": 34.60643224226087,
+                                "fixedCost": 6.921286448452175,
+                                "variableCost": 0.06921286448452174,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 50,
+                                "name": "Brakus, Ankunding and Keebler",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 4.936035938750964,
+                                "_quality": 0.18507138946769086,
+                                "quality": 0.18507138946769086,
+                                "price": 5.849554968398062,
+                                "fixedCost": 1.1699109936796124,
+                                "variableCost": 0.02632299735779128,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 6,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 6,
+                                "name": "Huel Ltd",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 19.327155400761765,
+                                "_quality": 0.7912004431797448,
+                                "quality": 0.7912004431797448,
+                                "price": 34.61880931924827,
+                                "fixedCost": 6.923761863849655,
+                                "variableCost": 0.06923761863849655,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 21,
+                                "name": "Considine, Hilpert and Hegmann",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
                                 "_necessity": 0.4,
-                                "_price": 17.467434140178387,
-                                "_quality": 0.5959329636292758,
-                                "quality": 0.5959329636292758,
-                                "price": 27.876853934334086,
-                                "fixedCost": 5.575370786866817,
-                                "variableCost": 0.05575370786866817,
+                                "_price": 17.325523246650658,
+                                "_quality": 0.6843357485071385,
+                                "quality": 0.6843357485071385,
+                                "price": 29.18199816592516,
+                                "fixedCost": 5.8363996331850325,
+                                "variableCost": 0.058363996331850326,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 36,
+                                "name": "Spinka, Eichmann and Fisher",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 50.2832793245464,
+                                "_quality": 0.9951711658930036,
+                                "quality": 0.9951711658930036,
+                                "price": 100.3237490348788,
+                                "fixedCost": 20.06474980697576,
+                                "variableCost": 0.1003237490348788,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 51,
+                                "name": "Ferry, Zieme and King",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.505131730118293,
+                                "_quality": 0.7698598471108814,
+                                "quality": 0.7698598471108814,
+                                "price": 30.981629767523,
+                                "fixedCost": 6.1963259535046005,
+                                "variableCost": 0.061963259535046,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 7,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 7,
+                                "name": "Wisozk Inc",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 149.7835981220336,
+                                "_quality": 0.5015091851468431,
+                                "quality": 0.5015091851468431,
+                                "price": 224.90144836457688,
+                                "fixedCost": 44.980289672915376,
+                                "variableCost": 0.11245072418228844,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 22,
+                                "name": "Davis LLC",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 50.23305447386351,
+                                "_quality": 0.15406595980445792,
+                                "quality": 0.15406595980445792,
+                                "price": 57.972258225288904,
+                                "fixedCost": 11.59445164505778,
+                                "variableCost": 0.057972258225288904,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 37,
+                                "name": "Kautzer-O'Connell",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 19.839191888690962,
+                                "_quality": 0.43190483219478837,
+                                "quality": 0.43190483219478837,
+                                "price": 28.40783473225624,
+                                "fixedCost": 5.681566946451248,
+                                "variableCost": 0.05681566946451248,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 52,
+                                "name": "Crona and Sons",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 148.97361875392528,
+                                "_quality": 0.42657067619382494,
+                                "quality": 0.42657067619382494,
+                                "price": 212.52139604082825,
+                                "fixedCost": 42.504279208165656,
+                                "variableCost": 0.10626069802041413,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 8,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 8,
+                                "name": "Senger-Goodwin",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 19.615128383306633,
+                                "_quality": 0.49466552034160494,
+                                "quality": 0.49466552034160494,
+                                "price": 29.318056071602392,
+                                "fixedCost": 5.863611214320478,
+                                "variableCost": 0.058636112143204785,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -686,16 +984,762 @@
                             "__class__": "Company",
                             "__value__": {
                                 "id": 23,
-                                "name": "Flatley-Miller",
+                                "name": "Williamson, Parisian and Metz",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 19.592238222448625,
+                                "_quality": 0.34332603708665,
+                                "quality": 0.34332603708665,
+                                "price": 26.3187637290195,
+                                "fixedCost": 5.263752745803901,
+                                "variableCost": 0.052637527458039006,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 38,
+                                "name": "Purdy, Okuneva and Kunze",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 5.082541492420039,
+                                "_quality": 0.265991436600727,
+                                "quality": 0.265991436600727,
+                                "price": 6.434454005571648,
+                                "fixedCost": 1.2868908011143296,
+                                "variableCost": 0.02895504302507242,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 53,
+                                "name": "Lehner-Schultz",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
                                 "_necessity": 0.1,
-                                "_price": 148.12337652817095,
-                                "_quality": 0.09751825704749406,
-                                "quality": 0.09751825704749406,
-                                "price": 162.56811003518786,
-                                "fixedCost": 32.513622007037576,
-                                "variableCost": 0.08128405501759393,
+                                "_price": 150.61553387855832,
+                                "_quality": 0.04102555976818145,
+                                "quality": 0.04102555976818145,
+                                "price": 156.79462046570967,
+                                "fixedCost": 31.358924093141937,
+                                "variableCost": 0.07839731023285483,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 9,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 9,
+                                "name": "Stanton-Dooley",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.391750409884043,
+                                "_quality": 0.42231382085268965,
+                                "quality": 0.42231382085268965,
+                                "price": 24.73652697679851,
+                                "fixedCost": 4.947305395359702,
+                                "variableCost": 0.04947305395359702,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 24,
+                                "name": "Quigley-Koelpin",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.49102520469906,
+                                "_quality": 0.9901455406043029,
+                                "quality": 0.9901455406043029,
+                                "price": 34.8096858117293,
+                                "fixedCost": 6.961937162345861,
+                                "variableCost": 0.0696193716234586,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 39,
+                                "name": "Ortiz and Sons",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.463314190004294,
+                                "_quality": 0.7820215394573748,
+                                "quality": 0.7820215394573748,
+                                "price": 31.12000203689927,
+                                "fixedCost": 6.2240004073798545,
+                                "variableCost": 0.06224000407379854,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 54,
+                                "name": "Heidenreich, Medhurst and Batz",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 148.98105841662235,
+                                "_quality": 0.03998239011729565,
+                                "quality": 0.03998239011729565,
+                                "price": 154.93767721432334,
+                                "fixedCost": 30.98753544286467,
+                                "variableCost": 0.07746883860716168,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 10,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 10,
+                                "name": "Dach PLC",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 4.973655232834348,
+                                "_quality": 0.6554263149346646,
+                                "quality": 0.6554263149346646,
+                                "price": 8.233519753846476,
+                                "fixedCost": 1.6467039507692953,
+                                "variableCost": 0.037050838892309146,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 25,
+                                "name": "Bruen-Price",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 49.29696919160962,
+                                "_quality": 0.3052173335705367,
+                                "quality": 0.3052173335705367,
+                                "price": 64.34325868138161,
+                                "fixedCost": 12.868651736276323,
+                                "variableCost": 0.06434325868138162,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 40,
+                                "name": "Johns and Sons",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 49.27546017998206,
+                                "_quality": 0.3557707755719607,
+                                "quality": 0.3557707755719607,
+                                "price": 66.80622886487954,
+                                "fixedCost": 13.36124577297591,
+                                "variableCost": 0.06680622886487954,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 55,
+                                "name": "Daniel-Langosh",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 5.064623875481618,
+                                "_quality": 0.05097135378203399,
+                                "quality": 0.05097135378203399,
+                                "price": 5.322774610811727,
+                                "fixedCost": 1.0645549221623456,
+                                "variableCost": 0.023952485748652774,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 11,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 11,
+                                "name": "McCullough Inc",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.289234960504178,
+                                "_quality": 0.8582620757232524,
+                                "quality": 0.8582620757232524,
+                                "price": 32.12792964537352,
+                                "fixedCost": 6.425585929074704,
+                                "variableCost": 0.06425585929074704,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 26,
+                                "name": "Keeling Inc",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 145.6940892580468,
+                                "_quality": 0.0121126507489695,
+                                "quality": 0.0121126507489695,
+                                "price": 147.4588308774187,
+                                "fixedCost": 29.491766175483743,
+                                "variableCost": 0.07372941543870935,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 41,
+                                "name": "Rohan Group",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 149.5662082337391,
+                                "_quality": 0.5741766152282737,
+                                "quality": 0.5741766152282737,
+                                "price": 235.44362742991459,
+                                "fixedCost": 47.08872548598292,
+                                "variableCost": 0.1177218137149573,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 56,
+                                "name": "Sawayn, Hettinger and Rippin",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 49.65599679780064,
+                                "_quality": 0.610636647689152,
+                                "quality": 0.610636647689152,
+                                "price": 79.97776822007289,
+                                "fixedCost": 15.995553644014578,
+                                "variableCost": 0.0799777682200729,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 12,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 12,
+                                "name": "Swift, Connelly and Daugherty",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 150.6477560469823,
+                                "_quality": 0.34999453006799464,
+                                "quality": 0.34999453006799464,
+                                "price": 203.37364663044374,
+                                "fixedCost": 40.67472932608875,
+                                "variableCost": 0.10168682331522187,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 27,
+                                "name": "Rohan, Reichel and Keebler",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 152.59370739471262,
+                                "_quality": 0.11230167730613805,
+                                "quality": 0.11230167730613805,
+                                "price": 169.73023668150088,
+                                "fixedCost": 33.946047336300175,
+                                "variableCost": 0.08486511834075045,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 42,
+                                "name": "Watsica, Hessel and Sanford",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.68723591889693,
+                                "_quality": 0.11502209050368328,
+                                "quality": 0.11502209050368328,
+                                "price": 19.721658769520293,
+                                "fixedCost": 3.9443317539040588,
+                                "variableCost": 0.03944331753904059,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 57,
+                                "name": "Lynch Ltd",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 4.887116348325998,
+                                "_quality": 0.9183684199726512,
+                                "quality": 0.9183684199726512,
+                                "price": 9.375289667360658,
+                                "fixedCost": 1.8750579334721316,
+                                "variableCost": 0.042188803503122964,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 13,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 13,
+                                "name": "Romaguera and Sons",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 19.92198036382895,
+                                "_quality": 0.687382369811405,
+                                "quality": 0.687382369811405,
+                                "price": 33.61599843765397,
+                                "fixedCost": 6.723199687530794,
+                                "variableCost": 0.06723199687530794,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 28,
+                                "name": "Kuvalis, Wiza and Reichert",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.59133302375402,
+                                "_quality": 0.3178385798991179,
+                                "quality": 0.3178385798991179,
+                                "price": 23.182537330556457,
+                                "fixedCost": 4.636507466111292,
+                                "variableCost": 0.046365074661112914,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 43,
+                                "name": "Schimmel, Windler and Berge",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 152.52435018609208,
+                                "_quality": 0.9934256506254949,
+                                "quality": 0.9934256506254949,
+                                "price": 304.04595200594144,
+                                "fixedCost": 60.80919040118829,
+                                "variableCost": 0.15202297600297074,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 58,
+                                "name": "Eichmann, Shields and Wiza",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 149.73835866138705,
+                                "_quality": 0.16164534414062426,
+                                "quality": 0.16164534414062426,
+                                "price": 173.94286717825918,
+                                "fixedCost": 34.788573435651834,
+                                "variableCost": 0.0869714335891296,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 14,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": null,
+                    "capital": 10620.724182329011,
+                    "happiness": 48.26124736678248,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 14,
+                                "name": "Armstrong, Bode and Gerlach",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 20.396045705176114,
+                                "_quality": 0.8546146395046897,
+                                "quality": 0.8546146395046897,
+                                "price": 37.82680495282638,
+                                "fixedCost": 7.565360990565276,
+                                "variableCost": 0.07565360990565276,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 29,
+                                "name": "Stanton, Schmitt and Schuster",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 5.005303050107182,
+                                "_quality": 0.6562299457461024,
+                                "quality": 0.6562299457461024,
+                                "price": 8.28993279912182,
+                                "fixedCost": 1.657986559824364,
+                                "variableCost": 0.037304697596048195,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 44,
+                                "name": "Romaguera, Lang and Carter",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.500835238432497,
+                                "_quality": 0.4880424256481737,
+                                "quality": 0.4880424256481737,
+                                "price": 26.04198531906613,
+                                "fixedCost": 5.208397063813226,
+                                "variableCost": 0.052083970638132256,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 59,
+                                "name": "Beer-Ward",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.13157827244615,
+                                "_quality": 0.8273727080441357,
+                                "quality": 0.8273727080441357,
+                                "price": 31.305778580789994,
+                                "fixedCost": 6.261155716157999,
+                                "variableCost": 0.06261155716157998,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -719,16 +1763,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 0,
-                    "name": "Hegmann PLC",
+                    "name": "Effertz LLC",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 17.30157089645198,
-                    "_quality": 0.925965486792969,
-                    "quality": 0.925965486792969,
-                    "price": 33.3222284138682,
-                    "fixedCost": 6.664445682773641,
-                    "variableCost": 0.06664445682773641,
+                    "_price": 17.45691761458016,
+                    "_quality": 0.1036130539095943,
+                    "quality": 0.1036130539095943,
+                    "price": 19.265682160475,
+                    "fixedCost": 3.853136432095,
+                    "variableCost": 0.03853136432095,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -744,16 +1788,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 1,
-                    "name": "Sawayn, Hettinger and Rippin",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 151.01270876220994,
-                    "_quality": 0.21528913789599935,
-                    "quality": 0.21528913789599935,
-                    "price": 183.52410464296574,
-                    "fixedCost": 36.70482092859315,
-                    "variableCost": 0.09176205232148286,
+                    "name": "Funk-Anderson",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 20.030254629055367,
+                    "_quality": 0.6612646651698283,
+                    "quality": 0.6612646651698283,
+                    "price": 33.27555424960406,
+                    "fixedCost": 6.655110849920813,
+                    "variableCost": 0.06655110849920813,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -769,16 +1813,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 2,
-                    "name": "Treutel and Sons",
-                    "category": "SUPERMARKET",
-                    "_frequency": 0.45,
-                    "_necessity": 0.8,
-                    "_price": 5.07627897077572,
-                    "_quality": 0.8844935564741189,
-                    "quality": 0.8844935564741189,
-                    "price": 9.566215011291915,
-                    "fixedCost": 1.913243002258383,
-                    "variableCost": 0.04304796755081362,
+                    "name": "Lemke-Collier",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 150.69409905485776,
+                    "_quality": 0.15621119942337836,
+                    "quality": 0.15621119942337836,
+                    "price": 174.23420501424246,
+                    "fixedCost": 34.84684100284849,
+                    "variableCost": 0.08711710250712124,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -794,16 +1838,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 3,
-                    "name": "Gorczany and Sons",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 150.003303169824,
-                    "_quality": 0.7697097063480651,
-                    "quality": 0.7697097063480651,
-                    "price": 265.462301603909,
-                    "fixedCost": 53.092460320781804,
-                    "variableCost": 0.1327311508019545,
+                    "name": "Gulgowski-Murazik",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 49.06189523068192,
+                    "_quality": 0.3677871300381885,
+                    "quality": 0.3677871300381885,
+                    "price": 67.10622887180871,
+                    "fixedCost": 13.421245774361743,
+                    "variableCost": 0.06710622887180871,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -819,16 +1863,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 4,
-                    "name": "Mohr Ltd",
-                    "category": "RESTAURANT",
+                    "name": "Ledner, Fay and Schmidt",
+                    "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 17.065212459563377,
-                    "_quality": 0.7839892224905264,
-                    "quality": 0.7839892224905264,
-                    "price": 30.444155107372115,
-                    "fixedCost": 6.088831021474423,
-                    "variableCost": 0.06088831021474423,
+                    "_necessity": 0.3,
+                    "_price": 20.279775002588988,
+                    "_quality": 0.4168300857659737,
+                    "quality": 0.4168300857659737,
+                    "price": 28.732995356232806,
+                    "fixedCost": 5.746599071246561,
+                    "variableCost": 0.057465990712465616,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -844,16 +1888,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 5,
-                    "name": "Daniel PLC",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 147.47072267186036,
-                    "_quality": 0.5224096927994577,
-                    "quality": 0.5224096927994577,
-                    "price": 224.51085759978096,
-                    "fixedCost": 44.9021715199562,
-                    "variableCost": 0.11225542879989048,
+                    "name": "Hackett, D'Amore and Friesen",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 5.035881840903936,
+                    "_quality": 0.9076790422261378,
+                    "quality": 0.9076790422261378,
+                    "price": 9.60684624701962,
+                    "fixedCost": 1.921369249403924,
+                    "variableCost": 0.0432308081115883,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -869,16 +1913,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 6,
-                    "name": "Cole, Jacobson and Metz",
+                    "name": "Huel Ltd",
                     "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
                     "_necessity": 0.3,
-                    "_price": 19.81244013162646,
-                    "_quality": 0.276415542078696,
-                    "quality": 0.276415542078696,
-                    "price": 25.288906510511698,
-                    "fixedCost": 5.05778130210234,
-                    "variableCost": 0.0505778130210234,
+                    "_price": 19.327155400761765,
+                    "_quality": 0.7912004431797448,
+                    "quality": 0.7912004431797448,
+                    "price": 34.61880931924827,
+                    "fixedCost": 6.923761863849655,
+                    "variableCost": 0.06923761863849655,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -894,16 +1938,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 7,
-                    "name": "Sawayn, Hettinger and Rippin",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 50.30361481770602,
-                    "_quality": 0.4202641825038643,
-                    "quality": 0.4202641825038643,
-                    "price": 71.44442237605853,
-                    "fixedCost": 14.288884475211706,
-                    "variableCost": 0.07144442237605853,
+                    "name": "Wisozk Inc",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 149.7835981220336,
+                    "_quality": 0.5015091851468431,
+                    "quality": 0.5015091851468431,
+                    "price": 224.90144836457688,
+                    "fixedCost": 44.980289672915376,
+                    "variableCost": 0.11245072418228844,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -919,16 +1963,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 8,
-                    "name": "Torp Ltd",
-                    "category": "MEDICAL",
-                    "_frequency": 0.1,
-                    "_necessity": 0.9,
-                    "_price": 49.75120997725647,
-                    "_quality": 0.704573141453585,
-                    "quality": 0.704573141453585,
-                    "price": 84.804576282049,
-                    "fixedCost": 16.960915256409802,
-                    "variableCost": 0.084804576282049,
+                    "name": "Senger-Goodwin",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 19.615128383306633,
+                    "_quality": 0.49466552034160494,
+                    "quality": 0.49466552034160494,
+                    "price": 29.318056071602392,
+                    "fixedCost": 5.863611214320478,
+                    "variableCost": 0.058636112143204785,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -944,16 +1988,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 9,
-                    "name": "Ratke PLC",
-                    "category": "SUPERMARKET",
-                    "_frequency": 0.45,
-                    "_necessity": 0.8,
-                    "_price": 4.906610087856052,
-                    "_quality": 0.41929754243203565,
-                    "quality": 0.41929754243203565,
-                    "price": 6.963939639366329,
-                    "fixedCost": 1.3927879278732658,
-                    "variableCost": 0.03133772837714848,
+                    "name": "Stanton-Dooley",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.391750409884043,
+                    "_quality": 0.42231382085268965,
+                    "quality": 0.42231382085268965,
+                    "price": 24.73652697679851,
+                    "fixedCost": 4.947305395359702,
+                    "variableCost": 0.04947305395359702,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -969,16 +2013,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 10,
-                    "name": "Spencer Ltd",
-                    "category": "ENTERTAINMENT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 19.6758060973816,
-                    "_quality": 0.4698499726103009,
-                    "quality": 0.4698499726103009,
-                    "price": 28.920483053321934,
-                    "fixedCost": 5.784096610664387,
-                    "variableCost": 0.05784096610664387,
+                    "name": "Dach PLC",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 4.973655232834348,
+                    "_quality": 0.6554263149346646,
+                    "quality": 0.6554263149346646,
+                    "price": 8.233519753846476,
+                    "fixedCost": 1.6467039507692953,
+                    "variableCost": 0.037050838892309146,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -994,16 +2038,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 11,
-                    "name": "Flatley Inc",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 148.50487666439417,
-                    "_quality": 0.3886318832669381,
-                    "quality": 0.3886318832669381,
-                    "price": 206.21860655680203,
-                    "fixedCost": 41.24372131136041,
-                    "variableCost": 0.10310930327840102,
+                    "name": "McCullough Inc",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.289234960504178,
+                    "_quality": 0.8582620757232524,
+                    "quality": 0.8582620757232524,
+                    "price": 32.12792964537352,
+                    "fixedCost": 6.425585929074704,
+                    "variableCost": 0.06425585929074704,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1019,16 +2063,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 12,
-                    "name": "Hoeger, Spinka and Volkman",
-                    "category": "RESTAURANT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 17.197541888089923,
-                    "_quality": 0.30841389221405213,
-                    "quality": 0.30841389221405213,
-                    "price": 22.501502718309936,
-                    "fixedCost": 4.500300543661988,
-                    "variableCost": 0.04500300543661987,
+                    "name": "Swift, Connelly and Daugherty",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 150.6477560469823,
+                    "_quality": 0.34999453006799464,
+                    "quality": 0.34999453006799464,
+                    "price": 203.37364663044374,
+                    "fixedCost": 40.67472932608875,
+                    "variableCost": 0.10168682331522187,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1044,16 +2088,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 13,
-                    "name": "Beier, Renner and Reichel",
-                    "category": "RESTAURANT",
+                    "name": "Romaguera and Sons",
+                    "category": "ENTERTAINMENT",
                     "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 17.456052386108396,
-                    "_quality": 0.3413474721798654,
-                    "quality": 0.3413474721798654,
-                    "price": 23.414631742345804,
-                    "fixedCost": 4.682926348469161,
-                    "variableCost": 0.04682926348469161,
+                    "_necessity": 0.3,
+                    "_price": 19.92198036382895,
+                    "_quality": 0.687382369811405,
+                    "quality": 0.687382369811405,
+                    "price": 33.61599843765397,
+                    "fixedCost": 6.723199687530794,
+                    "variableCost": 0.06723199687530794,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1069,16 +2113,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 14,
-                    "name": "Considine Group",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 150.4854768996236,
-                    "_quality": 0.3663363642215627,
-                    "quality": 0.3663363642215627,
-                    "price": 205.61377937517966,
-                    "fixedCost": 41.122755875035935,
-                    "variableCost": 0.10280688968758983,
+                    "name": "Armstrong, Bode and Gerlach",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 20.396045705176114,
+                    "_quality": 0.8546146395046897,
+                    "quality": 0.8546146395046897,
+                    "price": 37.82680495282638,
+                    "fixedCost": 7.565360990565276,
+                    "variableCost": 0.07565360990565276,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1094,16 +2138,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 15,
-                    "name": "Bradtke, Kilback and Wiegand",
+                    "name": "Lockman Inc",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 50.70518251394988,
-                    "_quality": 0.1783085139255628,
-                    "quality": 0.1783085139255628,
-                    "price": 59.74634825633672,
-                    "fixedCost": 11.949269651267343,
-                    "variableCost": 0.05974634825633672,
+                    "_price": 49.87206450976602,
+                    "_quality": 0.6257958079577852,
+                    "quality": 0.6257958079577852,
+                    "price": 81.08179341417784,
+                    "fixedCost": 16.21635868283557,
+                    "variableCost": 0.08108179341417784,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1119,16 +2163,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 16,
-                    "name": "Cronin-Tillman",
+                    "name": "Brakus, Ankunding and Keebler",
                     "category": "RESTAURANT",
                     "_frequency": 0.2,
                     "_necessity": 0.4,
-                    "_price": 17.7252165963787,
-                    "_quality": 0.5101450376143253,
-                    "quality": 0.5101450376143253,
-                    "price": 26.767647883660377,
-                    "fixedCost": 5.353529576732075,
-                    "variableCost": 0.05353529576732075,
+                    "_price": 17.47360205343933,
+                    "_quality": 0.5935403749906761,
+                    "quality": 0.5935403749906761,
+                    "price": 27.844890368675557,
+                    "fixedCost": 5.568978073735112,
+                    "variableCost": 0.05568978073735111,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1144,16 +2188,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 17,
-                    "name": "Bahringer-Fisher",
-                    "category": "RESTAURANT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 17.467434140178387,
-                    "_quality": 0.5959329636292758,
-                    "quality": 0.5959329636292758,
-                    "price": 27.876853934334086,
-                    "fixedCost": 5.575370786866817,
-                    "variableCost": 0.05575370786866817,
+                    "name": "Purdy and Sons",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 4.874000932241528,
+                    "_quality": 0.3915860744355236,
+                    "quality": 0.3915860744355236,
+                    "price": 6.782591824093071,
+                    "fixedCost": 1.3565183648186143,
+                    "variableCost": 0.030521663208418825,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1169,16 +2213,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 18,
-                    "name": "Buckridge LLC",
-                    "category": "LUXURY",
-                    "_frequency": 0.05,
-                    "_necessity": 0.1,
-                    "_price": 148.9237684967485,
-                    "_quality": 0.9123550739215397,
-                    "quality": 0.9123550739215397,
-                    "price": 284.79512431227374,
-                    "fixedCost": 56.959024862454754,
-                    "variableCost": 0.1423975621561369,
+                    "name": "Hyatt, Dickinson and Pollich",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.627590958315935,
+                    "_quality": 0.8940032131795544,
+                    "quality": 0.8940032131795544,
+                    "price": 33.38671391566525,
+                    "fixedCost": 6.677342783133049,
+                    "variableCost": 0.0667734278313305,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1194,16 +2238,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 19,
-                    "name": "Witting and Sons",
-                    "category": "SUPERMARKET",
-                    "_frequency": 0.45,
-                    "_necessity": 0.8,
-                    "_price": 5.0017866518232115,
-                    "_quality": 0.3041210916360443,
-                    "quality": 0.3041210916360443,
-                    "price": 6.522935468506282,
-                    "fixedCost": 1.3045870937012565,
-                    "variableCost": 0.029353209608278273,
+                    "name": "Fadel PLC",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.62274697089265,
+                    "_quality": 0.10257302864869855,
+                    "quality": 0.10257302864869855,
+                    "price": 19.430365500806786,
+                    "fixedCost": 3.8860731001613575,
+                    "variableCost": 0.03886073100161357,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1219,16 +2263,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 20,
-                    "name": "O'Reilly Ltd",
+                    "name": "Rolfson-Reynolds",
                     "category": "MEDICAL",
                     "_frequency": 0.1,
                     "_necessity": 0.9,
-                    "_price": 50.23869280416483,
-                    "_quality": 0.1500342562561241,
-                    "quality": 0.1500342562561241,
-                    "price": 57.77621771431759,
-                    "fixedCost": 11.555243542863519,
-                    "variableCost": 0.05777621771431759,
+                    "_price": 49.86904604663251,
+                    "_quality": 0.8663138996107943,
+                    "quality": 0.8663138996107943,
+                    "price": 93.07129379716098,
+                    "fixedCost": 18.614258759432197,
+                    "variableCost": 0.09307129379716098,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1244,16 +2288,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 21,
-                    "name": "McKenzie Ltd",
-                    "category": "ENTERTAINMENT",
+                    "name": "Considine, Hilpert and Hegmann",
+                    "category": "RESTAURANT",
                     "_frequency": 0.2,
-                    "_necessity": 0.3,
-                    "_price": 19.984841484131657,
-                    "_quality": 0.6641290861871078,
-                    "quality": 0.6641290861871078,
-                    "price": 33.25735599658221,
-                    "fixedCost": 6.651471199316443,
-                    "variableCost": 0.06651471199316443,
+                    "_necessity": 0.4,
+                    "_price": 17.325523246650658,
+                    "_quality": 0.6843357485071385,
+                    "quality": 0.6843357485071385,
+                    "price": 29.18199816592516,
+                    "fixedCost": 5.8363996331850325,
+                    "variableCost": 0.058363996331850326,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1269,16 +2313,16 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 22,
-                    "name": "Rippin-Lebsack",
-                    "category": "RESTAURANT",
-                    "_frequency": 0.2,
-                    "_necessity": 0.4,
-                    "_price": 17.33891835874702,
-                    "_quality": 0.4331671129666985,
-                    "quality": 0.4331671129666985,
-                    "price": 24.84956756617075,
-                    "fixedCost": 4.96991351323415,
-                    "variableCost": 0.049699135132341504,
+                    "name": "Davis LLC",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 50.23305447386351,
+                    "_quality": 0.15406595980445792,
+                    "quality": 0.15406595980445792,
+                    "price": 57.972258225288904,
+                    "fixedCost": 11.59445164505778,
+                    "variableCost": 0.057972258225288904,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1294,16 +2338,916 @@
                 "__class__": "Company",
                 "__value__": {
                     "id": 23,
-                    "name": "Flatley-Miller",
+                    "name": "Williamson, Parisian and Metz",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 19.592238222448625,
+                    "_quality": 0.34332603708665,
+                    "quality": 0.34332603708665,
+                    "price": 26.3187637290195,
+                    "fixedCost": 5.263752745803901,
+                    "variableCost": 0.052637527458039006,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 24,
+                    "name": "Quigley-Koelpin",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.49102520469906,
+                    "_quality": 0.9901455406043029,
+                    "quality": 0.9901455406043029,
+                    "price": 34.8096858117293,
+                    "fixedCost": 6.961937162345861,
+                    "variableCost": 0.0696193716234586,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 25,
+                    "name": "Bruen-Price",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 49.29696919160962,
+                    "_quality": 0.3052173335705367,
+                    "quality": 0.3052173335705367,
+                    "price": 64.34325868138161,
+                    "fixedCost": 12.868651736276323,
+                    "variableCost": 0.06434325868138162,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 26,
+                    "name": "Keeling Inc",
                     "category": "LUXURY",
                     "_frequency": 0.05,
                     "_necessity": 0.1,
-                    "_price": 148.12337652817095,
-                    "_quality": 0.09751825704749406,
-                    "quality": 0.09751825704749406,
-                    "price": 162.56811003518786,
-                    "fixedCost": 32.513622007037576,
-                    "variableCost": 0.08128405501759393,
+                    "_price": 145.6940892580468,
+                    "_quality": 0.0121126507489695,
+                    "quality": 0.0121126507489695,
+                    "price": 147.4588308774187,
+                    "fixedCost": 29.491766175483743,
+                    "variableCost": 0.07372941543870935,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 27,
+                    "name": "Rohan, Reichel and Keebler",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 152.59370739471262,
+                    "_quality": 0.11230167730613805,
+                    "quality": 0.11230167730613805,
+                    "price": 169.73023668150088,
+                    "fixedCost": 33.946047336300175,
+                    "variableCost": 0.08486511834075045,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 28,
+                    "name": "Kuvalis, Wiza and Reichert",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.59133302375402,
+                    "_quality": 0.3178385798991179,
+                    "quality": 0.3178385798991179,
+                    "price": 23.182537330556457,
+                    "fixedCost": 4.636507466111292,
+                    "variableCost": 0.046365074661112914,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 29,
+                    "name": "Stanton, Schmitt and Schuster",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 5.005303050107182,
+                    "_quality": 0.6562299457461024,
+                    "quality": 0.6562299457461024,
+                    "price": 8.28993279912182,
+                    "fixedCost": 1.657986559824364,
+                    "variableCost": 0.037304697596048195,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 30,
+                    "name": "Hand PLC",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 20.198409845616393,
+                    "_quality": 0.4800793610565741,
+                    "quality": 0.4800793610565741,
+                    "price": 29.895249538658728,
+                    "fixedCost": 5.979049907731746,
+                    "variableCost": 0.059790499077317455,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 31,
+                    "name": "Steuber Ltd",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 4.852340806410711,
+                    "_quality": 0.47983021440533136,
+                    "quality": 0.47983021440533136,
+                    "price": 7.180640535918502,
+                    "fixedCost": 1.4361281071837004,
+                    "variableCost": 0.03231288241163326,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 32,
+                    "name": "Runte-Yundt",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 20.21420000206172,
+                    "_quality": 0.38227873593617845,
+                    "quality": 0.38227873593617845,
+                    "price": 27.941658826810972,
+                    "fixedCost": 5.588331765362195,
+                    "variableCost": 0.05588331765362194,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 33,
+                    "name": "Reichert, Homenick and Larson",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.882101796292268,
+                    "_quality": 0.7908785448284696,
+                    "quality": 0.7908785448284696,
+                    "price": 32.02467244341846,
+                    "fixedCost": 6.4049344886836925,
+                    "variableCost": 0.06404934488683692,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 34,
+                    "name": "Legros LLC",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 19.93663734869541,
+                    "_quality": 0.5539677678808554,
+                    "quality": 0.5539677678808554,
+                    "price": 30.9808918398023,
+                    "fixedCost": 6.19617836796046,
+                    "variableCost": 0.0619617836796046,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 35,
+                    "name": "Goodwin, Hartmann and Ziemann",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 20.089716839042673,
+                    "_quality": 0.7225943262179876,
+                    "quality": 0.7225943262179876,
+                    "price": 34.60643224226087,
+                    "fixedCost": 6.921286448452175,
+                    "variableCost": 0.06921286448452174,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 36,
+                    "name": "Spinka, Eichmann and Fisher",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 50.2832793245464,
+                    "_quality": 0.9951711658930036,
+                    "quality": 0.9951711658930036,
+                    "price": 100.3237490348788,
+                    "fixedCost": 20.06474980697576,
+                    "variableCost": 0.1003237490348788,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 37,
+                    "name": "Kautzer-O'Connell",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 19.839191888690962,
+                    "_quality": 0.43190483219478837,
+                    "quality": 0.43190483219478837,
+                    "price": 28.40783473225624,
+                    "fixedCost": 5.681566946451248,
+                    "variableCost": 0.05681566946451248,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 38,
+                    "name": "Purdy, Okuneva and Kunze",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 5.082541492420039,
+                    "_quality": 0.265991436600727,
+                    "quality": 0.265991436600727,
+                    "price": 6.434454005571648,
+                    "fixedCost": 1.2868908011143296,
+                    "variableCost": 0.02895504302507242,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 39,
+                    "name": "Ortiz and Sons",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.463314190004294,
+                    "_quality": 0.7820215394573748,
+                    "quality": 0.7820215394573748,
+                    "price": 31.12000203689927,
+                    "fixedCost": 6.2240004073798545,
+                    "variableCost": 0.06224000407379854,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 40,
+                    "name": "Johns and Sons",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 49.27546017998206,
+                    "_quality": 0.3557707755719607,
+                    "quality": 0.3557707755719607,
+                    "price": 66.80622886487954,
+                    "fixedCost": 13.36124577297591,
+                    "variableCost": 0.06680622886487954,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 41,
+                    "name": "Rohan Group",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 149.5662082337391,
+                    "_quality": 0.5741766152282737,
+                    "quality": 0.5741766152282737,
+                    "price": 235.44362742991459,
+                    "fixedCost": 47.08872548598292,
+                    "variableCost": 0.1177218137149573,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 42,
+                    "name": "Watsica, Hessel and Sanford",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.68723591889693,
+                    "_quality": 0.11502209050368328,
+                    "quality": 0.11502209050368328,
+                    "price": 19.721658769520293,
+                    "fixedCost": 3.9443317539040588,
+                    "variableCost": 0.03944331753904059,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 43,
+                    "name": "Schimmel, Windler and Berge",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 152.52435018609208,
+                    "_quality": 0.9934256506254949,
+                    "quality": 0.9934256506254949,
+                    "price": 304.04595200594144,
+                    "fixedCost": 60.80919040118829,
+                    "variableCost": 0.15202297600297074,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 44,
+                    "name": "Romaguera, Lang and Carter",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.500835238432497,
+                    "_quality": 0.4880424256481737,
+                    "quality": 0.4880424256481737,
+                    "price": 26.04198531906613,
+                    "fixedCost": 5.208397063813226,
+                    "variableCost": 0.052083970638132256,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 45,
+                    "name": "Cruickshank-Hammes",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.104104230350064,
+                    "_quality": 0.7535844673434037,
+                    "quality": 0.7535844673434037,
+                    "price": 29.99349150616447,
+                    "fixedCost": 5.998698301232895,
+                    "variableCost": 0.059986983012328944,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 46,
+                    "name": "Strosin-O'Connell",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 149.62643844561808,
+                    "_quality": 0.320055732911261,
+                    "quality": 0.320055732911261,
+                    "price": 197.51523786523205,
+                    "fixedCost": 39.503047573046416,
+                    "variableCost": 0.09875761893261603,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 47,
+                    "name": "Watsica, Farrell and Christiansen",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.516053892643438,
+                    "_quality": 0.9483569916805311,
+                    "quality": 0.9483569916805311,
+                    "price": 34.127526068384824,
+                    "fixedCost": 6.825505213676966,
+                    "variableCost": 0.06825505213676965,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 48,
+                    "name": "Reichert, Wilderman and Grady",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "_price": 19.69629187622151,
+                    "_quality": 0.5469693448034956,
+                    "quality": 0.5469693448034956,
+                    "price": 30.4695597388168,
+                    "fixedCost": 6.09391194776336,
+                    "variableCost": 0.0609391194776336,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 49,
+                    "name": "Satterfield, Wehner and Boehm",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 49.47436355929147,
+                    "_quality": 0.48459045075111495,
+                    "quality": 0.48459045075111495,
+                    "price": 73.44916769711305,
+                    "fixedCost": 14.689833539422612,
+                    "variableCost": 0.07344916769711306,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 50,
+                    "name": "Brakus, Ankunding and Keebler",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 4.936035938750964,
+                    "_quality": 0.18507138946769086,
+                    "quality": 0.18507138946769086,
+                    "price": 5.849554968398062,
+                    "fixedCost": 1.1699109936796124,
+                    "variableCost": 0.02632299735779128,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 51,
+                    "name": "Ferry, Zieme and King",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.505131730118293,
+                    "_quality": 0.7698598471108814,
+                    "quality": 0.7698598471108814,
+                    "price": 30.981629767523,
+                    "fixedCost": 6.1963259535046005,
+                    "variableCost": 0.061963259535046,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 52,
+                    "name": "Crona and Sons",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 148.97361875392528,
+                    "_quality": 0.42657067619382494,
+                    "quality": 0.42657067619382494,
+                    "price": 212.52139604082825,
+                    "fixedCost": 42.504279208165656,
+                    "variableCost": 0.10626069802041413,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 53,
+                    "name": "Lehner-Schultz",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 150.61553387855832,
+                    "_quality": 0.04102555976818145,
+                    "quality": 0.04102555976818145,
+                    "price": 156.79462046570967,
+                    "fixedCost": 31.358924093141937,
+                    "variableCost": 0.07839731023285483,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 54,
+                    "name": "Heidenreich, Medhurst and Batz",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 148.98105841662235,
+                    "_quality": 0.03998239011729565,
+                    "quality": 0.03998239011729565,
+                    "price": 154.93767721432334,
+                    "fixedCost": 30.98753544286467,
+                    "variableCost": 0.07746883860716168,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 55,
+                    "name": "Daniel-Langosh",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 5.064623875481618,
+                    "_quality": 0.05097135378203399,
+                    "quality": 0.05097135378203399,
+                    "price": 5.322774610811727,
+                    "fixedCost": 1.0645549221623456,
+                    "variableCost": 0.023952485748652774,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 56,
+                    "name": "Sawayn, Hettinger and Rippin",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "_price": 49.65599679780064,
+                    "_quality": 0.610636647689152,
+                    "quality": 0.610636647689152,
+                    "price": 79.97776822007289,
+                    "fixedCost": 15.995553644014578,
+                    "variableCost": 0.0799777682200729,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 57,
+                    "name": "Lynch Ltd",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "_price": 4.887116348325998,
+                    "_quality": 0.9183684199726512,
+                    "quality": 0.9183684199726512,
+                    "price": 9.375289667360658,
+                    "fixedCost": 1.8750579334721316,
+                    "variableCost": 0.042188803503122964,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 58,
+                    "name": "Eichmann, Shields and Wiza",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "_price": 149.73835866138705,
+                    "_quality": 0.16164534414062426,
+                    "quality": 0.16164534414062426,
+                    "price": 173.94286717825918,
+                    "fixedCost": 34.788573435651834,
+                    "variableCost": 0.0869714335891296,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 59,
+                    "name": "Beer-Ward",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "_price": 17.13157827244615,
+                    "_quality": 0.8273727080441357,
+                    "quality": 0.8273727080441357,
+                    "price": 31.305778580789994,
+                    "fixedCost": 6.261155716157999,
+                    "variableCost": 0.06261155716157998,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1319,7 +3263,7 @@
         "numActions": 3,
         "suicideCount": 0,
         "time": 0,
-        "avgHappiness": 54.00186868434685,
-        "avgCapital": 9730.760581715842
+        "avgHappiness": 48.26124736678249,
+        "avgCapital": 10620.724182329013
     }
 }
