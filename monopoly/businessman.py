@@ -47,7 +47,7 @@ class Businessman():
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
-        if company and self.considerAction(company) > 0.3:
+        if company and self.considerAction(company):
             #self.getCompanyOwner(company, env).capital += company.price
             helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
             return company
