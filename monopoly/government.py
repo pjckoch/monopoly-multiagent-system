@@ -13,7 +13,7 @@ class Government():
                  politics=None,
                  taxesStatus=None,
                  subsidiariesStatus=None,
-                 taxRate=0.5,
+                 taxRate=0.2,
                  subsidyValue=50,
                  governmentMoney=0,
                  startCompPrice=9000,
