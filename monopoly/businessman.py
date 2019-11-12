@@ -149,6 +149,10 @@ class Businessman():
                         thirdCounter = owner.offerForCompany(company, thirdOffer, env.avgCapital)
                         if thirdCounter == thirdOffer:
                             env.sellCompany(company, self, owner, thirdOffer)
+        elif (self.capital - env.avgCapital)/env.avgCapital > 3:
+            if random.randint(1, 100) > 99:
+                newCompany = self.createCompany(len(env.listOfCompanies))
+                env.listOfCompanies.append(newCompany)
 
     def createCompany(self, companyId):
         """Creates a new company belonging to the businessman who founds it."""
