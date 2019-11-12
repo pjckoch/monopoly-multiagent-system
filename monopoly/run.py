@@ -42,7 +42,8 @@ def runFromJson(jsonFile):
                     nProfit = 0
                     for company in bm.companies:
                         bProfit = company.computeBruttoProfit()
-                        env.government.regulateTax(company)
+                        #QUICKFIX
+                        env.government.regulateTax(bm, company)
                         nProfit += company.computeNettoProfit()         
                         # company.payCosts(env.government)            
                         company.computeCompanyValue()
