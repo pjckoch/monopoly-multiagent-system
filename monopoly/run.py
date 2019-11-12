@@ -36,28 +36,27 @@ def runFromJson(jsonFile):
             env.time = round(time, 1)
 
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
-
+                print("-----------||-----------")
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
-
                     for company in bm.companies:
                         bProfit = company.computeBruttoProfit()
                         env.government.regulateTax(company)
                         nProfit = company.computeNettoProfit()            
-                        company.payCosts(env.government)            
+                        # company.payCosts(env.government)            
                         company.computeCompanyValue()
 
                     # compute the updated capital for the businessman and print
-                    # bm.capital += nProfit + bm.subsidiaries
                     bm.capital += nProfit 
 
                 averageCompany = env.computeAverageCompanyValue()
-                env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
+                # env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, env)
 
-        totalMoney += env.government.governmentMoney
+            totalMoney += env.government.governmentMoney
+            # print("Day " + str(env.time) + ": " + str(totalMoney))
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)

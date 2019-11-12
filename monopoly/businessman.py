@@ -44,6 +44,7 @@ class Businessman():
         company = self.chooseCompany(category, companies)
         if company and self.considerAction(company) > 0.3:
             self.capital -= company.price
+            # self.getCompanyOwner(company, env).capital += company.price
             company.turnOver += company.price #temporary way, change to transaction function
             return company
         else:
