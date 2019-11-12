@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from company import Company, BusinessCategory
 import random
+import logger
 
 name_list = "lists/names.csv"
 
@@ -142,20 +143,24 @@ class Businessman():
                 counter = owner.offerForCompany(company, offer, env.avgCapital)
                 if counter == offer:
                     env.sellCompany(company, self, owner, offer)
+                    logger.log_acquireCompany(env.time, self, owner, company, price)
                 else:
                     secondOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
                     secondCounter = owner.offerForCompany(company, secondOffer, env.avgCapital)
                     if secondCounter == secondOffer:
                         env.sellCompany(company, self, owner, secondOffer)
+                        logger.log_acquireCompany(env.time, self, owner, company, price)
                     else:
                         thirdOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
                         thirdCounter = owner.offerForCompany(company, thirdOffer, env.avgCapital)
                         if thirdCounter == thirdOffer:
                             env.sellCompany(company, self, owner, thirdOffer)
+                            logger.log_acquireCompany(env.time, self, owner, company, price)
         elif (self.capital - env.avgCapital)/env.avgCapital > 3:
             if random.randint(1, 100) > 99:
                 newCompany = self.createCompany(len(env.listOfCompanies))
                 env.listOfCompanies.append(newCompany)
+                logger.log_createCompany(env.time, self, newCompany.name)
 
     def createCompany(self, companyId):
         """Creates a new company belonging to the businessman who founds it."""
