@@ -96,9 +96,9 @@ class Businessman():
     def declareBancrupcy(self):
         print("")
 
-    def offerForCompany(self, company, price):
+    def offerForCompany(self, company, price, avgCapital):
         value = company.companyValue
-        willingness = 1
+        willingness = 1/(avgCapital-self.capital)/avgCapital + 1
         chance = willingness - (value-price)/value
         if 1-random.randint(1, 101)/100 > chance:
             return price
@@ -136,17 +136,17 @@ class Businessman():
             owner = env.findCompanyOwner(company)
             if owner != self and company.dontSell < 0:
                 offer = company.companyValue*random.randint(75, 105)/100
-                counter = owner.offerForCompany(company, offer)
+                counter = owner.offerForCompany(company, offer, env.avgCapital)
                 if counter == offer:
                     env.sellCompany(company, self, owner, offer)
                 else:
                     secondOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
-                    secondCounter = owner.offerForCompany(company, secondOffer)
+                    secondCounter = owner.offerForCompany(company, secondOffer, env.avgCapital)
                     if secondCounter == secondOffer:
                         env.sellCompany(company, self, owner, secondOffer)
                     else:
                         thirdOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
-                        thirdCounter = owner.offerForCompany(company, thirdOffer)
+                        thirdCounter = owner.offerForCompany(company, thirdOffer, env.avgCapital)
                         if thirdCounter == thirdOffer:
                             env.sellCompany(company, self, owner, thirdOffer)
 
