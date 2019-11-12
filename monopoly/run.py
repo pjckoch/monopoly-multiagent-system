@@ -24,11 +24,10 @@ def runFromJson(jsonFile):
         if time != 0.0:
 
             stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
-            companiesForEvaluation = env.listOfCompanies
 
             for bm in stillALiveBms:
 
-                action = bm.chooseAction(companiesForEvaluation, env)
+                action = bm.chooseAction(env)
                 # assuming buying a new company counts as an investment
                 # bm.invest(env)
                 totalMoney += bm.capital
@@ -36,13 +35,13 @@ def runFromJson(jsonFile):
             env.time = round(time, 1)
 
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
-                print("-----------||-----------")
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
+                    nProfit = 0
                     for company in bm.companies:
                         bProfit = company.computeBruttoProfit()
                         env.government.regulateTax(company)
-                        nProfit = company.computeNettoProfit()            
+                        nProfit += company.computeNettoProfit()            
                         # company.payCosts(env.government)            
                         company.computeCompanyValue()
 
