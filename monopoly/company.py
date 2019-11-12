@@ -43,7 +43,7 @@ class Company():
                  taxHistory=None):
         self.id = companyId
 
-        self.name = company_names[np.random.randint(1, numLines)]
+        self.name = company_names[np.random.randint(1, numLines)] if name is None else name
         self.category = random.choice(list(BusinessCategory)) if category is None else category
         self.frequency = self.category.value[0] if frequency is None else frequency
         self.necessity = self.category.value[1] if necessity is None else necessity

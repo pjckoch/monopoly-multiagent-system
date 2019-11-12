@@ -4,6 +4,7 @@ from company import BusinessCategory
 from government import Government
 from businessman import Businessman
 import pandas as pd
+import helper_funs
 
 # To be parametrized'
 # Wealth Distribution - Value from 0.1 to 1 (0.1 concentrated wealth; 1 distributed wealth)
@@ -117,8 +118,7 @@ class Environment():
     def sellCompany(self, company, buyer, seller, price):
         seller.companies.remove(company)
         buyer.companies.append(company)
-        seller.capital += price
-        buyer.capital -= price
+        helper_funs.transaction(buyer, seller, price)
         company.dontSell = 100
 
-        print("Transaction: " + seller.name + "'s company " + company.name + " sold to " + buyer.name + " for " + str(price))
+        # print("Transaction: " + seller.name + "'s company " + company.name + " sold to " + buyer.name + " for " + str(price))

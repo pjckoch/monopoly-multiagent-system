@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 from company import Company, BusinessCategory
 import random
+import logger
+import helper_funs
 
 name_list = "lists/names.csv"
 
@@ -24,7 +26,7 @@ class Businessman():
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
-        self.name = full_names[np.random.randint(1, numLines)]
+        self.name = full_names[np.random.randint(1, numLines)] if name is None else name
         self.capital = capital
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
@@ -45,10 +47,9 @@ class Businessman():
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
-        if company and self.considerAction(company) > 0.3:
-            self.capital -= company.price
-            # self.getCompanyOwner(company, env).capital += company.price
-            company.turnOver += company.price #temporary way, change to transaction function
+        if company and self.considerAction(company):
+            #self.getCompanyOwner(company, env).capital += company.price
+            helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
             return company
         else:
             return None
@@ -85,7 +86,10 @@ class Businessman():
         return random.choices(population = companiesFromCategory, weights = weights)[0]
     
     def considerAction(self, company):
-        return self.capital * company.necessity**2 / company.price
+        nec = company.necessity
+        p = company.price
+        probabilityOfAction = (nec*p*self.capital) /(p*nec*self.capital + 10000/nec)
+        return decision(probabilityOfAction)
 
     def negotiate(self):
         print("")
@@ -139,20 +143,25 @@ class Businessman():
                 counter = owner.offerForCompany(company, offer, env.avgCapital)
                 if counter == offer:
                     env.sellCompany(company, self, owner, offer)
+                    logger.log_acquireCompany(env.time, self, owner, company, offer)
                 else:
                     secondOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
                     secondCounter = owner.offerForCompany(company, secondOffer, env.avgCapital)
                     if secondCounter == secondOffer:
                         env.sellCompany(company, self, owner, secondOffer)
+                        logger.log_acquireCompany(env.time, self, owner, company, offer)
                     else:
                         thirdOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
                         thirdCounter = owner.offerForCompany(company, thirdOffer, env.avgCapital)
                         if thirdCounter == thirdOffer:
                             env.sellCompany(company, self, owner, thirdOffer)
+                            logger.log_acquireCompany(env.time, self, owner, company, offer)
         elif (self.capital - env.avgCapital)/env.avgCapital > 3:
             if random.randint(1, 100) > 99:
                 newCompany = self.createCompany(len(env.listOfCompanies))
+                # TODO: he needs to pay for it
                 env.listOfCompanies.append(newCompany)
+                logger.log_createCompany(env.time, self, newCompany.name)
 
     def createCompany(self, companyId):
         """Creates a new company belonging to the businessman who founds it."""
@@ -160,7 +169,6 @@ class Businessman():
         self.companies.append(company)
         return company
 
-def decision(probability):
     # def investOwnCompany(self, price):
     #     cmpList = self.companies
 
@@ -222,4 +230,5 @@ def decision(probability):
     #     ret.append(owner)
     #     ret.append(company)
     #     return ret
+def decision(probability):
     return np.random.random() < probability

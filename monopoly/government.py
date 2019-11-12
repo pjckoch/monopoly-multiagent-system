@@ -2,7 +2,7 @@ import random
 import numpy as np
 from enum import Enum
 import data_manager
-
+import helper_funs
 
 class Government():
     """An intelligent agent that interacts with other agents in order to regulate the happiness."""
@@ -65,6 +65,8 @@ class Government():
         return inverseList[index].capital/totalBmMoney
 
     def calculateSubsidiaryFormula(self, capital):
+        if capital + 1 < 0: # to avoid encountering log(0) error
+            capital = 0
         return 4000-100*np.log(capital+1)
 
     # Give Equal Subsidiaries to Everyone
@@ -87,8 +89,7 @@ class Government():
     def regulateSubsidiary(self,businessman,govMon, bmList):
         subs = self.robinHoodMode(businessman)
         businessman.subsidiariesHistory.append(subs)
-        businessman.capital += subs
-        self.governmentMoney -= subs
+        helper_funs.transaction(self, businessman, subs)
         # if not self.isPersonHelped(businessman):
         #     # if (businessman.capital < (self.avgCapital * 0.5)):
         #     if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:
@@ -107,7 +108,7 @@ class Government():
             company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
             self.governmentMoney += company.taxHistory[-1]
 
-    def regulate(self, averageCapital, averageCompany, businessmenList):
+    def regulate(self, businessmenList):
         momentaryGovMoney = self.governmentMoney
         for bm in businessmenList:
             self.regulateSubsidiary(bm, momentaryGovMoney, len(businessmenList))
