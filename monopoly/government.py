@@ -44,7 +44,7 @@ class Government():
         businessman.subsidiariesHistory.append(subs)
         businessman.capital += subs
         self.governmentMoney -= subs
-        print("BM " + str(businessman.id) + " received " + str(subs))
+        #print("BM " + str(businessman.id) + " received " + str(subs))
         # if not self.isPersonHelped(businessman):
         #     # if (businessman.capital < (self.avgCapital * 0.5)):
         #     if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:

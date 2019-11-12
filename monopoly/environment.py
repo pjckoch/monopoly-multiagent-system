@@ -95,7 +95,13 @@ class Environment():
             
     def findCompaniesByCategory(self, categories):
         companies = []
-        for cmp in self.listOfCompanies:
+        ownedCompanies = []
+
+        for bm in self.listOfPeople:
+            for company in bm.companies:
+                ownedCompanies.append(company)
+
+        for cmp in ownedCompanies:
             if cmp.category in categories:
                 companies.append(cmp)
 
@@ -109,10 +115,10 @@ class Environment():
         return None
 
     def sellCompany(self, company, buyer, seller, price):
-        print("sell")
         seller.companies.remove(company)
         buyer.companies.append(company)
         seller.capital += price
         buyer.capital -= price
+        company.dontSell = 100
 
         print("Transaction: " + seller.name + "'s company " + company.name + " sold to " + buyer.name + " for " + str(price))

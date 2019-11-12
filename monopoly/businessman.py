@@ -24,7 +24,7 @@ class Businessman():
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
-        self.name = name
+        self.name = full_names[np.random.randint(1, numLines)]
         self.capital = capital
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
@@ -94,18 +94,66 @@ class Businessman():
         print("")
 
     def offerForCompany(self, company, price):
-        if price >= company.companyValue:
-            if self.happiness < 60:
-                return price
-        return 0
+        value = company.companyValue
+        willingness = 1
+        chance = willingness - (value-price)/value
+        if 1-random.randint(1, 101)/100 > chance:
+            return price
+        elif price < value:
+            return value*(2-(value-price)/value)
+        else:
+            return price*random.randint(100, 150)/100
 
-    # def considerInvestment(self, avgCapital, possibleInvestments):
-    #     if avgCapital - self.capital > 0:
-    #         for cmp in possibleInvestments:
-    #             if self.capital/1.5 > cmp.computeCompanyValue():
-    #                 if random.randint(1,101) > 80 and (avgCapital - self.capital) / avgCapital > 0.1:
-    #                     return cmp
+    def considerInvestment(self, avgCapital, possibleInvestments):
+        if self.capital > 1.2*avgCapital:
+            bestValue = 99999999
+            bestCompany = None
+            for cmp in possibleInvestments:
+                v = cmp.companyValue
+                if bestValue > v and v > 20:
+                    bestCompany = cmp
+                    bestValue = v
+            if random.randint(1,101) < 30 and bestValue < self.capital*0.2:
+                return bestCompany
 
+
+
+    # TODO: Add investments in own companies, Create a new company, Buy a new company
+    def invest(self, env):
+
+        categories = []
+        for cmp in self.companies:
+            categories.append(cmp.category)
+
+        possibleInvestments = env.findCompaniesByCategory(categories)
+
+        company = self.considerInvestment(env.avgCapital, possibleInvestments)
+
+        if company != None:
+            owner = env.findCompanyOwner(company)
+            if owner != self and company.dontSell < 0:
+                offer = company.companyValue*random.randint(75, 105)/100
+                counter = owner.offerForCompany(company, offer)
+                if counter == offer:
+                    env.sellCompany(company, self, owner, offer)
+                else:
+                    secondOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
+                    secondCounter = owner.offerForCompany(company, secondOffer)
+                    if secondCounter == secondOffer:
+                        env.sellCompany(company, self, owner, secondOffer)
+                    else:
+                        thirdOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
+                        thirdCounter = owner.offerForCompany(company, thirdOffer)
+                        if thirdCounter == thirdOffer:
+                            env.sellCompany(company, self, owner, thirdOffer)
+
+    def createCompany(self, companyId):
+        """Creates a new company belonging to the businessman who founds it."""
+        company = Company(companyId)
+        self.companies.append(company)
+        return company
+
+def decision(probability):
     # def investOwnCompany(self, price):
     #     cmpList = self.companies
 
@@ -123,7 +171,7 @@ class Businessman():
     #         print("BM " + str(self.id) + " made an investment in company " + str(worstCmp.id))
 
 
-    # Calculates the best investment (Buy a Company from another BM, Create a New One or Invest in one of his own companies)
+    # # Calculates the best investment (Buy a Company from another BM, Create a New One or Invest in one of his own companies)
     # def evaluateInvestments(self, env):
     #     option = "none"
     #     buyCompPrice = 1000000
@@ -167,35 +215,4 @@ class Businessman():
     #     ret.append(owner)
     #     ret.append(company)
     #     return ret
-
-
-    # TODO: Add investments in own companies, Create a new company, Buy a new company
-    def invest(self, env):
-        evaluation = self.evaluateInvestments(env)
-        if (self.capital > evaluation[1]):
-            # Buy an existing company
-            if (evaluation[0]  == "Buy Company"):
-                if evaluation[1] > 0:
-                    print("EVALUATION OPTION: " + str(evaluation[0]))
-                    print("EVALUATION Price: " + str(evaluation[1]))
-                    env.sellCompany(evaluation[3], self, evaluation[2], evaluation[1])
-            # Investing in own company
-            # TODO: Remove Only investing in first company
-            elif (evaluation[0]  == "Invest" and self.companies[0].investmentLevel == 0):
-                print("EVALUATION OPTION: " + str(evaluation[0]))
-                print("EVALUATION Price: " + str(evaluation[1]))
-                self.investOwnCompany(evaluation[1])
-            # Create a new company
-            # elif (evaluation[0]  == "Create Company"):
-                # print()
-        # else:
-        #     print("No Investment")
-
-    def createCompany(self, companyId):
-        """Creates a new company belonging to the businessman who founds it."""
-        company = Company(companyId)
-        self.companies.append(company)
-        return company
-
-def decision(probability):
     return np.random.random() < probability
