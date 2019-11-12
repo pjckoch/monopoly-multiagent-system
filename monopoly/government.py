@@ -10,7 +10,7 @@ class Government():
     # Government Politics can be supportive, neutral or competitive
 
     def __init__(self,
-                 politics=None,
+                 politics=SUPPORTIVE,
                  taxesStatus=None,
                  subsidiariesStatus=None,
                  taxRate=0.5,

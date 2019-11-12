@@ -39,7 +39,7 @@ class Businessman():
                     return bm
         return None
 
-    def chooseAction(self, companies):
+    def chooseAction(self, companies, env):
         # if the businessman has no cash, he won't do shit
         if self.capital <= 0:
             return None
