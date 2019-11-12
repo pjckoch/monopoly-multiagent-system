@@ -25,7 +25,7 @@ class Businessman():
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
-        self.name = full_names[np.random.randint(1, numLines)]
+        self.name = full_names[np.random.randint(1, numLines)] if name is None else name
         self.capital = capital
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
@@ -48,7 +48,7 @@ class Businessman():
         company = self.chooseCompany(category, companies)
         if company and self.considerAction(company) > 0.3:
             self.capital -= company.price
-            # self.getCompanyOwner(company, env).capital += company.price
+            #self.getCompanyOwner(company, env).capital += company.price
             company.turnOver += company.price #temporary way, change to transaction function
             return company
         else:
