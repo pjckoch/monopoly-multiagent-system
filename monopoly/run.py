@@ -51,8 +51,7 @@ def runFromJson(jsonFile):
                     bm.capital += nProfit
 
                 averageCompany = env.computeAverageCompanyValue()
-                #TODO: REACTIVATE GOVERNMENT
-                # env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
+                env.government.regulate(stillALiveBms)
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, env)

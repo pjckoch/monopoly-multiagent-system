@@ -65,6 +65,8 @@ class Government():
         return inverseList[index].capital/totalBmMoney
 
     def calculateSubsidiaryFormula(self, capital):
+        if capital + 1 < 0: # to avoid encountering log(0) error
+            capital = 0
         return 4000-100*np.log(capital+1)
 
     # Give Equal Subsidiaries to Everyone
@@ -107,7 +109,7 @@ class Government():
             company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
             self.governmentMoney += company.taxHistory[-1]
 
-    def regulate(self, averageCapital, averageCompany, businessmenList):
+    def regulate(self, businessmenList):
         momentaryGovMoney = self.governmentMoney
         for bm in businessmenList:
             self.regulateSubsidiary(bm, momentaryGovMoney, len(businessmenList))
