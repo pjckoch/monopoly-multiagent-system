@@ -143,22 +143,23 @@ class Businessman():
                 counter = owner.offerForCompany(company, offer, env.avgCapital)
                 if counter == offer:
                     env.sellCompany(company, self, owner, offer)
-                    logger.log_acquireCompany(env.time, self, owner, company, price)
+                    logger.log_acquireCompany(env.time, self, owner, company, offer)
                 else:
                     secondOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
                     secondCounter = owner.offerForCompany(company, secondOffer, env.avgCapital)
                     if secondCounter == secondOffer:
                         env.sellCompany(company, self, owner, secondOffer)
-                        logger.log_acquireCompany(env.time, self, owner, company, price)
+                        logger.log_acquireCompany(env.time, self, owner, company, offer)
                     else:
                         thirdOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
                         thirdCounter = owner.offerForCompany(company, thirdOffer, env.avgCapital)
                         if thirdCounter == thirdOffer:
                             env.sellCompany(company, self, owner, thirdOffer)
-                            logger.log_acquireCompany(env.time, self, owner, company, price)
+                            logger.log_acquireCompany(env.time, self, owner, company, offer)
         elif (self.capital - env.avgCapital)/env.avgCapital > 3:
             if random.randint(1, 100) > 99:
                 newCompany = self.createCompany(len(env.listOfCompanies))
+                # TODO: he needs to pay for it
                 env.listOfCompanies.append(newCompany)
                 logger.log_createCompany(env.time, self, newCompany.name)
 

@@ -121,4 +121,4 @@ class Environment():
         buyer.capital -= price
         company.dontSell = 100
 
-        print("Transaction: " + seller.name + "'s company " + company.name + " sold to " + buyer.name + " for " + str(price))
+        # print("Transaction: " + seller.name + "'s company " + company.name + " sold to " + buyer.name + " for " + str(price))
