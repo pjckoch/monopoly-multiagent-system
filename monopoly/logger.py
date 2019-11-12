@@ -19,22 +19,9 @@ ch.setFormatter(formatter)
 logger.addHandler(fh)
 logger.addHandler(ch)
 
-eventtypes = {
-        1: log_investment,
-        2: log_acquireCompany,
-        3: log_createCompany,
-        4: log_auction,
-        5: log_election,
-        6: log_epidemy,
-}
-
-
-def log(evtype, days, param1, param2, param3):
-    time = getTime(days)
-    eventtypes[evtype](time, param1, param2, param3)
-
 
 def log_investment(time, investor, company, invest_value):
+    time = getTime(days)
     log_msg = str(investor)
     log_msg += ' invested '
     log_msg += str(invest_value)
@@ -43,6 +30,7 @@ def log_investment(time, investor, company, invest_value):
     logger.info(log_msg, extra={'envtime': str(time)})
 
 def log_acquireCompany(time, buyer, seller, company, price):
+    time = getTime(days)
     log_msg = str(buyer.id)
     log_msg += ' bought '
     log_msg += str(company.name)
@@ -53,12 +41,14 @@ def log_acquireCompany(time, buyer, seller, company, price):
     logger.info(log_msg, extra = {'envtime': str(time)})
 
 def log_createCompany(time, creator, company):
+    time = getTime(days)
     log_msg = str(creator.id)
     log_msg += ' created a new company with name '
     log_msg += str(company.name)
     logger.info(log_msg, extra = {'envtime': str(time)})
 
 def log_auction(time, company, buyer, seller):
+    time = getTime(days)
     log_msg = str(buyer.id)
     log_msg += ' bought '
     log_msg += str(company.name)
@@ -67,6 +57,7 @@ def log_auction(time, company, buyer, seller):
     logger.info(log_msg, extra = {'envtime': str(time)}
 
 def log_election(time, president, strategy):
+    time = getTime(days)
     log_msg = 'We have a new president! ' 
     log_msg += str(president.name)
     log_msg += ' won the election! He is known to support '
@@ -75,6 +66,7 @@ def log_election(time, president, strategy):
     logger.info(log_msg, extra = {'envtime': str(time)}
 
 def log_epidemy(time, epidemytype, deathcount):
+    time = getTime(days)
     log_msg = str(deathcount)
     log_msg += ' businessmen left their lives due to '    
     log_msg += str(epidemy)
