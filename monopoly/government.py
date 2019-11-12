@@ -2,7 +2,7 @@ import random
 import numpy as np
 from enum import Enum
 import data_manager
-
+import helper_funs
 
 class Government():
     """An intelligent agent that interacts with other agents in order to regulate the happiness."""
@@ -89,8 +89,7 @@ class Government():
     def regulateSubsidiary(self,businessman,govMon, bmList):
         subs = self.robinHoodMode(businessman)
         businessman.subsidiariesHistory.append(subs)
-        businessman.capital += subs
-        self.governmentMoney -= subs
+        helper_funs.transaction(self, businessman, subs)
         # if not self.isPersonHelped(businessman):
         #     # if (businessman.capital < (self.avgCapital * 0.5)):
         #     if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:

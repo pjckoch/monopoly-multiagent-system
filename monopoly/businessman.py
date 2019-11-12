@@ -3,6 +3,7 @@ import pandas as pd
 from company import Company, BusinessCategory
 import random
 import logger
+import helper_funs
 
 name_list = "lists/names.csv"
 
@@ -47,9 +48,8 @@ class Businessman():
         # choose a company from that category
         company = self.chooseCompany(category, companies)
         if company and self.considerAction(company) > 0.3:
-            self.capital -= company.price
             #self.getCompanyOwner(company, env).capital += company.price
-            company.turnOver += company.price #temporary way, change to transaction function
+            helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
             return company
         else:
             return None
