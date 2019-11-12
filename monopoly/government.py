@@ -35,12 +35,46 @@ class Government():
                 return True
         return False
 
+    def sortListByCapital(self, bmList):
+        tempBmList = bmList.copy()
+        sortedList = []
+        minCapital = 99999
+        minBm = None
+
+        while len(tempBmList) != 0:
+            for bm in tempBmList:
+                if bm.capital < minCapital:
+                    minCapital = bm.capital
+                    minBm = bm
+            tempBmList.remove(minBm)
+            sortedList.append(minBm)
+            minCapital = 99999
+            minBm = None
+
+        return sortedList
+
+    def calculateSubsidiaryPercentage(self, index, bmList):
+        # Returns the percentage of government money for subsidiaries that a bm will receive
+        inverseList = bmList[::-1]
+    
+        totalBmMoney = 0
+        for bm in bmList:
+            totalBmMoney += bm.capital
+
+        return inverseList[index].capital/totalBmMoney
+
+
     def calculateSubsidiary(self, bm, govMon, noBm):
-        return govMon/noBm
+        return govMon/len(bmList)
+
+    def calculateSubsidiaryOnSteroids(self, bm, govMon, bmList):
+        sortedList = self.sortListByCapital(bmList)
+        index = sortedList.index(bm)
+        return govMon * self.calculateSubsidiaryPercentage(index, bmList)
 
     #TODO: improve
-    def regulateSubsidiary(self,businessman,govMon,noBm):
-        subs = self.calculateSubsidiary(businessman,govMon,noBm)
+    def regulateSubsidiary(self,businessman,govMon, bmList):
+        subs = self.calculateSubsidiaryOnSteroids(businessman,govMon,bmList)
         businessman.subsidiariesHistory.append(subs)
         businessman.capital += subs
         self.governmentMoney -= subs
@@ -93,7 +127,7 @@ class Government():
     def regulate(self, averageCapital, averageCompany, businessmenList):
         momentaryGovMoney = self.governmentMoney
         for bm in businessmenList:
-            self.regulateSubsidiary(bm, momentaryGovMoney, len(businessmenList))
+            self.regulateSubsidiary(bm, momentaryGovMoney, businessmenList)
             # self.ejectCapital(bm)
             for company in bm.companies:
                 self.regulateTax(company)
