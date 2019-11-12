@@ -38,6 +38,9 @@ class Businessman():
         return None
 
     def chooseAction(self, companies, env):
+        # if the businessman has no cash, he won't do shit
+        if self.capital <= 0:
+            return None
         # choose a category randomly based on the frequency (probability)
         category = self.chooseCategory()
         # choose a company from that category
