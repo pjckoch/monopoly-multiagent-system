@@ -37,14 +37,14 @@ class Businessman():
                     return bm
         return None
 
-    def chooseAction(self, env):
+    def chooseAction(self, companies):
         # if the businessman has no cash, he won't do shit
         if self.capital <= 0:
             return None
         # choose a category randomly based on the frequency (probability)
         category = self.chooseCategory()
         # choose a company from that category
-        company = self.chooseCompany(category, env.listOfCompanies)
+        company = self.chooseCompany(category, companies)
         if company and self.considerAction(company) > 0.3:
             self.capital -= company.price
             # self.getCompanyOwner(company, env).capital += company.price
