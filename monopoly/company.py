@@ -69,7 +69,6 @@ class Company():
         """Compute profit without considering taxes"""
         self.turnOverHistory.append(self.turnOver)
         bProfit = self.turnOver - self.variableCost - self.fixedCost
-        # bProfit = self.turnOver
         self.bruttoProfitHistory.append(bProfit)
         self.turnOver = 0
         return bProfit
