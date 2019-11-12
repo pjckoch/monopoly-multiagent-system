@@ -85,7 +85,10 @@ class Businessman():
         return random.choices(population = companiesFromCategory, weights = weights)[0]
     
     def considerAction(self, company):
-        return self.capital * company.necessity**2 / company.price
+        nec = company.necessity
+        p = company.price
+        probabilityOfAction = (nec*p*self.capital) /(p*nec*self.capital + 10000/nec)
+        return decision(probabilityOfAction)
 
     def negotiate(self):
         print("")
@@ -160,7 +163,6 @@ class Businessman():
         self.companies.append(company)
         return company
 
-def decision(probability):
     # def investOwnCompany(self, price):
     #     cmpList = self.companies
 
@@ -222,4 +224,5 @@ def decision(probability):
     #     ret.append(owner)
     #     ret.append(company)
     #     return ret
+def decision(probability):
     return np.random.random() < probability
