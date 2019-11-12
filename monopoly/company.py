@@ -39,6 +39,7 @@ class Company():
                  bruttoProfitHistory=None,
                  nettoProfitHistory=None,
                  turnOverHistory=None,
+                 dontSell=None,
                  taxHistory=None):
         self.id = companyId
 
@@ -63,6 +64,7 @@ class Company():
         self.nettoProfitHistory = [] if nettoProfitHistory is None else nettoProfitHistory
         self.turnOverHistory = [] if turnOverHistory is None else turnOverHistory
         self.taxHistory = [0] if taxHistory is None else taxHistory
+        self.dontSell = 10
 
 
     def computeBruttoProfit(self):
@@ -89,6 +91,9 @@ class Company():
     def payCosts(self, government):
         """Paying the costs (going to the government ATM)"""
         government.governmentMoney += self.variableCost + self.fixedCost
+
+    def updateSale(self):
+        self.dontSell = self.dontSell - 1
 
     @property
     def frequency(self):
