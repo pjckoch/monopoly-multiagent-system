@@ -13,7 +13,7 @@ class Government():
                  politics=None,
                  taxesStatus=None,
                  subsidiariesStatus=None,
-                 taxRate=0.3,
+                 taxRate=0.5,
                  subsidyValue=50,
                  governmentMoney=0,
                  startCompPrice=9000,
@@ -89,7 +89,6 @@ class Government():
         businessman.subsidiariesHistory.append(subs)
         businessman.capital += subs
         self.governmentMoney -= subs
-        #print("BM " + str(businessman.id) + " received " + str(subs))
         # if not self.isPersonHelped(businessman):
         #     # if (businessman.capital < (self.avgCapital * 0.5)):
         #     if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:
@@ -112,6 +111,8 @@ class Government():
         momentaryGovMoney = self.governmentMoney
         for bm in businessmenList:
             self.regulateSubsidiary(bm, momentaryGovMoney, len(businessmenList))
+            # for comp in bm.companies:
+                # self.regulateTax(comp)
 
 
 class PoliticsSwitcher(Enum):

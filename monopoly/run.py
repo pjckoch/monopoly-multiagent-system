@@ -27,7 +27,7 @@ def runFromJson(jsonFile):
 
             for bm in stillALiveBms:
 
-                action = bm.chooseAction(env)
+                action = bm.chooseAction(env.listOfCompanies)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
                 totalMoney += bm.capital
@@ -43,14 +43,15 @@ def runFromJson(jsonFile):
                     for company in bm.companies:
                         bProfit = company.computeBruttoProfit()
                         env.government.regulateTax(company)
-                        nProfit += company.computeNettoProfit()            
+                        nProfit += company.computeNettoProfit()         
                         # company.payCosts(env.government)            
                         company.computeCompanyValue()
 
-                    # compute the updated capital for the businessman and print
-                    bm.capital += nProfit 
+                    # add the summed up netto profits to the businessman capital
+                    bm.capital += nProfit
 
                 averageCompany = env.computeAverageCompanyValue()
+                #TODO: REACTIVATE GOVERNMENT
                 # env.government.regulate(env.avgCapital, averageCompany, stillALiveBms)
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
