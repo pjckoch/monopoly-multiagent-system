@@ -41,6 +41,8 @@ def runFromJson(jsonFile):
                 for bm in stillALiveBms:
 
                     for company in bm.companies:
+                        bProfit = company.computeBruttoProfit()
+                        env.government.regulateTax(company)
                         nProfit = company.computeNettoProfit()            
                         company.payCosts(env.government)            
                         company.computeCompanyValue()

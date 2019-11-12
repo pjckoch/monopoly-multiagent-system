@@ -75,8 +75,9 @@ class Company():
 
     def computeNettoProfit(self):
         """Profit minus taxes"""
-        bProfit = self.computeBruttoProfit()
-        nProfit = bProfit - self.taxHistory[-1]
+        bProfit = self.bruttoProfitHistory[-1]
+        tax = self.taxHistory[-1]
+        nProfit = bProfit - tax
         self.nettoProfitHistory.append(nProfit)
         return nProfit
 

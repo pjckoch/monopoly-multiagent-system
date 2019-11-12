@@ -12,7 +12,7 @@ class Government():
                  politics=None,
                  taxesStatus=None,
                  subsidiariesStatus=None,
-                 taxRate=0.8,
+                 taxRate=0.3,
                  subsidyValue=50,
                  governmentMoney=0,
                  startCompPrice=9000,
@@ -44,7 +44,6 @@ class Government():
         businessman.subsidiariesHistory.append(subs)
         businessman.capital += subs
         self.governmentMoney -= subs
-        print("BM " + str(businessman.id) + " received " + str(subs))
         # if not self.isPersonHelped(businessman):
         #     # if (businessman.capital < (self.avgCapital * 0.5)):
         #     if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:
@@ -73,31 +72,15 @@ class Government():
     #         if bm.capital < 1500 and self.politics == PoliticsSwitcher.COMPETITIVE:
     #             bm.capital = 0 + random.randint(0, 1500)
 
-    #TODO: improve
-    def regulateTax(self,company):
+    def regulateTax(self, company):
         if company.bruttoProfitHistory[-1] > 0:
             company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
             self.governmentMoney += company.taxHistory[-1]
-        # if not self.isCompanyTaxed(company):
-        #     if company.companyValue > self.avgCompanyValue:
-        #         company.taxes += self.taxRate
-        #         self.governmentMoney += self.taxRate
-        #         temp = [company.id, 0]
-        #         self.taxesStatus.append(temp)
-        # else:
-        #     for tax in self.taxesStatus:
-        #         if tax[0] == company.id:
-        #             self.taxesStatus.remove(tax)
-        #             company.taxes = 0
 
     def regulate(self, averageCapital, averageCompany, businessmenList):
         momentaryGovMoney = self.governmentMoney
         for bm in businessmenList:
             self.regulateSubsidiary(bm, momentaryGovMoney, len(businessmenList))
-            # self.ejectCapital(bm)
-            for company in bm.companies:
-                self.regulateTax(company)
-
 
 
 class PoliticsSwitcher(Enum):
