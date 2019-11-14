@@ -120,7 +120,7 @@ class Businessman():
                 if bestValue > v and v > 20:
                     bestCompany = cmp
                     bestValue = v
-            if random.randint(1,101) < 30 and bestValue < self.capital*0.2:
+            if random.randint(1,101) < 30 and bestValue < self.capital*0.8:
                 return bestCompany
 
 
@@ -158,15 +158,15 @@ class Businessman():
                             logger.log_acquireCompany(env.time, self, owner, company, offer)
         elif (self.capital - env.avgCapital)/env.avgCapital > 3:
             if random.randint(1, 100) > 99:
-                newCompany = self.createCompany(len(env.listOfCompanies))
+                newCompany = self.createCompany(env.time, len(env.listOfCompanies))
                 # TODO: he needs to pay for it
                 env.listOfCompanies.append(newCompany)
-                logger.log_createCompany(env.time, self, newCompany.name)
 
-    def createCompany(self, companyId):
+    def createCompany(self, time, companyId):
         """Creates a new company belonging to the businessman who founds it."""
         company = Company(companyId)
         self.companies.append(company)
+        logger.log_createCompany(time, self, company)
         return company
 
     # def investOwnCompany(self, price):

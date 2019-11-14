@@ -89,10 +89,10 @@ class Environment():
         remainingCompanies = self.numCompanies % len(self.listOfPeople)
         for _ in range(numCompaniesPerBm):
             for bm in self.listOfPeople:
-                self.listOfCompanies.append(bm.createCompany(len(self.listOfCompanies))) # id increments with every new company
+                self.listOfCompanies.append(bm.createCompany(self.time, len(self.listOfCompanies))) # id increments with every new company
         for _ in range(remainingCompanies):
             bm = random.choice(self.listOfPeople)
-            self.listOfCompanies.append(bm.createCompany(len(self.listOfCompanies)))
+            self.listOfCompanies.append(bm.createCompany(self.time, len(self.listOfCompanies)))
             
     def findCompaniesByCategory(self, categories):
         companies = []

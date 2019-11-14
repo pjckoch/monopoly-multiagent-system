@@ -45,7 +45,8 @@ def log_acquireCompany(days, buyer, seller, company, price):
 
 def log_createCompany(days, creator, company):
     time = data_manager.getTime(days)
-    log_msg = str(creator.id)
+    log_msg = 'BM '
+    log_msg += str(creator.id)
     log_msg += ' created a new company with name '
     log_msg += str(company.name)
     logger.info(log_msg, extra= get_log_argument_dict(time, Logtype.CREATE_COMPANY))

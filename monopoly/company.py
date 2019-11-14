@@ -85,7 +85,7 @@ class Company():
 
     def computeCompanyValue(self):
         if (len(self.nettoProfitHistory) > 4):
-            self.companyValue = sum(self.nettoProfitHistory[-5:])
+            self.companyValue = 10*sum(self.nettoProfitHistory[-5:])
         return self.companyValue
 
     def payCosts(self, government):
