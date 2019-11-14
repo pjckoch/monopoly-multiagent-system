@@ -65,6 +65,7 @@ class Company():
         self.turnOverHistory = [] if turnOverHistory is None else turnOverHistory
         self.taxHistory = [0] if taxHistory is None else taxHistory
         self.dontSell = 10
+        self.money = 0
 
 
     def computeBruttoProfit(self):

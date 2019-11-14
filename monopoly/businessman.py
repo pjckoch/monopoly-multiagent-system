@@ -39,7 +39,7 @@ class Businessman():
                     return bm
         return None
 
-    def chooseAction(self, companies):
+    def chooseAction(self, companies, env):
         # if the businessman has no cash, he won't do shit
         if self.capital <= 0:
             return None
@@ -48,8 +48,12 @@ class Businessman():
         # choose a company from that category
         company = self.chooseCompany(category, companies)
         if company and self.considerAction(company):
-            #self.getCompanyOwner(company, env).capital += company.price
-            helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
+            # QUICKFIX
+            self.capital -= company.price
+            self.getCompanyOwner(company, env).capital += company.price
+            company.money += company.price
+            # company.turnOver += company.price
+            # helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
             return company
         else:
             return None

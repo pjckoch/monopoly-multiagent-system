@@ -1,8 +1,8 @@
 {
     "__class__": "Environment",
     "__value__": {
-        "numPeople": 10,
-        "numCompanies": 40,
+        "numPeople": 4,
+        "numCompanies": 16,
         "government": {
             "__class__": "Government",
             "__value__": {
@@ -50,7 +50,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -76,7 +77,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -102,7 +104,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -128,7 +131,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         }
                     ],
@@ -248,7 +252,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         }
                     ],
@@ -410,7 +415,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -462,7 +468,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -488,7 +495,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         }
                     ],
@@ -500,7 +508,7 @@
             {
                 "__class__": "Businessman",
                 "__value__": {
-                    "id": 4,
+                    "id": 2,
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": "Guntar Messenbird",
@@ -608,7 +616,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         }
                     ],
@@ -676,7 +685,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -822,7 +832,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -890,7 +901,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -980,7 +992,7 @@
             {
                 "__class__": "Businessman",
                 "__value__": {
-                    "id": 8,
+                    "id": 3,
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": "Ilse Melia",
@@ -1036,7 +1048,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -1062,7 +1075,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -1130,7 +1144,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         },
                         {
@@ -1208,7 +1223,8 @@
                                 "taxHistory": [
                                     0
                                 ],
-                                "dontSell": 10
+                                "dontSell": 10,
+                                "money": 0
                             }
                         }
                     ],
@@ -1242,7 +1258,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1294,7 +1311,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1320,7 +1338,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1346,7 +1365,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1372,7 +1392,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1450,7 +1471,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1554,7 +1576,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1684,7 +1707,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1710,7 +1734,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1814,7 +1839,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1840,7 +1866,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1892,7 +1919,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1918,7 +1946,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -1970,7 +1999,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -2022,7 +2052,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {
@@ -2048,7 +2079,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 0
                 }
             },
             {

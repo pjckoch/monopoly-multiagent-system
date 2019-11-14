@@ -1,8 +1,8 @@
 {
     "__class__": "Environment",
     "__value__": {
-        "numPeople": 10,
-        "numCompanies": 40,
+        "numPeople": 4,
+        "numCompanies": 16,
         "government": {
             "__class__": "Government",
             "__value__": {
@@ -994,7 +994,7 @@
             {
                 "__class__": "Businessman",
                 "__value__": {
-                    "id": 3,
+                    "id": 1,
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": "Caye Gaylord",
@@ -1220,7 +1220,8 @@
                                     755.2349125900064,
                                     357.69054486267055
                                 ],
-                                "dontSell": -1085
+                                "dontSell": -1085,
+                                "money": 4407.541997604359
                             }
                         }
                     ],
@@ -2277,7 +2278,7 @@
             {
                 "__class__": "Businessman",
                 "__value__": {
-                    "id": 7,
+                    "id": 3,
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": "Verna Bayly",
@@ -3279,7 +3280,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 269.87944899316386
                 }
             },
             {
@@ -3303,7 +3305,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 4300.487153011318
                 }
             },
             {
@@ -3327,7 +3330,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 199.12894941056305
                 }
             },
             {
@@ -3351,7 +3355,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 313.13434662540107
                 }
             },
             {
@@ -3375,7 +3380,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 707.0724597369443
                 }
             },
             {
@@ -3519,7 +3525,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 6373.5480781297865
                 }
             },
             {
@@ -3687,7 +3694,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 2048.7513146541405
                 }
             },
             {
@@ -3759,7 +3767,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 215.1635227833637
                 }
             },
             {
@@ -3831,7 +3840,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 8187.621618180658
                 }
             },
             {
@@ -3855,7 +3865,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 3905.4169599025963
                 }
             },
             {
@@ -3903,7 +3914,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 5616.963473593607
                 }
             },
             {
@@ -4023,7 +4035,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 1275.984626389929
                 }
             },
             {
@@ -4047,7 +4060,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 4946.204388908214
                 }
             },
             {
@@ -4071,7 +4085,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 254.4712155127926
                 }
             },
             {
@@ -4095,7 +4110,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 7560.928250257657
                 }
             },
             {
@@ -4143,7 +4159,8 @@
                     "taxHistory": [
                         0
                     ],
-                    "dontSell": 10
+                    "dontSell": 10,
+                    "money": 565.1580471524102
                 }
             },
             {

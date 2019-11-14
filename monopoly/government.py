@@ -10,7 +10,7 @@ class Government():
     # Government Politics can be supportive, neutral or competitive
 
     def __init__(self,
-                 politics=None,
+                 politics="SUPPORTIVE",
                  taxesStatus=None,
                  subsidiariesStatus=None,
                  taxRate=0.2,
@@ -103,9 +103,11 @@ class Government():
         #             self.subsidiariesStatus.remove(subs)
         #             businessman.subsidiaries = 0
 
-    def regulateTax(self, company):
-        if company.bruttoProfitHistory[-1] > 0:
-            company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
+    def regulateTax(self,bm, company):
+        #QUICKFIX
+        # if company.turnOver > 0:
+            # company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
+            company.taxHistory.append((bm.capital * random.randint(3,5))/5 * self.taxRate)
             self.governmentMoney += company.taxHistory[-1]
 
     def regulate(self, businessmenList):
