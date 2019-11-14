@@ -1,15 +1,19 @@
 {
     "__class__": "Environment",
     "__value__": {
-        "numPeople": 4,
-        "numCompanies": 16,
+        "numPeople": 6,
+        "numCompanies": 24,
         "government": {
             "__class__": "Government",
             "__value__": {
                 "politics": "SUPPORTIVE",
                 "taxesStatus": [],
                 "subsidiariesStatus": [],
+<<<<<<< Updated upstream
                 "taxRate": 0.8,
+=======
+                "taxRate": 0.01,
+>>>>>>> Stashed changes
                 "subsidyValue": 50,
                 "governmentMoney": 0,
                 "startCompPrice": 9000,
@@ -23,14 +27,21 @@
                     "id": 0,
                     "isAlive": true,
                     "subsidiaries": 0,
+<<<<<<< Updated upstream
                     "name": "Carlee Iley",
                     "capital": 10716.177400462939,
                     "happiness": 49.35141527220656,
+=======
+                    "name": "Chalmers Mooney",
+                    "capital": 11791.71835623977,
+                    "happiness": 58.28275704714426,
+>>>>>>> Stashed changes
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 0,
+<<<<<<< Updated upstream
                                 "name": "Harvey and Sons",
                                 "category": "MEDICAL",
                                 "_frequency": 0.1,
@@ -41,6 +52,19 @@
                                 "price": 54.17141061826439,
                                 "fixedCost": 10.834282123652878,
                                 "variableCost": 0.05417141061826439,
+=======
+                                "name": "Stehr Inc",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "inflationFactor": 1.4,
+                                "_price": 211.80212382846776,
+                                "_quality": 0.6132535417068155,
+                                "quality": 0.6132535417068155,
+                                "price": 341.6905264073011,
+                                "fixedCost": 68.33810528146022,
+                                "variableCost": 0.17084526320365054,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -57,6 +81,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 10,
                                 "name": "White Ltd",
                                 "category": "SUPERMARKET",
@@ -68,6 +93,20 @@
                                 "price": 7.769945218878696,
                                 "fixedCost": 1.5539890437757393,
                                 "variableCost": 0.03496475348495414,
+=======
+                                "id": 6,
+                                "name": "Daniel-Anderson",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "inflationFactor": 1.4,
+                                "_price": 69.67338422244615,
+                                "_quality": 0.14851406039265458,
+                                "quality": 0.14851406039265458,
+                                "price": 80.02086141461913,
+                                "fixedCost": 16.00417228292383,
+                                "variableCost": 0.08002086141461913,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -84,6 +123,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 20,
                                 "name": "Johns and Sons",
                                 "category": "RESTAURANT",
@@ -95,6 +135,20 @@
                                 "price": 27.504274546997966,
                                 "fixedCost": 5.500854909399593,
                                 "variableCost": 0.05500854909399593,
+=======
+                                "id": 12,
+                                "name": "Hermiston, Beahan and Kirlin",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 27.587648577845194,
+                                "_quality": 0.49825596270127814,
+                                "quality": 0.49825596270127814,
+                                "price": 41.333358978663995,
+                                "fixedCost": 8.2666717957328,
+                                "variableCost": 0.082666717957328,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -111,6 +165,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 30,
                                 "name": "Rau, Simonis and Jakubowski",
                                 "category": "SUPERMARKET",
@@ -122,6 +177,20 @@
                                 "price": 8.504020290004588,
                                 "fixedCost": 1.7008040580009176,
                                 "variableCost": 0.03826809130502065,
+=======
+                                "id": 18,
+                                "name": "Johnson-Ondricka",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 27.714491580359528,
+                                "_quality": 0.7941369772412662,
+                                "quality": 0.7941369772412662,
+                                "price": 49.723594149764764,
+                                "fixedCost": 9.944718829952954,
+                                "variableCost": 0.09944718829952953,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -147,14 +216,21 @@
                     "id": 1,
                     "isAlive": true,
                     "subsidiaries": 0,
+<<<<<<< Updated upstream
                     "name": "Aksel Profit",
                     "capital": 10716.177400462939,
                     "happiness": 49.35141527220656,
+=======
+                    "name": "Tony Wark",
+                    "capital": 11791.71835623977,
+                    "happiness": 58.28275704714426,
+>>>>>>> Stashed changes
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 1,
+<<<<<<< Updated upstream
                                 "name": "Gislason-Carroll",
                                 "category": "RESTAURANT",
                                 "_frequency": 0.2,
@@ -165,6 +241,19 @@
                                 "price": 30.62921397274986,
                                 "fixedCost": 6.125842794549972,
                                 "variableCost": 0.06125842794549972,
+=======
+                                "name": "Nitzsche Ltd",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 27.73965632434032,
+                                "_quality": 0.7994914251541624,
+                                "quality": 0.7994914251541624,
+                                "price": 49.91727369237383,
+                                "fixedCost": 9.983454738474768,
+                                "variableCost": 0.09983454738474767,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -180,6 +269,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 11,
                                 "name": "Roob-Considine",
                                 "category": "MEDICAL",
@@ -191,6 +281,20 @@
                                 "price": 89.37660014473734,
                                 "fixedCost": 17.875320028947467,
                                 "variableCost": 0.08937660014473733,
+=======
+                                "id": 7,
+                                "name": "Schimmel-Barrows",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "inflationFactor": 1.4,
+                                "_price": 70.41492012524142,
+                                "_quality": 0.6022451531302473,
+                                "quality": 0.6022451531302473,
+                                "price": 112.82196447872157,
+                                "fixedCost": 22.564392895744316,
+                                "variableCost": 0.11282196447872157,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -206,6 +310,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 21,
                                 "name": "Rice, Jacobs and Goyette",
                                 "category": "RESTAURANT",
@@ -217,6 +322,20 @@
                                 "price": 21.313429603673665,
                                 "fixedCost": 4.262685920734733,
                                 "variableCost": 0.04262685920734733,
+=======
+                                "id": 13,
+                                "name": "Hills Inc",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "inflationFactor": 1.4,
+                                "_price": 25.084919718693513,
+                                "_quality": 0.42613251586948464,
+                                "quality": 0.42613251586948464,
+                                "price": 35.77441966880443,
+                                "fixedCost": 7.154883933760885,
+                                "variableCost": 0.07154883933760886,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -232,6 +351,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 31,
                                 "name": "Waelchi, Wiza and Dach",
                                 "category": "LUXURY",
@@ -243,6 +363,20 @@
                                 "price": 159.15416563258816,
                                 "fixedCost": 31.830833126517632,
                                 "variableCost": 0.07957708281629408,
+=======
+                                "id": 19,
+                                "name": "West-Nitzsche",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "inflationFactor": 1.4,
+                                "_price": 71.09540756941827,
+                                "_quality": 0.9986268242280177,
+                                "quality": 0.9986268242280177,
+                                "price": 142.093188647663,
+                                "fixedCost": 28.418637729532602,
+                                "variableCost": 0.142093188647663,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -268,14 +402,21 @@
                     "id": 2,
                     "isAlive": true,
                     "subsidiaries": 0,
+<<<<<<< Updated upstream
                     "name": "Sutherlan Spence",
                     "capital": 10716.177400462939,
                     "happiness": 49.35141527220656,
+=======
+                    "name": "Doreen Winchcomb",
+                    "capital": 11791.71835623977,
+                    "happiness": 58.28275704714426,
+>>>>>>> Stashed changes
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 2,
+<<<<<<< Updated upstream
                                 "name": "Koepp Group",
                                 "category": "SUPERMARKET",
                                 "_frequency": 0.45,
@@ -286,6 +427,19 @@
                                 "price": 7.827140763094657,
                                 "fixedCost": 1.5654281526189315,
                                 "variableCost": 0.03522213343392596,
+=======
+                                "name": "Herman-Schmidt",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 27.936144096179305,
+                                "_quality": 0.5066123398146851,
+                                "quality": 0.5066123398146851,
+                                "price": 42.088939422144904,
+                                "fixedCost": 8.41778788442898,
+                                "variableCost": 0.08417787884428982,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -301,6 +455,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 12,
                                 "name": "Dickinson, Osinski and O'Reilly",
                                 "category": "LUXURY",
@@ -312,6 +467,20 @@
                                 "price": 289.81444365163514,
                                 "fixedCost": 57.96288873032703,
                                 "variableCost": 0.14490722182581758,
+=======
+                                "id": 8,
+                                "name": "Jerde-Reichert",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 28.21248890870835,
+                                "_quality": 0.05312868990626418,
+                                "quality": 0.05312868990626418,
+                                "price": 29.711381483423036,
+                                "fixedCost": 5.942276296684607,
+                                "variableCost": 0.05942276296684607,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -327,6 +496,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 22,
                                 "name": "Zemlak-Goodwin",
                                 "category": "LUXURY",
@@ -338,6 +508,20 @@
                                 "price": 241.4014459395597,
                                 "fixedCost": 48.28028918791194,
                                 "variableCost": 0.12070072296977985,
+=======
+                                "id": 14,
+                                "name": "Hilpert Ltd",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "inflationFactor": 1.4,
+                                "_price": 25.027528504336814,
+                                "_quality": 0.6323666095244873,
+                                "quality": 0.6323666095244873,
+                                "price": 40.85410184940175,
+                                "fixedCost": 8.170820369880351,
+                                "variableCost": 0.08170820369880351,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -353,6 +537,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 32,
                                 "name": "Mitchell PLC",
                                 "category": "RESTAURANT",
@@ -364,6 +549,20 @@
                                 "price": 30.016426742287496,
                                 "fixedCost": 6.003285348457499,
                                 "variableCost": 0.060032853484574995,
+=======
+                                "id": 20,
+                                "name": "Smith, Jones and Lowe",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 28.380759769950295,
+                                "_quality": 0.7342443520787395,
+                                "quality": 0.7342443520787395,
+                                "price": 49.2191723387398,
+                                "fixedCost": 9.84383446774796,
+                                "variableCost": 0.09843834467747961,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -388,14 +587,21 @@
                     "id": 3,
                     "isAlive": true,
                     "subsidiaries": 0,
+<<<<<<< Updated upstream
                     "name": "Caye Gaylord",
                     "capital": 10716.177400462939,
                     "happiness": 49.35141527220656,
+=======
+                    "name": "Hamish Radbone",
+                    "capital": 11791.71835623977,
+                    "happiness": 58.28275704714426,
+>>>>>>> Stashed changes
                     "companies": [
                         {
                             "__class__": "Company",
                             "__value__": {
                                 "id": 3,
+<<<<<<< Updated upstream
                                 "name": "Ernser, Hodkiewicz and Lindgren",
                                 "category": "LUXURY",
                                 "_frequency": 0.05,
@@ -406,6 +612,19 @@
                                 "price": 277.3206654700012,
                                 "fixedCost": 55.46413309400024,
                                 "variableCost": 0.13866033273500059,
+=======
+                                "name": "Hermann-Zemlak",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "inflationFactor": 1.4,
+                                "_price": 204.07578251593006,
+                                "_quality": 0.8920855387733341,
+                                "quality": 0.8920855387733341,
+                                "price": 386.1288369122433,
+                                "fixedCost": 77.22576738244867,
+                                "variableCost": 0.19306441845612166,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -422,6 +641,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 13,
                                 "name": "Howell-Christiansen",
                                 "category": "SUPERMARKET",
@@ -433,6 +653,20 @@
                                 "price": 7.171026503766055,
                                 "fixedCost": 1.4342053007532112,
                                 "variableCost": 0.03226961926694725,
+=======
+                                "id": 9,
+                                "name": "Bayer, Powlowski and Gislason",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "inflationFactor": 1.4,
+                                "_price": 24.957854630022,
+                                "_quality": 0.6229686607718147,
+                                "quality": 0.6229686607718147,
+                                "price": 40.50581590462444,
+                                "fixedCost": 8.101163180924889,
+                                "variableCost": 0.08101163180924889,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -448,6 +682,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 23,
                                 "name": "Langosh, Bergstrom and Zemlak",
                                 "category": "RESTAURANT",
@@ -459,6 +694,20 @@
                                 "price": 30.128946097371564,
                                 "fixedCost": 6.025789219474313,
                                 "variableCost": 0.06025789219474313,
+=======
+                                "id": 15,
+                                "name": "Stoltenberg, Pfannerstill and Kiehn",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "inflationFactor": 1.4,
+                                "_price": 70.12881072565591,
+                                "_quality": 0.06536495575193646,
+                                "quality": 0.06536495575193646,
+                                "price": 74.71277733567433,
+                                "fixedCost": 14.942555467134866,
+                                "variableCost": 0.07471277733567433,
+>>>>>>> Stashed changes
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -475,6 +724,7 @@
                         {
                             "__class__": "Company",
                             "__value__": {
+<<<<<<< Updated upstream
                                 "id": 33,
                                 "name": "Labadie-Powlowski",
                                 "category": "LUXURY",
@@ -486,6 +736,19 @@
                                 "price": 248.46522982958496,
                                 "fixedCost": 49.693045965916994,
                                 "variableCost": 0.12423261491479248,
+=======
+                                "id": 21,
+                                "name": "Beer Group",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "inflationFactor": 1.4,
+                                "_price": 24.641952991497817,
+                                "_quality": 0.6284883472035825,
+                                "quality": 0.6284883472035825,
+                                "price": 40.129133298992656,
+                                "fixedCost": 8.02582665979853,
+                                "variableCost": 0.08025826659798531,
                                 "turnOver": 0,
                                 "companyValue": 0,
                                 "investmentLevel": 0,
@@ -508,7 +771,326 @@
             {
                 "__class__": "Businessman",
                 "__value__": {
+                    "id": 4,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": "Dorian Burness",
+                    "capital": 11791.71835623977,
+                    "happiness": 58.28275704714426,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 4,
+                                "name": "Barton Ltd",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 28.197329590804802,
+                                "_quality": 0.2534251059767777,
+                                "quality": 0.2534251059767777,
+                                "price": 35.34324083061664,
+                                "fixedCost": 7.068648166123328,
+                                "variableCost": 0.07068648166123327,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "money": 0
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 10,
+                                "name": "O'Kon and Sons",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "inflationFactor": 1.4,
+                                "_price": 24.21924244098504,
+                                "_quality": 0.6926673734746428,
+                                "quality": 0.6926673734746428,
+                                "price": 40.99512149012775,
+                                "fixedCost": 8.19902429802555,
+                                "variableCost": 0.0819902429802555,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "money": 0
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 16,
+                                "name": "Jenkins, Crooks and Moore",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "inflationFactor": 1.4,
+                                "_price": 211.45341489096512,
+                                "_quality": 0.08588917857986533,
+                                "quality": 0.08588917857986533,
+                                "price": 229.6149750038576,
+                                "fixedCost": 45.92299500077152,
+                                "variableCost": 0.1148074875019288,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "money": 0
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 22,
+                                "name": "Rohan Group",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 27.78012300348257,
+                                "_quality": 0.40741821148423096,
+                                "quality": 0.40741821148423096,
+                                "price": 39.098251032373376,
+                                "fixedCost": 7.819650206474676,
+                                "variableCost": 0.07819650206474675,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "money": 0
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 5,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": "Wainwright Lemary",
+                    "capital": 11791.71835623977,
+                    "happiness": 58.28275704714426,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 5,
+                                "name": "Pacocha LLC",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "inflationFactor": 1.4,
+                                "_price": 72.1016157533719,
+                                "_quality": 0.45709337794852123,
+                                "quality": 0.45709337794852123,
+                                "price": 105.05878685362698,
+                                "fixedCost": 21.011757370725398,
+                                "variableCost": 0.10505878685362699,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "money": 0
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 11,
+                                "name": "O'Kon, Grimes and Bruen",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "inflationFactor": 1.4,
+                                "_price": 24.64637257778009,
+                                "_quality": 0.9719592971455563,
+                                "quality": 0.9719592971455563,
+                                "price": 48.60164354566674,
+                                "fixedCost": 9.720328709133348,
+                                "variableCost": 0.09720328709133348,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "money": 0
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 17,
+                                "name": "Hegmann-Roberts",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "inflationFactor": 1.4,
+                                "_price": 28.01950878628559,
+                                "_quality": 0.7350099462248856,
+                                "quality": 0.7350099462248856,
+                                "price": 48.61412643254107,
+                                "fixedCost": 9.722825286508215,
+                                "variableCost": 0.09722825286508215,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "money": 0
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 23,
+                                "name": "Schmitt, Bergstrom and Pollich",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "inflationFactor": 1.4,
+                                "_price": 7.225648067682879,
+                                "_quality": 0.1693237648986562,
+                                "quality": 0.1693237648986562,
+                                "price": 8.449122002335645,
+                                "fixedCost": 1.6898244004671292,
+                                "variableCost": 0.038021049010510406,
+>>>>>>> Stashed changes
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "money": 0
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ]
+                }
+<<<<<<< Updated upstream
+=======
+            }
+        ],
+        "listOfCompanies": [
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 0,
+                    "name": "Stehr Inc",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "inflationFactor": 1.4,
+                    "_price": 211.80212382846776,
+                    "_quality": 0.6132535417068155,
+                    "quality": 0.6132535417068155,
+                    "price": 341.6905264073011,
+                    "fixedCost": 68.33810528146022,
+                    "variableCost": 0.17084526320365054,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 1,
+                    "name": "Nitzsche Ltd",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 27.73965632434032,
+                    "_quality": 0.7994914251541624,
+                    "quality": 0.7994914251541624,
+                    "price": 49.91727369237383,
+                    "fixedCost": 9.983454738474768,
+                    "variableCost": 0.09983454738474767,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+>>>>>>> Stashed changes
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
                     "id": 2,
+<<<<<<< Updated upstream
                     "isAlive": true,
                     "subsidiaries": 0,
                     "name": "Guntar Messenbird",
@@ -622,6 +1204,54 @@
                         }
                     ],
                     "subsidiariesHistory": [
+=======
+                    "name": "Herman-Schmidt",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 27.936144096179305,
+                    "_quality": 0.5066123398146851,
+                    "quality": 0.5066123398146851,
+                    "price": 42.088939422144904,
+                    "fixedCost": 8.41778788442898,
+                    "variableCost": 0.08417787884428982,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 3,
+                    "name": "Hermann-Zemlak",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "inflationFactor": 1.4,
+                    "_price": 204.07578251593006,
+                    "_quality": 0.8920855387733341,
+                    "quality": 0.8920855387733341,
+                    "price": 386.1288369122433,
+                    "fixedCost": 77.22576738244867,
+                    "variableCost": 0.19306441845612166,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+>>>>>>> Stashed changes
                         0
                     ]
                 }
@@ -629,6 +1259,7 @@
             {
                 "__class__": "Businessman",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 5,
                     "isAlive": true,
                     "subsidiaries": 0,
@@ -1698,6 +2329,20 @@
                     "price": 6.927680925393172,
                     "fixedCost": 1.3855361850786345,
                     "variableCost": 0.03117456416426928,
+=======
+                    "id": 4,
+                    "name": "Barton Ltd",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 28.197329590804802,
+                    "_quality": 0.2534251059767777,
+                    "quality": 0.2534251059767777,
+                    "price": 35.34324083061664,
+                    "fixedCost": 7.068648166123328,
+                    "variableCost": 0.07068648166123327,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1714,6 +2359,7 @@
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 18,
                     "name": "Runolfsdottir-Ondricka",
                     "category": "MEDICAL",
@@ -1725,6 +2371,20 @@
                     "price": 51.50541012047584,
                     "fixedCost": 10.301082024095168,
                     "variableCost": 0.05150541012047584,
+=======
+                    "id": 5,
+                    "name": "Pacocha LLC",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "inflationFactor": 1.4,
+                    "_price": 72.1016157533719,
+                    "_quality": 0.45709337794852123,
+                    "quality": 0.45709337794852123,
+                    "price": 105.05878685362698,
+                    "fixedCost": 21.011757370725398,
+                    "variableCost": 0.10505878685362699,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1741,6 +2401,7 @@
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 19,
                     "name": "Champlin-Bahringer",
                     "category": "RESTAURANT",
@@ -1830,6 +2491,19 @@
                     "price": 241.4014459395597,
                     "fixedCost": 48.28028918791194,
                     "variableCost": 0.12070072296977985,
+=======
+                    "id": 6,
+                    "name": "Daniel-Anderson",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "inflationFactor": 1.4,
+                    "_price": 69.67338422244615,
+                    "_quality": 0.14851406039265458,
+                    "quality": 0.14851406039265458,
+                    "price": 80.02086141461913,
+                    "fixedCost": 16.00417228292383,
+                    "variableCost": 0.08002086141461913,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1846,6 +2520,64 @@
             {
                 "__class__": "Company",
                 "__value__": {
+                    "id": 7,
+                    "name": "Schimmel-Barrows",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "inflationFactor": 1.4,
+                    "_price": 70.41492012524142,
+                    "_quality": 0.6022451531302473,
+                    "quality": 0.6022451531302473,
+                    "price": 112.82196447872157,
+                    "fixedCost": 22.564392895744316,
+                    "variableCost": 0.11282196447872157,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 8,
+                    "name": "Jerde-Reichert",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 28.21248890870835,
+                    "_quality": 0.05312868990626418,
+                    "quality": 0.05312868990626418,
+                    "price": 29.711381483423036,
+                    "fixedCost": 5.942276296684607,
+                    "variableCost": 0.05942276296684607,
+>>>>>>> Stashed changes
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+<<<<<<< Updated upstream
                     "id": 23,
                     "name": "Langosh, Bergstrom and Zemlak",
                     "category": "RESTAURANT",
@@ -1857,6 +2589,20 @@
                     "price": 30.128946097371564,
                     "fixedCost": 6.025789219474313,
                     "variableCost": 0.06025789219474313,
+=======
+                    "id": 9,
+                    "name": "Bayer, Powlowski and Gislason",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "inflationFactor": 1.4,
+                    "_price": 24.957854630022,
+                    "_quality": 0.6229686607718147,
+                    "quality": 0.6229686607718147,
+                    "price": 40.50581590462444,
+                    "fixedCost": 8.101163180924889,
+                    "variableCost": 0.08101163180924889,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1873,6 +2619,7 @@
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 24,
                     "name": "Jacobs Ltd",
                     "category": "LUXURY",
@@ -1910,6 +2657,20 @@
                     "price": 28.791813101714833,
                     "fixedCost": 5.758362620342967,
                     "variableCost": 0.05758362620342967,
+=======
+                    "id": 10,
+                    "name": "O'Kon and Sons",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "inflationFactor": 1.4,
+                    "_price": 24.21924244098504,
+                    "_quality": 0.6926673734746428,
+                    "quality": 0.6926673734746428,
+                    "price": 40.99512149012775,
+                    "fixedCost": 8.19902429802555,
+                    "variableCost": 0.0819902429802555,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1926,6 +2687,7 @@
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 26,
                     "name": "Huel and Sons",
                     "category": "RESTAURANT",
@@ -1937,6 +2699,19 @@
                     "price": 18.789602684678233,
                     "fixedCost": 3.7579205369356465,
                     "variableCost": 0.037579205369356466,
+=======
+                    "id": 11,
+                    "name": "O'Kon, Grimes and Bruen",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "inflationFactor": 1.4,
+                    "_price": 24.64637257778009,
+                    "_quality": 0.9719592971455563,
+                    "quality": 0.9719592971455563,
+                    "price": 48.60164354566674,
+                    "fixedCost": 9.720328709133348,
+                    "variableCost": 0.09720328709133348,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1953,6 +2728,36 @@
             {
                 "__class__": "Company",
                 "__value__": {
+                    "id": 12,
+                    "name": "Hermiston, Beahan and Kirlin",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 27.587648577845194,
+                    "_quality": 0.49825596270127814,
+                    "quality": 0.49825596270127814,
+                    "price": 41.333358978663995,
+                    "fixedCost": 8.2666717957328,
+                    "variableCost": 0.082666717957328,
+>>>>>>> Stashed changes
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+<<<<<<< Updated upstream
                     "id": 27,
                     "name": "Thompson-Murphy",
                     "category": "SUPERMARKET",
@@ -1964,6 +2769,20 @@
                     "price": 6.155545121353989,
                     "fixedCost": 1.2311090242707978,
                     "variableCost": 0.027699953046092955,
+=======
+                    "id": 13,
+                    "name": "Hills Inc",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "inflationFactor": 1.4,
+                    "_price": 25.084919718693513,
+                    "_quality": 0.42613251586948464,
+                    "quality": 0.42613251586948464,
+                    "price": 35.77441966880443,
+                    "fixedCost": 7.154883933760885,
+                    "variableCost": 0.07154883933760886,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -1973,12 +2792,18 @@
                     "taxHistory": [
                         0
                     ],
+<<<<<<< Updated upstream
                     "dontSell": 10
+=======
+                    "dontSell": 10,
+                    "money": 0
+>>>>>>> Stashed changes
                 }
             },
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 28,
                     "name": "Swift, Connelly and Daugherty",
                     "category": "MEDICAL",
@@ -1990,6 +2815,19 @@
                     "price": 86.52315175340236,
                     "fixedCost": 17.304630350680473,
                     "variableCost": 0.08652315175340236,
+=======
+                    "id": 14,
+                    "name": "Hilpert Ltd",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "inflationFactor": 1.4,
+                    "_price": 25.027528504336814,
+                    "_quality": 0.6323666095244873,
+                    "quality": 0.6323666095244873,
+                    "price": 40.85410184940175,
+                    "fixedCost": 8.170820369880351,
+                    "variableCost": 0.08170820369880351,
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2006,6 +2844,36 @@
             {
                 "__class__": "Company",
                 "__value__": {
+                    "id": 15,
+                    "name": "Stoltenberg, Pfannerstill and Kiehn",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "inflationFactor": 1.4,
+                    "_price": 70.12881072565591,
+                    "_quality": 0.06536495575193646,
+                    "quality": 0.06536495575193646,
+                    "price": 74.71277733567433,
+                    "fixedCost": 14.942555467134866,
+                    "variableCost": 0.07471277733567433,
+>>>>>>> Stashed changes
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+<<<<<<< Updated upstream
                     "id": 29,
                     "name": "Kris, Mann and Kemmer",
                     "category": "SUPERMARKET",
@@ -2043,6 +2911,20 @@
                     "price": 8.504020290004588,
                     "fixedCost": 1.7008040580009176,
                     "variableCost": 0.03826809130502065,
+=======
+                    "id": 16,
+                    "name": "Jenkins, Crooks and Moore",
+                    "category": "LUXURY",
+                    "_frequency": 0.05,
+                    "_necessity": 0.1,
+                    "inflationFactor": 1.4,
+                    "_price": 211.45341489096512,
+                    "_quality": 0.08588917857986533,
+                    "quality": 0.08588917857986533,
+                    "price": 229.6149750038576,
+                    "fixedCost": 45.92299500077152,
+                    "variableCost": 0.1148074875019288,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2059,6 +2941,7 @@
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 31,
                     "name": "Waelchi, Wiza and Dach",
                     "category": "LUXURY",
@@ -2070,6 +2953,20 @@
                     "price": 159.15416563258816,
                     "fixedCost": 31.830833126517632,
                     "variableCost": 0.07957708281629408,
+=======
+                    "id": 17,
+                    "name": "Hegmann-Roberts",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 28.01950878628559,
+                    "_quality": 0.7350099462248856,
+                    "quality": 0.7350099462248856,
+                    "price": 48.61412643254107,
+                    "fixedCost": 9.722825286508215,
+                    "variableCost": 0.09722825286508215,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2086,6 +2983,7 @@
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 32,
                     "name": "Mitchell PLC",
                     "category": "RESTAURANT",
@@ -2097,6 +2995,20 @@
                     "price": 30.016426742287496,
                     "fixedCost": 6.003285348457499,
                     "variableCost": 0.060032853484574995,
+=======
+                    "id": 18,
+                    "name": "Johnson-Ondricka",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 27.714491580359528,
+                    "_quality": 0.7941369772412662,
+                    "quality": 0.7941369772412662,
+                    "price": 49.723594149764764,
+                    "fixedCost": 9.944718829952954,
+                    "variableCost": 0.09944718829952953,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2112,6 +3024,7 @@
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 33,
                     "name": "Labadie-Powlowski",
                     "category": "LUXURY",
@@ -2149,6 +3062,20 @@
                     "price": 99.00096216385643,
                     "fixedCost": 19.800192432771286,
                     "variableCost": 0.09900096216385643,
+=======
+                    "id": 19,
+                    "name": "West-Nitzsche",
+                    "category": "MEDICAL",
+                    "_frequency": 0.1,
+                    "_necessity": 0.9,
+                    "inflationFactor": 1.4,
+                    "_price": 71.09540756941827,
+                    "_quality": 0.9986268242280177,
+                    "quality": 0.9986268242280177,
+                    "price": 142.093188647663,
+                    "fixedCost": 28.418637729532602,
+                    "variableCost": 0.142093188647663,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2164,6 +3091,7 @@
             {
                 "__class__": "Company",
                 "__value__": {
+<<<<<<< Updated upstream
                     "id": 35,
                     "name": "Feil, Sawayn and Stamm",
                     "category": "LUXURY",
@@ -2175,6 +3103,104 @@
                     "price": 173.6862137457471,
                     "fixedCost": 34.737242749149424,
                     "variableCost": 0.08684310687287355,
+=======
+                    "id": 20,
+                    "name": "Smith, Jones and Lowe",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 28.380759769950295,
+                    "_quality": 0.7342443520787395,
+                    "quality": 0.7342443520787395,
+                    "price": 49.2191723387398,
+                    "fixedCost": 9.84383446774796,
+                    "variableCost": 0.09843834467747961,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 21,
+                    "name": "Beer Group",
+                    "category": "RESTAURANT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.4,
+                    "inflationFactor": 1.4,
+                    "_price": 24.641952991497817,
+                    "_quality": 0.6284883472035825,
+                    "quality": 0.6284883472035825,
+                    "price": 40.129133298992656,
+                    "fixedCost": 8.02582665979853,
+                    "variableCost": 0.08025826659798531,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 22,
+                    "name": "Rohan Group",
+                    "category": "ENTERTAINMENT",
+                    "_frequency": 0.2,
+                    "_necessity": 0.3,
+                    "inflationFactor": 1.4,
+                    "_price": 27.78012300348257,
+                    "_quality": 0.40741821148423096,
+                    "quality": 0.40741821148423096,
+                    "price": 39.098251032373376,
+                    "fixedCost": 7.819650206474676,
+                    "variableCost": 0.07819650206474675,
+                    "turnOver": 0,
+                    "companyValue": 0,
+                    "investmentLevel": 0,
+                    "bruttoProfitHistory": [],
+                    "nettoProfitHistory": [],
+                    "turnOverHistory": [],
+                    "taxHistory": [
+                        0
+                    ],
+                    "dontSell": 10,
+                    "money": 0
+                }
+            },
+            {
+                "__class__": "Company",
+                "__value__": {
+                    "id": 23,
+                    "name": "Schmitt, Bergstrom and Pollich",
+                    "category": "SUPERMARKET",
+                    "_frequency": 0.45,
+                    "_necessity": 0.8,
+                    "inflationFactor": 1.4,
+                    "_price": 7.225648067682879,
+                    "_quality": 0.1693237648986562,
+                    "quality": 0.1693237648986562,
+                    "price": 8.449122002335645,
+                    "fixedCost": 1.6898244004671292,
+                    "variableCost": 0.038021049010510406,
+>>>>>>> Stashed changes
                     "turnOver": 0,
                     "companyValue": 0,
                     "investmentLevel": 0,
@@ -2295,7 +3321,12 @@
         "numActions": 3,
         "suicideCount": 0,
         "time": 0,
+<<<<<<< Updated upstream
         "avgHappiness": 49.35141527220656,
         "avgCapital": 10716.177400462939
+=======
+        "avgHappiness": 58.282757047144266,
+        "avgCapital": 11791.71835623977
+>>>>>>> Stashed changes
     }
 }

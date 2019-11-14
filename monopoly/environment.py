@@ -15,7 +15,7 @@ class Environment():
     """Defines the environment of the multiagent system."""
 
     def __init__(self,
-                 numPeople=4,
+                 numPeople=6,
                  numCompanies=None,
                  government=None,
                  listPeople=None,

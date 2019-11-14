@@ -88,20 +88,9 @@ class Government():
 
     def regulateSubsidiary(self,businessman,govMon, bmList):
         subs = self.robinHoodMode(businessman)
-        businessman.subsidiariesHistory.append(subs)
-        helper_funs.transaction(self, businessman, subs)
-        # if not self.isPersonHelped(businessman):
-        #     # if (businessman.capital < (self.avgCapital * 0.5)):
-        #     if businessman.capital < 10000 and self.governmentMoney - self.subsidyValue > 0:
-        #         businessman.subsidiaries += self.subsidyValue
-        #         self.governmentMoney -= self.subsidyValue
-        #         temp = [businessman.id, 0] # We put a pair instead of ID only because later on we will increment the counter to 3 days per subsidiary
-        #         self.subsidiariesStatus.append(temp)
-        # else:
-        #     for subs in self.subsidiariesStatus:
-        #         if subs[0] == businessman.id:
-        #             self.subsidiariesStatus.remove(subs)
-        #             businessman.subsidiaries = 0
+        if self.governmentMoney - subs > 0:
+            businessman.subsidiariesHistory.append(subs)
+            helper_funs.transaction(self, businessman, subs)
 
     def regulateTax(self,bm, company):
         #QUICKFIX
