@@ -171,6 +171,7 @@ class Businessman():
         company = Company(companyId)
         self.companies.append(company)
         logger.log_createCompany(time, self, company)
+        logger.testLog(time)
         return company
 
     # def investOwnCompany(self, price):

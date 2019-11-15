@@ -19,6 +19,38 @@ ch.setFormatter(formatter)
 logger.addHandler(fh)
 logger.addHandler(ch)
 
+# create logger with 'spam_application'
+logger2 = logging.getLogger('spam_application2')
+logger2.setLevel(logging.DEBUG)
+# create file handler which logs even debug messages
+fh2 = logging.FileHandler('businessman_sales.log', mode='w')
+fh2.setLevel(logging.DEBUG)
+# create console handler with a higher log level
+ch2 = logging.StreamHandler()
+ch2.setLevel(logging.ERROR)
+# add formatter to the handlers
+fh2.setFormatter(formatter)
+ch2.setFormatter(formatter)
+# add the handlers to the logger
+logger2.addHandler(fh2)
+logger2.addHandler(ch2)
+
+# create logger with 'spam_application'
+logger2 = logging.getLogger('spam_application3')
+logger2.setLevel(logging.DEBUG)
+# create file handler which logs even debug messages
+fh2 = logging.FileHandler('company_sales.log', mode='w')
+fh2.setLevel(logging.DEBUG)
+# create console handler with a higher log level
+ch2 = logging.StreamHandler()
+ch2.setLevel(logging.ERROR)
+# add formatter to the handlers
+fh2.setFormatter(formatter)
+ch2.setFormatter(formatter)
+# add the handlers to the logger
+logger2.addHandler(fh2)
+logger2.addHandler(ch2)
+
 def get_log_argument_dict(time, logtype):
     return {'envtime': '['+str(time)+']', 'logtype': str(logtype.name)}
 
@@ -77,6 +109,28 @@ def log_epidemy(days, epidemytype, deathcount):
     log_msg += str(epidemy)
     logger.info(log_msg, extra= get_log_argument_dict(time, Logtype.EPIDEMY))
 
+# Sales Logger Functions
+
+def testLog(days):
+    time = data_manager.getTime(days)
+    log_msg = 'Buenos Dias Matosinhos'
+    logger2.info(log_msg, extra= get_log_argument_dict(time, Logtype.SALES_INFO))
+
+# TODO: Sales and Costs functions per Businessman and per Company
+
+def log_businessman_sales():
+    return
+
+def log_businessman_cost():
+    return
+
+def log_company_sales():
+    return
+
+def log_company_sales():
+    return
+    
+
 class Logtype(Enum):
     INVESTMENT = 1
     ACQUIRE_COMPANY = 2
@@ -84,3 +138,5 @@ class Logtype(Enum):
     AUCTION = 4
     ELECTION = 5
     EPIDEMY = 6
+    SALES_INFO = 7
+    COSTS_INFO = 8
