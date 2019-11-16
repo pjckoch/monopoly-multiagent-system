@@ -67,6 +67,7 @@ class Company():
         self.taxHistory = [0] if taxHistory is None else taxHistory
         self.dontSell = 10
         self.money = 0
+        self.companySales = []
         
 
 

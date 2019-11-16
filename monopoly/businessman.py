@@ -52,6 +52,10 @@ class Businessman():
             self.capital -= company.price
             self.getCompanyOwner(company, env).capital += company.price
             company.money += company.price
+
+            # Append action 
+            company.companySales.append(self.id)
+
             # company.turnOver += company.price
             # helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
             return company
@@ -70,12 +74,12 @@ class Businessman():
         if not companiesFromCategory:
             return None
         # check if the businessman owns a company of that type himself, increasing the probability that he goes there
-        bmsCompaniesOfThisCategory = [i for i in range(len(self.companies)) if self.companies[i].category == category]
+        bmsCompaniesOfThisCategory = [i for i in range(len(companies)) if companies[i].category == category]
         # if he has a company of that type, he chooses it with 90 % probability
         if bmsCompaniesOfThisCategory and decision(0.9):
             # pick randomly from all his companies that belong to this particular category
             companyIdx = random.choice(bmsCompaniesOfThisCategory)
-            company = self.companies[companyIdx]
+            company = companies[companyIdx]
         # otherwise evaluate the quality of the other companies
         else:
             company = self.pickBasedOnPricePerformance(companiesFromCategory)

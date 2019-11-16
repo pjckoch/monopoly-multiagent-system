@@ -39,8 +39,15 @@ def runFromJson(jsonFile):
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
+                    print("-------------------------------")
+                    print("Company owner:" + str(bm.id))
+                    for company in bm.companies:
+                        print(company.id)
                     nProfit = 0
                     for company in bm.companies:
+                        print("Sales")
+                        print(company.id)
+                        print(company.companySales)
                         bProfit = company.computeBruttoProfit()
                         #QUICKFIX
                         env.government.regulateTax(bm, company)

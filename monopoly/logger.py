@@ -118,7 +118,7 @@ def testLog(days):
 
 # TODO: Sales and Costs functions per Businessman and per Company
 
-def log_businessman_sales():
+def log_businessman_sales(days, transactionList):
     return
 
 def log_businessman_cost():
