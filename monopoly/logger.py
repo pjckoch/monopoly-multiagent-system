@@ -36,20 +36,20 @@ logger2.addHandler(fh2)
 logger2.addHandler(ch2)
 
 # create logger with 'spam_application'
-logger2 = logging.getLogger('spam_application3')
-logger2.setLevel(logging.DEBUG)
+logger3 = logging.getLogger('spam_application3')
+logger3.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
-fh2 = logging.FileHandler('company_sales.log', mode='w')
-fh2.setLevel(logging.DEBUG)
+fh3 = logging.FileHandler('company_sales.log', mode='w')
+fh3.setLevel(logging.DEBUG)
 # create console handler with a higher log level
-ch2 = logging.StreamHandler()
-ch2.setLevel(logging.ERROR)
+ch3 = logging.StreamHandler()
+ch3.setLevel(logging.ERROR)
 # add formatter to the handlers
-fh2.setFormatter(formatter)
-ch2.setFormatter(formatter)
+fh3.setFormatter(formatter)
+ch3.setFormatter(formatter)
 # add the handlers to the logger
-logger2.addHandler(fh2)
-logger2.addHandler(ch2)
+logger3.addHandler(fh3)
+logger3.addHandler(ch3)
 
 def get_log_argument_dict(time, logtype):
     return {'envtime': '['+str(time)+']', 'logtype': str(logtype.name)}
@@ -118,17 +118,37 @@ def testLog(days):
 
 # TODO: Sales and Costs functions per Businessman and per Company
 
-def log_businessman_sales(days, transactionList):
-    return
+def log_businessman_sales(days, bm):
+    sales = 0
+    turnover = 0
+    for company in bm.companies:
+        sales += len(company.companySales)
+        turnover += len(company.companySales) * company.price
+    
+    time = data_manager.getTime(days)
+    log_msg = 'Businessman with the ID: '
+    log_msg += str(bm.id)
+    log_msg += ' had a number of: '
+    log_msg += str(sales)
+    log_msg += ' consumers. Turnover: '
+    log_msg += str(turnover)
+    logger2.info(log_msg, extra= get_log_argument_dict(time, Logtype.SALES_INFO))
+
+def log_split(days):
+    time = data_manager.getTime(days)
+    logger2.info('-------------------------------', extra= get_log_argument_dict(time, Logtype.SALES_INFO))
 
 def log_businessman_cost():
     return
 
-def log_company_sales():
-    return
-
-def log_company_sales():
-    return
+def log_company_sales(days, company):
+    time = data_manager.getTime(days)
+    log_msg = 'Company with the ID: '
+    log_msg += str(company.id)
+    log_msg += ' had a number of: '
+    log_msg += str(len(company.companySales))
+    log_msg += ' consumers'
+    logger3.info(log_msg, extra= get_log_argument_dict(time, Logtype.SALES_INFO))
     
 
 class Logtype(Enum):

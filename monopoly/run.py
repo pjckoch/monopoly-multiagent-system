@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import random
+import logger
 from environment import Environment
 from plot_history import *
 from enum import Enum
@@ -39,15 +40,14 @@ def runFromJson(jsonFile):
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
+                    logger.log_businessman_sales(days, bm)
                     print("-------------------------------")
                     print("Company owner:" + str(bm.id))
                     for company in bm.companies:
                         print(company.id)
                     nProfit = 0
                     for company in bm.companies:
-                        print("Sales")
-                        print(company.id)
-                        print(company.companySales)
+                        logger.log_company_sales(env.time, company)
                         bProfit = company.computeBruttoProfit()
                         #QUICKFIX
                         env.government.regulateTax(bm, company)
@@ -58,6 +58,7 @@ def runFromJson(jsonFile):
                     # add the summed up netto profits to the businessman capital
                     bm.capital += nProfit
 
+                logger.log_split(env.time)
                 averageCompany = env.computeAverageCompanyValue()
                 env.government.regulate(stillALiveBms)
                 env.computeAvgCapital()
