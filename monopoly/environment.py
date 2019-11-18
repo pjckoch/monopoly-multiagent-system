@@ -23,6 +23,7 @@ class Environment():
                  numActions=3,
                  suicideCount=0,
                  time=0):
+        self.inflationFactor = 0.8
         self.numPeople = numPeople
         self.numCompanies = (4 * self.numPeople) if numCompanies is None else numCompanies
         self.government = Government() if government is None else government
@@ -122,3 +123,9 @@ class Environment():
         company.dontSell = 100
 
         # print("Transaction: " + seller.name + "'s company " + company.name + " sold to " + buyer.name + " for " + str(price))
+
+    def inflationInDaHouse(self, bm):
+        if (bm.capital > self.avgCapital):
+            bm.capital /= self.inflationFactor
+        else:
+            bm.capital /= (1/self.inflationFactor)

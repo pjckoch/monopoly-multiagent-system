@@ -138,8 +138,14 @@ def log_split(days):
     time = data_manager.getTime(days)
     logger2.info('-------------------------------', extra= get_log_argument_dict(time, Logtype.SALES_INFO))
 
-def log_businessman_cost():
-    return
+# Not sure if useful function
+
+# def log_businessman_cost(days, bm):
+#     cost = 0
+#     turnover = 0
+#     for company in bm.companies:
+#         cost += len(company.companySales)
+#         turnover += len(company.companySales) * company.price
 
 def log_company_sales(days, company):
     time = data_manager.getTime(days)
@@ -149,6 +155,11 @@ def log_company_sales(days, company):
     log_msg += str(len(company.companySales))
     log_msg += ' consumers'
     logger3.info(log_msg, extra= get_log_argument_dict(time, Logtype.SALES_INFO))
+
+# Not sure if useful function
+
+# def log_company_cost(days, company):
+#     return
     
 
 class Logtype(Enum):

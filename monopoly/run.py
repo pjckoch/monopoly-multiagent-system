@@ -41,10 +41,8 @@ def runFromJson(jsonFile):
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
                     logger.log_businessman_sales(days, bm)
-                    print("-------------------------------")
-                    print("Company owner:" + str(bm.id))
-                    for company in bm.companies:
-                        print(company.id)
+                    # env.inflationInDaHouse(bm)
+
                     nProfit = 0
                     for company in bm.companies:
                         logger.log_company_sales(env.time, company)
@@ -67,6 +65,8 @@ def runFromJson(jsonFile):
 
             totalMoney += env.government.governmentMoney
             # print("Day " + str(env.time) + ": " + str(totalMoney))
+            print("INFLATION")
+            print(env.inflationFactor)
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)

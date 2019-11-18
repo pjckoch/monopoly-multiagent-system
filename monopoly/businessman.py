@@ -23,6 +23,7 @@ class Businessman():
                 subsidiaries=0,
                 companiesList=None,
                 subsidiariesHistory=None):
+
         self.id = businessmanId
         self.isAlive = isAlive
         self.subsidiaries = subsidiaries
@@ -39,6 +40,19 @@ class Businessman():
                     return bm
         return None
 
+    def getInflationVal(self, company):
+        if company.category == "MEDICAL":
+            return 0.95
+        elif company.category == "SUPERMARKET":
+            return 0.9
+        elif company.category == "RESTAURANT":
+            return 0.8
+        elif company.category == "ENTERTAINMENT":
+            return 0.75
+        elif company.category == "LUXURY":
+            return 0.7
+        return 1
+
     def chooseAction(self, companies, env):
         # if the businessman has no cash, he won't do shit
         if self.capital <= 0:
@@ -47,12 +61,13 @@ class Businessman():
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
-        if company and self.considerAction(company):
+        # if company and self.considerAction(company):
+        if company != None:
             # QUICKFIX
             self.capital -= company.price
-            self.getCompanyOwner(company, env).capital += company.price
-            company.money += company.price
-
+            inflationVal = self.getInflationVal(company)
+            self.getCompanyOwner(company, env).capital += company.price*((1/env.inflationFactor)/inflationVal)
+            company.money += company.price*(env.inflationFactor/inflationVal)
             # Append action 
             company.companySales.append(self.id)
 
@@ -74,12 +89,12 @@ class Businessman():
         if not companiesFromCategory:
             return None
         # check if the businessman owns a company of that type himself, increasing the probability that he goes there
-        bmsCompaniesOfThisCategory = [i for i in range(len(self.companies)) if self.companies[i].category == category]
+        bmsCompaniesOfThisCategory = [i for i in range(len(companies)) if companies[i].category == category]
         # if he has a company of that type, he chooses it with 90 % probability
         if bmsCompaniesOfThisCategory and decision(0.9):
             # pick randomly from all his companies that belong to this particular category
             companyIdx = random.choice(bmsCompaniesOfThisCategory)
-            company = self.companies[companyIdx]
+            company = companies[companyIdx]
         # otherwise evaluate the quality of the other companies
         else:
             company = self.pickBasedOnPricePerformance(companiesFromCategory)
