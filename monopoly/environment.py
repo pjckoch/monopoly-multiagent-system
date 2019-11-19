@@ -32,6 +32,7 @@ class Environment():
         self.numActions = numActions
         self.suicideCount = suicideCount
         self.time = time
+        self.totalMoney = 0
         
         if self.listOfCompanies is None:
             self.distributeCompanies()
