@@ -58,6 +58,7 @@ class Businessman():
         if self.capital <= 0:
             return None
         # choose a category randomly based on the frequency (probability)
+
         ################################'
         # TEST
         sumOfMoneyBefore = 0
@@ -66,10 +67,12 @@ class Businessman():
         for comp in companies:
             sumOfMoneyBefore += comp.turnOver
         ################################'
+
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
         if company and self.considerAction(company):
+
             ######################################
             # check if it's his own company
             for compy in self.companies:
@@ -79,11 +82,13 @@ class Businessman():
                 isMyCompany = False
             # print(isMyCompany)
             ######################################
+
             inflationVal = self.getInflationVal(company)
             # Append action 
             company.companySales.append(self.id)
             # TODO: Activate inflation
-            helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
+            # helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
+
             ################################'
             # TEST
             sumOfMoneyAfter = 0
@@ -93,6 +98,7 @@ class Businessman():
                 sumOfMoneyAfter += comp.turnOver
             ################################'
             # print(sumOfMoneyBefore, sumOfMoneyAfter)
+
             return company
         else:
             return None

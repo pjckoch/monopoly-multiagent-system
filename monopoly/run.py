@@ -7,6 +7,7 @@ from plot_history import *
 from enum import Enum
 import data_manager
 import argparse
+import helper_funs
 
 days = 365
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
@@ -48,6 +49,7 @@ def runFromJson(jsonFile):
                 env.totalMoney += bm.capital
                 for comp in bm.companies:
                     env.totalMoney += comp.turnOver
+                    print(comp.turnOver)
             env.totalMoney += env.government.governmentMoney
             print("After: " + str(env.totalMoney))
             #################################
