@@ -31,14 +31,22 @@ class Environment():
         self.numActions = numActions
         self.suicideCount = suicideCount
         self.time = time
+        self.activeCompanies = []
         
         if self.listOfCompanies is None:
             self.distributeCompanies()
+            self.updateActiveCompanies()
         
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
         self.computeAvgCapital()
 
+
+    def updateActiveCompanies(self):
+        actives = []
+        for bm in [bm for bm in self.listOfPeople if bm.isAlive]:
+            actives.extend(bm.companies)
+        self.activeCompanies = actives
 
     def computeAvgHappiness(self):
         """Function to compute the average happiness of all businessmen."""

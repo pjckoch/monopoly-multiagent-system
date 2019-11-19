@@ -8,7 +8,7 @@ def transaction(sender, receiver, amount):
     elif type(sender) is government.Government:
         sender.governmentMoney -= amount
     if type(receiver) is company.Company:
-        receiver.turnOver += 2*amount
+        receiver.turnOver += amount
     elif type(receiver) is government.Government:
         receiver.governmentMoney += amount
     else:

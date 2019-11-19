@@ -5,6 +5,7 @@ from enum import Enum
 from django.utils.functional import cached_property
 
 
+
 company_list = "lists/companies.csv"
 
 df = pd.read_csv(company_list)
@@ -69,7 +70,22 @@ class Company():
         self.money = 0
         self.companySales = []
         
+    def isBankrupting(self):
+        if (len(self.nettoProfitHistory) > 6):
+            if sum(self.nettoProfitHistory[-5:]) < 0:
+                return True
 
+        return False
+
+    def bankrupcy(self, env):
+        if self.isBankrupting():
+            owner = env.findCompanyOwner(self)
+            print(owner.name)
+            print(self.name)
+            env.government.governmentMoney -= self.fixedCost*30
+            owner.capital += self.fixedCost*30
+            owner.loseCompany(self)
+            env.updateActiveCompanies()
 
     def computeBruttoProfit(self):
         """Compute profit without considering taxes"""

@@ -178,6 +178,9 @@ class Businessman():
         logger.testLog(time)
         return company
 
+    def loseCompany(self, cmp):
+        self.companies.remove(cmp)
+
     # def investOwnCompany(self, price):
     #     cmpList = self.companies
 
