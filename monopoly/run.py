@@ -18,37 +18,26 @@ def runFromJson(jsonFile):
 
     env = data_manager.readFromJson(jsonFile)
 
-    totalMoney = 0
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
-        totalMoney = 0
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
             stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
 
-            activeCompanies = []
-
-
-            env.updateActiveCompanies()
-
             money = 0
 
             for bm in stillALiveBms:
                 money += bm.capital
-                action = bm.chooseAction(env.activeCompanies, env)
+                action = bm.chooseAction(env.listOfCompanies, env)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
-                totalMoney += bm.capital
                 for company in bm.companies:
                     company.updateSale()
-                    company.bankrupcy(env)
-
-            env.updateActiveCompanies()
+                    # company.bankrupcy(env)
 
             money += env.government.governmentMoney
 
             print(money)
-            print("\n\n\nbreak\n\n")
 
             env.time = round(time, 1)
 
@@ -78,10 +67,6 @@ def runFromJson(jsonFile):
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, env)
 
-            totalMoney += env.government.governmentMoney
-            # print("Day " + str(env.time) + ": " + str(totalMoney))
-            print("INFLATION")
-            print(env.inflationFactor)
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)

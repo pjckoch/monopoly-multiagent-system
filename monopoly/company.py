@@ -66,12 +66,11 @@ class Company():
         self.turnOverHistory = [] if turnOverHistory is None else turnOverHistory
         self.taxHistory = [0] if taxHistory is None else taxHistory
         self.dontSell = 10
-        self.money = 0
         self.companySales = []
         
     def isBankrupting(self):
-        if (len(self.nettoProfitHistory) > 6):
-            if sum(self.nettoProfitHistory[-5:]) < 0:
+        if (len(self.nettoProfitHistory) > 10):
+            if sum(self.nettoProfitHistory[-9:]) < 0:
                 return True
 
         return False
@@ -84,7 +83,6 @@ class Company():
             env.government.governmentMoney -= self.fixedCost*30
             owner.capital += self.fixedCost*30
             owner.loseCompany(self)
-            env.updateActiveCompanies()
 
     def computeBruttoProfit(self):
         """Compute profit without considering taxes"""

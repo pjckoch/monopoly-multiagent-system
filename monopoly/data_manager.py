@@ -127,8 +127,8 @@ def evaluateStats(time, environment):
     for bm in environment.listOfPeople:
         turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(bm)
         appendToDataFrame(time, environment, bm, turnOver, taxes, nettoProfit)
-        for cmp in bm.companies:
-            appendToDataFrameCategories(time, cmp, bm)
+        for comp in bm.companies:
+            appendToDataFrameCategories(time, comp, bm)
 
 def computeStatsForEvaluationInterval(bm):
     """Compute the stats for one Businessman over a given evaluation interval"""

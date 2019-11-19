@@ -61,18 +61,21 @@ class Businessman():
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
-        # if company and self.considerAction(company):
-        if company != None:
-            # QUICKFIX
-            self.capital -= company.price
+        if company and self.considerAction(company):
+            ######################################
+            # check if it's his own company
+            for compy in self.companies:
+                if company.id == compy.id:
+                    isMyCompany = True
+            else:
+                isMyCompany = False
+            # print(isMyCompany)
+            ######################################
             inflationVal = self.getInflationVal(company)
-            self.getCompanyOwner(company, env).capital += company.price*((1/env.inflationFactor)/inflationVal)
-            company.money += company.price*(env.inflationFactor/inflationVal)
             # Append action 
             company.companySales.append(self.id)
-
-            # company.turnOver += company.price
-            # helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
+            # TODO: Activate inflation
+            helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
             return company
         else:
             return None
