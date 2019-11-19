@@ -22,12 +22,11 @@ def runFromJson(jsonFile):
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
-            stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
+            stillALiveBms = env.listOfPeople#[bm for bm in env.listOfPeople if bm.isAlive]
 
             env.totalMoney = 0
 
             for bm in stillALiveBms:
-                env.totalMoney += bm.capital
                 action = bm.chooseAction(env.listOfCompanies, env)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
@@ -35,11 +34,17 @@ def runFromJson(jsonFile):
                     company.updateSale()
                     # company.bankrupcy(env)
 
+            for bm in stillALiveBms:
+                env.totalMoney += bm.capital
+                for comp in bm.companies:
+                    env.totalMoney += comp.turnOver
             env.totalMoney += env.government.governmentMoney
+            print(env.totalMoney)
 
             env.time = round(time, 1)
 
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
+                print("----------------")
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
                     logger.log_businessman_sales(days, bm)
@@ -49,10 +54,9 @@ def runFromJson(jsonFile):
                     for company in bm.companies:
                         logger.log_company_sales(env.time, company)
                         bProfit = company.computeBruttoProfit()
-                        #QUICKFIX
+                        company.payCosts(env.government) 
                         env.government.regulateTax(bm, company)
-                        nProfit += company.computeNettoProfit()         
-                        # company.payCosts(env.government)            
+                        nProfit += company.computeNettoProfit()    
                         company.computeCompanyValue()
 
                     # add the summed up netto profits to the businessman capital

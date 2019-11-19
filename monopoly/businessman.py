@@ -58,6 +58,14 @@ class Businessman():
         if self.capital <= 0:
             return None
         # choose a category randomly based on the frequency (probability)
+        ################################'
+        # TEST
+        sumOfMoneyBefore = 0
+        for bm in env.listOfPeople:
+            sumOfMoneyBefore += bm.capital
+        for comp in companies:
+            sumOfMoneyBefore += comp.turnOver
+        ################################'
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
@@ -76,6 +84,15 @@ class Businessman():
             company.companySales.append(self.id)
             # TODO: Activate inflation
             helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
+            ################################'
+            # TEST
+            sumOfMoneyAfter = 0
+            for bm in env.listOfPeople:
+                sumOfMoneyAfter += bm.capital
+            for comp in env.listOfCompanies:
+                sumOfMoneyAfter += comp.turnOver
+            ################################'
+            # print(sumOfMoneyBefore, sumOfMoneyAfter)
             return company
         else:
             return None
