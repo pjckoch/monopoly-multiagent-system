@@ -24,7 +24,15 @@ def runFromJson(jsonFile):
 
             stillALiveBms = env.listOfPeople#[bm for bm in env.listOfPeople if bm.isAlive]
 
+            #################################
             env.totalMoney = 0
+            for bm in stillALiveBms:
+                env.totalMoney += bm.capital
+                for comp in bm.companies:
+                    env.totalMoney += comp.turnOver
+            env.totalMoney += env.government.governmentMoney
+            print("Before: " + str(env.totalMoney))
+            #################################
 
             for bm in stillALiveBms:
                 action = bm.chooseAction(env.listOfCompanies, env)
@@ -33,13 +41,16 @@ def runFromJson(jsonFile):
                 for company in bm.companies:
                     company.updateSale()
                     # company.bankrupcy(env)
-
+            #################################
+            # TEST PRINT STATEMENTS
+            env.totalMoney = 0
             for bm in stillALiveBms:
                 env.totalMoney += bm.capital
                 for comp in bm.companies:
                     env.totalMoney += comp.turnOver
             env.totalMoney += env.government.governmentMoney
-            print(env.totalMoney)
+            print("After: " + str(env.totalMoney))
+            #################################
 
             env.time = round(time, 1)
 
