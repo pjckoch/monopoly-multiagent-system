@@ -66,8 +66,13 @@ class Businessman():
             # QUICKFIX
             self.capital -= company.price
             inflationVal = self.getInflationVal(company)
-            self.getCompanyOwner(company, env).capital += company.price*((1/env.inflationFactor)/inflationVal)
-            company.money += company.price*(env.inflationFactor/inflationVal)
+
+            # self.getCompanyOwner(company, env).capital += company.price*((1/env.inflationFactor)/inflationVal)
+            # company.money += company.price*(env.inflationFactor/inflationVal)
+
+            self.getCompanyOwner(company, env).capital += company.price
+            helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
+
             # Append action 
             company.companySales.append(self.id)
 

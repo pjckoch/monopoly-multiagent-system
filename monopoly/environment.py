@@ -23,7 +23,7 @@ class Environment():
                  numActions=3,
                  suicideCount=0,
                  time=0):
-        self.inflationFactor = 0.8
+        self.inflationFactor = 1
         self.numPeople = numPeople
         self.numCompanies = (4 * self.numPeople) if numCompanies is None else numCompanies
         self.government = Government() if government is None else government

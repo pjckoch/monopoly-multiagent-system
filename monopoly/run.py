@@ -46,9 +46,8 @@ def runFromJson(jsonFile):
             env.updateActiveCompanies()
 
             money += env.government.governmentMoney
-
             print(money)
-            print("\n\n\nbreak\n\n")
+
 
             env.time = round(time, 1)
 
@@ -57,7 +56,11 @@ def runFromJson(jsonFile):
                 for bm in stillALiveBms:
                     logger.log_businessman_sales(days, bm)
                     # env.inflationInDaHouse(bm)
-
+                    print("Businessman ID:" + str(bm.id))
+                    print("List of Sales:")
+                    for company in bm.companies:
+                        print(company.companySales)
+                        company.companySales = []
                     nProfit = 0
                     for company in bm.companies:
                         logger.log_company_sales(env.time, company)
@@ -80,8 +83,6 @@ def runFromJson(jsonFile):
 
             totalMoney += env.government.governmentMoney
             # print("Day " + str(env.time) + ": " + str(totalMoney))
-            print("INFLATION")
-            print(env.inflationFactor)
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)
