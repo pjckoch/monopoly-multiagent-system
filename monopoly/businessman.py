@@ -59,31 +59,13 @@ class Businessman():
             return None
         # choose a category randomly based on the frequency (probability)
 
-        ################################'
-        # TEST
-        sumOfMoneyBefore = 0
-        for bm in env.listOfPeople:
-            sumOfMoneyBefore += bm.capital
-        for comp in companies:
-            sumOfMoneyBefore += comp.turnOver
-        ################################'
-
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
         if company and self.considerAction(company):
 
             ######################################
-            # check if it's his own company
-            for compy in self.companies:
-                if company.id == compy.id:
-                    isMyCompany = True
-            else:
-                isMyCompany = False
-            # print(isMyCompany)
-            ######################################
-
-            ######################################
+            # THIS IS THE TEMPORARY BUG FIX
             for bm in env.listOfPeople:
                 for comp in bm.companies:
                     if comp.id == company.id:
@@ -94,17 +76,7 @@ class Businessman():
             inflationVal = self.getInflationVal(company)
             # Append action 
             company.companySales.append(self.id)
-            # TODO: Activate 
             helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
-            ################################'
-            # TEST
-            sumOfMoneyAfter = 0
-            for bm in env.listOfPeople:
-                sumOfMoneyAfter += bm.capital
-            for comp in env.listOfCompanies:
-                sumOfMoneyAfter += comp.turnOver
-            ################################'
-            # print(sumOfMoneyBefore, sumOfMoneyAfter)
 
             return company
         else:

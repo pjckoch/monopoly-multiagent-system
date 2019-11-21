@@ -25,39 +25,17 @@ def runFromJson(jsonFile):
 
             stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
 
-            #################################
-            env.totalMoney = 0
-            for bm in stillALiveBms:
-                env.totalMoney += bm.capital
-                for comp in bm.companies:
-                    env.totalMoney += comp.turnOver
-            env.totalMoney += env.government.governmentMoney
-            print("Before: " + str(env.totalMoney))
-            #################################
-
             for bm in stillALiveBms:
                 action = bm.chooseAction(env.listOfCompanies, env)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
                 for company in bm.companies:
                     company.updateSale()
-                    # company.bankrupcy(env)
-            #################################
-            # TEST PRINT STATEMENTS
-            env.totalMoney = 0
-            for bm in stillALiveBms:
-                env.totalMoney += bm.capital
-                for comp in bm.companies:
-                    env.totalMoney += comp.turnOver
-                    print(comp.turnOver)
-            env.totalMoney += env.government.governmentMoney
-            print("After: " + str(env.totalMoney))
-            #################################
+                    company.bankrupcy(env)
 
             env.time = round(time, 1)
 
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
-                print("----------------")
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
                     logger.log_businessman_sales(days, bm)
