@@ -23,7 +23,7 @@ def runFromJson(jsonFile):
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
-            stillALiveBms = env.listOfPeople#[bm for bm in env.listOfPeople if bm.isAlive]
+            stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
 
             #################################
             env.totalMoney = 0

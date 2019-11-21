@@ -83,12 +83,19 @@ class Businessman():
             # print(isMyCompany)
             ######################################
 
+            ######################################
+            for bm in env.listOfPeople:
+                for comp in bm.companies:
+                    if comp.id == company.id:
+                        company = comp
+
+            ######################################
+
             inflationVal = self.getInflationVal(company)
             # Append action 
             company.companySales.append(self.id)
-            # TODO: Activate inflation
-            # helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
-
+            # TODO: Activate 
+            helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
             ################################'
             # TEST
             sumOfMoneyAfter = 0
