@@ -1,84 +1,105 @@
 import numpy as np
+import pandas as pd
 import random
+import logger
 from environment import Environment
 from plot_history import *
+from enum import Enum
+import data_manager
+import argparse
+import helper_funs
 
-days = 50
+days = 365
+evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
-if __name__ == "__main__":
+parser = argparse.ArgumentParser(description='Run the multiagent monopoly system.')
+parser.add_argument('-e', '--existing', help='Use existing environment')
 
-    env = Environment()
+def runFromJson(jsonFile):
 
-    # print businessmen id's
-    print("Businessman IDs:")
-    print([bm.id for bm in env.listOfPeople])
+    env = data_manager.readFromJson(jsonFile)
 
-    # print companies id's
-    print("Company IDs:")
-    print([company.id for company in env.listOfCompanies])
-
-    # print average capital and average happiness
-    print("Average Capital:")
-    print(env.avgCapital)
-    print("Average Happiness:")
-    print(env.avgHappiness)
-
-    # change this later, one action per loop only
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
-
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
             stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
+
             for bm in stillALiveBms:
-                
-                # choose randomly
-                companiesForEvaluation = []
+                action = bm.chooseAction(env.listOfCompanies, env)
+                # assuming buying a new company counts as an investment
+                bm.invest(env)
+                for company in bm.companies:
+                    company.updateSale()
+                    company.bankrupcy(env)
 
-                for i in range(env.numActions):
-                    companiesForEvaluation.append(env.listOfCompanies[random.randint(0, len(env.listOfCompanies)-1)])
-
-                bmDailyActions = []
-                for company in companiesForEvaluation:
-                    aux = bm.chooseAction(company)
-                    bmDailyActions.append(aux)
-
-                print("Businessman " + str(bm.id) + " List of Actions:")
-                for action in bmDailyActions:
-                    if action is not None:
-                        print(action.id)
-                    else:
-                        print("No action")
             env.time = round(time, 1)
-            print("Days passed: " + str(env.time))
 
-            if env.time % 1.0 == 0.0 :
-
+            if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
+                    logger.log_businessman_sales(days, bm)
+                    # env.inflationInDaHouse(bm)
 
-                    dailyProfits = []
-
+                    nProfit = 0
                     for company in bm.companies:
+                        logger.log_company_sales(env.time, company)
+                        bProfit = company.computeBruttoProfit()
+                        company.payCosts(env.government) 
+                        env.government.regulateTax(bm, company)
+                        nProfit += company.computeNettoProfit()    
+                        company.computeCompanyValue()
 
-                        dailyProfits.append(company.computeProfit())
-                        
+                    # add the summed up netto profits to the businessman capital
+                    bm.capital += nProfit
 
-                    # append the new values into the peopleProfitDict
-                    env.addProfitsForBM(bm.id, dailyProfits)
+                logger.log_split(env.time)
+                averageCompany = env.computeAverageCompanyValue()
+                env.government.regulate(stillALiveBms)
+                env.computeAvgCapital()
+                env.computeAvgHappiness()
+                data_manager.evaluateStats(time, env)
 
-                    # compute the updated capital for the businessman and print
-                    bm.capital += sum(dailyProfits)
-                    env.addCapitalForBM(bm.id, bm.capital)
+
+    data_manager.exportToCSV()
+    data_manager.writeToJson(data_manager.FileType.RESULTS, env)
 
 
-    # print some values
-    print("COMPANY ID: ",env.listOfCompanies[0].id)
-    print("COMPANY frequency: ",env.listOfCompanies[0].frequency)
-    print("COMPANY necessity: " ,env.listOfCompanies[0].necessity)
-    print("COMPANY price: " ,env.listOfCompanies[0].price)
-    print("COMPANY variableCost: " ,env.listOfCompanies[0].variableCost)
-    print("COMPANY fixedCost: " ,env.listOfCompanies[0].fixedCost)
+def create_new_environment():
+    data_manager.init_statistics()
+    env = Environment()
+    jsonfile = data_manager.FileType.CONFIG
+    data_manager.writeToJson(jsonfile, env)
+    return jsonfile
 
-    # plot profit history and capital
-    plot_all(env.peopleCapitalDict, env.peopleProfitDict, numDays = days)
+def use_existing_environment():
+    dataframe_total = pd.read_csv(data_manager.FileType.STATS.value, index_col=0)
+    lastItem_total = dataframe_total.iloc[-1]
+    lastDfIndex_total = len(dataframe_total.index) + 1
+    lastDate = data_manager.convertStringToDate(lastItem_total.time)
+
+    dataframe_companies = pd.read_csv(data_manager.FileType.COMPANY_STATS.value, index_col=0)
+    lastItem_companies = dataframe_companies.tail(1)
+    lastDfIndex_companies = len(lastItem_companies.index) + 1
+
+    data_manager.init_statistics(dataframe_total=dataframe_total,
+                                 dataframe_categories=dataframe_companies,
+                                 dfIdx=lastDfIndex_total,
+                                 dfIdxCompanies=lastDfIndex_companies,
+                                 startDt=lastDate)
+    return data_manager.FileType.RESULTS
+
+
+chooseEnvironment = {
+    'new': create_new_environment,
+    'existing': use_existing_environment
+}
+
+if __name__ == "__main__":
+    args = parser.parse_args()
+    if args.existing:
+        env_type = 'existing'
+    else:
+        env_type = 'new'
+    jsonfile = chooseEnvironment[env_type]()
+    runFromJson(jsonfile)
