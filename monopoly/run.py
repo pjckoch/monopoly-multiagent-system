@@ -28,7 +28,6 @@ def runFromJson(jsonFile):
 
             activeCompanies = []
 
-
             env.updateActiveCompanies()
 
             money = 0
@@ -38,37 +37,30 @@ def runFromJson(jsonFile):
                 action = bm.chooseAction(env.activeCompanies, env)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
-                totalMoney += bm.capital
                 for company in bm.companies:
                     company.updateSale()
                     company.bankrupcy(env)
 
             env.updateActiveCompanies()
 
-            money += env.government.governmentMoney
-            print(money)
-
-
             env.time = round(time, 1)
 
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
+                    env.totalMoney += bm.capital
                     logger.log_businessman_sales(days, bm)
                     # env.inflationInDaHouse(bm)
                     print("Businessman ID:" + str(bm.id))
                     print("List of Sales:")
-                    for company in bm.companies:
-                        print(company.companySales)
-                        company.companySales = []
                     nProfit = 0
                     for company in bm.companies:
+                        env.totalMoney += company.turnOver
                         logger.log_company_sales(env.time, company)
                         bProfit = company.computeBruttoProfit()
-                        #QUICKFIX
                         env.government.regulateTax(bm, company)
                         nProfit += company.computeNettoProfit()         
-                        # company.payCosts(env.government)            
+                        company.payCosts(env.government)            
                         company.computeCompanyValue()
 
                     # add the summed up netto profits to the businessman capital
@@ -81,8 +73,7 @@ def runFromJson(jsonFile):
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, env)
 
-            totalMoney += env.government.governmentMoney
-            # print("Day " + str(env.time) + ": " + str(totalMoney))
+            env.totalMoney += env.government.governmentMoney
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)

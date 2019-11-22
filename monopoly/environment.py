@@ -33,6 +33,7 @@ class Environment():
         self.suicideCount = suicideCount
         self.time = time
         self.activeCompanies = []
+        self.totalMoney = 0
         
         if self.listOfCompanies is None:
             self.distributeCompanies()
