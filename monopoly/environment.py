@@ -15,7 +15,7 @@ class Environment():
     """Defines the environment of the multiagent system."""
 
     def __init__(self,
-                 numPeople=6,
+                 numPeople=10,
                  numCompanies=None,
                  government=None,
                  listPeople=None,
@@ -32,23 +32,14 @@ class Environment():
         self.numActions = numActions
         self.suicideCount = suicideCount
         self.time = time
-        self.activeCompanies = []
         self.totalMoney = 0
         
         if self.listOfCompanies is None:
             self.distributeCompanies()
-            self.updateActiveCompanies()
         
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
         self.computeAvgCapital()
-
-
-    def updateActiveCompanies(self):
-        actives = []
-        for bm in [bm for bm in self.listOfPeople if bm.isAlive]:
-            actives.extend(bm.companies)
-        self.activeCompanies = actives
 
     def computeAvgHappiness(self):
         """Function to compute the average happiness of all businessmen."""
@@ -87,9 +78,9 @@ class Environment():
     #     self.peopleCapitalDict[bmId].append(capital)
         
 
-    # def addProfitsForCompany(self, cmpId, profit):
+    # def addProfitsForCompany(self, compId, profit):
     #     """Function to append a profit for a certain businessman to the peopleProfitDict"""
-    #     self.companiesProfitDict[cmpId].append(profit)
+    #     self.companiesProfitDict[compId].append(profit)
 
 
     def distributeCompanies(self):
@@ -112,16 +103,16 @@ class Environment():
             for company in bm.companies:
                 ownedCompanies.append(company)
 
-        for cmp in ownedCompanies:
-            if cmp.category in categories:
-                companies.append(cmp)
+        for comp in ownedCompanies:
+            if comp.category in categories:
+                companies.append(comp)
 
         return companies
 
     def findCompanyOwner(self, company):
         for bm in self.listOfPeople:
-            for cmp in bm.companies:
-                if cmp.id == company.id:
+            for comp in bm.companies:
+                if comp.id == company.id:
                     return bm
         return None
 

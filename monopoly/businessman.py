@@ -58,26 +58,26 @@ class Businessman():
         if self.capital <= 0:
             return None
         # choose a category randomly based on the frequency (probability)
+
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
-        # if company and self.considerAction(company):
-        if company != None:
-            # QUICKFIX
-            self.capital -= company.price
+        if company and self.considerAction(company):
+
+            ######################################
+            # THIS IS THE TEMPORARY BUG FIX
+            for bm in env.listOfPeople:
+                for comp in bm.companies:
+                    if comp.id == company.id:
+                        company = comp
+
+            ######################################
+
             inflationVal = self.getInflationVal(company)
-
-            # self.getCompanyOwner(company, env).capital += company.price*((1/env.inflationFactor)/inflationVal)
-            # company.money += company.price*(env.inflationFactor/inflationVal)
-
-            self.getCompanyOwner(company, env).capital += company.price
-            helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
-
             # Append action 
             company.companySales.append(self.id)
+            helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
 
-            # company.turnOver += company.price
-            # helper_funs.transaction(self, company, company.price) #temporary way, change to transaction function
             return company
         else:
             return None

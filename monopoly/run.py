@@ -7,6 +7,7 @@ from plot_history import *
 from enum import Enum
 import data_manager
 import argparse
+import helper_funs
 
 days = 365
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
@@ -18,30 +19,19 @@ def runFromJson(jsonFile):
 
     env = data_manager.readFromJson(jsonFile)
 
-    totalMoney = 0
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
-        totalMoney = 0
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
             stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
 
-            activeCompanies = []
-
-            env.updateActiveCompanies()
-
-            money = 0
-
             for bm in stillALiveBms:
-                money += bm.capital
-                action = bm.chooseAction(env.activeCompanies, env)
+                action = bm.chooseAction(env.listOfCompanies, env)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
                 for company in bm.companies:
                     company.updateSale()
                     company.bankrupcy(env)
-
-            env.updateActiveCompanies()
 
             env.time = round(time, 1)
 
@@ -58,9 +48,9 @@ def runFromJson(jsonFile):
                         env.totalMoney += company.turnOver
                         logger.log_company_sales(env.time, company)
                         bProfit = company.computeBruttoProfit()
+                        company.payCosts(env.government) 
                         env.government.regulateTax(bm, company)
-                        nProfit += company.computeNettoProfit()         
-                        company.payCosts(env.government)            
+                        nProfit += company.computeNettoProfit()    
                         company.computeCompanyValue()
 
                     # add the summed up netto profits to the businessman capital
@@ -73,7 +63,6 @@ def runFromJson(jsonFile):
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, env)
 
-            env.totalMoney += env.government.governmentMoney
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)

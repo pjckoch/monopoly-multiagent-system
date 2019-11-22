@@ -34,8 +34,8 @@ def plot_all(peopleCapitalDict, peopleProfitDict, companiesProfitDict, companies
     bmIds = list(peopleProfitDict.keys())
     line_labels = ['BM ' + str(id) for id in bmIds]
 
-    cmpIds = list(companiesProfitDict.keys())
-    line_labels = ['BM ' + str(id) for id in cmpIds]
+    compIds = list(companiesProfitDict.keys())
+    line_labels = ['BM ' + str(id) for id in compIds]
 
     ax2.set_xlim([1, numDays])
     ax2.set_ylim([-1000, 3000])
@@ -49,9 +49,9 @@ def plot_all(peopleCapitalDict, peopleProfitDict, companiesProfitDict, companies
     totalDailyProfits = np.sum(profitArr, 2)
     colors1 = cm.gnuplot(np.linspace(0.1, 0.8, len(bmIds)))
     
-    cmpList = list(companiesProfitDict.values())
-    dailyCmpProfits = np.array(cmpList)[cmpIds]
-    colors2 = cm.gnuplot(np.linspace(0.2, 0.9, len(cmpIds)))
+    compList = list(companiesProfitDict.values())
+    dailyCmpProfits = np.array(compList)[compIds]
+    colors2 = cm.gnuplot(np.linspace(0.2, 0.9, len(compIds)))
 
     days = np.arange(1, numDays + 1)
     l2 = []
@@ -83,7 +83,7 @@ def plot_all(peopleCapitalDict, peopleProfitDict, companiesProfitDict, companies
             else:
                 l.set_visible(True)
 
-        for i, clr in zip(range(len(cmpIds)), colors2):
+        for i, clr in zip(range(len(compIds)), colors2):
             g, = ax3.plot(days[0:day], dailyCmpProfits[i, 0:day], color=clr, label=i)
             l3.append(l)
 
