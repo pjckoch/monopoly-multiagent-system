@@ -36,13 +36,12 @@ def runFromJson(jsonFile):
             env.time = round(time, 1)
 
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
+                env.totalMoney = 0
                 # compute the profits for each businessman
                 for bm in stillALiveBms:
                     env.totalMoney += bm.capital
                     logger.log_businessman_sales(days, bm)
                     # env.inflationInDaHouse(bm)
-                    print("Businessman ID:" + str(bm.id))
-                    print("List of Sales:")
                     nProfit = 0
                     for company in bm.companies:
                         env.totalMoney += company.turnOver
@@ -56,6 +55,7 @@ def runFromJson(jsonFile):
                     # add the summed up netto profits to the businessman capital
                     bm.capital += nProfit
 
+                env.totalMoney += env.government.governmentMoney
                 logger.log_split(env.time)
                 averageCompany = env.computeAverageCompanyValue()
                 env.government.regulate(stillALiveBms)
