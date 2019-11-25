@@ -93,11 +93,15 @@ class Government():
             helper_funs.transaction(self, businessman, subs)
 
     def regulateTax(self,bm, company):
-        #QUICKFIX
-        # if company.turnOver > 0:
-            # company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
+        if self.governmentMoney < 20000:
+            print("High Taxes")
             company.taxHistory.append((bm.capital * random.randint(3,5))/5 * self.taxRate)
             self.governmentMoney += company.taxHistory[-1]
+        else:
+            print("Low Taxes")
+            company.taxHistory.append(0)
+            # self.governmentMoney += company.taxHistory[-1]
+
 
     def regulate(self, businessmenList):
         momentaryGovMoney = self.governmentMoney

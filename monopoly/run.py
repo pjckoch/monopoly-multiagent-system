@@ -41,7 +41,6 @@ def runFromJson(jsonFile):
                 for bm in stillALiveBms:
                     env.totalMoney += bm.capital
                     logger.log_businessman_sales(days, bm)
-                    # env.inflationInDaHouse(bm)
                     nProfit = 0
                     for company in bm.companies:
                         env.totalMoney += company.turnOver
@@ -66,6 +65,10 @@ def runFromJson(jsonFile):
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)
+    print("NO INFLATION")
+    print(env.listOfPeople[0].considerAction(env.listOfCompanies[1], 1))
+    print("INFLATION")
+    print(env.listOfPeople[0].considerAction(env.listOfCompanies[1], 3))
 
 
 def create_new_environment():
