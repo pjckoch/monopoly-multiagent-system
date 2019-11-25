@@ -49,7 +49,7 @@ def runFromJson(jsonFile):
                         logger.log_company_stats(env.time, company, log_once)
                         bProfit = company.computeBruttoProfit()
                         company.payCosts(env.government) 
-                        env.government.regulateTax(bm, company)
+                        env.government.regulateTax(bm, company, env.time)
                         nProfit += company.computeNettoProfit()
                         company.computeCompanyValue()
 

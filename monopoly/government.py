@@ -3,6 +3,9 @@ import numpy as np
 from enum import Enum
 import data_manager
 import helper_funs
+import logger
+
+prevPol = 0
 
 class Government():
     """An intelligent agent that interacts with other agents in order to regulate the happiness."""
@@ -92,15 +95,19 @@ class Government():
             businessman.subsidiariesHistory.append(subs)
             helper_funs.transaction(self, businessman, subs)
 
-    def regulateTax(self,bm, company):
+    def regulateTax(self,bm, company, time):
+        global prevPol
         if self.governmentMoney < 20000:
-            print("High Taxes")
             company.taxHistory.append((bm.capital * random.randint(3,5))/5 * self.taxRate)
             self.governmentMoney += company.taxHistory[-1]
+            if prevPol != 1:
+                logger.log_government(time, "COMPETITIVE")
+                prevPol = 1
         else:
-            print("Low Taxes")
             company.taxHistory.append(0)
-            # self.governmentMoney += company.taxHistory[-1]
+            if prevPol != 2:
+                logger.log_government(time, "SUPPORTIVE")
+                prevPol = 2
 
 
     def regulate(self, businessmenList):
