@@ -9,6 +9,7 @@ import data_manager
 import argparse
 import helper_funs
 
+log_once = False
 days = 365
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
@@ -16,7 +17,7 @@ parser = argparse.ArgumentParser(description='Run the multiagent monopoly system
 parser.add_argument('-e', '--existing', help='Use existing environment')
 
 def runFromJson(jsonFile):
-
+    global log_once
     env = data_manager.readFromJson(jsonFile)
 
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
@@ -41,20 +42,21 @@ def runFromJson(jsonFile):
                 for bm in stillALiveBms:
                     env.totalMoney += bm.capital
                     logger.log_businessman_sales(days, bm)
-                    # env.inflationInDaHouse(bm)
                     nProfit = 0
                     for company in bm.companies:
                         env.totalMoney += company.turnOver
                         logger.log_company_sales(env.time, company)
+                        logger.log_company_stats(env.time, company, log_once)
                         bProfit = company.computeBruttoProfit()
                         company.payCosts(env.government) 
-                        env.government.regulateTax(bm, company)
-                        nProfit += company.computeNettoProfit()    
+                        env.government.regulateTax(bm, company, env.time)
+                        nProfit += company.computeNettoProfit()
                         company.computeCompanyValue()
 
                     # add the summed up netto profits to the businessman capital
                     bm.capital += nProfit
 
+                log_once = True
                 env.totalMoney += env.government.governmentMoney
                 logger.log_split(env.time)
                 averageCompany = env.computeAverageCompanyValue()
@@ -66,6 +68,10 @@ def runFromJson(jsonFile):
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)
+    print("NO INFLATION")
+    print(env.listOfPeople[0].considerAction(env.listOfCompanies[1], 1))
+    print("INFLATION")
+    print(env.listOfPeople[0].considerAction(env.listOfCompanies[1], 3))
 
 
 def create_new_environment():

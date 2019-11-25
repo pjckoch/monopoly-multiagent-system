@@ -188,6 +188,7 @@ def appendToDataFrameCategories(time, company, owner):
                             "companyValue": company.companyValue,
                             "turnOver": turnOver,
                             "nettoProfit": nettoProfit,
+                            "demand": company.demandHistory[-1],
                             #"taxes": company.taxes[-1],
                             "fixedCost": company.fixedCost,
                             "variableCost": company.variableCost},

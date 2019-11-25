@@ -51,6 +51,38 @@ ch3.setFormatter(formatter)
 logger3.addHandler(fh3)
 logger3.addHandler(ch3)
 
+# create logger with 'spam_application'
+logger4 = logging.getLogger('spam_application4')
+logger4.setLevel(logging.DEBUG)
+# create file handler which logs even debug messages
+fh4 = logging.FileHandler('company_stats.log', mode='w')
+fh4.setLevel(logging.DEBUG)
+# create console handler with a higher log level
+ch4 = logging.StreamHandler()
+ch4.setLevel(logging.ERROR)
+# add formatter to the handlers
+fh4.setFormatter(formatter)
+ch4.setFormatter(formatter)
+# add the handlers to the logger
+logger4.addHandler(fh4)
+logger4.addHandler(ch4)
+
+# create logger with 'spam_application'
+logger5 = logging.getLogger('spam_application5')
+logger5.setLevel(logging.DEBUG)
+# create file handler which logs even debug messages
+fh5 = logging.FileHandler('government.log', mode='w')
+fh5.setLevel(logging.DEBUG)
+# create console handler with a higher log level
+ch5 = logging.StreamHandler()
+ch5.setLevel(logging.ERROR)
+# add formatter to the handlers
+fh5.setFormatter(formatter)
+ch5.setFormatter(formatter)
+# add the handlers to the logger
+logger5.addHandler(fh5)
+logger5.addHandler(ch5)
+
 def get_log_argument_dict(time, logtype):
     return {'envtime': '['+str(time)+']', 'logtype': str(logtype.name)}
 
@@ -160,7 +192,28 @@ def log_company_sales(days, company):
 
 # def log_company_cost(days, company):
 #     return
+
+def log_company_stats(days, company, log_once):
+    if not log_once:
+        time = data_manager.getTime(days)
+        log_msg = 'Company with the ID: '
+        log_msg += str(company.id)
+        log_msg += ' has the following stats: '
+        log_msg += '\n'
+        log_msg += 'Category: ' + str(company.category) + '\n'
+        log_msg += 'Frequency: ' + str(company.frequency) + '\n'
+        log_msg += 'Necessity: ' + str(company.necessity) + '\n'
+        log_msg += 'Price: ' + str(company.price) + '\n'
+        log_msg += 'Quality: ' + str(company.quality) + '\n'
+        log_msg += 'Fixed Costs: ' + str(company.fixedCost) + '\n'
+        log_msg += 'Variable Costs: ' + str(company.variableCost) + '\n'
+        logger4.info(log_msg, extra= get_log_argument_dict(time, Logtype.COMPANY_STATS))
     
+def log_government(days, strategy):
+    time = data_manager.getTime(days)
+    log_msg = 'Government changed is strategy to : ' + strategy
+    logger5.info(log_msg, extra= get_log_argument_dict(time, Logtype.COMPANY_STATS))
+
 
 class Logtype(Enum):
     INVESTMENT = 1
@@ -168,6 +221,7 @@ class Logtype(Enum):
     CREATE_COMPANY = 3
     AUCTION = 4
     ELECTION = 5
-    EPIDEMY = 6
+    GOVERNMENT = 6
     SALES_INFO = 7
     COSTS_INFO = 8
+    COMPANY_STATS = 9

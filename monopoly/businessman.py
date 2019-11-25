@@ -32,6 +32,7 @@ class Businessman():
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
         self.subsidiariesHistory = [0] if subsidiariesHistory is None else subsidiariesHistory
+        self.inflation = 4
     
     def getCompanyOwner(self, company, env):
         for bm in env.listOfPeople:
@@ -39,19 +40,6 @@ class Businessman():
                 if cmp.id == company.id:
                     return bm
         return None
-
-    def getInflationVal(self, company):
-        if company.category == "MEDICAL":
-            return 0.95
-        elif company.category == "SUPERMARKET":
-            return 0.9
-        elif company.category == "RESTAURANT":
-            return 0.8
-        elif company.category == "ENTERTAINMENT":
-            return 0.75
-        elif company.category == "LUXURY":
-            return 0.7
-        return 1
 
     def chooseAction(self, companies, env):
         # if the businessman has no cash, he won't do shit
@@ -62,7 +50,7 @@ class Businessman():
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
-        if company and self.considerAction(company):
+        if company and self.considerAction(company, self.inflation):
 
             ######################################
             # THIS IS THE TEMPORARY BUG FIX
@@ -73,10 +61,10 @@ class Businessman():
 
             ######################################
 
-            inflationVal = self.getInflationVal(company)
             # Append action 
             company.companySales.append(self.id)
             helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
+            company.visited()
 
             return company
         else:
@@ -113,10 +101,10 @@ class Businessman():
         weights = qualities * np.log(self.capital/1000 +1) + 100/prices
         return random.choices(population = companiesFromCategory, weights = weights)[0]
     
-    def considerAction(self, company):
+    def considerAction(self, company, testInflation):
         nec = company.necessity
-        p = company.price
-        probabilityOfAction = (nec*p*self.capital) /(p*nec*self.capital + 10000/nec)
+        p = company.price * testInflation
+        probabilityOfAction = (nec*p*self.capital*self.inflation ) /(p*nec*self.capital*self.inflation + 10000/nec)
         return decision(probabilityOfAction)
 
     def negotiate(self):
@@ -195,7 +183,6 @@ class Businessman():
         company = Company(companyId)
         self.companies.append(company)
         logger.log_createCompany(time, self, company)
-        logger.testLog(time)
         return company
 
     def loseCompany(self, cmp):

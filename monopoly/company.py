@@ -4,9 +4,6 @@ import pandas as pd
 from enum import Enum
 from django.utils.functional import cached_property
 
-inflation = 10
-
-
 company_list = "lists/companies.csv"
 
 df = pd.read_csv(company_list)
@@ -43,7 +40,7 @@ class Company():
                  dontSell=None,
                  taxHistory=None):
         self.id = companyId
-
+        self.inflationFactor = 1
         self.name = company_names[np.random.randint(1, numLines)] if name is None else name
         self.category = random.choice(list(BusinessCategory)) if category is None else category
         self.frequency = self.category.value[0] if frequency is None else frequency
@@ -67,6 +64,8 @@ class Company():
         self.taxHistory = [0] if taxHistory is None else taxHistory
         self.dontSell = 10
         self.companySales = []
+        self.demand = 0
+        self.demandHistory = []
         
     def isBankrupting(self):
         if (len(self.nettoProfitHistory) > 10):
@@ -78,8 +77,6 @@ class Company():
     def bankrupcy(self, env):
         if self.isBankrupting():
             owner = env.findCompanyOwner(self)
-            print(owner.name)
-            print(self.name)
             env.government.governmentMoney -= self.fixedCost*30
             owner.capital += self.fixedCost*30
             owner.loseCompany(self)
@@ -98,6 +95,8 @@ class Company():
         tax = self.taxHistory[-1]
         nProfit = bProfit - tax
         self.nettoProfitHistory.append(nProfit)
+        self.demandHistory.append(self.demand)
+        self.demand = 0
         return nProfit
 
     def computeCompanyValue(self):
@@ -111,6 +110,9 @@ class Company():
 
     def updateSale(self):
         self.dontSell = self.dontSell - 1
+
+    def visited(self):
+        self.demand += 1 
 
     @property
     def frequency(self):
@@ -129,18 +131,18 @@ class Company():
     @cached_property
     def price(self):
         if self.category == BusinessCategory.MEDICAL:
-            self._price = (0.5 * np.random.randn() + 10*5) 	        # sig * randn + mu
+            self._price = (0.5 * np.random.randn() + 10*5) * self.inflationFactor 	        # sig * randn + mu
         elif self.category == BusinessCategory.SUPERMARKET:
-            self._price = (0.1 * np.random.randn() + 1*5) 	
+            self._price = (0.1 * np.random.randn() + 1*5) * self.inflationFactor  	
         elif self.category == BusinessCategory.RESTAURANT:
-            self._price = (0.25 * np.random.randn() + 17.5/5*5)	
+            self._price = (0.25 * np.random.randn() + 17.5/5*5)	* self.inflationFactor 
         elif self.category == BusinessCategory.ENTERTAINMENT:
-            self._price = (0.25 * np.random.randn() + 4*5)	
+            self._price = (0.25 * np.random.randn() + 4*5) * self.inflationFactor 	
         elif self.category == BusinessCategory.LUXURY:
-            self._price = (2 * np.random.randn() + 30*5)
+            self._price = (2 * np.random.randn() + 30*5) * self.inflationFactor 
         else:
             raise ValueError("Category invalid.")
-        return self._price * (1 + self.quality)
+        return self._price * (1 + self.quality) * self.inflationFactor 
 
     @cached_property
     def quality(self):
