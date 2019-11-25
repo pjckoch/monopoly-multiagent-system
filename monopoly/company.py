@@ -67,6 +67,8 @@ class Company():
         self.taxHistory = [0] if taxHistory is None else taxHistory
         self.dontSell = 10
         self.companySales = []
+        self.demand = 0
+        self.demandHistory = []
         
     def isBankrupting(self):
         if (len(self.nettoProfitHistory) > 10):
@@ -98,6 +100,8 @@ class Company():
         tax = self.taxHistory[-1]
         nProfit = bProfit - tax
         self.nettoProfitHistory.append(nProfit)
+        self.demandHistory.append(self.demand)
+        self.demand = 0
         return nProfit
 
     def computeCompanyValue(self):
@@ -111,6 +115,9 @@ class Company():
 
     def updateSale(self):
         self.dontSell = self.dontSell - 1
+
+    def visited(self):
+        self.demand += 1 
 
     @property
     def frequency(self):

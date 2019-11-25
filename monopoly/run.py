@@ -49,7 +49,7 @@ def runFromJson(jsonFile):
                         bProfit = company.computeBruttoProfit()
                         company.payCosts(env.government) 
                         env.government.regulateTax(bm, company)
-                        nProfit += company.computeNettoProfit()    
+                        nProfit += company.computeNettoProfit()
                         company.computeCompanyValue()
 
                     # add the summed up netto profits to the businessman capital
