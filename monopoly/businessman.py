@@ -63,7 +63,8 @@ class Businessman():
 
             # Append action 
             company.companySales.append(self.id)
-            helper_funs.transaction(self, company, company.price)
+            helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
+            company.visited()
 
             return company
         else:
