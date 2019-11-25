@@ -32,7 +32,7 @@ class Businessman():
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
         self.subsidiariesHistory = [0] if subsidiariesHistory is None else subsidiariesHistory
-        self.inflation = 3
+        self.inflation = 4
     
     def getCompanyOwner(self, company, env):
         for bm in env.listOfPeople:
@@ -183,7 +183,6 @@ class Businessman():
         company = Company(companyId)
         self.companies.append(company)
         logger.log_createCompany(time, self, company)
-        logger.testLog(time)
         return company
 
     def loseCompany(self, cmp):

@@ -9,6 +9,7 @@ import data_manager
 import argparse
 import helper_funs
 
+log_once = False
 days = 365
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
@@ -16,7 +17,7 @@ parser = argparse.ArgumentParser(description='Run the multiagent monopoly system
 parser.add_argument('-e', '--existing', help='Use existing environment')
 
 def runFromJson(jsonFile):
-
+    global log_once
     env = data_manager.readFromJson(jsonFile)
 
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
@@ -45,6 +46,7 @@ def runFromJson(jsonFile):
                     for company in bm.companies:
                         env.totalMoney += company.turnOver
                         logger.log_company_sales(env.time, company)
+                        logger.log_company_stats(env.time, company, log_once)
                         bProfit = company.computeBruttoProfit()
                         company.payCosts(env.government) 
                         env.government.regulateTax(bm, company)
@@ -54,6 +56,7 @@ def runFromJson(jsonFile):
                     # add the summed up netto profits to the businessman capital
                     bm.capital += nProfit
 
+                log_once = True
                 env.totalMoney += env.government.governmentMoney
                 logger.log_split(env.time)
                 averageCompany = env.computeAverageCompanyValue()
