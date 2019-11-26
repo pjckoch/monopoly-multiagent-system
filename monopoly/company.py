@@ -38,7 +38,8 @@ class Company():
                  nettoProfitHistory=None,
                  turnOverHistory=None,
                  dontSell=None,
-                 taxHistory=None):
+                 taxHistory=None,
+                 demandHistory=None):
         self.id = companyId
         self.inflationFactor = 1
         self.name = company_names[np.random.randint(1, numLines)] if name is None else name
