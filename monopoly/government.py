@@ -97,17 +97,8 @@ class Government():
 
     def regulateTax(self,bm, company, time):
         global prevPol
-        if self.governmentMoney < 20000:
-            company.taxHistory.append((bm.capital * random.randint(3,5))/5 * self.taxRate)
-            self.governmentMoney += company.taxHistory[-1]
-            if prevPol != 1:
-                logger.log_government(time, "COMPETITIVE")
-                prevPol = 1
-        else:
-            company.taxHistory.append(0)
-            if prevPol != 2:
-                logger.log_government(time, "SUPPORTIVE")
-                prevPol = 2
+        company.taxHistory.append((bm.capital * random.randint(3,5))/5 * self.taxRate)
+        self.governmentMoney += company.taxHistory[-1]
 
 
     def regulate(self, businessmenList):

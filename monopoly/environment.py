@@ -66,22 +66,6 @@ class Environment():
             temp += company.companyValue
         return temp/len(self.listOfCompanies)
 
-
-    # def addProfitsForBM(self, bmId, profit):
-    #     """Function to append a profit for a certain businessman to the peopleProfitDict"""
-    #     self.peopleProfitDict[bmId].append(profit)
-
-
-    # def addCapitalForBM(self, bmId, capital):
-    #     """Function to append a profit for a certain businessman to the peopleProfitDict"""
-    #     self.peopleCapitalDict[bmId].append(capital)
-        
-
-    # def addProfitsForCompany(self, compId, profit):
-    #     """Function to append a profit for a certain businessman to the peopleProfitDict"""
-    #     self.companiesProfitDict[compId].append(profit)
-
-
     def distributeCompanies(self):
         """Makes every businessman create his first company for himself."""
         self.listOfCompanies = []
