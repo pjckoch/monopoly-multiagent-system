@@ -241,6 +241,7 @@ def deserialize_company(obj):
                            bruttoProfitHistory = obj['bruttoProfitHistory'],
                            nettoProfitHistory = obj['nettoProfitHistory'],
                            turnOverHistory = obj['turnOverHistory'],
+                           demandHistory = obj['demandHistory'],
                            taxHistory = obj['taxHistory'])
 
 def deserialize_government(obj):
