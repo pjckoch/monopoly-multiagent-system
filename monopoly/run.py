@@ -46,17 +46,17 @@ def runFromJson(jsonFile):
                 n = random.randint(1,3)
                 if n == 1:
                     env.government.politics = "COMMUNIST"
-                    env.government.taxRate=0.15
+                    env.government.taxRate=0.1
                     logger.log_government(time, "COMMUNIST")
                     print("COMMUNIST")
                 elif n == 2:
                     env.government.politics = "NEUTRAL"
-                    env.government.taxRate=0.1
+                    env.government.taxRate=0.02
                     logger.log_government(time, "NEUTRAL")
                     print("NEUTRAL")
                 elif n == 3:
                     env.government.politics = "LIBERAL"
-                    env.government.taxRate=0.05
+                    env.government.taxRate=0.01
                     logger.log_government(time, "LIBERAL")
                     print("LIBERAL")
 

@@ -256,7 +256,129 @@
     </datasource>
   </datasources>
   <worksheets>
-    <worksheet name='Planilha 1'>
+    <worksheet name='Planilha 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='statistics' name='federated.1enoa2i1474lez19o9cgr0eu77bu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1enoa2i1474lez19o9cgr0eu77bu'>
+            <column datatype='integer' name='[id]' role='measure' type='quantitative' />
+            <column-instance column='[id]' derivation='None' name='[none:id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[id]' derivation='None' name='[none:id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[numOfEntertainments]' derivation='None' name='[none:numOfEntertainments:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[numOfLuxuries]' derivation='None' name='[none:numOfLuxuries:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[numOfMedicals]' derivation='None' name='[none:numOfMedicals:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[numOfRestaurants]' derivation='None' name='[none:numOfRestaurants:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[numOfSupermarkets]' derivation='None' name='[none:numOfSupermarkets:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[numOfEntertainments]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[numOfLuxuries]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[numOfMedicals]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[numOfRestaurants]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[numOfSupermarkets]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfLuxuries:qk]' value='56' />
+            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfMedicals:qk]' value='56' />
+            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfSupermarkets:qk]' value='56' />
+            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfRestaurants:qk]' value='56' />
+            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfEntertainments:qk]' value='56' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1009' />
+                <format attr='maxwidth' value='1009' />
+                <format attr='minheight' value='106' />
+                <format attr='maxheight' value='106' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfLuxuries:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfMedicals:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfSupermarkets:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfRestaurants:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
+            </encodings>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfEntertainments:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfLuxuries:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfMedicals:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfSupermarkets:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfRestaurants:qk] + [federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfEntertainments:qk]))))</rows>
+        <cols>[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:qk]</cols>
+      </table>
+      <simple-id uuid='{12247950-C54D-4E3A-B967-3F6C0A280781}' />
+    </worksheet>
+    <worksheet name='Planilha 3'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{00BCC12D-3619-41AD-9140-1F3365B70903}' />
+    </worksheet>
+    <worksheet name='Profits'>
       <layout-options>
         <title>
           <formatted-text>
@@ -371,7 +493,7 @@
               <lod column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[attr:capital:qk]' />
             </encodings>
           </pane>
-          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[sum:totalMoney:qk]'>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[sum:totalMoney:qk]'>
             <view>
               <breakdown value='auto' />
             </view>
@@ -383,111 +505,9 @@
       </table>
       <simple-id uuid='{FCEA46A6-6602-4AD8-BC30-F511656F9859}' />
     </worksheet>
-    <worksheet name='Planilha 2'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='statistics' name='federated.1enoa2i1474lez19o9cgr0eu77bu' />
-          </datasources>
-          <datasource-dependencies datasource='federated.1enoa2i1474lez19o9cgr0eu77bu'>
-            <column datatype='integer' name='[id]' role='measure' type='quantitative' />
-            <column-instance column='[id]' derivation='None' name='[none:id:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[id]' derivation='None' name='[none:id:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[numOfEntertainments]' derivation='None' name='[none:numOfEntertainments:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[numOfLuxuries]' derivation='None' name='[none:numOfLuxuries:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[numOfMedicals]' derivation='None' name='[none:numOfMedicals:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[numOfRestaurants]' derivation='None' name='[none:numOfRestaurants:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[numOfSupermarkets]' derivation='None' name='[none:numOfSupermarkets:qk]' pivot='key' type='quantitative' />
-            <column datatype='integer' name='[numOfEntertainments]' role='measure' type='quantitative' />
-            <column datatype='integer' name='[numOfLuxuries]' role='measure' type='quantitative' />
-            <column datatype='integer' name='[numOfMedicals]' role='measure' type='quantitative' />
-            <column datatype='integer' name='[numOfRestaurants]' role='measure' type='quantitative' />
-            <column datatype='integer' name='[numOfSupermarkets]' role='measure' type='quantitative' />
-          </datasource-dependencies>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='axis'>
-            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfLuxuries:qk]' value='56' />
-            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfMedicals:qk]' value='56' />
-            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfSupermarkets:qk]' value='56' />
-            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfRestaurants:qk]' value='56' />
-            <format attr='width' field='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfEntertainments:qk]' value='56' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
-            </encodings>
-            <style>
-              <style-rule element='pane'>
-                <format attr='minwidth' value='1009' />
-                <format attr='maxwidth' value='1009' />
-                <format attr='minheight' value='106' />
-                <format attr='maxheight' value='106' />
-                <format attr='aspect' value='0' />
-              </style-rule>
-            </style>
-          </pane>
-          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfLuxuries:qk]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
-            </encodings>
-          </pane>
-          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfMedicals:qk]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
-            </encodings>
-          </pane>
-          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfSupermarkets:qk]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
-            </encodings>
-          </pane>
-          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfRestaurants:qk]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
-            </encodings>
-          </pane>
-          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfEntertainments:qk]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <color column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]' />
-            </encodings>
-          </pane>
-        </panes>
-        <rows>([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfLuxuries:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfMedicals:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfSupermarkets:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfRestaurants:qk] + [federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfEntertainments:qk]))))</rows>
-        <cols>[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:qk]</cols>
-      </table>
-      <simple-id uuid='{12247950-C54D-4E3A-B967-3F6C0A280781}' />
-    </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Planilha 1'>
+    <window class='worksheet' name='Profits'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -544,6 +564,29 @@
         </edge>
       </cards>
       <simple-id uuid='{4A4B8791-7ABF-47E9-9CD7-468CC80514CF}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Planilha 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6B22DCCB-1BED-47F9-B159-F32241CC2206}' />
     </window>
   </windows>
 </workbook>

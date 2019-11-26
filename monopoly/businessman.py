@@ -151,20 +151,20 @@ class Businessman():
                 offer = company.companyValue*random.randint(75, 105)/100
                 #print("First Offer: " + str(offer) + " Value: " + str(company.companyValue))
                 counter = owner.offerForCompany(company, offer, env.avgCapital)
-                if counter == offer:
+                if counter == offer and self.capital > counter:
                     env.sellCompany(company, self, owner, offer)
                     logger.log_acquireCompany(env.time, self, owner, company, offer)
                 else:
                     secondOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100*counter
                     secondCounter = owner.offerForCompany(company, secondOffer, env.avgCapital)
                     #print("Second Offer: " + str(secondOffer) + " Value: " + str(company.companyValue))
-                    if secondCounter == secondOffer:
+                    if secondCounter == secondOffer and self.capital > secondCounter:
                         env.sellCompany(company, self, owner, secondOffer)
                         logger.log_acquireCompany(env.time, self, owner, company, offer)
                     else:
-                        thirdOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100*secondCounter
+                        thirdOffer = (((secondCounter-secondOffer)/secondOffer)+1)*random.randint(95, 120)/100*secondCounter
                         thirdCounter = owner.offerForCompany(company, thirdOffer, env.avgCapital)
-                        if thirdCounter == thirdOffer:
+                        if thirdCounter == thirdOffer and self.capital > thirdCounter:
                             env.sellCompany(company, self, owner, thirdOffer)
                             logger.log_acquireCompany(env.time, self, owner, company, offer)
         elif self.capital > 9000:

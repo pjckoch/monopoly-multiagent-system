@@ -75,8 +75,8 @@ class Government():
         #     val = 5000
         # elif self.politics == "COMMUNIST":
         #     val = 3000
-        # if capital + 1 < 0: # to avoid encountering log(0) error
-        #     capital = 0
+        if capital + 1 < 0: # to avoid encountering log(0) error
+            capital = 0
         return val-100*np.log(capital+1)
 
     # Give Equal Subsidiaries to Everyone
