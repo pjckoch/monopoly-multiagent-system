@@ -1,6 +1,8 @@
 import logging
 from enum import Enum
 import data_manager
+import os
+
 
 # create logger with 'spam_application'
 logger = logging.getLogger('spam_application')
@@ -211,7 +213,7 @@ def log_company_stats(days, company, log_once):
     
 def log_government(days, strategy):
     time = data_manager.getTime(days)
-    log_msg = 'Government changed is strategy to : ' + strategy
+    log_msg = 'Government changed its strategy to : ' + strategy
     logger5.info(log_msg, extra= get_log_argument_dict(time, Logtype.COMPANY_STATS))
 
 

@@ -33,7 +33,6 @@ class Businessman():
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
         self.subsidiariesHistory = [0] if subsidiariesHistory is None else subsidiariesHistory
-        self.inflation = 1
     
     def getCompanyOwner(self, company, env):
         for bm in env.listOfPeople:
@@ -51,7 +50,7 @@ class Businessman():
         category = self.chooseCategory()
         # choose a company from that category
         company = self.chooseCompany(category, companies)
-        if company and self.considerAction(company, self.inflation):
+        if company and self.considerAction(company):
 
             ######################################
             # THIS IS THE TEMPORARY BUG FIX
@@ -64,7 +63,7 @@ class Businessman():
 
             # Append action 
             company.companySales.append(self.id)
-            helper_funs.transaction(self, company, company.price)#*(env.inflationFactor/inflationVal))
+            helper_funs.transaction(self, company, company.price)
             company.visited()
 
             return company
@@ -104,10 +103,10 @@ class Businessman():
         normal_weights = np.true_divide(weights, sum_weights)
         return random.choices(population = companiesFromCategory, weights = normal_weights)[0]
     
-    def considerAction(self, company, testInflation):
+    def considerAction(self, company):
         nec = company.necessity
-        p = company.price * testInflation
-        probabilityOfAction = (nec*p*self.capital*self.inflation ) /(p*nec*self.capital*self.inflation + 10000/nec)
+        p = company.price
+        probabilityOfAction = (nec*p*self.capital ) /(p*nec*self.capital + 10000/nec)
         return decision(probabilityOfAction)
 
     def offerForCompany(self, company, price, avgCapital):

@@ -42,7 +42,6 @@ class Company():
                  demandHistory=None,
                  costHistory=None):
         self.id = companyId
-        self.inflationFactor = 1
         self.name = company_names[np.random.randint(1, numLines)] if name is None else name
         self.category = random.choice(list(BusinessCategory)) if category is None else category
         self.frequency = self.category.value[0] if frequency is None else frequency
@@ -136,18 +135,18 @@ class Company():
     @cached_property
     def price(self):
         if self.category == BusinessCategory.MEDICAL:
-            self._price = (0.5 * np.random.randn() + 10*5) * self.inflationFactor 	        # sig * randn + mu
+            self._price = (0.5 * np.random.randn() + 10*5) 	        # sig * randn + mu
         elif self.category == BusinessCategory.SUPERMARKET:
-            self._price = (0.1 * np.random.randn() + 1*5) * self.inflationFactor  	
+            self._price = (0.1 * np.random.randn() + 1*5)
         elif self.category == BusinessCategory.RESTAURANT:
-            self._price = (0.25 * np.random.randn() + 17.5/5*5)	* self.inflationFactor 
+            self._price = (0.25 * np.random.randn() + 17.5/5*5)
         elif self.category == BusinessCategory.ENTERTAINMENT:
-            self._price = (0.25 * np.random.randn() + 4*5) * self.inflationFactor 	
+            self._price = (0.25 * np.random.randn() + 4*5)
         elif self.category == BusinessCategory.LUXURY:
-            self._price = (2 * np.random.randn() + 30*5) * self.inflationFactor 
+            self._price = (2 * np.random.randn() + 30*5)
         else:
             raise ValueError("Category invalid.")
-        return self._price * (1 + self.quality) * self.inflationFactor 
+        return self._price * (1 + self.quality)
 
     @cached_property
     def quality(self):
