@@ -183,7 +183,7 @@ def appendToDataFrameCategories(time, company, owner):
     df_part = pd.DataFrame({"time": time,
                             "id": company.id,
                             "name": company.name,
-                            "owner": owner.name,
+                            "owner": owner.id,
                             "category": str(company.category).split(".")[1],
                             "companyValue": company.companyValue,
                             "turnOver": turnOver,
