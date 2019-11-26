@@ -55,7 +55,7 @@ class Company():
         else:
             self.quality = quality
         self.fixedCost = (2 * self.price) if fixedCost is None else fixedCost
-        self.variableCost = (0.4 * self.price) if variableCost is None else variableCost
+        self.variableCost = (0.3 * self.price) if variableCost is None else variableCost
         self.turnOver = turnOver
         self.companyValue = companyValue
         self.investmentLevel = investmentLevel

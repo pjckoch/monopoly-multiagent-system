@@ -99,9 +99,9 @@ class Businessman():
         prices = np.array([comp.price for comp in companiesFromCategory])
         qualities = np.array([comp.quality for comp in companiesFromCategory])
         weights = qualities * np.log(self.capital/1000 +1) + 100/prices
-        sum_weights = sum(weights)
-        normal_weights = np.true_divide(weights, sum_weights)
-        return random.choices(population = companiesFromCategory, weights = normal_weights)[0]
+        # sum_weights = sum(weights)
+        # normal_weights = np.true_divide(weights, sum_weights)
+        return random.choices(population = companiesFromCategory, weights = weights)[0]
     
     def considerAction(self, company):
         nec = company.necessity
