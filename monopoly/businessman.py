@@ -165,11 +165,12 @@ class Businessman():
                         if thirdCounter == thirdOffer:
                             env.sellCompany(company, self, owner, thirdOffer)
                             logger.log_acquireCompany(env.time, self, owner, company, offer)
-        elif (self.capital - env.avgCapital)/env.avgCapital > 3:
-            if random.randint(1, 100) > 99:
+        elif self.capital > 9000:
+            if random.randint(1, 1000) > 997:
                 newCompany = self.createCompany(env.time, len(env.listOfCompanies))
-                # TODO: he needs to pay for it
+                helper_funs.transaction(self, env.government, 5000)
                 env.listOfCompanies.append(newCompany)
+                #print("New company: " + str(self.id))
 
     def createCompany(self, time, companyId):
         """Creates a new company belonging to the businessman who founds it."""
