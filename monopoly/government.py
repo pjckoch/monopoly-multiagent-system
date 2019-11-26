@@ -96,15 +96,8 @@ class Government():
             helper_funs.transaction(self, businessman, subs)
 
     def regulateTax(self,bm, company, time):
-        global prevPol
         company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
         helper_funs.transaction(company, self, company.taxHistory[-1])
-        if prevPol != 1:
-            logger.log_government(time, "COMPETITIVE")
-            prevPol = 1
-        if prevPol != 2:
-            logger.log_government(time, "SUPPORTIVE")
-            prevPol = 2
 
 
     def regulate(self, businessmenList):
