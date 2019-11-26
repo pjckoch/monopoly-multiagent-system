@@ -20,7 +20,7 @@ def runFromJson(jsonFile):
     global log_once
     env = data_manager.readFromJson(jsonFile)
 
-    for time in np.linspace(env.time, env.time + days, num = env.numActions * days + 1):
+    for time in np.linspace(0.0, days, num = env.numActions * days + 1):
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
