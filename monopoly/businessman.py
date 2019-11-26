@@ -4,6 +4,7 @@ from company import Company, BusinessCategory
 import random
 import logger
 import helper_funs
+import math as m
 
 name_list = "lists/names.csv"
 
@@ -98,7 +99,9 @@ class Businessman():
         prices = np.array([comp.price for comp in companiesFromCategory])
         qualities = np.array([comp.quality for comp in companiesFromCategory])
         weights = qualities * np.log(self.capital/1000 +1) + 100/prices
-        return random.choices(population = companiesFromCategory, weights = weights)[0]
+        sum_weights = sum(weights)
+        normal_weights = np.true_divide(weights, sum_weights)
+        return random.choices(population = companiesFromCategory, weights = normal_weights)[0]
     
     def considerAction(self, company):
         nec = company.necessity
@@ -162,11 +165,12 @@ class Businessman():
                         if thirdCounter == thirdOffer:
                             env.sellCompany(company, self, owner, thirdOffer)
                             logger.log_acquireCompany(env.time, self, owner, company, offer)
-        elif (self.capital - env.avgCapital)/env.avgCapital > 3:
-            if random.randint(1, 100) > 99:
+        elif self.capital > 9000:
+            if random.randint(1, 1000) > 997:
                 newCompany = self.createCompany(env.time, len(env.listOfCompanies))
-                # TODO: he needs to pay for it
+                helper_funs.transaction(self, env.government, 5000)
                 env.listOfCompanies.append(newCompany)
+                #print("New company: " + str(self.id))
 
     def createCompany(self, time, companyId):
         """Creates a new company belonging to the businessman who founds it."""

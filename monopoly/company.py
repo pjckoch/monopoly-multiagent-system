@@ -54,8 +54,8 @@ class Company():
             self.quality
         else:
             self.quality = quality
-        self.fixedCost = (self.price) if fixedCost is None else fixedCost
-        self.variableCost = (0.1 * self.price) if variableCost is None else variableCost
+        self.fixedCost = (2 * self.price) if fixedCost is None else fixedCost
+        self.variableCost = (0.4 * self.price) if variableCost is None else variableCost
         self.turnOver = turnOver
         self.companyValue = companyValue
         self.investmentLevel = investmentLevel
@@ -150,7 +150,7 @@ class Company():
 
     @cached_property
     def quality(self):
-        self._quality = np.random.uniform(0.0, 1.0)                 # 0.0: low, 1.0: high quality
+        self._quality = np.random.uniform(0.0, 1.0)                # 0.0: low, 1.0: high quality
         return self._quality
 
 
