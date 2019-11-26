@@ -1449,7 +1449,7 @@
     </datasource>
   </datasources>
   <worksheets>
-    <worksheet name='Hoja 2'>
+    <worksheet name='Costs'>
       <table>
         <view>
           <datasources>
@@ -1527,7 +1527,7 @@
       </table>
       <simple-id uuid='{93FD12C1-F742-47AB-BAEC-A50D34927FF3}' />
     </worksheet>
-    <worksheet name='Planilha 1'>
+    <worksheet name='Profits'>
       <table>
         <view>
           <datasources>
@@ -1543,6 +1543,8 @@
             <column-instance column='[demand]' derivation='None' name='[none:demand:qk]' pivot='key' type='quantitative' />
             <column-instance column='[id]' derivation='None' name='[none:id:ok]' pivot='key' type='ordinal' />
             <column-instance column='[nettoProfit]' derivation='None' name='[none:nettoProfit:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
             <column datatype='date' name='[time]' role='dimension' type='ordinal' />
             <column-instance column='[time]' derivation='Month-Trunc' name='[tmn:time:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
@@ -1590,15 +1592,25 @@
               <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:demand:qk]' />
             </encodings>
           </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[sum:price:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:id:ok]' />
+              <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:demand:qk]' />
+            </encodings>
+          </pane>
         </panes>
-        <rows>([federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:nettoProfit:qk] + [federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:demand:qk])</rows>
+        <rows>([federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:nettoProfit:qk] + ([federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:demand:qk] + [federated.0vc3bz60jn6j9g1h7wpwc08ke590].[sum:price:qk]))</rows>
         <cols>([federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:category:nk] * [federated.0vc3bz60jn6j9g1h7wpwc08ke590].[tmn:time:qk])</cols>
       </table>
       <simple-id uuid='{71FFC183-E5CB-4BBC-A636-885679526CAF}' />
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Planilha 1'>
+    <window class='worksheet' maximized='true' name='Profits'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1626,7 +1638,7 @@
       </cards>
       <simple-id uuid='{1C84E8EA-805E-4C85-B8BA-0B752ECB8E85}' />
     </window>
-    <window class='worksheet' name='Hoja 2'>
+    <window class='worksheet' name='Costs'>
       <cards>
         <edge name='left'>
           <strip size='160'>

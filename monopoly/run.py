@@ -20,7 +20,7 @@ def runFromJson(jsonFile):
     global log_once
     env = data_manager.readFromJson(jsonFile)
 
-    for time in np.linspace(0.0, days, num = env.numActions * days + 1):
+    for time in np.linspace(env.time, env.time + days, num = env.numActions * days + 1):
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
@@ -68,10 +68,6 @@ def runFromJson(jsonFile):
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)
-    print("NO INFLATION")
-    print(env.listOfPeople[0].considerAction(env.listOfCompanies[1], 1))
-    print("INFLATION")
-    print(env.listOfPeople[0].considerAction(env.listOfCompanies[1], 3))
 
 
 def create_new_environment():
