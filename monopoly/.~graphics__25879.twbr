@@ -286,9 +286,11 @@
             <column datatype='integer' name='[numOfCompanies]' role='measure' type='quantitative' />
             <column datatype='real' name='[subsidiaries]' role='measure' type='quantitative' />
             <column-instance column='[governmentCapital]' derivation='Sum' name='[sum:governmentCapital:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[totalMoney]' derivation='Sum' name='[sum:totalMoney:qk]' pivot='key' type='quantitative' />
             <column datatype='real' name='[taxes]' role='measure' type='quantitative' />
             <column datatype='date' name='[time]' role='dimension' type='ordinal' />
             <column-instance column='[time]' derivation='Month-Trunc' name='[tmn:time:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[totalMoney]' role='measure' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[none:id:ok]'>
             <groupfilter function='level-members' level='[none:id:ok]' />
@@ -369,8 +371,14 @@
               <lod column='[federated.1enoa2i1474lez19o9cgr0eu77bu].[attr:capital:qk]' />
             </encodings>
           </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1enoa2i1474lez19o9cgr0eu77bu].[sum:totalMoney:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
         </panes>
-        <rows>([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:capital:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:nettoProfit:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:taxes:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:subsidiaries:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfCompanies:qk] + [federated.1enoa2i1474lez19o9cgr0eu77bu].[sum:governmentCapital:qk])))))</rows>
+        <rows>([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:capital:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:nettoProfit:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:taxes:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:subsidiaries:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[none:numOfCompanies:qk] + ([federated.1enoa2i1474lez19o9cgr0eu77bu].[sum:governmentCapital:qk] + [federated.1enoa2i1474lez19o9cgr0eu77bu].[sum:totalMoney:qk]))))))</rows>
         <cols>[federated.1enoa2i1474lez19o9cgr0eu77bu].[tmn:time:qk]</cols>
       </table>
       <simple-id uuid='{FCEA46A6-6602-4AD8-BC30-F511656F9859}' />

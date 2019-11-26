@@ -149,28 +149,30 @@ class Businessman():
             owner = env.findCompanyOwner(company)
             if owner != self and company.dontSell < 0:
                 offer = company.companyValue*random.randint(75, 105)/100
+                #print("First Offer: " + str(offer) + " Value: " + str(company.companyValue))
                 counter = owner.offerForCompany(company, offer, env.avgCapital)
                 if counter == offer:
                     env.sellCompany(company, self, owner, offer)
                     logger.log_acquireCompany(env.time, self, owner, company, offer)
                 else:
-                    secondOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
+                    secondOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100*counter
                     secondCounter = owner.offerForCompany(company, secondOffer, env.avgCapital)
+                    #print("Second Offer: " + str(secondOffer) + " Value: " + str(company.companyValue))
                     if secondCounter == secondOffer:
                         env.sellCompany(company, self, owner, secondOffer)
                         logger.log_acquireCompany(env.time, self, owner, company, offer)
                     else:
-                        thirdOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100
+                        thirdOffer = (((counter-offer)/offer)+1)*random.randint(95, 120)/100*secondCounter
                         thirdCounter = owner.offerForCompany(company, thirdOffer, env.avgCapital)
                         if thirdCounter == thirdOffer:
                             env.sellCompany(company, self, owner, thirdOffer)
                             logger.log_acquireCompany(env.time, self, owner, company, offer)
         elif self.capital > 9000:
-            if random.randint(1, 1000) > 997:
+            if random.randint(1, 10000) > 9999:
                 newCompany = self.createCompany(env.time, len(env.listOfCompanies))
                 helper_funs.transaction(self, env.government, 5000)
                 env.listOfCompanies.append(newCompany)
-                #print("New company: " + str(self.id))
+                print("New company founded by: " + str(self.id))
 
     def createCompany(self, time, companyId):
         """Creates a new company belonging to the businessman who founds it."""

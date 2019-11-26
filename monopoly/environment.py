@@ -104,3 +104,4 @@ class Environment():
         buyer.companies.append(company)
         helper_funs.transaction(buyer, seller, price)
         company.dontSell = 100
+        print("Businessman " + str(seller.id) + " sold company (" + str(company.id) + ") to " + str(buyer.id) + " for " + str(price) + " " + str(company.companyValue))

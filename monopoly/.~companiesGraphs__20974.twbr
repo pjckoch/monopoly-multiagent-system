@@ -595,18 +595,20 @@
             <datasource caption='companiesStats' name='federated.0vc3bz60jn6j9g1h7wpwc08ke590' />
           </datasources>
           <datasource-dependencies datasource='federated.0vc3bz60jn6j9g1h7wpwc08ke590'>
+            <column-instance column='[companyValue]' derivation='Attribute' name='[attr:companyValue:qk]' pivot='key' type='quantitative' />
             <column-instance column='[demand]' derivation='Attribute' name='[attr:demand:qk]' pivot='key' type='quantitative' />
             <column-instance column='[owner]' derivation='Attribute' name='[attr:owner:nk]' pivot='key' type='nominal' />
             <column-instance column='[quality]' derivation='Attribute' name='[attr:quality:qk]' pivot='key' type='quantitative' />
             <column datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column datatype='real' name='[companyValue]' role='measure' type='quantitative' />
             <column datatype='integer' name='[demand]' role='measure' type='quantitative' />
             <column datatype='integer' name='[id]' role='measure' type='quantitative' />
             <column datatype='real' name='[nettoProfit]' role='measure' type='quantitative' />
             <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[companyValue]' derivation='None' name='[none:companyValue:qk]' pivot='key' type='quantitative' />
             <column-instance column='[demand]' derivation='None' name='[none:demand:qk]' pivot='key' type='quantitative' />
             <column-instance column='[id]' derivation='None' name='[none:id:ok]' pivot='key' type='ordinal' />
             <column-instance column='[nettoProfit]' derivation='None' name='[none:nettoProfit:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[owner]' derivation='None' name='[none:owner:nk]' pivot='key' type='nominal' />
             <column datatype='string' name='[owner]' role='dimension' type='nominal' />
             <column datatype='real' name='[quality]' role='measure' type='quantitative' />
             <column datatype='date' name='[time]' role='dimension' type='ordinal' />
@@ -615,12 +617,8 @@
           <filter class='categorical' column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:category:nk]'>
             <groupfilter from='&quot;ENTERTAINMENT&quot;' function='range' level='[none:category:nk]' to='&quot;SUPERMARKET&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:owner:nk]'>
-            <groupfilter function='member' level='[none:owner:nk]' member='&quot;17&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
-          </filter>
           <slices>
             <column>[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:category:nk]</column>
-            <column>[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:owner:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -636,6 +634,15 @@
               <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:demand:qk]' />
               <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:quality:qk]' />
             </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='427' />
+                <format attr='maxwidth' value='427' />
+                <format attr='minheight' value='164' />
+                <format attr='maxheight' value='164' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
           </pane>
           <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:nettoProfit:qk]'>
             <view>
@@ -647,6 +654,7 @@
               <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:demand:qk]' />
               <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:quality:qk]' />
               <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:owner:nk]' />
+              <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:companyValue:qk]' />
             </encodings>
           </pane>
           <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:demand:qk]'>
@@ -660,8 +668,19 @@
               <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:quality:qk]' />
             </encodings>
           </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:companyValue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:id:ok]' />
+              <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:demand:qk]' />
+              <lod column='[federated.0vc3bz60jn6j9g1h7wpwc08ke590].[attr:quality:qk]' />
+            </encodings>
+          </pane>
         </panes>
-        <rows>([federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:nettoProfit:qk] + [federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:demand:qk])</rows>
+        <rows>([federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:nettoProfit:qk] + ([federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:demand:qk] + [federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:companyValue:qk]))</rows>
         <cols>([federated.0vc3bz60jn6j9g1h7wpwc08ke590].[none:category:nk] * [federated.0vc3bz60jn6j9g1h7wpwc08ke590].[tmn:time:qk])</cols>
       </table>
       <simple-id uuid='{71FFC183-E5CB-4BBC-A636-885679526CAF}' />
