@@ -10,10 +10,10 @@ prevPol = 0
 class Government():
     """An intelligent agent that interacts with other agents in order to regulate the happiness."""
 
-    # Government Politics can be supportive, neutral or competitive
+    # Government Politics can be LIBERAL, NEUTRAL or COMMUNIST
 
     def __init__(self,
-                 politics="SUPPORTIVE",
+                 politics="LIBERAL",
                  taxesStatus=None,
                  subsidiariesStatus=None,
                  taxRate=0.1,
@@ -21,7 +21,7 @@ class Government():
                  governmentMoney=0,
                  startCompPrice=9000,
                  investOwnCompPrice=3000):
-        self.politics = PoliticsSwitcher.SUPPORTIVE if politics is None else politics
+        self.politics = PoliticsSwitcher.LIBERAL if politics is None else politics
         self.taxesStatus = [] if taxesStatus is None else taxesStatus
         self.subsidiariesStatus = [] if subsidiariesStatus is None else subsidiariesStatus
         self.taxRate = taxRate
@@ -68,9 +68,16 @@ class Government():
         return inverseList[index].capital/totalBmMoney
 
     def calculateSubsidiaryFormula(self, capital):
-        if capital + 1 < 0: # to avoid encountering log(0) error
-            capital = 0
-        return 4000-100*np.log(capital+1)
+        val = 3000
+        # if self.politics == "LIBERAL":
+        #     val = 3000
+        # elif self.politics == "NEUTRAL":
+        #     val = 5000
+        # elif self.politics == "COMMUNIST":
+        #     val = 3000
+        # if capital + 1 < 0: # to avoid encountering log(0) error
+        #     capital = 0
+        return val-100*np.log(capital+1)
 
     # Give Equal Subsidiaries to Everyone
     def calculateSubsidiary(self, bm, govMon, noBm):
@@ -84,7 +91,14 @@ class Government():
 
     # Give Differentiated Subsidiaries to Poor People When They are Below 2000$
     def robinHoodMode(self, bm):
-        if bm.capital < 2000:
+        val = 4000
+        if self.politics == "LIBERAL":
+            val = 3000
+        elif self.politics == "NEUTRAL":
+            val = 4000
+        elif self.politics == "COMMUNIST":
+            val = 5000
+        if bm.capital < val:
             return self.calculateSubsidiaryFormula(bm.capital)
         return 0
 
@@ -109,6 +123,6 @@ class Government():
 class PoliticsSwitcher(Enum):
 
     """Defines the economical strategy of the government"""
-    SUPPORTIVE = 1
+    LIBERAL = 1
     NEUTRAL = 0
-    COMPETITIVE = -1
+    COMMUNIST = -1
