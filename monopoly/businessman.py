@@ -23,7 +23,8 @@ class Businessman():
                 isAlive=True,
                 subsidiaries=0,
                 companiesList=None,
-                subsidiariesHistory=None):
+                subsidiariesHistory=None,
+                actionHistory=None):
 
         self.id = businessmanId
         self.isAlive = isAlive
@@ -33,6 +34,9 @@ class Businessman():
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
         self.subsidiariesHistory = [0] if subsidiariesHistory is None else subsidiariesHistory
+        self.inflation = 4
+        self.actionHistory = [] if actionHistory is None else actionHistory
+        self.actionCounter = 0
     
     def getCompanyOwner(self, company, env):
         for bm in env.listOfPeople:
@@ -65,7 +69,7 @@ class Businessman():
             company.companySales.append(self.id)
             helper_funs.transaction(self, company, company.price)
             company.visited()
-
+            self.actionCounter += 1
             return company
         else:
             return None
@@ -106,7 +110,7 @@ class Businessman():
     def considerAction(self, company):
         nec = company.necessity
         p = company.price
-        probabilityOfAction = (nec*p*self.capital ) /(p*nec*self.capital + 10000/nec)
+        probabilityOfAction = (nec*p*self.capital*self.inflation ) /(p*nec*self.capital*self.inflation + 10000/nec)
         return decision(probabilityOfAction)
 
     def offerForCompany(self, company, price, avgCapital):
@@ -183,6 +187,11 @@ class Businessman():
 
     def loseCompany(self, cmp):
         self.companies.remove(cmp)
+
+    def countActions(self):
+        print(self.actionCounter)
+        self.actionHistory.append(self.actionCounter)
+        self.actionCounter = 0
 
 def decision(probability):
     return np.random.random() < probability

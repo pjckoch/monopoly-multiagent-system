@@ -168,6 +168,7 @@ def appendToDataFrame(time, env, bm, turnOver, taxes, nettoProfit):
                        "subsidiaries": bm.subsidiariesHistory[-1],
                        "capital": bm.capital,
                        "happiness": bm.happiness,
+                       "numActions": bm.actionHistory[0],
                        "governmentCapital": env.government.governmentMoney,
                        "totalMoney": env.totalMoney},
                        index = [dfIndex])

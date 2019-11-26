@@ -31,9 +31,7 @@ def runFromJson(jsonFile):
         # we don't need to round here, we only want to exclude the very first value
         if time != 0.0:
 
-            stillALiveBms = [bm for bm in env.listOfPeople if bm.isAlive]
-
-            for bm in stillALiveBms:
+            for bm in env.listOfPeople:
                 action = bm.chooseAction(env.listOfCompanies, env)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
@@ -45,18 +43,18 @@ def runFromJson(jsonFile):
             if env.time % 365 == 0: 
                 n = random.randint(1,3)
                 if n == 1:
-                    env.government.politics = "COMMUNIST"
-                    env.government.taxRate=0.1
-                    logger.log_government(time, "COMMUNIST")
-                    print("COMMUNIST")
+                    env.government.politics = "SOCIALIST"
+                    env.government.taxRate=0.3
+                    logger.log_government(time, "SOCIALIST")
+                    print("SOCIALIST")
                 elif n == 2:
                     env.government.politics = "NEUTRAL"
-                    env.government.taxRate=0.02
+                    env.government.taxRate=0.15
                     logger.log_government(time, "NEUTRAL")
                     print("NEUTRAL")
                 elif n == 3:
                     env.government.politics = "LIBERAL"
-                    env.government.taxRate=0.01
+                    env.government.taxRate=0.05
                     logger.log_government(time, "LIBERAL")
                     print("LIBERAL")
 
@@ -65,7 +63,7 @@ def runFromJson(jsonFile):
             if data_manager.isEvaluationIntervalCompleted(env.time, evaluationInterval):
                 env.totalMoney = 0
                 # compute the profits for each businessman
-                for bm in stillALiveBms:
+                for bm in env.listOfPeople:
                     env.totalMoney += bm.capital
                     logger.log_businessman_sales(days, bm)
                     nProfit = 0
@@ -74,6 +72,8 @@ def runFromJson(jsonFile):
                         logger.log_company_sales(env.time, company)
                         logger.log_company_stats(env.time, company, log_once)
                         bProfit = company.computeBruttoProfit()
+                        bm.actionHistory.append(bm.actionCounter)
+                        bm.actionCounter = 0
                         company.payCosts(env.government)
                         env.government.regulateTax(bm, company, env.time)
                         nProfit += company.computeNettoProfit()
@@ -85,7 +85,7 @@ def runFromJson(jsonFile):
                 env.totalMoney += env.government.governmentMoney
                 logger.log_split(env.time)
                 averageCompany = env.computeAverageCompanyValue()
-                env.government.regulate(stillALiveBms)
+                env.government.regulate(env.listOfPeople)
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, env)

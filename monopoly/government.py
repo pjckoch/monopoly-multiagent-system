@@ -125,4 +125,4 @@ class PoliticsSwitcher(Enum):
     """Defines the economical strategy of the government"""
     LIBERAL = 1
     NEUTRAL = 0
-    COMMUNIST = -1
+    SOCIALIST = -1
