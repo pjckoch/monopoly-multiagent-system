@@ -776,6 +776,555 @@
                         0
                     ]
                 }
+<<<<<<< HEAD
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 6,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": "Valaree Vize",
+                    "capital": 9686.863138224648,
+                    "happiness": 37.66013371649886,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 6,
+                                "inflationFactor": 1,
+                                "name": "Schumm, Fritsch and Durgan",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.605653005243404,
+                                "_quality": 0.0746745974121441,
+                                "quality": 0.0746745974121441,
+                                "price": 18.920348055587862,
+                                "fixedCost": 3.7840696111175727,
+                                "variableCost": 0.03784069611117572,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 16,
+                                "inflationFactor": 1,
+                                "name": "Kunze Inc",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.621438404548016,
+                                "_quality": 0.12149659477499264,
+                                "quality": 0.12149659477499264,
+                                "price": 19.76238316573788,
+                                "fixedCost": 3.952476633147576,
+                                "variableCost": 0.03952476633147576,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 26,
+                                "inflationFactor": 1,
+                                "name": "Langosh, Bergstrom and Zemlak",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 18.01197939957577,
+                                "_quality": 0.6230908575525254,
+                                "quality": 0.6230908575525254,
+                                "price": 29.23507908987586,
+                                "fixedCost": 5.847015817975173,
+                                "variableCost": 0.05847015817975172,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 36,
+                                "inflationFactor": 1,
+                                "name": "Lynch Ltd",
+                                "category": "LUXURY",
+                                "_frequency": 0.05,
+                                "_necessity": 0.1,
+                                "_price": 151.16305353005274,
+                                "_quality": 0.9352635675431319,
+                                "quality": 0.9352635675431319,
+                                "price": 292.5403502552833,
+                                "fixedCost": 58.508070051056656,
+                                "variableCost": 0.14627017512764165,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ],
+                    "inflation": 4
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 7,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": "Romona Antosch",
+                    "capital": 9686.863138224648,
+                    "happiness": 37.66013371649886,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 7,
+                                "inflationFactor": 1,
+                                "name": "Mills, Nitzsche and Larkin",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 50.348477957162245,
+                                "_quality": 0.2641208745848692,
+                                "quality": 0.2641208745848692,
+                                "price": 63.64656198922494,
+                                "fixedCost": 12.72931239784499,
+                                "variableCost": 0.06364656198922494,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 17,
+                                "inflationFactor": 1,
+                                "name": "Hettinger-Brakus",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 50.512621078352666,
+                                "_quality": 0.6310906162694322,
+                                "quality": 0.6310906162694322,
+                                "price": 82.39066224407456,
+                                "fixedCost": 16.478132448814915,
+                                "variableCost": 0.08239066224407457,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 27,
+                                "inflationFactor": 1,
+                                "name": "Anderson-Bailey",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 5.050927212815199,
+                                "_quality": 0.4699674108047984,
+                                "quality": 0.4699674108047984,
+                                "price": 7.424698397185455,
+                                "fixedCost": 1.4849396794370913,
+                                "variableCost": 0.033411142787334557,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 37,
+                                "inflationFactor": 1,
+                                "name": "O'Kon, Grimes and Bruen",
+                                "category": "RESTAURANT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.4,
+                                "_price": 17.651453517038277,
+                                "_quality": 0.35356873053574933,
+                                "quality": 0.35356873053574933,
+                                "price": 23.892455529168288,
+                                "fixedCost": 4.778491105833658,
+                                "variableCost": 0.04778491105833658,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ],
+                    "inflation": 4
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 8,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": "Paulie Fullard",
+                    "capital": 9686.863138224648,
+                    "happiness": 37.66013371649886,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 8,
+                                "inflationFactor": 1,
+                                "name": "Jacobs Ltd",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 5.042014883877188,
+                                "_quality": 0.35610141889929803,
+                                "quality": 0.35610141889929803,
+                                "price": 6.837483538137235,
+                                "fixedCost": 1.3674967076274471,
+                                "variableCost": 0.030768675921617562,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 18,
+                                "inflationFactor": 1,
+                                "name": "Ortiz-Ortiz",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 50.004328281375344,
+                                "_quality": 0.36806043777580566,
+                                "quality": 0.36806043777580566,
+                                "price": 68.40894323930345,
+                                "fixedCost": 13.681788647860692,
+                                "variableCost": 0.06840894323930345,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 28,
+                                "inflationFactor": 1,
+                                "name": "Orn Inc",
+                                "category": "MEDICAL",
+                                "_frequency": 0.1,
+                                "_necessity": 0.9,
+                                "_price": 49.07367126729408,
+                                "_quality": 0.8435832014395909,
+                                "quality": 0.8435832014395909,
+                                "price": 90.47139598135209,
+                                "fixedCost": 18.094279196270417,
+                                "variableCost": 0.09047139598135209,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 38,
+                                "inflationFactor": 1,
+                                "name": "Pacocha LLC",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 19.895188914897357,
+                                "_quality": 0.9943318743098097,
+                                "quality": 0.9943318743098097,
+                                "price": 39.677609398395,
+                                "fixedCost": 7.935521879679,
+                                "variableCost": 0.07935521879679,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ],
+                    "inflation": 4
+                }
+            },
+            {
+                "__class__": "Businessman",
+                "__value__": {
+                    "id": 9,
+                    "isAlive": true,
+                    "subsidiaries": 0,
+                    "name": "Anett Sirett",
+                    "capital": 9686.863138224648,
+                    "happiness": 37.66013371649886,
+                    "companies": [
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 9,
+                                "inflationFactor": 1,
+                                "name": "Nienow, Crist and Kozey",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 5.009940912695329,
+                                "_quality": 0.9516367913329261,
+                                "quality": 0.9516367913329261,
+                                "price": 9.777585007620264,
+                                "fixedCost": 1.9555170015240528,
+                                "variableCost": 0.04399913253429119,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 19,
+                                "inflationFactor": 1,
+                                "name": "DuBuque-Robel",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 20.45209654327804,
+                                "_quality": 0.9292243420256225,
+                                "quality": 0.9292243420256225,
+                                "price": 39.45668249675008,
+                                "fixedCost": 7.891336499350017,
+                                "variableCost": 0.07891336499350017,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 29,
+                                "inflationFactor": 1,
+                                "name": "Heathcote-Senger",
+                                "category": "ENTERTAINMENT",
+                                "_frequency": 0.2,
+                                "_necessity": 0.3,
+                                "_price": 19.475732756883996,
+                                "_quality": 0.49115256352653225,
+                                "quality": 0.49115256352653225,
+                                "price": 29.041288826985227,
+                                "fixedCost": 5.8082577653970455,
+                                "variableCost": 0.05808257765397046,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        },
+                        {
+                            "__class__": "Company",
+                            "__value__": {
+                                "id": 39,
+                                "inflationFactor": 1,
+                                "name": "Swaniawski-Mertz",
+                                "category": "SUPERMARKET",
+                                "_frequency": 0.45,
+                                "_necessity": 0.8,
+                                "_price": 4.9121499328588545,
+                                "_quality": 0.9261563379117034,
+                                "quality": 0.9261563379117034,
+                                "price": 9.46156872594863,
+                                "fixedCost": 1.8923137451897263,
+                                "variableCost": 0.042577059266768844,
+                                "turnOver": 0,
+                                "companyValue": 0,
+                                "investmentLevel": 0,
+                                "bruttoProfitHistory": [],
+                                "nettoProfitHistory": [],
+                                "turnOverHistory": [],
+                                "taxHistory": [
+                                    0
+                                ],
+                                "dontSell": 10,
+                                "companySales": [],
+                                "demand": 0,
+                                "demandHistory": []
+                            }
+                        }
+                    ],
+                    "subsidiariesHistory": [
+                        0
+                    ],
+                    "inflation": 4
+                }
             }
         ],
         "listOfCompanies": [

@@ -10,6 +10,10 @@ import argparse
 import helper_funs
 
 log_once = False
+append = False
+clearLogCount = 0
+yearCount = 0
+
 days = 365
 evaluationInterval = data_manager.EvaluationInterval.MONTHLY
 
@@ -18,6 +22,9 @@ parser.add_argument('-e', '--existing', help='Use existing environment')
 
 def runFromJson(jsonFile):
     global log_once
+    global append
+    global clearLogCount
+    global yearCount
     env = data_manager.readFromJson(jsonFile)
 
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
@@ -33,6 +40,19 @@ def runFromJson(jsonFile):
                 for company in bm.companies:
                     company.updateSale()
                     company.bankrupcy(env)
+
+            # Elections
+            if env.time % 365 == 0: 
+                n = random.randint(1,3)
+                if n == 1:
+                    env.government.politics = "COMPETITIVE"
+                    logger.log_government(time, "COMPETITIVE")
+                elif n == 2:
+                    env.government.politics = "NEUTRAL"
+                    logger.log_government(time, "NEUTRAL")
+                elif n == 3:
+                    env.government.politics = "SUPPORTIVE"
+                    logger.log_government(time, "SUPPORTIVE")
 
             env.time = round(time, 1)
 
@@ -52,7 +72,6 @@ def runFromJson(jsonFile):
                         env.government.regulateTax(bm, company, env.time)
                         nProfit += company.computeNettoProfit()
                         company.computeCompanyValue()
-
                     # add the summed up netto profits to the businessman capital
                     bm.capital += nProfit
 
@@ -64,7 +83,7 @@ def runFromJson(jsonFile):
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, env)
-
+            
 
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)
@@ -104,6 +123,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.existing:
         env_type = 'existing'
+        append = True
     else:
         env_type = 'new'
     jsonfile = chooseEnvironment[env_type]()
