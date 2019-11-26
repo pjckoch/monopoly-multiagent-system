@@ -189,9 +189,11 @@ def appendToDataFrameCategories(time, company, owner):
                             "turnOver": turnOver,
                             "nettoProfit": nettoProfit,
                             "demand": company.demandHistory[-1],
-                            #"taxes": company.taxes[-1],
+                            "costHistory": company.costHistory[-1],
                             "fixedCost": company.fixedCost,
-                            "variableCost": company.variableCost},
+                            "variableCost": company.variableCost,
+                            "quality": company.quality,
+                            "price": company.price},
                             index = [dfIndexCompanies])
 
     df_categories = df_categories.append(df_part, sort=False)
@@ -241,6 +243,8 @@ def deserialize_company(obj):
                            bruttoProfitHistory = obj['bruttoProfitHistory'],
                            nettoProfitHistory = obj['nettoProfitHistory'],
                            turnOverHistory = obj['turnOverHistory'],
+                           demandHistory = obj['demandHistory'],
+                           costHistory= obj['costHistory'],
                            taxHistory = obj['taxHistory'])
 
 def deserialize_government(obj):

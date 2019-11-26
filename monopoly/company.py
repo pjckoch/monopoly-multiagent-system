@@ -38,7 +38,9 @@ class Company():
                  nettoProfitHistory=None,
                  turnOverHistory=None,
                  dontSell=None,
-                 taxHistory=None):
+                 taxHistory=None,
+                 demandHistory=None,
+                 costHistory=None):
         self.id = companyId
         self.inflationFactor = 1
         self.name = company_names[np.random.randint(1, numLines)] if name is None else name
@@ -53,8 +55,8 @@ class Company():
             self.quality
         else:
             self.quality = quality
-        self.fixedCost = (0.2 * self.price) if fixedCost is None else fixedCost
-        self.variableCost = (0.01 * self.frequency * self.price) if variableCost is None else variableCost
+        self.fixedCost = (self.price) if fixedCost is None else fixedCost
+        self.variableCost = (0.1 * self.price) if variableCost is None else variableCost
         self.turnOver = turnOver
         self.companyValue = companyValue
         self.investmentLevel = investmentLevel
@@ -65,7 +67,8 @@ class Company():
         self.dontSell = 10
         self.companySales = []
         self.demand = 0
-        self.demandHistory = []
+        self.demandHistory = [] if demandHistory is None else demandHistory
+        self.costHistory = [] if costHistory is None else costHistory
         
     def isBankrupting(self):
         if (len(self.nettoProfitHistory) > 10):
@@ -84,8 +87,12 @@ class Company():
     def computeBruttoProfit(self):
         """Compute profit without considering taxes"""
         self.turnOverHistory.append(self.turnOver)
-        bProfit = self.turnOver - self.variableCost - self.fixedCost
+        totalCosts = self.variableCost * self.demand + self.fixedCost
+        self.costHistory.append(totalCosts)
+        bProfit = self.turnOver - totalCosts
         self.bruttoProfitHistory.append(bProfit)
+        self.demandHistory.append(self.demand)
+        self.demand = 0
         self.turnOver = 0
         return bProfit
 
@@ -95,8 +102,6 @@ class Company():
         tax = self.taxHistory[-1]
         nProfit = bProfit - tax
         self.nettoProfitHistory.append(nProfit)
-        self.demandHistory.append(self.demand)
-        self.demand = 0
         return nProfit
 
     def computeCompanyValue(self):
@@ -106,7 +111,7 @@ class Company():
 
     def payCosts(self, government):
         """Paying the costs (going to the government ATM)"""
-        government.governmentMoney += self.variableCost + self.fixedCost
+        government.governmentMoney += self.costHistory[-1]
 
     def updateSale(self):
         self.dontSell = self.dontSell - 1

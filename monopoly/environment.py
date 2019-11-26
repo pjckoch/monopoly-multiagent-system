@@ -24,7 +24,7 @@ class Environment():
                  suicideCount=0,
                  time=0):
         self.numPeople = numPeople
-        self.numCompanies = (4 * self.numPeople) if numCompanies is None else numCompanies
+        self.numCompanies = (2 * self.numPeople) if numCompanies is None else numCompanies
         self.government = Government() if government is None else government
         self.listOfPeople = [Businessman(i) for i in range(self.numPeople)] if listPeople is None else listPeople
         self.listOfCompanies = listCompanies
@@ -104,5 +104,3 @@ class Environment():
         buyer.companies.append(company)
         helper_funs.transaction(buyer, seller, price)
         company.dontSell = 100
-
-        # print("Transaction: " + seller.name + "'s company " + company.name + " sold to " + buyer.name + " for " + str(price))

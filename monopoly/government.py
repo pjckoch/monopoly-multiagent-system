@@ -16,7 +16,7 @@ class Government():
                  politics="SUPPORTIVE",
                  taxesStatus=None,
                  subsidiariesStatus=None,
-                 taxRate=0.01,
+                 taxRate=0.1,
                  subsidyValue=50,
                  governmentMoney=0,
                  startCompPrice=9000,
@@ -97,8 +97,14 @@ class Government():
 
     def regulateTax(self,bm, company, time):
         global prevPol
-        company.taxHistory.append((bm.capital * random.randint(3,5))/5 * self.taxRate)
-        self.governmentMoney += company.taxHistory[-1]
+        company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
+        helper_funs.transaction(company, self, company.taxHistory[-1])
+        if prevPol != 1:
+            logger.log_government(time, "COMPETITIVE")
+            prevPol = 1
+        if prevPol != 2:
+            logger.log_government(time, "SUPPORTIVE")
+            prevPol = 2
 
 
     def regulate(self, businessmenList):

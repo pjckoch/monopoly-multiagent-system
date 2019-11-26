@@ -32,7 +32,7 @@ class Businessman():
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
         self.subsidiariesHistory = [0] if subsidiariesHistory is None else subsidiariesHistory
-        self.inflation = 4
+        self.inflation = 1
     
     def getCompanyOwner(self, company, env):
         for bm in env.listOfPeople:
@@ -107,15 +107,6 @@ class Businessman():
         probabilityOfAction = (nec*p*self.capital*self.inflation ) /(p*nec*self.capital*self.inflation + 10000/nec)
         return decision(probabilityOfAction)
 
-    def negotiate(self):
-        print("")
-
-    def suicide(self):
-        print("")
-
-    def declareBancrupcy(self):
-        print("")
-
     def offerForCompany(self, company, price, avgCapital):
         value = company.companyValue
         willingness = 1/(avgCapital-self.capital)/avgCapital + 1
@@ -188,66 +179,5 @@ class Businessman():
     def loseCompany(self, cmp):
         self.companies.remove(cmp)
 
-    # def investOwnCompany(self, price):
-    #     cmpList = self.companies
-
-    #     worstCmpValue = 9999
-    #     worstCmp = None
-    #     for cmp in cmpList:
-    #         if cmp.companyValue < worstCmpValue:
-    #             worstCmpValue = cmp.companyValue
-    #             worstCmp = cmp
-    #     if worstCmp != None:
-    #         worstCmp.frequency = worstCmp.frequency  - 1
-    #         worstCmp.necessity = worstCmp.necessity - 1
-    #         worstCmp.investmentLevel = worstCmp.investmentLevel + 1
-    #         self.capital -= price
-    #         print("BM " + str(self.id) + " made an investment in company " + str(worstCmp.id))
-
-
-    # # Calculates the best investment (Buy a Company from another BM, Create a New One or Invest in one of his own companies)
-    # def evaluateInvestments(self, env):
-    #     option = "none"
-    #     buyCompPrice = 1000000
-    #     owner = None
-
-    #     # Calculate Buy Company Price
-    #     categories = []
-    #     for cmp in self.companies:
-    #         categories.append(cmp.category)
-
-    #     possibleInvestments = env.findCompaniesByCategory(categories)
-
-    #     company = self.considerInvestment(env.avgCapital, possibleInvestments)
-
-    #     if company != None:
-    #         owner = env.findCompanyOwner(company)
-    #         buyCompPrice = owner.offerForCompany(company, company.companyValue)
-    #         if buyCompPrice < 0:
-    #             buyCompPrice = 1000000
-
-    #     # Calculate Investment Price (Regulated By The Government)
-    #     investPrice = env.government.investOwnCompPrice
-
-    #     # Calculate Create Company Price (Regulated By The Government)
-    #     createCompPrice = env.government.startCompPrice
-
-    #     # Return best option
-    #     if (buyCompPrice < investPrice and  buyCompPrice < createCompPrice and env.government.politics == "competitive"):
-    #         option = "Buy Company"
-    #         price = buyCompPrice
-    #     elif (investPrice < buyCompPrice and  investPrice < createCompPrice and env.government.politics == "neutral?"):
-    #         option = "Invest"
-    #         price = investPrice
-    #     else:
-    #         option = "Create Company"
-    #         price = createCompPrice
-
-    #     ret = []
-    #     ret.append(option)
-    #     ret.append(price)
-    #     ret.append(owner)
-    #     ret.append(company)
-    #     return ret
 def decision(probability):
     return np.random.random() < probability
