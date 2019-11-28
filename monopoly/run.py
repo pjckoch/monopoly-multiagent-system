@@ -41,22 +41,22 @@ def runFromJson(jsonFile):
 
             # Elections
             if env.time % 365 == 0: 
-                n = random.randint(1,3)
-                if n == 1:
-                    env.government.politics = "SOCIALIST"
-                    env.government.taxRate=0.3
-                    logger.log_government(time, "SOCIALIST")
-                    print("SOCIALIST")
-                elif n == 2:
-                    env.government.politics = "NEUTRAL"
-                    env.government.taxRate=0.15
-                    logger.log_government(time, "NEUTRAL")
-                    print("NEUTRAL")
-                elif n == 3:
-                    env.government.politics = "LIBERAL"
-                    env.government.taxRate=0.05
-                    logger.log_government(time, "LIBERAL")
-                    print("LIBERAL")
+                # n = random.randint(1,3)
+                # if n == 1:
+                    # env.government.politics = "SOCIALIST"
+                    # env.government.taxRate=0.3
+                    # logger.log_government(time, "SOCIALIST")
+                    # print("SOCIALIST")
+                # elif n == 2:
+                    # env.government.politics = "NEUTRAL"
+                    # env.government.taxRate=0.15
+                    # logger.log_government(time, "NEUTRAL")
+                    # print("NEUTRAL")
+                # elif n == 3:
+                env.government.politics = "LIBERAL"
+                env.government.taxRate=0.05
+                logger.log_government(time, "LIBERAL")
+                print("LIBERAL")
 
             env.time = round(time, 1)
 

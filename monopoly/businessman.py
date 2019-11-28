@@ -34,7 +34,7 @@ class Businessman():
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
         self.subsidiariesHistory = [0] if subsidiariesHistory is None else subsidiariesHistory
-        self.inflation = 4
+        self.inflation = 1
         self.actionHistory = [] if actionHistory is None else actionHistory
         self.actionCounter = 0
     
