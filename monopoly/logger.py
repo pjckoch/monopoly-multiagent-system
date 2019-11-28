@@ -4,11 +4,17 @@ import data_manager
 import os
 
 
+writemode = 'w'
+
+def change_write_mode_to_append():
+    global writemode
+    writemode = 'w'
+
 # create logger with 'spam_application'
 logger = logging.getLogger('spam_application')
 logger.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
-fh = logging.FileHandler('timeline.log', mode='w')
+fh = logging.FileHandler('timeline.log', mode=writemode)
 fh.setLevel(logging.DEBUG)
 # create console handler with a higher log level
 ch = logging.StreamHandler()
@@ -25,7 +31,7 @@ logger.addHandler(ch)
 logger2 = logging.getLogger('spam_application2')
 logger2.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
-fh2 = logging.FileHandler('businessman_sales.log', mode='w')
+fh2 = logging.FileHandler('businessman_sales.log', mode=writemode)
 fh2.setLevel(logging.DEBUG)
 # create console handler with a higher log level
 ch2 = logging.StreamHandler()
@@ -41,7 +47,7 @@ logger2.addHandler(ch2)
 logger3 = logging.getLogger('spam_application3')
 logger3.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
-fh3 = logging.FileHandler('company_sales.log', mode='w')
+fh3 = logging.FileHandler('company_sales.log', mode=writemode)
 fh3.setLevel(logging.DEBUG)
 # create console handler with a higher log level
 ch3 = logging.StreamHandler()
@@ -57,7 +63,7 @@ logger3.addHandler(ch3)
 logger4 = logging.getLogger('spam_application4')
 logger4.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
-fh4 = logging.FileHandler('company_stats.log', mode='w')
+fh4 = logging.FileHandler('company_stats.log', mode=writemode)
 fh4.setLevel(logging.DEBUG)
 # create console handler with a higher log level
 ch4 = logging.StreamHandler()
@@ -73,7 +79,7 @@ logger4.addHandler(ch4)
 logger5 = logging.getLogger('spam_application5')
 logger5.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
-fh5 = logging.FileHandler('government.log', mode='w')
+fh5 = logging.FileHandler('government.log', mode=writemode)
 fh5.setLevel(logging.DEBUG)
 # create console handler with a higher log level
 ch5 = logging.StreamHandler()
@@ -115,6 +121,8 @@ def log_createCompany(days, creator, company):
     log_msg += str(creator.id)
     log_msg += ' created a new company with name '
     log_msg += str(company.name)
+    log_msg += ' and ID: '
+    log_msg += str(company.id)
     logger.info(log_msg, extra= get_log_argument_dict(time, Logtype.CREATE_COMPANY))
 
 def log_auction(days, company, buyer, seller):
@@ -150,50 +158,12 @@ def testLog(days):
     log_msg = 'Buenos Dias Matosinhos'
     logger2.info(log_msg, extra= get_log_argument_dict(time, Logtype.SALES_INFO))
 
-# TODO: Sales and Costs functions per Businessman and per Company
 
-def log_businessman_sales(days, bm):
-    sales = 0
-    turnover = 0
-    for company in bm.companies:
-        sales += len(company.companySales)
-        turnover += len(company.companySales) * company.price
-    
-    time = data_manager.getTime(days)
-    log_msg = 'Businessman with the ID: '
-    log_msg += str(bm.id)
-    log_msg += ' had a number of: '
-    log_msg += str(sales)
-    log_msg += ' consumers. Turnover: '
-    log_msg += str(turnover)
-    logger2.info(log_msg, extra= get_log_argument_dict(time, Logtype.SALES_INFO))
 
 def log_split(days):
     time = data_manager.getTime(days)
     logger2.info('-------------------------------', extra= get_log_argument_dict(time, Logtype.SALES_INFO))
 
-# Not sure if useful function
-
-# def log_businessman_cost(days, bm):
-#     cost = 0
-#     turnover = 0
-#     for company in bm.companies:
-#         cost += len(company.companySales)
-#         turnover += len(company.companySales) * company.price
-
-def log_company_sales(days, company):
-    time = data_manager.getTime(days)
-    log_msg = 'Company with the ID: '
-    log_msg += str(company.id)
-    log_msg += ' had a number of: '
-    log_msg += str(len(company.companySales))
-    log_msg += ' consumers'
-    logger3.info(log_msg, extra= get_log_argument_dict(time, Logtype.SALES_INFO))
-
-# Not sure if useful function
-
-# def log_company_cost(days, company):
-#     return
 
 def log_company_stats(days, company, log_once):
     if not log_once:

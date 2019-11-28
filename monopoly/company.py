@@ -64,7 +64,6 @@ class Company():
         self.turnOverHistory = [] if turnOverHistory is None else turnOverHistory
         self.taxHistory = [0] if taxHistory is None else taxHistory
         self.dontSell = 10
-        self.companySales = []
         self.demand = 0
         self.demandHistory = [] if demandHistory is None else demandHistory
         self.costHistory = [] if costHistory is None else costHistory

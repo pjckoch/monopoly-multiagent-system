@@ -40,7 +40,8 @@ def runFromJson(jsonFile):
                     company.bankrupcy(env)
 
             # Elections
-            if env.time % 365 == 0: 
+            if env.time % 365 == 0:
+                print("")
                 n = random.randint(1,3)
                 if n == 1:
                     env.government.politics = "SOCIALIST"
@@ -65,19 +66,17 @@ def runFromJson(jsonFile):
                 # compute the profits for each businessman
                 for bm in env.listOfPeople:
                     env.totalMoney += bm.capital
-                    logger.log_businessman_sales(days, bm)
                     nProfit = 0
                     for company in bm.companies:
                         env.totalMoney += company.turnOver
-                        logger.log_company_sales(env.time, company)
                         logger.log_company_stats(env.time, company, log_once)
                         bProfit = company.computeBruttoProfit()
-                        bm.actionHistory.append(bm.actionCounter)
-                        bm.actionCounter = 0
                         company.payCosts(env.government)
                         env.government.regulateTax(bm, company, env.time)
                         nProfit += company.computeNettoProfit()
                         company.computeCompanyValue()
+                    bm.actionHistory.append(bm.actionCounter)
+                    bm.actionCounter = 0
                     # add the summed up netto profits to the businessman capital
                     bm.capital += nProfit
 
@@ -103,6 +102,7 @@ def create_new_environment():
     return jsonfile
 
 def use_existing_environment():
+    logger.change_write_mode_to_append()
     dataframe_total = pd.read_csv(data_manager.FileType.STATS.value, index_col=0)
     lastItem_total = dataframe_total.iloc[-1]
     lastDfIndex_total = len(dataframe_total.index) + 1

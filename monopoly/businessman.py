@@ -34,7 +34,7 @@ class Businessman():
         self.happiness = happiness
         self.companies = [] if companiesList is None else companiesList
         self.subsidiariesHistory = [0] if subsidiariesHistory is None else subsidiariesHistory
-        self.inflation = 4
+        self.inflation = 1
         self.actionHistory = [] if actionHistory is None else actionHistory
         self.actionCounter = 0
     
@@ -66,7 +66,6 @@ class Businessman():
             ######################################
 
             # Append action 
-            company.companySales.append(self.id)
             helper_funs.transaction(self, company, company.price)
             company.visited()
             self.actionCounter += 1
@@ -183,6 +182,11 @@ class Businessman():
         company = Company(companyId)
         self.companies.append(company)
         logger.log_createCompany(time, self, company)
+        print_msg = "Bm " 
+        print_msg += str(self.id)
+        print_msg += " created company "
+        print_msg += str(companyId)
+        print(print_msg)
         return company
 
     def loseCompany(self, cmp):
