@@ -32,9 +32,12 @@ class Environment():
         self.suicideCount = suicideCount
         self.time = time
         self.totalMoney = 0
+        self.companyCategoryDistribution = []
         
         if self.listOfCompanies is None:
             self.distributeCompanies()
+        
+        self.distributeCompaniesInCategories()
         
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
@@ -67,8 +70,9 @@ class Environment():
         return temp/len(self.listOfCompanies)
 
     def distributeCompanies(self):
-        """Makes every businessman create his first company for himself."""
+        """Makes every businessman create his first company(s) for himself."""
         self.listOfCompanies = []
+        
         numCompaniesPerBm = self.numCompanies // len(self.listOfPeople)
         remainingCompanies = self.numCompanies % len(self.listOfPeople)
         for _ in range(numCompaniesPerBm):
@@ -105,3 +109,25 @@ class Environment():
         helper_funs.transaction(buyer, seller, price)
         company.dontSell = 100
         print("Businessman " + str(seller.id) + " sold company (" + str(company.id) + ") to " + str(buyer.id) + " for " + str(price))# + " " + str(company.companyValue))
+
+    def distributeCompaniesInCategories(self):
+        # safe an array of tuples with business category and number of companies for that category
+        numMedicals = 0.15 * self.numCompanies
+        self.companyCategoryDistribution.append((BusinessCategory.MEDICAL, numMedicals))
+        numSupermarkets = 0.25 * self.numCompanies
+        self.companyCategoryDistribution.append((BusinessCategory.SUPERMARKET, numSupermarkets))
+        numRestaurants = 0.35 * self.numCompanies
+        self.companyCategoryDistribution.append((BusinessCategory.RESTAURANT, numRestaurants))
+        numEntertainments = 0.15 * self.numCompanies
+        self.companyCategoryDistribution.append((BusinessCategory.ENTERTAINMENT, numEntertainments))
+        numLuxuries = 0.1 * self.numCompanies
+        self.companyCategoryDistribution.append((BusinessCategory.LUXURY, numLuxuries))
+
+
+    def applyInflation(self, inflationRate):
+        for comp in self.listOfCompanies:
+            tmp = comp.price
+            # print("Before" + str(tmp))
+            del comp.__dict__['price']
+            comp.price = tmp * (1 + inflationRate)
+            # print("after" + str(comp.price))

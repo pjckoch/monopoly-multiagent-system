@@ -177,9 +177,9 @@ class Businessman():
                 env.listOfCompanies.append(newCompany)
                 print("New company founded by: " + str(self.id))
 
-    def createCompany(self, time, companyId):
+    def createCompany(self, time, companyId, category=None):
         """Creates a new company belonging to the businessman who founds it."""
-        company = Company(companyId)
+        company = Company(companyId=companyId, category=category)
         self.companies.append(company)
         logger.log_createCompany(time, self, company)
         print_msg = "Bm " 

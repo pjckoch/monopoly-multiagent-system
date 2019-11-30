@@ -13,3 +13,9 @@ def transaction(sender, receiver, amount):
         receiver.governmentMoney += amount
     else:
         receiver.capital += amount
+
+
+def get_companies_of_bm(bm, env):
+    bmCompIds = [comp.id for comp in bm.companies]
+    return [comp for comp in env.listOfCompanies if comp.id in bmCompIds]
+        
