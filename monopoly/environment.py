@@ -35,10 +35,9 @@ class Environment():
         self.companyCategoryDistribution = []
         
         if self.listOfCompanies is None:
+            self.distributeCompaniesInCategories()
             self.distributeCompanies()
-        
-        self.distributeCompaniesInCategories()
-        
+                
         # compute initial values for happiness and capital
         self.computeAvgHappiness()
         self.computeAvgCapital()
@@ -72,15 +71,15 @@ class Environment():
     def distributeCompanies(self):
         """Makes every businessman create his first company(s) for himself."""
         self.listOfCompanies = []
-        
-        numCompaniesPerBm = self.numCompanies // len(self.listOfPeople)
-        remainingCompanies = self.numCompanies % len(self.listOfPeople)
-        for _ in range(numCompaniesPerBm):
+        n = len(self.companyCategoryDistribution)
+        print(n)
+        while n > 0:
             for bm in self.listOfPeople:
-                self.listOfCompanies.append(bm.createCompany(self.time, len(self.listOfCompanies))) # id increments with every new company
-        for _ in range(remainingCompanies):
-            bm = random.choice(self.listOfPeople)
-            self.listOfCompanies.append(bm.createCompany(self.time, len(self.listOfCompanies)))
+                category = random.choice(self.companyCategoryDistribution)
+                self.companyCategoryDistribution.remove(category)
+                n -= 1
+                self.listOfCompanies.append(bm.createCompany(self.time, len(self.listOfCompanies), category)) # id increments with every new company
+
             
     def findCompaniesByCategory(self, categories):
         companies = []
@@ -111,17 +110,21 @@ class Environment():
         print("Businessman " + str(seller.id) + " sold company (" + str(company.id) + ") to " + str(buyer.id) + " for " + str(price))# + " " + str(company.companyValue))
 
     def distributeCompaniesInCategories(self):
-        # safe an array of tuples with business category and number of companies for that category
-        numMedicals = 0.15 * self.numCompanies
-        self.companyCategoryDistribution.append((BusinessCategory.MEDICAL, numMedicals))
-        numSupermarkets = 0.25 * self.numCompanies
-        self.companyCategoryDistribution.append((BusinessCategory.SUPERMARKET, numSupermarkets))
-        numRestaurants = 0.35 * self.numCompanies
-        self.companyCategoryDistribution.append((BusinessCategory.RESTAURANT, numRestaurants))
-        numEntertainments = 0.15 * self.numCompanies
-        self.companyCategoryDistribution.append((BusinessCategory.ENTERTAINMENT, numEntertainments))
-        numLuxuries = 0.1 * self.numCompanies
-        self.companyCategoryDistribution.append((BusinessCategory.LUXURY, numLuxuries))
+        numMedicals = int(0.15 * self.numCompanies)
+        self.companyCategoryDistribution.append(numMedicals * [BusinessCategory.MEDICAL])
+        numSupermarkets = int(0.25 * self.numCompanies)
+        self.companyCategoryDistribution.append(numSupermarkets * [BusinessCategory.SUPERMARKET])
+        numRestaurants = int(0.35 * self.numCompanies)
+        self.companyCategoryDistribution.append(numRestaurants*[BusinessCategory.RESTAURANT])
+        numEntertainments = int(0.15 * self.numCompanies)
+        self.companyCategoryDistribution.append(numEntertainments*[BusinessCategory.ENTERTAINMENT])
+        numLuxuries = int(0.1 * self.numCompanies)
+        self.companyCategoryDistribution.append(numLuxuries*[BusinessCategory.LUXURY])
+        self.companyCategoryDistribution = sum(self.companyCategoryDistribution, [])        # flattens the 2D list to 1D
+        # distribute remaining to restaurant
+        remaining = len(self.companyCategoryDistribution) - self.numCompanies
+        for _ in range(remaining):
+            self.companyCategoryDistribution.append(BusinessCategory.RESTAURANT)
 
 
     def applyInflation(self, inflationRate):
