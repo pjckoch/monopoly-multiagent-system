@@ -131,6 +131,5 @@ class Environment():
         for comp in self.listOfCompanies:
             tmp = comp.price
             # print("Before" + str(tmp))
-            del comp.__dict__['price']
             comp.price = tmp * (1 + inflationRate)
             # print("after" + str(comp.price))

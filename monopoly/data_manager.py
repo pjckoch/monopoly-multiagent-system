@@ -234,7 +234,7 @@ def deserialize_company(obj):
                            category = category,
                            frequency = obj['_frequency'],
                            necessity = obj['_necessity'],
-                           price = obj['price'],
+                           price = obj['_price'],
                            quality = obj['quality'],
                            turnOver = obj['turnOver'],
                            fixedCost = obj['fixedCost'],

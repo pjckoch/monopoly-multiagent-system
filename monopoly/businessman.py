@@ -187,6 +187,7 @@ class Businessman():
         print_msg += " created company "
         print_msg += str(companyId)
         print(print_msg)
+        company.init_price()
         return company
 
     def loseCompany(self, cmp):

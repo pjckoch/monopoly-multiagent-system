@@ -46,10 +46,7 @@ class Company():
         self.category = random.choice(list(BusinessCategory)) if category is None else category
         self.frequency = self.category.value[0] if frequency is None else frequency
         self.necessity = self.category.value[1] if necessity is None else necessity
-        if price is None:
-            self.price
-        else:
-            self.price = price
+        self.price = 0 if price is None else price
         if quality is None:
             self.quality
         else:
@@ -131,21 +128,27 @@ class Company():
     def necessity(self, value):
         self._necessity = value
 
-    @cached_property
+    @property
     def price(self):
+        return self._price
+
+    @price.setter
+    def price(self, price):
+        self._price = price
+
+    def init_price(self):
         if self.category == BusinessCategory.MEDICAL:
-            self._price = (0.5 * np.random.randn() + 10*5) 	        # sig * randn + mu
+            self.price = (0.5 * np.random.randn() + 50) * (1 + self.quality)	        # sig * randn + mu
         elif self.category == BusinessCategory.SUPERMARKET:
-            self._price = (0.1 * np.random.randn() + 1*5)
+            self.price = (0.1 * np.random.randn() + 5) * (1 + self.quality)
         elif self.category == BusinessCategory.RESTAURANT:
-            self._price = (0.25 * np.random.randn() + 17.5/5*5)
+            self.price = (0.25 * np.random.randn() + 17.5) * (1 + self.quality)
         elif self.category == BusinessCategory.ENTERTAINMENT:
-            self._price = (0.25 * np.random.randn() + 4*5)
+            self.price = (0.25 * np.random.randn() + 20) * (1 + self.quality)
         elif self.category == BusinessCategory.LUXURY:
-            self._price = (2 * np.random.randn() + 30*5)
+            self.price = (2 * np.random.randn() + 150) * (1 + self.quality)
         else:
             raise ValueError("Category invalid.")
-        return self._price * (1 + self.quality)
 
     @cached_property
     def quality(self):
