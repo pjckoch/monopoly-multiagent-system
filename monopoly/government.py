@@ -95,7 +95,7 @@ class Government():
         if self.politics == PoliticsSwitcher.LIBERAL:
             val = 1500
         elif self.politics == PoliticsSwitcher.NEUTRAL:
-            val = 2500
+            val = 3000
         elif self.politics == PoliticsSwitcher.SOCIALIST:
             val = 7000
         if bm.capital < val:
@@ -113,9 +113,9 @@ class Government():
         if self.politics == PoliticsSwitcher.LIBERAL:
             self.taxRate = 0.05
         elif self.politics == PoliticsSwitcher.NEUTRAL:
-            self.taxRate = 0.15
+            self.taxRate = 0.2
         elif self.politics == PoliticsSwitcher.SOCIALIST:
-            self.taxRate = 0.5
+            self.taxRate = 0.55
         company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
         hf.transaction(company, self, company.taxHistory[-1])
 

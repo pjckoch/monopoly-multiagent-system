@@ -37,13 +37,7 @@ class Businessman():
         self.inflation = 1
         self.actionHistory = [] if actionHistory is None else actionHistory
         self.actionCounter = 0
-    
-    def getCompanyOwner(self, company, env):
-        for bm in env.listOfPeople:
-            for cmp in bm.companies:
-                if cmp.id == company.id:
-                    return bm
-        return None
+
 
     def chooseAction(self, companies, env):
         # if the businessman has no cash, he won't do shit
@@ -138,13 +132,11 @@ class Businessman():
     def invest(self, env):
 
         categories = []
-        for cmp in self.companies:
+        for cmp in hf.get_companies_of_bm(self, env):
             categories.append(cmp.category)
-
-        possibleInvestments = env.findCompaniesByCategory(categories)
-
+        possibleInvestments = env.findCompaniesByCategory(categories, env)
         company = self.considerInvestment(env.avgCapital, possibleInvestments)
-
+        # print(company)
         if company != None:
             owner = env.findCompanyOwner(company)
             if owner != self and company.dontSell < 0:

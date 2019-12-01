@@ -81,12 +81,12 @@ class Environment():
                 self.listOfCompanies.append(bm.createCompany(self.time, len(self.listOfCompanies), category)) # id increments with every new company
 
             
-    def findCompaniesByCategory(self, categories):
+    def findCompaniesByCategory(self, categories, env):
         companies = []
         ownedCompanies = []
 
         for bm in self.listOfPeople:
-            for company in bm.companies:
+            for company in hf.get_companies_of_bm(bm, env):
                 ownedCompanies.append(company)
 
         for comp in ownedCompanies:
@@ -103,7 +103,10 @@ class Environment():
         return None
 
     def sellCompany(self, company, buyer, seller, price):
-        seller.companies.remove(company)
+        for comp in seller.companies:
+            if comp.id == company.id:
+                companyToRemove = comp
+        seller.companies.remove(companyToRemove)
         buyer.companies.append(company)
         hf.transaction(buyer, seller, price)
         company.dontSell = 100
