@@ -109,7 +109,7 @@ class Environment():
         seller.companies.remove(companyToRemove)
         buyer.companies.append(company)
         hf.transaction(buyer, seller, price)
-        company.dontSell = 100
+        company.dontSell = 10
         print("Businessman " + str(seller.id) + " sold company (" + str(company.id) + ") to " + str(buyer.id) + " for " + str(price))# + " " + str(company.companyValue))
 
     def distributeCompaniesInCategories(self):

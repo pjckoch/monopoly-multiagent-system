@@ -60,7 +60,7 @@ class Company():
         self.nettoProfitHistory = [] if nettoProfitHistory is None else nettoProfitHistory
         self.turnOverHistory = [] if turnOverHistory is None else turnOverHistory
         self.taxHistory = [0] if taxHistory is None else taxHistory
-        self.dontSell = 10
+        self.dontSell = 6
         self.demand = 0
         self.demandHistory = [] if demandHistory is None else demandHistory
         self.costHistory = [] if costHistory is None else costHistory
@@ -101,7 +101,7 @@ class Company():
 
     def computeCompanyValue(self):
         if (len(self.nettoProfitHistory) > 4):
-            self.companyValue = 10*sum(self.nettoProfitHistory[-5:])
+            self.companyValue = 20*sum(self.nettoProfitHistory[-5:])
         return self.companyValue
 
     def payCosts(self, government):

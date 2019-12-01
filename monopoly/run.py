@@ -27,6 +27,7 @@ def runFromJson(jsonFile):
     global clearLogCount
     global yearCount
     env = data_manager.readFromJson(jsonFile)
+    env.applyInflation(0.04)
 
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
         # we don't need to round here, we only want to exclude the very first value
@@ -37,13 +38,12 @@ def runFromJson(jsonFile):
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
                 for company in hf.get_companies_of_bm(bm,env):
-                    company.updateSale()
                     company.bankrupcy(env)
 
             # Elections
             if env.time % 365 == 0:
                 print("")
-                env.government.politics = PoliticsSwitcher.SOCIALIST
+                env.government.politics = PoliticsSwitcher.LIBERAL
                 # n = random.randint(1,3)
                 # if n == 1:
                 #     env.government.politics = PoliticsSwitcher.SOCIALIST
@@ -74,6 +74,7 @@ def runFromJson(jsonFile):
                         env.government.regulateTax(bm, company, env.time)
                         nProfit += company.computeNettoProfit()
                         company.computeCompanyValue()
+                        company.updateSale()        # update the "memory" that prevents the BM to buy/sell the same company over and over
                     bm.actionHistory.append(bm.actionCounter)
                     bm.actionCounter = 0
                     # add the summed up netto profits to the businessman capital
