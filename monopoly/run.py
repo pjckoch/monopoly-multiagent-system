@@ -3,11 +3,12 @@ import pandas as pd
 import random
 import logger
 from environment import Environment
+from government import PoliticsSwitcher
 from plot_history import *
 from enum import Enum
 import data_manager
 import argparse
-import helper_funs
+import helper_funs as hf
 
 log_once = False
 append = False
@@ -35,29 +36,27 @@ def runFromJson(jsonFile):
                 action = bm.chooseAction(env.listOfCompanies, env)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
-                for company in bm.companies:
+                for company in hf.get_companies_of_bm(bm,env):
                     company.updateSale()
                     company.bankrupcy(env)
 
             # Elections
             if env.time % 365 == 0:
                 print("")
-                n = random.randint(1,3)
-                if n == 1:
-                    env.government.politics = "SOCIALIST"
-                    env.government.taxRate=0.3
-                    logger.log_government(time, "SOCIALIST")
-                    print("SOCIALIST")
-                elif n == 2:
-                    env.government.politics = "NEUTRAL"
-                    env.government.taxRate=0.15
-                    logger.log_government(time, "NEUTRAL")
-                    print("NEUTRAL")
-                elif n == 3:
-                    env.government.politics = "LIBERAL"
-                    env.government.taxRate=0.05
-                    logger.log_government(time, "LIBERAL")
-                    print("LIBERAL")
+                env.government.politics = PoliticsSwitcher.SOCIALIST
+                # n = random.randint(1,3)
+                # if n == 1:
+                #     env.government.politics = PoliticsSwitcher.SOCIALIST
+                #     logger.log_government(time, "SOCIALIST")
+                #     print("SOCIALIST")
+                # elif n == 2:
+                #     env.government.politics = PoliticsSwitcher.NEUTRAL
+                #     logger.log_government(time, "NEUTRAL")
+                #     print("NEUTRAL")
+                # elif n == 3:
+                #     env.government.politics = PoliticsSwitcher.LIBERAL
+                #     logger.log_government(time, "LIBERAL")
+                #     print("LIBERAL")
 
             env.time = round(time, 1)
 
@@ -67,7 +66,7 @@ def runFromJson(jsonFile):
                 for bm in env.listOfPeople:
                     env.totalMoney += bm.capital
                     nProfit = 0
-                    for company in bm.companies:
+                    for company in hf.get_companies_of_bm(bm, env):
                         env.totalMoney += company.turnOver
                         logger.log_company_stats(env.time, company, log_once)
                         bProfit = company.computeBruttoProfit()

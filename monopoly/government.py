@@ -2,7 +2,7 @@ import random
 import numpy as np
 from enum import Enum
 import data_manager
-import helper_funs
+import helper_funs as hf
 import logger
 
 prevPol = 0
@@ -92,12 +92,12 @@ class Government():
     # Give Differentiated Subsidiaries to Poor People When They are Below 2000$
     def robinHoodMode(self, bm):
         val = 4000
-        if self.politics == "LIBERAL":
-            val = 3000
-        elif self.politics == "NEUTRAL":
-            val = 4000
-        elif self.politics == "COMMUNIST":
-            val = 5000
+        if self.politics == PoliticsSwitcher.LIBERAL:
+            val = 1500
+        elif self.politics == PoliticsSwitcher.NEUTRAL:
+            val = 2500
+        elif self.politics == PoliticsSwitcher.SOCIALIST:
+            val = 7000
         if bm.capital < val:
             return self.calculateSubsidiaryFormula(bm.capital)
         return 0
@@ -107,11 +107,17 @@ class Government():
         subs = self.robinHoodMode(businessman)
         if self.governmentMoney - subs > 0:
             businessman.subsidiariesHistory.append(subs)
-            helper_funs.transaction(self, businessman, subs)
+            hf.transaction(self, businessman, subs)
 
     def regulateTax(self,bm, company, time):
+        if self.politics == PoliticsSwitcher.LIBERAL:
+            self.taxRate = 0.05
+        elif self.politics == PoliticsSwitcher.NEUTRAL:
+            self.taxRate = 0.15
+        elif self.politics == PoliticsSwitcher.SOCIALIST:
+            self.taxRate = 0.5
         company.taxHistory.append(company.bruttoProfitHistory[-1] * self.taxRate)
-        helper_funs.transaction(company, self, company.taxHistory[-1])
+        hf.transaction(company, self, company.taxHistory[-1])
 
 
     def regulate(self, businessmenList):

@@ -3,7 +3,7 @@ import pandas as pd
 from company import Company, BusinessCategory
 import random
 import logger
-import helper_funs
+import helper_funs as hf
 import math as m
 
 name_list = "lists/names.csv"
@@ -56,17 +56,14 @@ class Businessman():
         company = self.chooseCompany(category, companies)
         if company and self.considerAction(company):
 
-            ######################################
-            # THIS IS THE TEMPORARY BUG FIX
             for bm in env.listOfPeople:
-                for comp in bm.companies:
+                for comp in hf.get_companies_of_bm(self, env):
                     if comp.id == company.id:
                         company = comp
 
-            ######################################
 
             # Append action 
-            helper_funs.transaction(self, company, company.price)
+            hf.transaction(self, company, company.price)
             company.visited()
             self.actionCounter += 1
             return company
@@ -173,7 +170,7 @@ class Businessman():
         elif self.capital > 9000:
             if random.randint(1, 10000) > 9999:
                 newCompany = self.createCompany(env.time, len(env.listOfCompanies))
-                helper_funs.transaction(self, env.government, 5000)
+                hf.transaction(self, env.government, 5000)
                 env.listOfCompanies.append(newCompany)
                 print("New company founded by: " + str(self.id))
 

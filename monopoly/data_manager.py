@@ -8,6 +8,7 @@ import company
 import environment
 import businessman
 import government
+import helper_funs as hf
 
 df_total = None
 dfIndex = None
@@ -121,22 +122,21 @@ def isEvaluationIntervalCompleted(days, evaluationInterval):
     else:
         return False
 
-def evaluateStats(time, environment):
+def evaluateStats(time, env):
     """Evaluate the stats for a list of businessmen over a given evaluation interval"""
     time = getTime(days=time)
-    for bm in environment.listOfPeople:
-        turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(bm)
-        appendToDataFrame(time, environment, bm, turnOver, taxes, nettoProfit)
-        for comp in bm.companies:
+    for bm in env.listOfPeople:
+        turnOver, taxes, nettoProfit = computeStatsForEvaluationInterval(bm, env)
+        appendToDataFrame(time, env, bm, turnOver, taxes, nettoProfit)
+        for comp in hf.get_companies_of_bm(bm, env):
             appendToDataFrameCategories(time, comp, bm)
 
-def computeStatsForEvaluationInterval(bm):
+def computeStatsForEvaluationInterval(bm, env):
     """Compute the stats for one Businessman over a given evaluation interval"""
     turnOver = 0
     taxes = 0
     nettoProfit = 0
-
-    for comp in bm.companies:
+    for comp in hf.get_companies_of_bm(bm,env):
         turnOver += comp.turnOverHistory[-1]
         taxes += comp.taxHistory[-1]
         nettoProfit += comp.nettoProfitHistory[-1]
