@@ -135,4 +135,5 @@ class Environment():
             tmp = comp.price
             # print("Before" + str(tmp))
             comp.price = tmp * (1 + inflationRate)
+            comp.inf = 1 + inflationRate
             # print("after" + str(comp.price))
