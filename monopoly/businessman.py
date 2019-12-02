@@ -179,8 +179,11 @@ class Businessman():
         company.init_price()
         return company
 
-    def loseCompany(self, cmp):
-        self.companies.remove(cmp)
+    def loseCompany(self, company):
+        for comp in self.companies:
+            if comp.id == company.id:
+                companyToRemove = comp
+        self.companies.remove(comp)
 
     def countActions(self):
         print(self.actionCounter)
