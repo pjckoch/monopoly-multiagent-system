@@ -64,6 +64,7 @@ class Company():
         self.demand = 0
         self.demandHistory = [] if demandHistory is None else demandHistory
         self.costHistory = [] if costHistory is None else costHistory
+        self.inf = 1
         
     def isBankrupting(self):
         if (len(self.nettoProfitHistory) > 10):

@@ -102,7 +102,7 @@ class Businessman():
     def considerAction(self, company):
         nec = company.necessity
         p = company.price
-        probabilityOfAction = (nec*p*self.capital*self.inflation ) /(p*nec*self.capital*self.inflation + 10000/nec)
+        probabilityOfAction = (nec*p*self.capital*company.inf ) /(p*nec*self.capital*company.inf  + 10000/nec)
         return decision(probabilityOfAction)
 
     def offerForCompany(self, company, price, avgCapital):

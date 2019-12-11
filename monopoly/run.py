@@ -37,13 +37,13 @@ def runFromJson(jsonFile):
                 action = bm.chooseAction(env.listOfCompanies, env)
                 # assuming buying a new company counts as an investment
                 bm.invest(env)
-                for company in hf.get_companies_of_bm(bm,env):
-                    company.bankrupcy(env)
+                # for company in hf.get_companies_of_bm(bm,env):
+                    # company.bankrupcy(env)
 
             # Elections
             if env.time % 365 == 0:
                 print("")
-                env.government.politics = PoliticsSwitcher.SOCIALIST
+                env.government.politics = PoliticsSwitcher.NEUTRAL
                 # n = random.randint(1,3)
                 # if n == 1:
                 #     env.government.politics = PoliticsSwitcher.SOCIALIST
