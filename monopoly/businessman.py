@@ -24,7 +24,8 @@ class Businessman():
                 subsidiaries=0,
                 companiesList=None,
                 subsidiariesHistory=None,
-                actionHistory=None):
+                actionHistory=None,
+                incomeHistory=None):
 
         self.id = businessmanId
         self.isAlive = isAlive
@@ -37,6 +38,7 @@ class Businessman():
         self.inflation = 1
         self.actionHistory = [] if actionHistory is None else actionHistory
         self.actionCounter = 0
+        self.incomeHistory = [] if incomeHistory is None else incomeHistory
 
 
     def chooseAction(self, companies, env):

@@ -27,7 +27,7 @@ def runFromJson(jsonFile):
     global clearLogCount
     global yearCount
     env = data_manager.readFromJson(jsonFile)
-    env.applyInflation(0.04)
+    env.applyInflation(0.0)
 
     for time in np.linspace(0.0, days, num = env.numActions * days + 1):
         # we don't need to round here, we only want to exclude the very first value
@@ -43,7 +43,7 @@ def runFromJson(jsonFile):
             # Elections
             if env.time % 365 == 0:
                 print("")
-                env.government.politics = PoliticsSwitcher.LIBERAL
+                env.government.politics = PoliticsSwitcher.SOCIALIST
                 # n = random.randint(1,3)
                 # if n == 1:
                 #     env.government.politics = PoliticsSwitcher.SOCIALIST
@@ -79,6 +79,7 @@ def runFromJson(jsonFile):
                     bm.actionCounter = 0
                     # add the summed up netto profits to the businessman capital
                     bm.capital += nProfit
+                    bm.incomeHistory.append(nProfit)
 
                 log_once = True
                 env.totalMoney += env.government.governmentMoney
@@ -88,8 +89,9 @@ def runFromJson(jsonFile):
                 env.computeAvgCapital()
                 env.computeAvgHappiness()
                 data_manager.evaluateStats(time, env)
-            
 
+    annual_incomes = hf.get_annual_incomes(env.listOfPeople)
+    print("Gini Coefficient: " + str(hf.gini(annual_incomes)))
     data_manager.exportToCSV()
     data_manager.writeToJson(data_manager.FileType.RESULTS, env)
 
